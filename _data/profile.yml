@@ -1,8 +1,7 @@
 @@ -8,21 +8,21 @@ positions:
   name: BA, MEng, PhD (Cantab)
 
-email: "sas245@cam.ac.com"
-# cv_link: link-to-your-cv-file
+email: "sas245@cam.ac.uk"
 gscholar: your_google_scholar_id
 cv_link: "https://media.journoportfolio.com/users/370149/uploads/0b2c70db-afe5-4d31-b38d-e5de58c6abda.pdf"
 #gscholar: your_google_scholar_id
@@ -21,5 +20,5 @@ short_bio: >-
   where I have worked with theoretical syntacticians, typologists and phonologists and completed an extended project led by Prof 
   Nigel Collier, the director of the Language Technology Laboratory.
 portrait_url: /assets/images/photos/portrait.jpg
-portrait_caption: >-
-  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
+#portrait_caption: >-
+#  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
