@@ -12,16 +12,14 @@ linkedin: "ssalhan"
 orcid: "0000-0001-7201-7387"
 
 short_bio: >-
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-Hello! I’m Suchir Salhan, a fourth-year MEng Computer Science student at Gonville and Caius College, the University of Cambridge.
-
-I research Machine Learning and Natural Language Processing. I am interested in engineering more data-efficient “foundation models” in Machine Learning (particularly Large Language Models and Vision-Language Models), and multi-agent systems. I have a broad interest in tackling the fundamental issues in Machine Learning, such as model compositionality and explainable AI.
-
-I have worked with several researchers in the Department of Computer Science & Technology, particularly in the Natural Language and Information Processing Group (NLIP).
-
-I also maintain strong links with the Department of Theoretical and Applied Linguistics where I have worked with theoretical syntacticians, typologists and phonologists and completed an extended project led by Prof Nigel Collier, the director of the Language Technology Laboratory.
+  Hello! I’m Suchir Salhan, a fourth-year MEng Computer Science student at Gonville and Caius College, the University of Cambridge.
+  I research Machine Learning and Natural Language Processing. I am interested in engineering more data-efficient “foundation models” in Machine Learning 
+  (particularly Large Language Models and Vision-Language Models), and multi-agent systems. 
+  I have a broad interest in tackling the fundamental issues in Machine Learning, such as model compositionality and explainable AI.
+  I have worked with several researchers in the Department of Computer Science & Technology, particularly in the Natural Language 
+  and Information Processing Group (NLIP).I also maintain strong links with the Department of Theoretical and Applied Linguistics 
+  where I have worked with theoretical syntacticians, typologists and phonologists and completed an extended project led by Prof 
+  Nigel Collier, the director of the Language Technology Laboratory.
 portrait_url: /assets/images/photos/portrait.jpg
 portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
