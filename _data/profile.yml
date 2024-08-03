@@ -1,5 +1,12 @@
-@@ -8,21 +8,21 @@ positions:
-  name: BA, MEng, PhD (Cantab)
+primary_name: "Suchir Salhan"
+secondary_name: ""
+navbar_name: "Suchir Salhan"
+
+positions:
+- name: Machine Learning Researcher
+- logo: /assets/images/badges/PKU_red.png
+  name: BA (Cantab), MEng (Cantab), PhD Candidate 
+
 
 email: "sas245@cam.ac.uk"
 cv_link: "https://media.journoportfolio.com/users/370149/uploads/0b2c70db-afe5-4d31-b38d-e5de58c6abda.pdf"
@@ -10,7 +17,7 @@ linkedin: "ssalhan"
 orcid: "0000-0001-7201-7387"
 
 short_bio: >-
-  Hello! I’m Suchir Salhan, a fourth-year MEng Computer Science student at Gonville and Caius College, the University of Cambridge.
+  Hello! I’m Suchir Salhan, an incoming Computer Science PhD Candidate at Gonville and Caius College, the University of Cambridge.
   I research Machine Learning and Natural Language Processing. I am interested in engineering more data-efficient “foundation models” in Machine Learning 
   (particularly Large Language Models and Vision-Language Models), and multi-agent systems. 
   I have a broad interest in tackling the fundamental issues in Machine Learning, such as model compositionality and explainable AI.
