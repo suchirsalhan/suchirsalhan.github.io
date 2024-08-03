@@ -4,7 +4,7 @@
 email: "sas245@cam.ac.uk"
 gscholar: your_google_scholar_id
 cv_link: "https://media.journoportfolio.com/users/370149/uploads/0b2c70db-afe5-4d31-b38d-e5de58c6abda.pdf"
-#gscholar: your_google_scholar_id
+# gscholar: your_google_scholar_id
 github: "suchirsalhan"
 twitter: "suchirsalhan"
 linkedin: "ssalhan"
@@ -16,9 +16,8 @@ short_bio: >-
   (particularly Large Language Models and Vision-Language Models), and multi-agent systems. 
   I have a broad interest in tackling the fundamental issues in Machine Learning, such as model compositionality and explainable AI.
   I have worked with several researchers in the Department of Computer Science & Technology, particularly in the Natural Language 
-  and Information Processing Group (NLIP).I also maintain strong links with the Department of Theoretical and Applied Linguistics 
-  where I have worked with theoretical syntacticians, typologists and phonologists and completed an extended project led by Prof 
+  and Information Processing Group (NLIP). I also maintain strong links with the Department of Theoretical and Applied Linguistics 
+  where I have worked with theoretical syntacticians, typologists, and phonologists and completed an extended project led by Prof 
   Nigel Collier, the director of the Language Technology Laboratory.
+
 portrait_url: /assets/images/photos/portrait.jpg
-#portrait_caption: >-
-#  Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
