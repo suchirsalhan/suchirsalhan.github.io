@@ -1,21 +1,20 @@
-primary_name: "Suchir Salhan"
-secondary_name: ""
-navbar_name: "Suchir Salhan"
-
-positions:
-- name: Cambridge Machine Learning PhD Student
-- logo: /assets/images/badges/PKU_red.png
-  name: PhD, Cambridge University (2024 -)
+@@ -8,21 +8,21 @@ positions:
+  #name: PhD, Cambridge University (2024 -)
 
 email: "sas245@cam.ac.com"
+# cv_link: link-to-your-cv-file
+gscholar: your_google_scholar_id
 cv_link: "https://media.journoportfolio.com/users/370149/uploads/0b2c70db-afe5-4d31-b38d-e5de58c6abda.pdf"
 #gscholar: your_google_scholar_id
-github: your_github_id
+github: "suchirsalhan"
 twitter: "suchirsalhan"
 linkedin: "ssalhan"
 orcid: "0000-0001-7201-7387"
 
 short_bio: >-
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+  Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
 Hello! I’m Suchir Salhan, a fourth-year MEng Computer Science student at Gonville and Caius College, the University of Cambridge.
 
 I research Machine Learning and Natural Language Processing. I am interested in engineering more data-efficient “foundation models” in Machine Learning (particularly Large Language Models and Vision-Language Models), and multi-agent systems. I have a broad interest in tackling the fundamental issues in Machine Learning, such as model compositionality and explainable AI.
@@ -26,24 +25,3 @@ I also maintain strong links with the Department of Theoretical and Applied Ling
 portrait_url: /assets/images/photos/portrait.jpg
 portrait_caption: >-
   Photo by Manja Vitolic on Unsplash (this caption is optional, comment it out to disable).
-
-education:
-- name: Peking University
-  logo: /assets/images/badges/PKU_red.png
-  position: B.S. in Computer Science
-  date: Sep. 2017 - Jul. 2021
-
-# experience:
-# - name: Peking University
-#   logo: /assets/images/badges/PKU_red.png
-#   position: Research Intern
-#   date: Sep. 2019 - Jul. 2021
-
-
-awards:
-- name: Award Name 2
-  date: 2024
-- name: Award Name 1 
-  date: 2021
-- name: A quick brown fox jumps over the lazy dog and runs away award
-  date: 2021
