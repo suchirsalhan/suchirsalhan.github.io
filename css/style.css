@@ -22,7 +22,7 @@ header {
             justify-content: space-between; /* Space between header title and navbar */
             align-items: center; /* Vertically center items */
             padding: 10px;
-            background-color: #f8f8f8; /* Light background for visibility */
+            background-color: #0d0d0d; /* Light background for visibility */
         }
 
 .center {
