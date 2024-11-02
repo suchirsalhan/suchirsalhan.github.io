@@ -18,12 +18,15 @@ body {
 }
 
 header {
-            display: flex; /* Use flexbox for horizontal alignment */
-            justify-content: space-between; /* Space between header title and navbar */
-            align-items: center; /* Vertically center items */
-            padding: 10px;
-	    background-color: var(--main-bg-color);
-        }
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Space between header title and navbar */
+    align-items: center; /* Vertically center items */
+    padding: 10px;
+    width: 100%;
+    background-color: var(--main-bg-color) !important; /* Set header background to match the page */
+    color: var(--yellow-0); /* Optional: set text color to make it stand out on the dark background */
+    box-shadow: none; /* Optional: remove any shadows if present */
+}
 
 .center {
 	margin-left: auto;
