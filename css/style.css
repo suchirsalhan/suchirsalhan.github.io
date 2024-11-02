@@ -22,6 +22,7 @@ header {
             justify-content: space-between; /* Space between header title and navbar */
             align-items: center; /* Vertically center items */
             padding: 10px;
+	    background-color: var(--main-bg-color);
         }
 
 .center {
