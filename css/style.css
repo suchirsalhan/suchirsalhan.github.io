@@ -17,6 +17,14 @@ body {
 	width: 100vw;
 }
 
+header {
+            display: flex; /* Use flexbox for horizontal alignment */
+            justify-content: space-between; /* Space between header title and navbar */
+            align-items: center; /* Vertically center items */
+            padding: 10px;
+            background-color: #f8f8f8; /* Light background for visibility */
+        }
+
 .center {
 	margin-left: auto;
 	margin-right: auto;
@@ -26,6 +34,7 @@ body {
 }
 
 .navbar {
+	margin-left: auto;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -37,6 +46,9 @@ body {
 }
 
 .navbar a {
+	text-decoration: none;
+        color: #333; /* Dark color for the links */
+        padding: 10px 15px; /* Padding around the links */
 	display: inline-block;
 	position: relative;
 	background-color: rgba(255, 255, 255, 0);
@@ -49,6 +61,8 @@ body {
 }
 
 .navbar a:after {
+	background-color: #4CAF50; /* Change background on hover */
+        color: white; /* Change text color on hover */
 	content: '';
 	position: absolute;
 	width: 100%;
@@ -56,7 +70,6 @@ body {
 	height: 4px;
 	bottom: 0px;
 	left: 0;
-	background-color: var(--yellow-0);
 	transform-origin: bottom right;
 	transition: transform 0.15s ease-out;
 }
