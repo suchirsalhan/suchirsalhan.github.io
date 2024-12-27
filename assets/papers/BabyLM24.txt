@@ -1,0 +1,6 @@
+@article{salhan2024less,
+  title={Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies},
+  author={Salhan, Suchir and Martinez, Richard Diehl and Goriely, Z{\'e}bulon and Buttery, Paula},
+  journal={arXiv preprint arXiv:2410.22886},
+  year={2024}
+}
