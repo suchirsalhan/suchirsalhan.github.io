@@ -1,11 +1,11 @@
-title: "Kyle Fogarty"
-email: ktf25@cam.ac.uk
+title: "Suchir Salhan"
+email: sas245@cam.ac.uk
 timezone: UTC
 baseurl: ""
 permalink: "/:title/"
 logo: 'assets/images/logo.svg'
 favicon: 'assets/images/favicon.ico'
-author: Kyle
+author: Suchir
 paginate: 30
 disqus: 'demowebsite'
 locale: en_us
@@ -25,25 +25,24 @@ ganalytics: UA-113961478-1
 # Authors
 authors:
   Kyle:
-    name: Kyle Fogarty
-    display_name: Kyle
-    avatar: 'assets/images/intro_1.png'
-    email: wowthemesnet@gmail.com
-    web: https://www.wowthemes.net/category/jekyll-themes/
-    twitter: https://twitter.com/wowthemesnet
-    linkedin: https://www.linkedin.com/in/kylefogarty/
-    description: "PhD Student in Visual Computing at the University of Cambridge."
+    name: Suchir Salhan
+    display_name: Suchir Salhan
+    avatar: 'assets/images/sas245.jpg'
+    email: sas245@cam.ac.uk
+    web: https://www.cst.cam.ac.uk/people/sas245
+    twitter: https://twitter.com/suchirsalhan
+    linkedin: https://www.linkedin.com/in/ssalhan/
+    description: "PhD Candidate at the University of Cambridge | Founder of Per Capita Media."
  
 
 # Social
 social:
   instagram: 
   facebook: 
-  twitter: 
-  linkedin: https://www.linkedin.com/in/kylefogarty/
-  google_scholar: https://scholar.google.com/citations?user=yEwwq4EAAAAJ&hl=en
-  cambridge: https://www.cst.cam.ac.uk/people/ktf25
-  agriforwards: https://agriforwards-cdt.blogs.lincoln.ac.uk/cdt-personal/kyle-fogarty/
+  twitter: https://twitter.com/suchirsalhan
+  linkedin: https://www.linkedin.com/in/ssalhan/
+  google_scholar: https://scholar.google.com/citations?user=xOo9sisAAAAJ&hl=en
+  cambridge: https://www.cst.cam.ac.uk/people/sas245
 # Plugins
 plugins: 
 - jekyll-paginate
