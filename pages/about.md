@@ -2,16 +2,18 @@
 layout: page
 title: 
 permalink: "/about/"
-image: "assets/images/kyle.png"
+image: "assets/images/sas245.png"
 usemathjax: true
 ---
 
 <h5><u>Short Bio</u></h5>
 
-I am a first year PhD student, supervised by Dr Cengiz Öztireli. My research spans computer graphics, computer vision, and machine learning. I seek to enable the easy creation, manipulation, visualisation, and analysis of high-fidelity digital models of reality, with a specific emphasis on the modelling of natural structures. My PhD is funded by the EPSRC Centre for Doctoral Training in Agri-Food Robotics: <u><a href ="https://agriforwards-cdt.blogs.lincoln.ac.uk">AgriFoRwArdS</a></u>.
+I am a PhD Candidate in Computer Science at the University of Cambridge (Gonville & Caius College), researching Machine Learning and Natural Language Processing and supervised by Professor Paula Buttery. I specialise in Machine Learning and Natural Language Processing. I am interested in developing cognitively-inspired computational systems, including alternatives to Transformer-based Large Language Models. I previously completed my Bachelor of Arts and Masters in Engineering in Computer Science and Linguistics at Gonville & Caius College, University of Cambridge, where I obtained a Starred First (Class I with Distinction) and a Distinction (also equivalent to a starred First) respectively. My research focuses on Small-Scale Language Models to improve the interpretability of Foundation Models.
 
-Before coming to Cambridge, I studied for an integrated masters degree in Mathematics and Physics (MMath&Phys) at the Univeristy of Manchester and a masters degree (MSc) in Robotics and Autonomous Systems at the University of Lincoln. 
+Outside of academia, I lead a publication called <a href="https://www.per-capita.co.uk" target="_blank" rel="noopener noreferrer">Per Capita Media</a>, Cambridge University's newest independent publication supported by a team of students and academics from Cambridge and other academic institutions nationwide, including the University of Oxford and the University of the Arts London. I founded the publication in 2024, with the generous support of Lady Stothard, Dr Ruth Scurr FRSL. My journalistic output has seen me work with The One Show, and liaise with journalists from The Sunday Times and BBC Radio 5Live. I am also involved in student policy think tanks, as the Head of Policy at The Wilberforce Society, the UK's oldest student think tank in the UK  based at the University of Cambridge, and organise several speaker events throughout the University. In the past, I have helped organise policy events with the Editor of the BBC Russian Service and the Foreign Minister of Sri Lanka.
+
 
 <h5><u>Curriculum Vitae</u></h5>
-I keep my most up-to-date CV on Google Drive - a copy can be found using the link below.
-<p style="text-align:center;" ><a href="https://drive.google.com/file/d/1Lk5KxSEiO3dN4pkuNKXfIYpbGfAgSfJ0/view?usp=sharing" class="btn btn-dark text-white px-5 btn-lg">Curriculum Vitae</a></p>
+A copy of my CV can be found on my <a href="https://www.cst.cam.ac.uk/people/sas245" target="_blank" rel="noopener noreferrer">Department page</a>: 
+
+<p style="text-align:center;" ><a href="https://www.cst.cam.ac.uk/sites/default/files/profile/sas245/sas245_cst_2025.pdf" class="btn btn-dark text-white px-5 btn-lg">Curriculum Vitae</a></p>
