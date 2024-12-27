@@ -1,0 +1,25 @@
+<!-- begin post -->
+{% assign author = site.authors[post.author] %}
+<div class="card">
+    <a href="{{ post.url | absolute_url }}">
+        {% if post.image %} <img class="rounded mb-4" src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}"> {% endif %}
+    </a>
+    <div class="card-block">
+        <h2 class="card-title h6 serif-font"><a href="{{ post.url | absolute_url }}">{{ post.title }}</a></h2>
+        <div class="wrapfooter small d-flex align-items-center">
+            <div class="clearfix"></div>
+        </div>
+        <p class="card-text text-muted">{{ post.excerpt | strip_html | truncatewords:10 }}</p>
+        <div class="metafooter">
+            <div class="wrapfooter small d-flex align-items-center">
+                <span class="author-meta">
+                 <!--span class="post-name"> {% if post.author %}{{author.display_name }}{% else %}{{  }}{% endif %}</span>  
+                <span class="post-name"><i>{{post.publish_author}}</i> </span-->             
+                
+                </span>               
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end post -->

@@ -1,0 +1,21 @@
+<div class="sidebar sticky-top">        
+    <div class="sidebar-section">
+        <h5><span>Check Out The <br>Latest Project</span></h5>
+        {% assign i = 0 %}  
+        {% for post in site.posts %}
+        {% if post.featured == true %}
+          {% if i < 1  %}
+  
+            {% include postbox_side.html %}
+       
+              {% assign i = i | plus:1 %}
+          {% endif %}
+        {% endif %}
+    {% endfor %}
+
+    </div>
+    <!--div class="sidebar-section">
+        <h5><span>Your Ad Here</span></h5>
+        <img src="{{site.baseurl}}/assets/images/ad.png">
+    </div-->
+</div>

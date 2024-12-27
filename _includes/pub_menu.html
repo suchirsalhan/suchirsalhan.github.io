@@ -1,0 +1,15 @@
+{% assign author = site.authors[post.author] %}
+<div class="card">
+    <table style="width:100%">
+        <tr>
+          <td style="width:30%">{% if post.image %} <img class="rounded mb-4" src="{{ site.baseurl }}/{{ post.image }}" alt="{{ post.title }}" width = 200px> {% endif %}</td>
+          <td style="width:10px"> </td>
+          <td style="width:80%"><p style="font-size:14px"><a href="{{ post.url | absolute_url }}">{{post.title }}</a> <br><i>{{post.publish_author}}</i>  <br> <b>{{post.publish_venue}}</b></p>
+        </td> 
+          <!-- <td style="width:10px"> </td>
+          <td><p style="font-size:12px"></p></td> -->
+        </tr>
+      </table>
+</div>
+<!-- end post -->
+
