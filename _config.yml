@@ -1,0 +1,53 @@
+title: "Kyle Fogarty"
+email: ktf25@cam.ac.uk
+timezone: UTC
+baseurl: ""
+permalink: "/:title/"
+logo: 'assets/images/logo.svg'
+favicon: 'assets/images/favicon.ico'
+author: Kyle
+paginate: 30
+disqus: 'demowebsite'
+locale: en_us
+lang: en_us
+feed_items: 10
+feed_update_period: daily
+feed_update_frequency: 1
+markdown: kramdown
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+sass:
+  sass_dir: _sass
+  style: :compressed
+ganalytics: UA-113961478-1
+
+# Authors
+authors:
+  Kyle:
+    name: Kyle Fogarty
+    display_name: Kyle
+    avatar: 'assets/images/intro_1.png'
+    email: wowthemesnet@gmail.com
+    web: https://www.wowthemes.net/category/jekyll-themes/
+    twitter: https://twitter.com/wowthemesnet
+    linkedin: https://www.linkedin.com/in/kylefogarty/
+    description: "PhD Student in Visual Computing at the University of Cambridge."
+ 
+
+# Social
+social:
+  instagram: 
+  facebook: 
+  twitter: 
+  linkedin: https://www.linkedin.com/in/kylefogarty/
+  google_scholar: https://scholar.google.com/citations?user=yEwwq4EAAAAJ&hl=en
+  cambridge: https://www.cst.cam.ac.uk/people/ktf25
+  agriforwards: https://agriforwards-cdt.blogs.lincoln.ac.uk/cdt-personal/kyle-fogarty/
+# Plugins
+plugins: 
+- jekyll-paginate
+- jekyll-sitemap
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-archives

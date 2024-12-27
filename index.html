@@ -1,142 +1,101 @@
-<!DOCTYPE HTML>
-<html lang="en">
+---
+title: Home
+layout: default
+background: '/img/bg-index.jpg'
+---
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Suchir Salhan</title>
-  <meta name="author" content="Suchir Salhan">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="css/style.css" rel="stylesheet">
-  <link href="css/font.css" rel="stylesheet">  
-  <link rel="icon" href="sas245.jpg">
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-4VJBBSSEN8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-4VJBBSSEN8');
-  </script>
-</head>
+<!-- Home Intro
+================================================== -->
+{% if page.url == "/" %} 
+<!--h2 style="text-align: center;" >🚧 Site Currently Under Construction 🚧</h2>
+<h2 style="text-align: center;">... Please visit again soon ...</h2-->
+<div class="rounded mb-5 hero">
+  <div class="row align-items-center justify-content-between">
+    <div class="col-md-6">
+      <h1 class="font-weight-bold mb-4 serif-font">Kyle Fogarty</h1>
+      <p >Hi 👋, I'm Kyle a PhD Student in Computer Science @ University of Cambridge, working 
+        with <u><a href ="https://www.cl.cam.ac.uk/~aco41/">Dr Cengiz Öztireli</a></u>. I work at the intersection of <b>3D computer graphics</b>, <b>computer vision</b>, and <b>machine learning</b>, to deliver high fidelity models 
+        of visual reality.
+      </p>
+      <p><br></p>
+      <!-- <p>I have started this site to host both my work and some blog posts along the way!</p> -->
+      <a href="{{site.baseurl}}/about" class="btn btn-dark text-white px-5 btn-lg">About me</a>
+    </div>
+    <div class="col-md-6 text-right pl-0 pl-lg-4">
+      <img class="intro" height="500" src="{{site.baseurl}}/assets/images/intro_1b_small.png">      
+    </div>
+  </div>
+</div>
+{% endif %}
 
-<body style="background-color: #0d0d0d;">
-  <div class="center">
-    <header>
-      <h1>Suchir Salhan</h1>
-        <nav class="navbar">
-        <a href="https://suchirsalhan.github.io/slm" target="_blank">Cambridge Small LMs</a> 
-      </nav>
-    </header>
+<!-- Featured
+================================================== 
+<h3 class="font-weight-bold mb-4 serif-font">Recent News 🗞️:</h3>
+ &nbsp➙&nbsp   I am looking for students to work with me on a project over summer 2023 (see contact page for more details). [Jan 2023]<br>
+&nbsp➙&nbsp   I have launched the <a href = "https://computationaltoolkit.github.io"><em><u>Computational Toolkit</u></em></a> webpage, as part of my work with the University of Warwick. [Nov 2022]<br>
+&nbsp➙&nbsp   I have started my PhD with Dr Cengiz Öztireli at the University of Cambridge. [Oct 2022]<br>
+&nbsp➙&nbsp   I submitted my MSc thesis on point-set reconstruction at the University of Lincoln. [Sep 2022]
+<br>
+<br>-->
 
 
-      <main>
-<section class="group-section">
-    <ul style="list-style-type:none; padding:0; margin:0; width:100%; max-width:800px; margin-right:auto; margin-left:auto;">
-        <li>
-            <div style="padding:2.5%; vertical-align:middle; text-align:center;">
-                <img src="images/sas245.jpg" alt="Suchir Salhan" style="max-width:100%; height:auto;">
-                <p>I am a PhD Candidate in Computer Science at the <a href="https://www.cst.cam.ac.uk/research/themes/natural-language-processing">University of Cambridge</a> (Gonville & Caius College), researching Machine Learning and Natural Language Processing and supervised by <a href="https://www.cst.cam.ac.uk/people/pjb48">Professor Paula Buttery</a>. I specialise in Machine Learning and Natural Language Processing. I am interested in developing cognitively-inspired computational systems, including alternatives to Transformer-based Large Language Models. I previously completed my Bachelor of Arts and Masters in Engineering in Computer Science and Linguistics at Gonville & Caius College, University of Cambridge, where I obtained a Starred First (Class I with Distinction) and a Distinction (also equivalent to a starred First) respectively. My research focuses on Small-Scale Language Models to improve the interpretability of Foundation Models.</p>
-                <p>My research primarily is concerned with engineering more cognitively plausible Foundation Models. This is an emerging research paradigm that attempts to improve the cognitive capabilities of state-of-the-art computational systems within a cognitively plausible environment. I have interests in Machine Learning Systems, the Theory of Deep Learning, and Theoretical Linguistics. My ambition is to develop data-efficient Machine Learning systems that draw on human cognition.</p>
-                <p>To this end, I'm particularly interested in developing novel machine learning techniques to build scalable neural architectures that draw on formal methods (e.g., category and type theory) utilised in theoretical formalisms in Cognitive Science.</p>
-                <p style="text-align:center;">
-                    <a href="mailto:sas245@cam.ac.uk">Email</a> &nbsp;/&nbsp;
-                    <a href="https://www.cst.cam.ac.uk/sites/www.cst.cam.ac.uk/files/profile/sas245/sas245_cst_2025.pdf/">CV</a> &nbsp;/&nbsp;
-                    <a href="https://twitter.com/suchirsalhan/">Twitter</a> &nbsp;/&nbsp;
-                    <a href="https://www.linkedin.com/in/ssalhan">LinkedIn</a> &nbsp;/&nbsp;
-                    <a href="https://github.com/suchirsalhan/">Github</a>
-                </p>
-            </div>
-        </li>
-    </ul>
+
+{% for thing in things %}
+    {% assign i = i | plus:1 %}
+{% endfor %}
+
+<!-- Posts List with Sidebar (except featured)
+================================================== -->
+<h3 class="font-weight-bold mb-4 serif-font"><a href = '/publications/'>Recent Publications:</a></h3>
+<br>
+<section class="row">
+  <div class="col-sm-8">
+    <div class="row">
+
+      {% unless post.featured == false %}
+
+      {% assign i = 0 %}  
+      {% for post in site.posts %}
+      {% if post.featured == true %}
+        {% if i < 4  %}
+        <div class="col-md-6 mb-5">
+          {% include postbox.html %}
+        </div>
+            {% assign i = i | plus:1 %}
+        {% endif %}
+      {% endif %}
+  {% endfor %}
+
+
+      {% endunless %}
     
-    <h1 style="margin-top: 0; font-size: 2.5rem">
-      Computer Science PhD at <br class="ignore-on-mobile"/> University of Cambridge
-    </h1>
-    <img src="images/computer-lab.jpg" alt="Picture of the William Gates Building." class="hero" style="margin-bottom: 0;">
-    <ul style="margin-top: 0;">
-        <li>Natural Language Processing</li>
-        <li>Machine Learning</li>
-      <li>
-              <div style="padding:2.5%; vertical-align:middle; text-align:center;">
-                <h3>Research: Small Language Models</h3>
-                <p> The main focus of my PhD is engineering small-scale Foundation Models, with a focus on domain-specific tasks. My research currently focuses on building small-scale Transformer-based language models. I have engineered curriculum learning (CL) strategies inspired by cutting-edge Language Acquisition frameworks. </p>
-                <p><a href="https://suchirsalhan.github.io/slm" target="_blank">Learn more about Cambridge Small Language Models</a></p>
-                <p> If you are interested in getting in touch about this, please <a href="mailto:sas245@cam.ac.uk">email</a> me!</p>
-                <h3>Machine Learning</h3>
-                <p> I have worked with Multimodal Vision-Language Models in the Language Technology Lab with Prof Nigel Collier and Fangyu Liu (now Google DeepMind). Previously, I've probed vision-language models, exploring the semantic representations of CLIP. I have worked on Nearest Neighbour Algorithms for Offline Imitation Learning (IL). I have also worked on Explainable AI and Argumentation Mining, and Shortcut Learning in Natural Language Inference.</p>
-                <h3>Cognitive Science and Theoretical Linguistics</h3>
-                <p>My theoretical linguistics interests work against the background assumptions of neo-emergentist approaches, which assume a minimally endowed (genetic) component of the grammar and situate the burden of acquisition to the learner. Within this approach, I am concerned by questions of Learnability and look to formalise approaches that draw on Dynamical Systems Theory. I am keen to explore the potential relevance of information-theoretic approaches to acquisition and to explore syntax-phonology interface phenomena. I have worked as a Research Assistant for a small project on corpus-based studies of code-switching with Dr Li Nguyen.</p>
-
-              </div>
-        </li>
-    </ul>
-
-
+    </div>
+    
+    <!-- Pagination -->
+    <div class="bottompagination">
+      <span class="navigation" role="navigation">
+          {% include pagination.html %}
+      </span>
+    </div>
+  </div>
+  <div class="col-sm-4">
+    {% include sidebar.html %}
+  </div>
 </section>
 
-
-
-      
-      <section>
-        <h2>Publications</h2>
-        <ul>
-          <li>
-            <div class="card-base card-round-top">
-              <div class="card-content">
-                <div class="card-header">
-                  <div class="card-header-title">
-                    <h3>Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies</h3>
-                    <p> BabyLM Challenge 2024 (Accepted, Poster)</p>
-                     <p class="card-body-title">2024</p>
-                    <p><strong>Authors:</strong> Suchir Salhan, Richard Diehl-Martinez, Zebulon Goriely, Paula Buttery</p>
-                  </div>
-                </div>
-                <div class="card-body-content">
-                  <p>This publication introduces Small-Scale Language Models (SSLMs) trained on developmentally plausible corpora. It explores cognitive curriculum learning strategies that provide insights into syntactic learning across different languages. Cognitively-Inspired Small-Scale Language Models (SSLMs) have been developed for four typologically distant language families: Romance (including French, Spanish, and Portuguese), Germanic (German and Dutch), Japanese, and Chinese, all trained on developmentally plausible corpora. Initial experiments with these SSLMs assessed the advantages of training a Transformer-based Language Model on a developmentally appropriate quantity of Child-Directed Speech (CDS). These experiments demonstrated that training SSLMs on CDS provides benefits beyond English, enabling the acquisition of grammatical knowledge comparable to that of pre-trained RoBERTa models, despite using approximately 25 times fewer parameters and 6,000 times fewer words. Furthermore, a Monolingual Age-Ordered framework, referred to as Curriculum Learning for Infant-Inspired Model Building (MAO-CLIMB), was introduced as a family of more "cognitively plausible" alternatives to BabyBERTa-style SSLMs. MAO-CLIMB incorporates three novel objective curricula, inspired by cutting-edge Chomskyan theories of language acquisition. The findings revealed that Transformer-based SSLMs do not adhere strictly to ordered developmental sequences, resulting in a mixed benefit of curriculum learning strategies. However, these strategies can sometimes outperform larger language models on certain syntactic benchmarks, particularly in Japanese. The study discusses the implications of these findings for constructing and evaluating cognitively plausible SSLMs beyond English.</p>
-                </div>
-              </div>
+<h3 class="font-weight-bold mb-4 serif-font">Recent Blog Posts:</h3>
+<br>
+<section class="row">
+{% assign i = 0 %}  
+  {% for post in site.posts %}
+      {% if post.featured == false %}
+        {% if i <3  %}
+            <div class="col-md-4 mb-5">
+            {% include postbox.html %}
             </div>
-          </li>
-          <li>
-            <div class="card-base">
-              <div class="card-content">
-                <div class="card-header">
-                  <div class="card-header-title">
-                    <h3>LLMs “off-the-shelf” or Pretrain-from-Scratch? Recalibrating Biases and Improving Transparency using Small-Scale Language Models</h3>
-                    <p>Learning & Human Intelligence Group</p>
-                    <p class="card-body-title">2024</p>
-                    <p><strong>Authors:</strong> Suchir Salhan, Richard Diehl-Martinez, Zebulon Goriely, Andrew Caines, Paula Buttery</p>
-                  </div>
-          </li>
-          <li>
-            <div class="card-base card-round-bottom">
-              <div class="card-content">
-                <div class="card-header">
-                  <div class="card-header-title">
-                    <h3>On the Potential for Maximising Minimal Means in Transformer Language Models: A Dynamical Systems Perspective</h3>
-                    <p>Cambridge Occasional Papers in Linguistics</p>
-                  <p class="card-body-title">2023</p>
-                  <p><strong>Author:</strong> Suchir Salhan</p>
-                  </div>
-                <div class="card-body-content">
-                  <p>Computational linguists can utilise the insights of neo-emergent linguistic models, an approach to grammar construction that relies heavily on domain-general inductive biases, to address extant challenges associated with the syntactic and typological capabilities of state-of-the-art Transformer-based Language Models (LMs), which underpin systems like Google Translate and ChatGPT. I offer a synthesis of the inductive biases of Transformer-based LMs that are reminiscent of Dynamical Systems Theory (DST) approaches in human cognition. In doing so, I put forward a research agenda that will strengthen the case for minimalism in deep learning.</p>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </section>
-    </main>
-
-<ul style="list-style-type:none; padding:0; margin:0; width:100%; text-align:right;">
-    <li>
-        <p style="font-size:small;">
-            © Suchir Salhan 2024 
-        </p>
-    </li>
-</ul>
+            {% assign i = i | plus:1 %}
+        {% endif %}
+      {% endif %}
+  {% endfor %}
   </div>
-</body>
-<script src="js/effect.js"></script>
-</html>
-
+</section>
