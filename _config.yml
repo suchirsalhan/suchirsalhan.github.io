@@ -3,7 +3,7 @@ email: sas245@cam.ac.uk
 timezone: UTC
 baseurl: ""
 permalink: "/:title/"
-logo: 'assets/images/logo.png'
+logo: 'assets/images/logo.svg'
 favicon: 'assets/images/favicon.ico'
 author: Suchir
 paginate: 30
@@ -24,7 +24,7 @@ ganalytics: UA-113961478-1
 
 # Authors
 authors:
-  Suchir:
+  Kyle:
     name: Suchir Salhan
     display_name: Suchir Salhan
     avatar: 'assets/images/sas245.jpg'
