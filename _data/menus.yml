@@ -13,13 +13,13 @@ topmenu:
 # - title: Blog
 #   url: "blog/"
 
-# - title: Teaching
-#   url: "teaching/"
+ - title: Teaching
+   url: "handouts/"
 # - title: Projects
 #   url: "projects/"
 
-- title: Contact
-  url: "contact/"
+- title: SLM
+   url: "slm/"
 
 
 
