@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies"
+publish_author: Suchir Salhan
+publish_venue: MEng Thesis, published in the BabyLM Shared Task, co-located in EMNLP 2024
+publish_year: 2023
+categories: []
+image: assets/images/plc.png
+featured: True
+thesis: True
+---
+
+
+
+
+
+<table style="width:80%">
+  <tr>
+    <th><a href="{{site.baseurl}}/assets/papers/2410.22886v1.pdf" class="btn btn-dark text-white px-5 btn-lg">PDF</a></th>
+  </tr>
+</table>
