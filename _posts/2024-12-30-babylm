@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "On the Potential for Maximising Minimal Means in Transformer Language Models"
+publish_author: Suchir Salhan
+publish_venue: BA Thesis
+publish_year: 2023
+categories: []
+image: assets/images/plc.png
+featured: True
+thesis: True
+---
+
+
+
+
+
+<table style="width:80%">
+  <tr>
+    <th><a href="{{site.baseurl}}/assets/papers/v15_salhan_2.pdf" class="btn btn-dark text-white px-5 btn-lg">PDF</a></th>
+  </tr>
+</table>
