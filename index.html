@@ -17,8 +17,7 @@ background: '/img/bg-index.jpg'
     <div class="col-md-6">
       <h1 class="font-weight-bold mb-4 serif-font">Suchir Salhan</h1>
       <p >Suchir Salhan is a Computer Science PhD candidate at the University of Cambridge, working on <b>Small Language Models</b> under the supervision of  <u><a href ="https://www.cl.cam.ac.uk/~pjb48/">Prof Paula Buttery</a></u>.  
-      and the Founder of  <a href="https://www.per-capita.co.uk" class="btn btn-dark text-white px-5 btn-lg" target="_blank" rel="noopener noreferrer">Per Capita Media</a>, Cambridge University's newest independent media organisation. To contact me, email <a href="mailto:sas245@cam.ac.uk" class="btn btn-dark text-white px-5 btn-lg" target="_blank" rel="noopener noreferrer">sas245@cam.ac.uk</a> 
-      You can find out more about my non-academic work (including writing and journalism) on my  <a href="https://www.suchirsalhan.co.uk" class="btn btn-dark text-white px-5 btn-lg" target="_blank" rel="noopener noreferrer">home page</a>. A copy of my CV can be found on my <a href="https://www.cst.cam.ac.uk/people/sas245" target="_blank" rel="noopener noreferrer">Department page</a>: 
+      and the <b> Founder of <u><a href="https://www.per-capita.co.uk">Per Capita Media</a></u>, Cambridge University's newest independent media organisation</b>. To contact me, email <a href="mailto:sas245@cam.ac.uk" rel="noopener noreferrer">sas245@cam.ac.uk</a> 
    </p>
       <p><br></p>
     </div>
@@ -26,15 +25,30 @@ background: '/img/bg-index.jpg'
 </div>
 {% endif %}
 
-
-<div class="card-body-title">
+<div class="rounded mb-5 hero">
   <div class="col-md-6">
     <h3 class="font-weight-bold mb-4 serif-font">Small Language Models:</h3>
+    Modern Natural Language Processing (NLP) is dominated by large pre-trained, highly parameterised neural networks trained on extremely large web-mined corpora. Training and inference using such models are incredibly costly, and the benefits of the pre-train/fine-tune paradigm are unclear for domain-specific downstream tasks. Recent advances in language modeling consist in pretraining highly parameterized neural networks on extremely large web-mined text corpora. Training and inference with such models can be costly in practice, which incentivizes the use of smaller counterparts. Additionally, theoretical linguists and cognitive scientists have highlighted several weaknesses with state-of-the-art foundation models.
     <div class="d-flex justify-content-center gap-3">
       <a href="{{site.baseurl}}/slm" class="btn btn-dark text-white px-5 btn-lg"> Cambridge Small Language Models</a>
     </div>
   </div>
 </div>
+
+
+<div class="rounded mb-5 hero">
+  <div class="row align-items-center justify-content-between">
+    <div class="col-md-6 text-right pl-0 pl-lg-4">
+      <img class="intro" height="500" src="{{site.baseurl}}/sas245-photo.png">      
+    </div>
+    <div class="col-md-6">
+      <h1 class="font-weight-bold mb-4 serif-font">Handouts & Resources</h1>
+      <p > </p>
+      <p><br></p>
+    </div>
+  </div>
+</div>
+
 
 <div class="card-body-title">
   <div class="col-md-6">
@@ -42,11 +56,21 @@ background: '/img/bg-index.jpg'
   </div>
 </div>
 
-<div class="card-body-title">
-  <div class="col-md-6">
-    <h3 class="font-weight-bold mb-4 serif-font">Handouts & Resources:</h3>
+<section class="row">
+{% assign i = 0 %}  
+  {% for post in site.posts %}
+      {% if post.featured == false %}
+        {% if i <3  %}
+            <div class="col-md-4 mb-5">
+            {% include postbox.html %}
+            </div>
+            {% assign i = i | plus:1 %}
+        {% endif %}
+      {% endif %}
+  {% endfor %}
   </div>
-</div>
+</section>
+
 
 
 {% for thing in things %}
@@ -94,17 +118,4 @@ background: '/img/bg-index.jpg'
 
 <h3 class="font-weight-bold mb-4 serif-font">Blog:</h3>
 <br>
-<section class="row">
-{% assign i = 0 %}  
-  {% for post in site.posts %}
-      {% if post.featured == false %}
-        {% if i <3  %}
-            <div class="col-md-4 mb-5">
-            {% include postbox.html %}
-            </div>
-            {% assign i = i | plus:1 %}
-        {% endif %}
-      {% endif %}
-  {% endfor %}
-  </div>
-</section>
+
