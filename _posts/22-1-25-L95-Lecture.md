@@ -5,7 +5,6 @@ publish_author: Suchir Salhan
 publish_venue: MPhil in Advanced Computer Science, University of Cambridge
 publish_year: 2024
 categories: []
-image: assets/images/plc.png
 featured: True
 thesis: True
 ---
