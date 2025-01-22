@@ -127,32 +127,7 @@ background: '/img/bg-index.jpg'
   </div>
 
 
-    <!-- 
-{% for thing in things %}
-    {% assign i = i | plus:1 %}
-{% endfor %}
-<h3 class="font-weight-bold mb-4 serif-font"><a href = '/publications/'>Publications:</a></h3>
-<br>
-<section class="row">
-  <div class="col-sm-8">
-    <div class="row">
 
-      {% unless post.featured == false %}
-
-      {% assign i = 0 %}  
-      {% for post in site.posts %}
-      {% if post.featured == true %}
-        {% if i < 4  %}
-        <div class="col-md-6 mb-5">
-          {% include postbox.html %}
-        </div>
-            {% assign i = i | plus:1 %}
-        {% endif %}
-      {% endif %}
-  {% endfor %}
-      {% endunless %}
-    </div>
--->
     
     <!-- Pagination -->
     <div class="bottompagination">
