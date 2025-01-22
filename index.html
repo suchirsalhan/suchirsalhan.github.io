@@ -24,8 +24,13 @@ background: '/img/bg-index.jpg'
       <h3 class="font-weight-bold mb-4 article-post serif-font">Suchir Salhan is a Computer Science PhD candidate at the University of Cambridge, working on <b>Small Language Models</b> under the supervision of  <u><a href ="https://www.cl.cam.ac.uk/~pjb48/">Prof Paula Buttery</a></u>  
       and the <b> Founder of <u><a href="https://www.per-capita.co.uk">Per Capita Media</a></u>, Cambridge University's newest independent media organisation</b>.</a> 
    </h3>
-      <p> To contact me, email <a href="mailto:sas245@cam.ac.uk" rel="noopener noreferrer">sas245@cam.ac.uk.  </a> </p>
-  </div>
+      <p> To contact me, email <u><a href="mailto:sas245@cam.ac.uk" rel="noopener noreferrer">sas245@cam.ac.uk. </a></u></p>
+           <p><b> Quick Links: </b></p>
+          <ul>
+          <li><a href="{{site.baseurl}}/tripos">Cambridge Tripos Notes (Computer Science & Linguistics)</a></li>
+          <li><a href="{{site.baseurl}}/slm"> Small Language Models</a></li>
+          </ul>
+    </div>
 </div>
 {% endif %}
 
@@ -44,13 +49,12 @@ background: '/img/bg-index.jpg'
   <p class="article-post serif-font">     Modern Natural Language Processing (NLP) is dominated by large pre-trained, highly parameterised neural networks trained on extremely large web-mined corpora. Training and inference using such models are incredibly costly, and the benefits of the pre-train/fine-tune paradigm are unclear for domain-specific downstream tasks. Recent advances in language modelling rely on pretraining highly parameterized neural networks on extremely large web-mined text corpora. Training and inference with such models can be costly in practice, which incentivises the use of smaller counterparts. Additionally, theoretical linguists and cognitive scientists have highlighted several weaknesses with state-of-the-art foundation models.
 
 
-      <div class="rounded mb-5 hero">
+  <div class="rounded mb-5 hero">
   <div class="row align-items-center justify-content-between">
      <a href="{{site.baseurl}}/slm" class="btn btn-dark text-white px-5 btn-lg"> </a>
   <p class="article-post serif-font"> The <u><a href={{site.baseurl}}/slm">Cambridge Small Language Models</a></u> technical 'blog' focuses on interesting techniques and perspectives from collaborators and other Machine Learning, NLP and Cognitive Science researchers that broadly relate to the above issues.</p>
-   
-</div>
-   </div>
+  </div>
+  </div>
 
 
   
@@ -115,6 +119,17 @@ background: '/img/bg-index.jpg'
     <p class="article-post serif-font">   I delivered my first guest lecture in November 2024 for an MPhil course in the University of Cambridge with Prof Buttery and Dr Fermín Moscoso del Prado Martín on Language Model Evaluation – aged 22, this was a great opportunity and privilege so early in my “formal” academic career. In Lent 2025, I am the Teaching Assistant (a new role equivalent to Lead Demonstrator) for CST IA Machine Learning & Real World Data and am a supervisor for Machine Learning & Bayesian Inference (MBLI) [CST Part II]. I am supervising an MPhil Project on Language Model Stability. </p>
 
 
+  <div class="rounded mb-5 hero">
+  <div class="row align-items-center justify-content-between">
+     <a href="{{site.baseurl}}/slm" class="btn btn-dark text-white px-5 btn-lg"> </a>
+  <p class="article-post serif-font">  <u><a href={{site.baseurl}}/tripos">Cambridge Tripos Page</a></u> contains a (non-exhaustive) set of resources for the Computer Science and Linguistics Triposes.</p>
+  </div>
+  </div>
+
+
+    <!-- 
+
+
 {% for thing in things %}
     {% assign i = i | plus:1 %}
 {% endfor %}
@@ -145,6 +160,7 @@ background: '/img/bg-index.jpg'
       {% endunless %}
     
     </div>
+-->
     
     <!-- Pagination -->
     <div class="bottompagination">
