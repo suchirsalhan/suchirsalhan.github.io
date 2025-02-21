@@ -9,65 +9,120 @@ I previously completed my Bachelor of Arts and Masters in Engineering in Compute
 
 <body>
     <div class="container">
-        <h2>Part IA - Michaelmas Term</h2>
+        <h4>Computer Science Tripos</h4>
+        <h5>CST IB</h5>
         <table>
             <tr>
                 <th>Course</th>
-                <th>HTML</th>
                 <th>PDF</th>
-                <th>PDF (trim)</th>
-                <th>PDF (defs)</th>
-                <th>PDF (thm)</th>
-                <th>PDF (thm+proof)</th>
-                <th>TEX</th>
                 <th>Example Sheet</th>
                 <th>Official Notes</th>
             </tr>
             <tr>
-                <td>Differential Equations (2014, M. G. Worster)</td>
-                <td><a href="#">HTML</a></td>
+                <td>Data Science (Damon Wischik, 2025)</td>
                 <td><a href="#">PDF</a></td>
-                <td><a href="#">Trim</a></td>
-                <td><a href="#">Defs</a></td>
-                <td><a href="#">Thm</a></td>
-                <td><a href="#">Thm+Proof</a></td>
-                <td><a href="#">TEX</a></td>
+                <td><a href="#">Sheet</a></td>
+                <td><a href="#">Notes</a></td>
+            </tr>
+            <tr>
+                <td>Formal Models of Language (Paula Buttery, 2025)</td>
+                <td><a href="#">PDF</a></td>
+                <td><a href="#">Sheet</a></td>
+                <td><a href="#">Notes</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <h5>CST II</h5>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>PDF</th>
+                <th>Example Sheet</th>
+                <th>Official Notes</th>
+            </tr>
+            <tr>
+                <td>Machine Learning & Bayesian Inference (Sean Holden, 2025)</td>
+                <td><a href="#">PDF</a></td>
+                <td><a href="#">Sheet</a></td>
+                <td><a href="#">Notes</a></td>
+            </tr>
+            <tr>
+                <td>Information Theory (Robert Harle, 2025)</td>
+                <td><a href="#">PDF</a></td>
+                <td><a href="#">Sheet</a></td>
+                <td><a href="#">Notes</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4>Linguistics Tripos</h4>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>PDF</th>
+                <th>Example Sheet</th>
+                <th>Official Notes</th>
+            </tr>
+            <tr>
+                <td>Machine Learning & Bayesian Inference (Sean Holden, 2025)</td>
+                <td><a href="#">PDF</a></td>
                 <td><a href="#">Sheet</a></td>
                 <td><a href="#">Notes</a></td>
             </tr>
             <tr>
                 <td>Groups (2014, J. Goedecke)</td>
-                <td><a href="#">HTML</a></td>
                 <td><a href="#">PDF</a></td>
-                <td><a href="#">Trim</a></td>
-                <td><a href="#">Defs</a></td>
-                <td><a href="#">Thm</a></td>
-                <td><a href="#">Thm+Proof</a></td>
-                <td><a href="#">TEX</a></td>
                 <td><a href="#">Sheet</a></td>
                 <td><a href="#">Notes</a></td>
             </tr>
             <tr>
                 <td>Numbers and Sets (2014, A. G. Thomason)</td>
-                <td><a href="#">HTML</a></td>
                 <td><a href="#">PDF</a></td>
-                <td><a href="#">Trim</a></td>
-                <td><a href="#">Defs</a></td>
-                <td><a href="#">Thm</a></td>
-                <td><a href="#">Thm+Proof</a></td>
-                <td><a href="#">TEX</a></td>
                 <td><a href="#">Sheet</a></td>
                 <td><a href="#">Notes</a></td>
             </tr>
             <tr>
                 <td>Vectors and Matrices (2014, N. Peake)</td>
-                <td><a href="#">HTML</a></td>
                 <td><a href="#">PDF</a></td>
-                <td><a href="#">Trim</a></td>
-                <td><a href="#">Defs</a></td>
-                <td><a href="#">Thm</a></td>
-                <td><a href="#">Thm+Proof</a></td>
-                <td><a href="#">TEX</a></td>
+                <td><a href="#">Sheet</a></td>
+                <td><a href="#">Notes</a></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <h4>Mathematical Tripos</h4>
+        <table>
+            <tr>
+                <th>Course</th>
+                <th>PDF</th>
+                <th>Example Sheet</th>
+                <th>Official Notes</th>
+            </tr>
+            <tr>
+                <td>Machine Learning & Bayesian Inference (Sean Holden, 2025)</td>
+                <td><a href="#">PDF</a></td>
+                <td><a href="#">Sheet</a></td>
+                <td><a href="#">Notes</a></td>
+            </tr>
+            <tr>
+                <td>Groups (2014, J. Goedecke)</td>
+                <td><a href="#">PDF</a></td>
+                <td><a href="#">Sheet</a></td>
+                <td><a href="#">Notes</a></td>
+            </tr>
+            <tr>
+                <td>Numbers and Sets (2014, A. G. Thomason)</td>
+                <td><a href="#">PDF</a></td>
+                <td><a href="#">Sheet</a></td>
+                <td><a href="#">Notes</a></td>
+            </tr>
+            <tr>
+                <td>Vectors and Matrices (2014, N. Peake)</td>
+                <td><a href="#">PDF</a></td>
                 <td><a href="#">Sheet</a></td>
                 <td><a href="#">Notes</a></td>
             </tr>
@@ -75,15 +130,12 @@ I previously completed my Bachelor of Arts and Masters in Engineering in Compute
     </div>
 </body>
 
-<h1 class="font-weight-bold mb-4 serif-font">Computer Science Tripos (Part II/III/ACS):</h1>
+
 
 <h3 class="font-weight-bold mb-4 serif-font">Natural Language Syntax and Parsing</h3>
 
 <h3 class="font-weight-bold mb-4 serif-font">Computational Semantics</h3>
 
-<h3 class="font-weight-bold mb-4 serif-font">Computational Semantics</h3>
-
-<h3 class="font-weight-bold mb-4 serif-font">Machine Learning & Bayesian Inference</h3>
 
 <h3 class="font-weight-bold mb-4 serif-font">Advanced Topics in Machine Learning</h3>
 
@@ -97,7 +149,6 @@ I previously completed my Bachelor of Arts and Masters in Engineering in Compute
 
 <h3 class="font-weight-bold mb-4 serif-font">Machine Learning & Real World Data</h3>
 
-<h1 class="font-weight-bold mb-4 serif-font"> Linguistics Tripos:</h1>
 
 <h3 class="font-weight-bold mb-4 serif-font">Li18 Computational Linguistics</h3>
 
