@@ -14,20 +14,32 @@ I previously completed my Bachelor of Arts and Masters in Engineering in Compute
     <tr>
         <th>Course</th>
         <th>PDF</th>
-        <th>Example Sheet</th>
-        <th>Official Notes</th>
+        <th>Example Sheet   </th>
+        <th>Official Notes   </th>
     </tr>
     <tr>
-        <td>Data Science <br> <small>(Damon Wischik, 2025)</small></td>
+        <td>Data Science <br></td>
         <td><a href="#">PDF</a></td>
         <td><a href="#">Sheet</a></td>
         <td><a href="#">Notes</a></td>
     </tr>
-    <tr>
-        <td>Formal Models of Language <br> <small>(Paula Buttery, 2025)</small></td>
+        <tr>
+        <td>(Damon Wischik, 2025)</td>
+        <td><a href="#"></a></td>
+        <td><a href="#"></a></td>
+        <td><a href="#"></a></td>
+    </tr>
+<tr>
+        <td> Formal Models of Language <br></td>
         <td><a href="#">PDF</a></td>
         <td><a href="#">Sheet</a></td>
         <td><a href="#">Notes</a></td>
+    </tr>
+        <tr>
+        <td>(Paula Buttery, 2025)</td>
+        <td><a href="#"></a></td>
+        <td><a href="#"></a></td>
+        <td><a href="#"></a></td>
     </tr>
 </table>
         <h5>CST II</h5>
