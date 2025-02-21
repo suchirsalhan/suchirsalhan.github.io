@@ -4,7 +4,19 @@ title:
 permalink: "/tripos/"
 usemathjax: true
 ---
-
+        <style>
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+    }
+    th, td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: center;
+        width: 25%;
+    }
+</style>
 I previously completed my Bachelor of Arts and Masters in Engineering in Computer Science and Linguistics at Gonville & Caius College, University of Cambridge, where I obtained a Starred First (Class I with Distinction) and a Distinction (also equivalent to a starred First) respectively. Alongside teaching assistant and guest lecturer roles, I now supervise various courses in the Computer Science Tripos. 
 
 <body> 
@@ -14,34 +26,24 @@ I previously completed my Bachelor of Arts and Masters in Engineering in Compute
     <tr>
         <th>Course</th>
         <th>PDF</th>
-        <th>Example Sheet   </th>
-        <th>Official Notes   </th>
+        <th>Example Sheet</th>
+        <th>Official Notes</th>
     </tr>
     <tr>
-        <td>Data Science <br></td>
+        <td>Data Science <br> <small>(Damon Wischik, 2025)</small></td>
         <td><a href="#">PDF</a></td>
         <td><a href="#">Sheet</a></td>
         <td><a href="#">Notes</a></td>
     </tr>
-        <tr>
-        <td>(Damon Wischik, 2025)</td>
-        <td><a href="#"></a></td>
-        <td><a href="#"></a></td>
-        <td><a href="#"></a></td>
-    </tr>
-<tr>
-        <td> Formal Models of Language <br></td>
+    <tr>
+        <td>Formal Models of Language <br> <small>(Paula Buttery, 2025)</small></td>
         <td><a href="#">PDF</a></td>
         <td><a href="#">Sheet</a></td>
         <td><a href="#">Notes</a></td>
-    </tr>
-        <tr>
-        <td>(Paula Buttery, 2025)</td>
-        <td><a href="#"></a></td>
-        <td><a href="#"></a></td>
-        <td><a href="#"></a></td>
     </tr>
 </table>
+
+        
         <h5>CST II</h5>
         <table>
             <tr>
