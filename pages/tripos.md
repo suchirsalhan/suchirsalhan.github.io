@@ -8,7 +8,6 @@ usemathjax: true
 I previously completed my Bachelor of Arts and Masters in Engineering in Computer Science and Linguistics at Gonville & Caius College, University of Cambridge, where I obtained a Starred First (Class I with Distinction) and a Distinction (also equivalent to a starred First) respectively. Alongside teaching assistant and guest lecturer roles, I now supervise various courses in the Computer Science Tripos. 
 
 <body>
-    <div class="container">
         <h4>Computer Science Tripos</h4>
         <h5>CST IB</h5>
         <table>
@@ -52,7 +51,6 @@ I previously completed my Bachelor of Arts and Masters in Engineering in Compute
                 <td><a href="#">Notes</a></td>
             </tr>
         </table>
-    </div>
 </body>
 
 
