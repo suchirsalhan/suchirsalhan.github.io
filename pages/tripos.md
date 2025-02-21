@@ -31,10 +31,7 @@ I previously completed my Bachelor of Arts and Masters in Engineering in Compute
                 <td><a href="#">Notes</a></td>
             </tr>
         </table>
-    </div>
-
-    <div class="container">
-        <h5>CST II</h5>
+                <h5>CST II</h5>
         <table>
             <tr>
                 <th>Course</th>
@@ -43,85 +40,13 @@ I previously completed my Bachelor of Arts and Masters in Engineering in Compute
                 <th>Official Notes</th>
             </tr>
             <tr>
-                <td>Machine Learning & Bayesian Inference (Sean Holden, 2025)</td>
+                <td> Machine Learning & Bayesian Inference (Sean Holden, 2025)</td>
                 <td><a href="#">PDF</a></td>
                 <td><a href="#">Sheet</a></td>
                 <td><a href="#">Notes</a></td>
             </tr>
             <tr>
-                <td>Information Theory (Robert Harle, 2025)</td>
-                <td><a href="#">PDF</a></td>
-                <td><a href="#">Sheet</a></td>
-                <td><a href="#">Notes</a></td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="container">
-        <h4>Linguistics Tripos</h4>
-        <table>
-            <tr>
-                <th>Course</th>
-                <th>PDF</th>
-                <th>Example Sheet</th>
-                <th>Official Notes</th>
-            </tr>
-            <tr>
-                <td>Machine Learning & Bayesian Inference (Sean Holden, 2025)</td>
-                <td><a href="#">PDF</a></td>
-                <td><a href="#">Sheet</a></td>
-                <td><a href="#">Notes</a></td>
-            </tr>
-            <tr>
-                <td>Groups (2014, J. Goedecke)</td>
-                <td><a href="#">PDF</a></td>
-                <td><a href="#">Sheet</a></td>
-                <td><a href="#">Notes</a></td>
-            </tr>
-            <tr>
-                <td>Numbers and Sets (2014, A. G. Thomason)</td>
-                <td><a href="#">PDF</a></td>
-                <td><a href="#">Sheet</a></td>
-                <td><a href="#">Notes</a></td>
-            </tr>
-            <tr>
-                <td>Vectors and Matrices (2014, N. Peake)</td>
-                <td><a href="#">PDF</a></td>
-                <td><a href="#">Sheet</a></td>
-                <td><a href="#">Notes</a></td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="container">
-        <h4>Mathematical Tripos</h4>
-        <table>
-            <tr>
-                <th>Course</th>
-                <th>PDF</th>
-                <th>Example Sheet</th>
-                <th>Official Notes</th>
-            </tr>
-            <tr>
-                <td>Machine Learning & Bayesian Inference (Sean Holden, 2025)</td>
-                <td><a href="#">PDF</a></td>
-                <td><a href="#">Sheet</a></td>
-                <td><a href="#">Notes</a></td>
-            </tr>
-            <tr>
-                <td>Groups (2014, J. Goedecke)</td>
-                <td><a href="#">PDF</a></td>
-                <td><a href="#">Sheet</a></td>
-                <td><a href="#">Notes</a></td>
-            </tr>
-            <tr>
-                <td>Numbers and Sets (2014, A. G. Thomason)</td>
-                <td><a href="#">PDF</a></td>
-                <td><a href="#">Sheet</a></td>
-                <td><a href="#">Notes</a></td>
-            </tr>
-            <tr>
-                <td>Vectors and Matrices (2014, N. Peake)</td>
+                <td> Information Theory (Robert Harle, 2025)</td>
                 <td><a href="#">PDF</a></td>
                 <td><a href="#">Sheet</a></td>
                 <td><a href="#">Notes</a></td>
