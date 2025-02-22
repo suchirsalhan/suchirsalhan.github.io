@@ -14,7 +14,7 @@ usemathjax: true
         table-layout: fixed;
     }
     th, td {
-        border: 1px solid black;
+        border: 0px solid black;
         padding: 10px;
         text-align: center;
         width: 25%;
@@ -75,7 +75,6 @@ I previously completed my Bachelor of Arts and Masters in Engineering in Compute
 </body> 
 
 <h3 class="font-weight-bold mb-4 serif-font">Natural Language Syntax and Parsing</h3>
-<body> 
 
 L95, a course taught in Cambridge University's MPhil in Advanced Computer Science (ACS), covers formal methods for parsing and neural algorithms. 
         
@@ -112,8 +111,6 @@ L95, a course taught in Cambridge University's MPhil in Advanced Computer Scienc
         </td>
     </tr>
 </table>
-
-</body> 
 
 
 <h3 class="font-weight-bold mb-4 serif-font">Computational Semantics</h3>
