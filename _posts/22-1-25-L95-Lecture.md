@@ -15,6 +15,6 @@ thesis: True
 
 <table style="width:80%">
   <tr>
-    <th><a href="{{site.baseurl}}/assets/papers/2410.22886v1.pdf" class="btn btn-dark text-white px-5 btn-lg">PDF</a></th>
+    <th><a href="{{site.baseurl}}/assets/papers/L95_BLiMP.pdf" class="btn btn-dark text-white px-5 btn-lg">PDF</a></th>
   </tr>
 </table>
