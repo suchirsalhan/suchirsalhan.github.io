@@ -4,7 +4,7 @@ timezone: UTC
 baseurl: ""
 permalink: "/:title/"
 logo: 'assets/images/logo.svg'
-favicon: 'assets/images/favicon.ico'
+favicon: 'assets/images/logo.svg'
 author: Suchir
 paginate: 30
 disqus: 'demowebsite'
