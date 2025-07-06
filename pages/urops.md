@@ -13,13 +13,17 @@ usemathjax: true
         table-layout: fixed;
     }
     th, td {
-        border: 0px solid black;
         padding: 10px;
         text-align: center;
         width: 25%;
+        border-bottom: 1px solid #ccc; /* Adds horizontal lines between rows */
+    }
+    tr:last-child td {
+        border-bottom: none; /* Remove border after last row */
     }
 </style>
 {% endraw %}
+
 
 <h1>Cambridge University UROPs 2025: Small Language Models Research Projects</h1>
 
