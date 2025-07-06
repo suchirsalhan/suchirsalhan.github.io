@@ -16,13 +16,20 @@ usemathjax: true
         padding: 10px;
         text-align: center;
         width: 25%;
-        border-bottom: 1px solid #ccc; /* Adds horizontal lines between rows */
+        border-bottom: 1px solid #ccc;
+    }
+    tr:nth-child(even) {
+        background-color: #FFFFC5; /* Light Yellow for even rows */
+    }
+    tr:nth-child(odd) {
+        background-color: #F0FFF0; /* Light Green for Odd Rows */
     }
     tr:last-child td {
-        border-bottom: none; /* Remove border after last row */
+        border-bottom: none;
     }
 </style>
 {% endraw %}
+
 
 
 <h1>Cambridge University UROPs 2025: Small Language Models Research Projects</h1>
