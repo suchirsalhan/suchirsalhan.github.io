@@ -57,8 +57,70 @@ usemathjax: true
             <strong>Recommended Additional Readings:</strong><br>
             <a href="https://aclanthology.org/2023.conll-babylm.10/"> CLIMB – Curriculum Learning for Infant-inspired Model Building </a><br>
             <a href="[https://aclanthology.org/2023.conll-babylm.10/"> Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies </a><br>
+         <strong>Practical Tasks:</strong><br>
+         TO DO <br>
         </td>
     </tr>
+
+ <tr>
+         <td>2</td>
+        <td>Bilingual BabyLM Training and Evaluation</td>
+        <td>
+            <a href="#">Slides</a> | <a href="#">Notes</a> | <a href="#">Code</a><br>
+            <strong>Required Readings:</strong><br>
+            <a href="https://arxiv.org/pdf/2503.03962"> On the Acquisition of Shared Grammatical Representations in Bilingual Language Models </a><br>
+            <a href="https://arxiv.org/abs/2504.02768"> MultiBLiMP 1.0 </a><br>
+            <strong>Recommended Additional Readings:</strong><br>
+             <a href="https://universaldependencies.org/"> Universal Dependencies </a><br>
+         <strong>Practical Tasks:</strong><br>
+         TO DO <br>
+        </td>
+    </tr> 
+
+ <tr>
+         <td>3</td>
+        <td> Pretraining Language Models: The Pico Framework</td>
+        <td>
+            <a href="#">Slides</a> | <a href="#">Notes</a> | <a href="#">Code</a><br>
+            <strong>Required Readings:</strong><br>
+            <a href="https://www.picolm.io/guides/train"> Pico Train Tutorial </a><br>
+            <a href="https://www.picolm.io/guides/analyze"> Pico Analyze Tutorial </a><br>
+            <strong>Recommended Additional Readings:</strong><br>
+            TO DO <br>
+         <strong>Practical Tasks:</strong><br>
+         TO DO <br>
+        </td>
+    </tr> 
+
+
+ <tr>
+         <td>4</td>
+        <td> BabyLM Architectures & Feedback (ALTA CST)</td>
+        <td>
+            <a href="#">Slides</a> | <a href="#">Notes</a> | <a href="#">Code</a><br>
+            <strong>Required Readings:</strong><br>
+            <a href="https://arxiv.org/abs/2308.02019"> BabyLLama </a><br>
+            TO DO <br>
+         <strong>Practical Tasks:</strong><br>
+         TO DO <br>
+        </td>
+    </tr> 
+
+ <tr>
+         <td>4</td>
+        <td> Mechanistic and Developmental Interpretability</td>
+        <td>
+            <a href="#">Slides</a> | <a href="#">Notes</a> | <a href="#">Code</a><br>
+            <strong>Required Readings:</strong><br>
+            <a href="https://arxiv.org/pdf/2311.03658"> The Linear Representation Hypothesis and the Geometry of Large Language Models</a><br>
+            <strong>Additional Readings:</strong><br>
+            <a href="https://drive.google.com/file/d/1yaBGi6RQdcGlGfjjGLGf5fo0TaINpsLm/view?usp=sharing"> Slides from Arthur Conmy (Google DeepMind)</a><br>
+         <strong>Practical Tasks:</strong><br>
+         TO DO <br>
+        </td>
+    </tr> 
+
+
 </table>
 
 
