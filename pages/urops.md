@@ -22,7 +22,8 @@ usemathjax: true
 </style>
 {% endraw %}
 
-Cambridge University UROPs 2025: Small Language Models Research Projects
+<h3>Cambridge University UROPs 2025: Small Language Models Research Projects</h3>
+
 <body> 
 
 
@@ -35,7 +36,7 @@ Cambridge University UROPs 2025: Small Language Models Research Projects
     </tr>
       <tr>
         <td colspan="3">
-            <strong>Small Langauge Models:</strong><br>
+            <strong>Small Language Models:</strong><br>
             <a href="https://stanford-cs336.github.io/spring2025-lectures/?trace=var/traces/lecture_01.json">CS335 Language Models from Scratch</a><br>
             <a href="https://web.stanford.edu/class/cs224u/slides/cs224u-contextualreps-2023-handout.pdf">CS224U Contextual Word Representations</a><br>
             <a href="https://web.stanford.edu/class/cs224u/slides/lisa-224u-diffusion.pdf">CS224U Diffusion Models for Text</a><br>
@@ -49,14 +50,13 @@ Cambridge University UROPs 2025: Small Language Models Research Projects
         <td>BabyLMs and Multilingual Evaluation</td>
         <td>
             <a href="#">Slides</a> | <a href="#">Notes</a> | <a href="#">Code</a><br>
-            <strong>Suggested Readings:</strong><br>
-            <a href="#">GloVe: Global Vectors for Word Representation</a> (original GloVe paper)<br>
-            <a href="#">Improving Distributional Similarity with Lessons Learned from Word Embeddings</a><br>
-            <a href="#">Evaluation methods for unsupervised word embeddings</a><br>
-            <strong>Additional Readings:</strong><br>
-            <a href="#">A Latent Variable Model Approach to PMI-based Word Embeddings</a><br>
-            <a href="#">Linear Algebraic Structure of Word Senses, with Applications to Polysemy</a><br>
-            <a href="#">On the Dimensionality of Word Embedding</a>
+            <strong>Required Readings:</strong><br>
+            <a href="https://aclanthology.org/2023.conll-babylm.1.pdf"> Findings of the 1st BabyLM Challenge </a><br>
+            <a href="https://aclanthology.org/2023.conll-babylm.1.pdf"> Findings of the 2nd BabyLM Challenge </a><br>
+            <a href="https://suchirsalhan.github.io/assets/papers/L95_BLiMP.pdf"> Handout on Language Model Evaluation</a> (Suchir Salhan, L95 MPhil ACS)<br>
+            <strong>Recommended Additional Readings:</strong><br>
+            <a href="https://aclanthology.org/2023.conll-babylm.10/"> CLIMB – Curriculum Learning for Infant-inspired Model Building </a><br>
+            <a href="[https://aclanthology.org/2023.conll-babylm.10/"> Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies </a><br>
         </td>
     </tr>
 </table>
