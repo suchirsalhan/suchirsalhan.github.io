@@ -22,12 +22,9 @@ usemathjax: true
 </style>
 {% endraw %}
 
-<h3>Cambridge University UROPs 2025: Small Language Models Research Projects</h3>
+<h1>Cambridge University UROPs 2025: Small Language Models Research Projects</h1>
 
 <body> 
-
-
-
 <table>
     <tr>
         <th>Week</th>
@@ -153,14 +150,11 @@ usemathjax: true
          <strong> Final Project Presentations and UROP Project Reports (Friday 5 September 2025, Due 5pm)</strong>  <br>
         </td>
     </tr> 
-
-
 </table>
-
-
 </body> 
 
 <h3 class="font-weight-bold mb-4 serif-font">Language Model Primers</h3>
+<body> 
 
 Stanford CS224N and CS336: 
 
@@ -169,11 +163,11 @@ Stanford CS224N and CS336:
     <li><a href="https://web.stanford.edu/class/cs224u/slides/cs224u-contextualreps-2023-handout.pdf"><u>CS224U Contextual Word Representations</u></a></li>
     <li><a href="https://web.stanford.edu/class/cs224u/slides/cs224u-incontextlearning-2023-handout.pdf"><u>CS224U In-Context Learning</u></a></li>
 </ul>
-
+</body> 
 
 
 <h3 class="font-weight-bold mb-4 serif-font">Small Language Models</h3>
-
+<body> 
 <ul>
     <li><a href="https://web.stanford.edu/class/cs224u/slides/lisa-224u-diffusion.pdf"><u>CS224U Diffusion Models for Text</u></a></li>
     <li><a href="https://arxiv.org/pdf/2411.03350"><u>A Comprehensive Survey of Small Language Models in the Era of Large Language Models</u></a></li>
@@ -189,15 +183,14 @@ Stanford CS224N and CS336:
 <ul>
     <li><a href="https://web.stanford.edu/class/cs224u/slides/lisa-224u-diffusion.pdf"><u>CS224U Diffusion Models for Text</u></a></li>
     <li><a href="https://spacehunterinf.github.io/blog/2025/diffusion-language-models/"><u>What are Diffusion Language Models? Blogpost by Xiaochen Zhu (NLIP Group, PhD Student)</u></a></li>
-
 </ul>
-
+</body> 
 
 <h3 class="font-weight-bold mb-4 serif-font">Useful Links (Raven Access Required)</h3>
-
+<body> 
 See Dr Andrew Caines's Page for lots of useful advice, in particular about the access to compute resources. 
 
 Dr Russell Moore previously developed his ML Commando Course for the 2021 ALTA UROPs, which you might find helpful. 
- 
+</body> 
 
 
