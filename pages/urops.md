@@ -59,16 +59,19 @@ usemathjax: true
 
     <tr>
         <td>2 (21/07)</td>
-        <td>Bilingual BabyLM Training and Evaluation</td>
+        <td> Tokenisation and Interpretability Bilingual BabyLM Training and Evaluation</td>
         <td>
             <a href="#">Slides</a> | <a href="#">Notes</a> | <a href="#">Code</a><br>
             <strong>Required Readings:</strong><br>
-            <a href="https://arxiv.org/pdf/2503.03962">On the Acquisition of Shared Grammatical Representations in Bilingual Language Models</a><br>
-            <a href="https://arxiv.org/abs/2504.02768">MultiBLiMP 1.0</a><br>
+            <a href="https://arxiv.org/pdf/2311.03658">The Linear Representation Hypothesis and the Geometry of Large Language Models</a><br>
+            <a href="https://drive.google.com/file/d/1yaBGi6RQdcGlGfjjGLGf5fo0TaINpsLm/view?usp=sharing">Slides from Arthur Conmy (Google DeepMind)</a><br>
+
             <strong>Recommended Additional Readings:</strong><br>
             <a href="https://universaldependencies.org/">Universal Dependencies</a><br>
+            <a href="https://arxiv.org/pdf/2503.03962">On the Acquisition of Shared Grammatical Representations in Bilingual Language Models</a><br>
+            <a href="https://arxiv.org/abs/2504.02768">MultiBLiMP 1.0</a><br>
             <strong>Practical Tasks:</strong><br>
-            TO DO<br>
+             <a href="https://transformerlensorg.github.io/TransformerLens/"> The TransformerLens Library</a>   <br>
         </td>
     </tr>
 
@@ -106,9 +109,8 @@ usemathjax: true
         <td>
             <a href="#">Slides</a> | <a href="#">Notes</a> | <a href="#">Code</a><br>
             <strong>Required Readings:</strong><br>
-            <a href="https://arxiv.org/pdf/2311.03658">The Linear Representation Hypothesis and the Geometry of Large Language Models</a><br>
+
             <strong>Additional Readings:</strong><br>
-            <a href="https://drive.google.com/file/d/1yaBGi6RQdcGlGfjjGLGf5fo0TaINpsLm/view?usp=sharing">Slides from Arthur Conmy (Google DeepMind)</a><br>
             <strong>Practical Tasks:</strong><br>
             <strong>Interim Project Presentation</strong><br>
         </td>
