@@ -33,6 +33,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="research.html">Research</a></li>
+          <li><a href="beetle.html">Beetle</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="teaching.html">Teaching</a></li>
           <li><a href="talks.html">Talks</a></li>
@@ -82,6 +83,28 @@
       </div>
     </section>
 
+    <!-- Flagship: Beetle -->
+    <section class="section beetle-flag">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <a class="beetle-flag-img" href="beetle.html">
+              <img src="assets/beetle/beetle-fig1.jpg" alt="The Beetle framework diagram" loading="lazy">
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <span class="eyebrow-k">Flagship framework · the foundation of my PhD</span>
+            <h2 style="margin:8px 0 12px">Beetle</h2>
+            <p class="lead">An open-source framework <strong>I designed and built</strong> for <strong>controlled bilingual &amp; multilingual pretraining and interpretability</strong>. I trained <strong>114 language models</strong> across 13 typologically-diverse first languages, 5 exposure curricula and 3 data scales — small Beetle models rival multilingual LLMs up to <strong>8B parameters</strong> on human L2 reading-time.</p>
+            <div class="chip-row" style="margin-bottom:18px">
+              <span class="chip">114 models</span><span class="chip">13 L1s</span><span class="chip">5 curricula</span><span class="chip">first-author paper · under review</span>
+            </div>
+            <a href="beetle.html" class="btn-pill solid"><i class="bi bi-arrow-right"></i> Explore Beetle</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Research summary + themes sideblock -->
     <section class="section home-sec">
       <div class="container">
@@ -99,7 +122,7 @@
               <ul>
                 <li><i class="bi bi-diagram-3"></i><span><b>Cognitively-Inspired Design &amp; Evaluation</b> — developmentally plausible models &amp; evaluation.</span></li>
                 <li><i class="bi bi-cpu"></i><span><b>Pretraining &amp; Interpretability</b> — learning dynamics of small LMs via Pico.</span></li>
-                <li><i class="bi bi-globe2"></i><span><b>Multilinguality</b> — human-scale, cross-lingual, bilingual competence.</span></li>
+                <li><i class="bi bi-globe2"></i><span><b>Multilinguality</b> — human-scale, cross-lingual, bilingual competence via <a href="beetle.html">Beetle</a>.</span></li>
                 <li><i class="bi bi-flower1"></i><span><b>Tokenization</b> — information-driven subword segmentation (ByteSpan).</span></li>
                 <li><i class="bi bi-pencil-square"></i><span><b>Alignment &amp; Interaction</b> — pedagogical alignment, student proxies.</span></li>
                 <li><i class="bi bi-soundwave"></i><span><b>Cognitive Science &amp; Linguistics</b> — grammar induction, cross-lingual phonology.</span></li>
@@ -249,6 +272,14 @@
       </div>
     </section>
   </main>
+
+  <style>
+    .beetle-flag { background: linear-gradient(135deg, var(--accent-soft) 0%, var(--tint-bg) 100%); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+    .beetle-flag .eyebrow-k { color: var(--accent-deep); }
+    .beetle-flag-img { display:block; border-radius:18px; overflow:hidden; border:1px solid var(--line); box-shadow: 0 18px 44px rgba(42,39,32,0.16); background: var(--surface-color); transition: transform .25s, box-shadow .25s; }
+    .beetle-flag-img:hover { transform: translateY(-4px); box-shadow: 0 24px 56px rgba(76,99,66,0.22); }
+    .beetle-flag-img img { display:block; width:100%; max-width:100%; height:auto; }
+  </style>
 
   <footer class="footer">
     <div class="container">

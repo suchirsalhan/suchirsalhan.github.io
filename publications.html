@@ -24,6 +24,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="research.html">Research</a></li>
+          <li><a href="beetle.html">Beetle</a></li>
           <li><a href="publications.html" class="active">Publications</a></li>
           <li><a href="teaching.html">Teaching</a></li>
           <li><a href="talks.html">Talks</a></li>
@@ -71,6 +72,11 @@
                 <a class="lnk" href="https://aclanthology.org/2025.emnlp-demos.22/"><i class="bi bi-file-text"></i> ACL Anthology</a>
                 <a class="lnk" href="https://www.picolm.io/"><i class="bi bi-box-arrow-up-right"></i> Project</a>
               </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="https://aclanthology.org/2025.emnlp-demos.22/" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/babylm%20+%20pico.jpg" alt="Pico paper first page"></a>
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-1">Abstract <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-1" hidden><span class="abs-label">Abstract</span>Building language models (LMs), especially small and medium ones, remains more art than science. While large LMs often improve by sheer scale, it is still unclear why many design choices work. For small LMs, this uncertainty is more limiting: tight parameter budgets make each decision critical, yet researchers still lack systematic, scientific ways to test and refine new ideas. We introduce Pico, a lightweight, modular framework that enables systematic, hypothesis-driven research for small and medium-scale language model development. Pico consists of two libraries that together provide a practical sandbox where researchers can make targeted changes to a model's architecture or training procedures and directly observe their effects on the model's behavior. To support reproducible experimentation, we also release a suite of baseline models, pico-decoder, trained under standardized conditions and open-sourced for the community. Case studies highlight how Pico can support iterative small LM design and analysis.</div>
+              </div>
             </div>
           </div>
 
@@ -82,6 +88,10 @@
               <div class="venue">EACL 2026 (Main Conference) · Rabat, Morocco</div>
               <div class="meta">
                 <a class="lnk" href="https://babylm.github.io/babybabellm/"><i class="bi bi-box-arrow-up-right"></i> Project</a>
+              </div>
+              <div class="pub-extra">
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-2">Abstract <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-2" hidden><span class="abs-label">Abstract</span>We present BabyBabelLM, a multilingual collection of datasets modeling the language a person observes from birth until they acquire a native language. The project curates developmentally plausible training data covering approximately 100 million English word-equivalents across 45 languages, creates evaluation benchmarks, and trains baseline models to support multilingual pretraining research and language acquisition studies.</div>
               </div>
             </div>
           </div>
@@ -209,6 +219,11 @@
               <div class="meta">
                 <a class="lnk" href="https://aclanthology.org/2024.conll-babylm.15/"><i class="bi bi-file-text"></i> ACL Anthology</a>
               </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="https://aclanthology.org/2024.conll-babylm.15/" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/2410.22886v1.jpg" alt="Less is More paper first page"></a>
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-13">Abstract <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-13" hidden><span class="abs-label">Abstract</span>Curriculum Learning has been a popular strategy to improve the cognitive plausibility of Small-Scale Language Models (SSLMs) in the BabyLM Challenge. However, it has not led to considerable improvements over non-curriculum models. We assess whether theoretical linguistic acquisition theories can be used to specify more fine-grained curriculum learning strategies, creating age-ordered corpora of Child-Directed Speech for four typologically distant language families to implement SSLMs and acquisition-inspired curricula cross-lingually. Comparing the success of three objective curricula (Growing, Inwards &amp; MMM) that precisely replicate the predictions of acquisition theories on a standard SSLM architecture, we find fine-grained acquisition-inspired curricula can outperform non-curriculum baselines and performance benefits of curricula strategies in SSLMs can be derived by specifying fine-grained language-specific curricula that precisely replicate language acquisition theories.</div>
+              </div>
             </div>
           </div>
 
@@ -218,10 +233,13 @@
               <div class="t"><a href="https://arxiv.org/abs/2506.18639">ByteSpan: Information-Driven Subword Tokenisation</a></div>
               <div class="auth">Zebulon Goriely, <b>Suchir Salhan</b>, Pietro Lesci, Julius Cheng, Paula Buttery</div>
               <div class="venue">ICML 2025 Tokenization Workshop (TokShop) · Vancouver, Canada (August 2025)</div>
-              <div class="abs">Recent dynamic tokenisation methods operate directly on bytes and pool their latent representations into patches. This bears similarities to computational models of word segmentation that determine lexical boundaries using spikes in an autoregressive model's prediction error. Inspired by this connection, we explore whether grouping predictable bytes — rather than pooling their representations — can yield a useful fixed subword vocabulary. We propose a new information-driven subword tokeniser, ByteSpan, that uses an external byte-level LM during training to identify contiguous predictable byte sequences and group them into subwords. Experiments show that ByteSpan yields efficient vocabularies with higher morphological alignment scores than BPE for English. Multilingual experiments show similar compression and Rényi efficiency for 25 languages.</div>
               <div class="meta">
                 <a class="lnk" href="https://arxiv.org/abs/2506.18639"><i class="bi bi-file-text"></i> arXiv</a>
                 <a class="lnk" href="https://openreview.net/forum?id=5AnYuCoCsf&amp;noteId=z9aNzxmVFt"><i class="bi bi-chat-square-text"></i> OpenReview</a>
+              </div>
+              <div class="pub-extra">
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-14">Abstract <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-14" hidden><span class="abs-label">Abstract</span>Recent dynamic tokenisation methods operate directly on bytes and pool their latent representations into patches. This bears similarities to computational models of word segmentation that determine lexical boundaries using spikes in an autoregressive model's prediction error. Inspired by this connection, we explore whether grouping predictable bytes — rather than pooling their representations — can yield a useful fixed subword vocabulary. We propose a new information-driven subword tokeniser, ByteSpan, that uses an external byte-level LM during training to identify contiguous predictable byte sequences and group them into subwords. Experiments show that ByteSpan yields efficient vocabularies with higher morphological alignment scores than BPE for English. Multilingual experiments show similar compression and Rényi efficiency for 25 languages.</div>
               </div>
             </div>
           </div>
@@ -237,6 +255,11 @@
                 <a class="lnk" href="assets/presentations/acl2025.pdf" target="_blank"><i class="bi bi-easel"></i> Slides</a>
                 <a class="lnk" href="assets/posters/ACL_Poster.pdf" target="_blank"><i class="bi bi-easel2"></i> Poster</a>
               </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="assets/posters/ACL_Poster.pdf" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/ACL_Poster.jpg" alt="ACL 2025 poster preview"></a>
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-15">Abstract <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-15" hidden><span class="abs-label">Summary</span>Introduces information-theoretic measures — derivational entropy rates alongside mean length of utterance — for quantifying grammatical diversity from small corpora, and shows that these estimates remain robust to the choice of syntactic annotation scheme (annotation invariance) and to limited corpus size.</div>
+              </div>
             </div>
           </div>
 
@@ -246,10 +269,14 @@
               <div class="t"><a href="https://aclanthology.org/2025.mrl-main.8/">Meta-Pretraining for Zero-Shot Cross-Lingual Named Entity Recognition in Low-Resource Philippine Languages</a></div>
               <div class="auth">David Demitri Africa, <b>Suchir Salhan</b>, Yuval Weiss, Paula Buttery, Richard Diehl-Martinez</div>
               <div class="venue">5th Workshop on Multilingual Representation Learning (MRL), EMNLP 2025 · Suzhou, China</div>
-              <div class="abs">Named-entity recognition (NER) in low-resource languages is usually tackled by finetuning very large multilingual LMs, an option that is often infeasible in memory- or latency-constrained settings. We ask whether small decoder LMs can be pretrained so that they adapt quickly and transfer zero-shot to languages unseen during pretraining. To this end we replace part of the autoregressive objective with first-order model-agnostic meta-learning (MAML). Tagalog and Cebuano are typologically similar yet structurally different in their actor/non-actor voice systems, and hence serve as a challenging test-bed. Across four model sizes (11 M – 570 M) MAML lifts zero-shot micro-F1 by 2–6 pp under head-only tuning and 1–3 pp after full tuning, while cutting convergence time by up to 8%. Gains are largest for single-token person entities that co-occur with Tagalog case particles si/ni, highlighting the importance of surface anchors.</div>
               <div class="meta">
                 <a class="lnk" href="https://aclanthology.org/2025.mrl-main.8/"><i class="bi bi-file-text"></i> ACL Anthology</a>
                 <a class="lnk" href="assets/posters/Pico_MAML_Multilingual_Representation_Learning_Workshop.pdf" target="_blank"><i class="bi bi-easel2"></i> Poster</a>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="assets/posters/Pico_MAML_Multilingual_Representation_Learning_Workshop.pdf" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/Pico_MAML_Multilingual_Representation_Learning_Workshop.jpg" alt="MAML NER poster preview"></a>
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-16">Abstract <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-16" hidden><span class="abs-label">Abstract</span>Named-entity recognition (NER) in low-resource languages is usually tackled by finetuning very large multilingual LMs, an option that is often infeasible in memory- or latency-constrained settings. We ask whether small decoder LMs can be pretrained so that they adapt quickly and transfer zero-shot to languages unseen during pretraining. To this end we replace part of the autoregressive objective with first-order model-agnostic meta-learning (MAML). Tagalog and Cebuano are typologically similar yet structurally different in their actor/non-actor voice systems, and hence serve as a challenging test-bed. Across four model sizes (11 M – 570 M) MAML lifts zero-shot micro-F1 by 2–6 pp under head-only tuning and 1–3 pp after full tuning, while cutting convergence time by up to 8%. Gains are largest for single-token person entities that co-occur with Tagalog case particles si/ni, highlighting the importance of surface anchors.</div>
               </div>
             </div>
           </div>
@@ -264,6 +291,10 @@
                 <a class="lnk" href="https://aclanthology.org/2025.babylm-main.25/"><i class="bi bi-file-text"></i> ACL Anthology</a>
                 <span class="badge-award"><i class="bi bi-award"></i> Outstanding Paper Award</span>
               </div>
+              <div class="pub-extra">
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-17">Abstract <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-17" hidden><span class="abs-label">Abstract</span>Multi-turn dialogues between a child and caregiver are characterized by a property called contingency – prompt, direct, and meaningful exchanges between interlocutors. We introduce ContingentChat, a Teacher–Student framework that benchmarks and improves multi-turn contingency in a BabyLM trained on 100M words. Using a novel alignment dataset for post-training, BabyLM generates responses that are more grammatical and cohesive. Experiments with adaptive Teacher decoding strategies show limited additional gains. ContingentChat highlights the positive benefits of targeted post-training on dialogue quality and presents contingency as a challenging goal for BabyLMs.</div>
+              </div>
             </div>
           </div>
 
@@ -277,6 +308,11 @@
                 <a class="lnk" href="https://aclanthology.org/2025.babylm-main.15/"><i class="bi bi-file-text"></i> ACL Anthology</a>
                 <span class="badge-award"><i class="bi bi-award"></i> Outstanding Paper Award</span>
               </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="https://aclanthology.org/2025.babylm-main.15/" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/Bmg44_MPhil_Project%20(1).jpg" alt="Looking to Learn first page"></a>
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-18">Abstract <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-18" hidden><span class="abs-label">Abstract</span>Training vision-language models on cognitively-plausible amounts of data requires rethinking how models integrate multimodal information. Within the constraints of the Vision track for the BabyLM Challenge 2025, we propose a lightweight decoder-based architecture with (1) token-wise dynamic gating for adaptive fusion of linguistic and visual cues, (2) feature modulation and channel attention to maximise the utility of limited visual information and (3) auxiliary contrastive objectives for visual grounding. Evaluation on five benchmarks (BLiMP, BLiMP Supplement, EWoK, Winoground and VQA) shows competitive or superior performance to multimodal baselines. More notably, our dynamic gate discovers interpretable patterns without explicit supervision, favouring visual cues for content words and linguistic cues for function words. While we identify limitations in the Challenge constraints, such as the information bottleneck created by global image embeddings and training instability from the dataset split, our findings establish dynamic gating as a powerful tool for efficient multimodal learning, offering both interpretability and performance even under severe constraints.</div>
+              </div>
             </div>
           </div>
 
@@ -288,6 +324,10 @@
               <div class="venue">BabyLM Workshop, EMNLP 2025 · Suzhou, China</div>
               <div class="meta">
                 <a class="lnk" href="https://aclanthology.org/2025.babylm-main.13/"><i class="bi bi-file-text"></i> ACL Anthology</a>
+              </div>
+              <div class="pub-extra">
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-19">Abstract <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-19" hidden><span class="abs-label">Abstract</span>Cross-lingual extensions of the BabyLM Shared Task beyond English incentivise the development of Small Language Models that simulate a much wider range of language acquisition scenarios, including code-switching, simultaneous and successive bilingualism and second language acquisition. However, to our knowledge, there is no benchmark of the formal competence of cognitively-inspired models of L2 acquisition, or L2LMs. To address this, we introduce a Benchmark of Learner Interlingual Syntactic Structure (BLiSS). BLiSS consists of 1.5M naturalistic minimal pairs dataset derived from errorful sentence–correction pairs in parallel learner corpora. These are systematic patterns – overlooked by standard benchmarks of the formal competence of Language Models – which we use to evaluate L2LMs trained in a variety of training regimes on specific properties of L2 learner language to provide a linguistically-motivated framework for controlled measure of the interlanguage competence of L2LMs.</div>
               </div>
             </div>
           </div>
@@ -302,6 +342,11 @@
                 <a class="lnk" href="https://aclanthology.org/2025.babylm-main.10/"><i class="bi bi-file-text"></i> ACL Anthology</a>
                 <a class="lnk" href="assets/posters/BabyLM%20Sequence%20Length%20Poster.pdf" target="_blank"><i class="bi bi-easel2"></i> Poster</a>
               </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="assets/posters/BabyLM%20Sequence%20Length%20Poster.pdf" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/BabyLM%20Sequence%20Length%20Poster.jpg" alt="Sequence length poster preview"></a>
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-20">Abstract <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-20" hidden><span class="abs-label">Abstract</span>Transformer language models typically operate with a fixed-length context window, which has grown in step with large-scale pretraining datasets. In the BabyLM Challenge, however, many past submissions have defaulted to using much shorter sequence lengths. We examine the impact of sequence length on BabyLM pretraining, to answer the simple question: what sequence length should we be using when training Baby LMs? Using 100M-word training data and fixed compute budgets, we compare 125M-parameter Mamba and OPT models, finding that although longer is often better, the optimal length depends on both task and architecture. Shorter sequences are sufficient for grammatical generalization tasks whereas longer contexts benefit morphological analogical reasoning tasks.</div>
+              </div>
             </div>
           </div>
 
@@ -313,6 +358,9 @@
               <div class="venue">NeurIPS First Workshop on CogInterp: Interpreting Cognition in Deep Learning Models, 2025 · San Diego, California, USA</div>
               <div class="meta">
                 <a class="lnk" href="assets/posters/CogInterp%20NEURIPS%20Poster.pdf" target="_blank"><i class="bi bi-easel2"></i> Poster</a>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="assets/posters/CogInterp%20NEURIPS%20Poster.pdf" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/CogInterp%20NEURIPS%20Poster.jpg" alt="CogInterp NeurIPS poster preview"></a>
               </div>
             </div>
           </div>
@@ -326,6 +374,9 @@
               <div class="meta">
                 <a class="lnk" href="assets/posters/CogInterp%20NEURIPS%20Poster_2.pdf" target="_blank"><i class="bi bi-easel2"></i> Poster</a>
               </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="assets/posters/CogInterp%20NEURIPS%20Poster_2.pdf" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/CogInterp%20NEURIPS%20Poster_2.jpg" alt="CogInterp NeurIPS poster (II) preview"></a>
+              </div>
             </div>
           </div>
 
@@ -335,6 +386,9 @@
               <div class="t">Glints of Gold or Troubling Waters? Can a School of Merged Monolingual Goldfish Models Swim in Bilingual Seas?</div>
               <div class="auth"><b>Suchir Salhan</b>, EJ Zhou, Laura Barbenel, Aoife O'Driscoll, Lily Goulder, Lucas Resck, Catherine Arnett &amp; Paula Buttery</div>
               <div class="venue">EACL Workshop on Multilingual Multicultural Evaluation (MME), Non-Archival Full Paper, 2026 · Rabat, Morocco</div>
+              <div class="pub-extra">
+                <span class="pub-thumb"><img loading="lazy" src="assets/thumbs/EACL_2026_MME_Workshop.jpg" alt="MME workshop paper first page"></span>
+              </div>
             </div>
           </div>
 
@@ -380,6 +434,9 @@
               <div class="meta">
                 <a class="lnk" href="https://www.mmll.cam.ac.uk/files/v15_salhan_2.pdf"><i class="bi bi-file-text"></i> PDF</a>
               </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="https://www.mmll.cam.ac.uk/files/v15_salhan_2.pdf" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/v15_salhan_2.jpg" alt="CoPiL Vol. 15 paper first page"></a>
+              </div>
             </div>
           </div>
 
@@ -389,6 +446,9 @@
               <div class="t">Multimodal Language Modelling across Languages and Cultures: Grounding Strategies for Nouns and Verbs</div>
               <div class="auth"><b>Salhan, Suchir</b>, Liu, Fangyu &amp; Collier, Nigel (2022 / preprint)</div>
               <div class="venue">Research Project, Language Technology Lab, Department of Theoretical and Applied Linguistics, University of Cambridge</div>
+              <div class="pub-extra">
+                <span class="pub-thumb"><img loading="lazy" src="assets/thumbs/CollierLiu.jpg" alt="Multimodal grounding paper first page"></span>
+              </div>
             </div>
           </div>
 
@@ -401,6 +461,9 @@
               <div class="meta">
                 <a class="lnk" href="assets/papers/ocp_fermin.pdf" target="_blank"><i class="bi bi-file-text"></i> PDF</a>
                 <a class="lnk" href="assets/presentations/ML2025.pdf" target="_blank"><i class="bi bi-easel"></i> Keynote Slides</a>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="assets/papers/ocp_fermin.pdf" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/ocp_fermin.jpg" alt="OCP23 phonemes paper first page"></a>
               </div>
             </div>
           </div>
@@ -423,6 +486,10 @@
               <div class="meta">
                 <a class="lnk" href="https://aclanthology.org/2025.mrl-main.9/"><i class="bi bi-file-text"></i> ACL Anthology</a>
               </div>
+              <div class="pub-extra">
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-31">Abstract <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-31" hidden><span class="abs-label">Abstract</span>Do independently trained monolingual language models converge on shared linguistic principles? To explore this question, we propose to analyze a suite of models trained separately on single languages but with identical architectures and budgets. We train sparse autoencoders (SAEs) on model activations to obtain interpretable latent features, then align them across languages using activation correlations. We do pairwise analyses to see if feature spaces show non-trivial convergence, and we identify universal features that consistently emerge across diverse models. Positive results will provide evidence that certain high-level regularities in language are rediscovered independently in machine learning systems.</div>
+              </div>
             </div>
           </div>
 
@@ -432,6 +499,9 @@
               <div class="t">Linguistics in the Age of Language Models: What can Cognitively-Inspired Language Models offer to Linguistic Theory?</div>
               <div class="auth"><b>Salhan, S.A.</b> (2025)</div>
               <div class="venue">Position Paper in Cambridge Occasional Papers in Linguistics (CoPiL), Accepted, Volume 17</div>
+              <div class="pub-extra">
+                <span class="pub-thumb"><img loading="lazy" src="assets/thumbs/v17_salhan.jpg" alt="CoPiL Vol. 17 position paper first page"></span>
+              </div>
             </div>
           </div>
 
@@ -471,6 +541,20 @@
           groups.forEach(function (g) {
             g.style.display = (f === 'all' || g.getAttribute('data-group') === f) ? '' : 'none';
           });
+        });
+      });
+    })();
+  </script>
+  <script>
+    // Abstract accordion — vanilla JS, no framework
+    (function () {
+      document.querySelectorAll('.pub-abs-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var panel = document.getElementById(btn.getAttribute('aria-controls'));
+          if (!panel) return;
+          var open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+          panel.hidden = open;
         });
       });
     })();

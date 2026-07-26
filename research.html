@@ -24,6 +24,7 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="research.html" class="active">Research</a></li>
+          <li><a href="beetle.html">Beetle</a></li>
           <li><a href="publications.html">Publications</a></li>
           <li><a href="teaching.html">Teaching</a></li>
           <li><a href="talks.html">Talks</a></li>
@@ -53,20 +54,20 @@
         <div class="section-head left">
           <p class="kicker">Overview</p>
           <h2>Research Orientation</h2>
-          <p>How grammatical and semantic structure emerges in compact neural systems trained under multilingual and data-limited conditions.</p>
+          <p>I study how neural networks acquire, organise, and transfer knowledge — using language models as a controlled scientific instrument to uncover the mechanisms of learning and representation formation.</p>
         </div>
         <div class="prose wide">
-          <p>I studied Computer Science and Linguistics at the University of Cambridge, completing both my undergraduate and master's degrees at Gonville &amp; Caius College. Over time, my interests shifted away from formal descriptions of language toward questions of acquisition: how structure arises without explicit instruction, how learning proceeds unevenly, and how competence is gradually assembled rather than suddenly attained.</p>
+          <p>My work is guided by a single central question: <strong>how do learning systems acquire, organise, and converge upon structured knowledge?</strong> Language is the ideal testbed, because it offers rich structure — syntax, semantics, morphology — alongside decades of developmental theory, cross-linguistic variation, and behavioural benchmarks against which learning can be measured.</p>
 
-          <p>I am currently supervised by Professor <a href="https://www.cl.cam.ac.uk/~pjb48/" target="_blank" rel="noopener">Paula Buttery</a>. My doctoral research examines how grammatical and semantic structure emerges in compact neural systems trained under multilingual and data-limited conditions.</p>
+          <p>I studied Computer Science and Linguistics at the University of Cambridge, completing both my undergraduate and master's degrees at Gonville &amp; Caius College, and I am now supervised by Professor <a href="https://www.cl.cam.ac.uk/~pjb48/" target="_blank" rel="noopener">Paula Buttery</a>. Over time my interests shifted away from formal descriptions of language toward questions of acquisition: how structure arises without explicit instruction, how learning proceeds unevenly, and how competence is gradually assembled rather than suddenly attained.</p>
 
-          <p>Much of machine learning research is organised around endpoints: benchmarks, leaderboards, final accuracy. My own work is motivated by a discomfort with this framing.</p>
+          <p>My core instrument is the <strong>small, human-scale language model (BabyLM)</strong> — a deliberately constrained system whose limits make learning <em>visible</em> and measurable. Everything in my research radiates from this core. Much of machine learning is organised around endpoints — benchmarks, leaderboards, final accuracy — and my work is motivated by a discomfort with that framing.</p>
 
           <blockquote class="pull-quote">Small language models are not merely scaled-down versions of larger ones. Their value lies less in what they achieve than in what they make intelligible.</blockquote>
 
-          <p>I approach language models instead as epistemic artefacts, focusing on learning dynamics rather than end states, and drawing on tools from psychometrics and developmental psychology—such as item response theory.</p>
+          <p>I therefore approach language models as epistemic artefacts, focusing on learning dynamics rather than end states, and drawing on tools from psychometrics and developmental psychology — such as item response theory.</p>
 
-          <p>My research begins from a question that is often taken for granted: what does it mean to learn language at all? Not as a matter of fluency or scale, but as a problem of structure—how regularities are inferred from limited experience, how abstraction emerges, and where it fails.</p>
+          <p>The long-term vision is a scientific framework for how structured knowledge emerges, is organised, and becomes transferable in learning systems — combining learning dynamics, representation theory, mergeability, and computational cognitive science. Language models are the focus; the questions concern representation learning broadly.</p>
         </div>
       </div>
     </section>
@@ -100,9 +101,9 @@
     <section class="section">
       <div class="container">
         <div class="section-head left">
-          <p class="kicker">Focus Areas</p>
-          <h2>Key Themes</h2>
-          <p>Six recurring themes that connect my work across machine learning, interpretability, and the language sciences — in plain English. Tap any card to learn more and see representative papers.</p>
+          <p class="kicker">The Science · Fundamental</p>
+          <h2>Language Model Science</h2>
+          <p>Four connected threads make up the fundamental core of my work — for academics, cognitive scientists, and computer scientists. Each treats small language models as a scientific instrument for studying how structured knowledge is learned. Tap any card to learn more and see representative papers.</p>
           <div class="theme-links">
             <a class="btn-pill solid" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">📚 See all my papers on Google Scholar</a>
             <a class="btn-pill outline" href="publications.html">Full publications page <i class="bi bi-arrow-right"></i></a>
@@ -113,39 +114,19 @@
 
           <article class="theme-card" style="--tint:#5f7a52">
             <button class="theme-toggle" type="button" aria-expanded="false">
-              <span class="theme-chip">🧠</span>
+              <span class="theme-chip">📈</span>
               <span class="theme-titles">
-                <span class="theme-title">Small, human-scale language models</span>
-                <span class="theme-blurb">Children pick up language from a tiny fraction of the data that powers today's AI. I build small models that learn under those same human-scale limits — and help maintain open-source tools so anyone can run these experiments.</span>
+                <span class="theme-title">Learning dynamics</span>
+                <span class="theme-blurb">How do linguistic abstractions emerge over the course of training? I study the phases of learning, and how data and optimisation interact — working towards a theory of how representations form.</span>
               </span>
               <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
             </button>
             <div class="theme-panel">
               <div class="theme-panel-inner">
-                <p>I build and study language models that learn from human-scale amounts of data, and maintain open tooling so these experiments are reproducible for everyone.</p>
+                <p>I trace how abstractions emerge across training — the phases of learning, and how data and optimisation shape representation formation. I also maintain open tooling so these experiments are reproducible for everyone.</p>
                 <div class="theme-papers">
                   <a class="theme-pill" href="https://aclanthology.org/2025.emnlp-demos.22/" target="_blank" rel="noopener">Pico — a framework for small-model research</a>
                   <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.10/" target="_blank" rel="noopener">What's the Best Sequence Length for BabyLM?</a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="theme-card" style="--tint:#b0894a">
-            <button class="theme-toggle" type="button" aria-expanded="false">
-              <span class="theme-chip">🌍</span>
-              <span class="theme-titles">
-                <span class="theme-title">Multilingual &amp; fairer AI</span>
-                <span class="theme-blurb">Most AI is built for English. I work on models that learn many languages at once, including under-served ones, so the technology is fairer and more culturally adaptive for more of the world.</span>
-              </span>
-              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
-            </button>
-            <div class="theme-panel">
-              <div class="theme-panel-inner">
-                <p>I develop multilingual models and benchmarks that reach beyond English to under-served languages, making language technology fairer and more culturally adaptive.</p>
-                <div class="theme-papers">
-                  <a class="theme-pill" href="https://babylm.github.io/babybabellm/" target="_blank" rel="noopener">BabyBabelLM — a multilingual benchmark</a>
-                  <a class="theme-pill" href="https://aclanthology.org/2024.conll-babylm.15/" target="_blank" rel="noopener">Less is More — cross-lingual curriculum learning</a>
                 </div>
               </div>
             </div>
@@ -155,36 +136,16 @@
             <button class="theme-toggle" type="button" aria-expanded="false">
               <span class="theme-chip">🔤</span>
               <span class="theme-titles">
-                <span class="theme-title">Tokenisation — how models read language</span>
-                <span class="theme-blurb">Before a model understands text it has to break it into pieces. I research smarter 'tokenisers' so models handle any language more fairly and efficiently.</span>
+                <span class="theme-title">Tokenisation &amp; representation</span>
+                <span class="theme-blurb">Input representation is a fundamental part of representation learning, not mere preprocessing. How does the choice of input representation constrain what a network can learn — and which representations best support efficient, robust, cross-lingual learning?</span>
               </span>
               <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
             </button>
             <div class="theme-panel">
               <div class="theme-panel-inner">
-                <p>I design information-driven ways of splitting text into units, so models process any language more fairly and efficiently.</p>
+                <p>I treat input representation as central to what a model can learn, designing information-driven ways of splitting text so that learning is more efficient, robust, and cross-lingual.</p>
                 <div class="theme-papers">
                   <a class="theme-pill" href="https://arxiv.org/abs/2506.18639" target="_blank" rel="noopener">ByteSpan — information-driven subword tokenisation</a>
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <article class="theme-card" style="--tint:#b06a8f">
-            <button class="theme-toggle" type="button" aria-expanded="false">
-              <span class="theme-chip">📊</span>
-              <span class="theme-titles">
-                <span class="theme-title">Language processing &amp; evaluation</span>
-                <span class="theme-blurb">I study how models process language and design more human-like ways to test them — measuring what they really understand, not just what they score.</span>
-              </span>
-              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
-            </button>
-            <div class="theme-panel">
-              <div class="theme-panel-inner">
-                <p>I build more human-like evaluations of language models, measuring genuine understanding rather than surface benchmark scores.</p>
-                <div class="theme-papers">
-                  <a class="theme-pill" href="https://direct.mit.edu/coli/article/doi/10.1162/coli.a.15/131070" target="_blank" rel="noopener">Measuring Grammatical Diversity from Small Corpora</a>
-                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.25/" target="_blank" rel="noopener">Teacher Demonstrations for multi-turn interaction</a>
                 </div>
               </div>
             </div>
@@ -194,36 +155,36 @@
             <button class="theme-toggle" type="button" aria-expanded="false">
               <span class="theme-chip">🔬</span>
               <span class="theme-titles">
-                <span class="theme-title">Interpretability — how models learn</span>
-                <span class="theme-blurb">I open up small models to see how linguistic structure emerges as they learn — using linguistics and cognitive science to make sense of what's happening inside.</span>
+                <span class="theme-title">Developmental interpretability</span>
+                <span class="theme-blurb">I open up small models (BabyLMs) to see how structure forms as they learn — using linguistics and cognitive science to make sense of what is happening inside as competence is assembled.</span>
               </span>
               <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
             </button>
             <div class="theme-panel">
               <div class="theme-panel-inner">
-                <p>I look inside small models as they train to understand how linguistic structure emerges, drawing on linguistics and cognitive science.</p>
+                <p>I look inside small models as they train to understand how linguistic structure emerges over development, drawing on linguistics and cognitive science.</p>
                 <div class="theme-papers">
                   <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.15/" target="_blank" rel="noopener">Looking to Learn — dynamic gating for vision-language</a>
+                  <a class="theme-pill" href="https://direct.mit.edu/coli/article/doi/10.1162/coli.a.15/131070" target="_blank" rel="noopener">Measuring Grammatical Diversity from Small Corpora</a>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="theme-card" style="--tint:#c1794e">
+          <article class="theme-card" style="--tint:#b06a8f">
             <button class="theme-toggle" type="button" aria-expanded="false">
-              <span class="theme-chip">🛡️</span>
+              <span class="theme-chip">🧩</span>
               <span class="theme-titles">
-                <span class="theme-title">Alignment, interaction &amp; AI safety</span>
-                <span class="theme-blurb">I care about keeping capable systems aligned with human values, and about human-centred uses of AI — including helping people learn a language.</span>
+                <span class="theme-title">Convergence &amp; mergeability</span>
+                <span class="theme-blurb">When and why do independently trained models converge on compatible representations? I treat model merging as a scientific probe of representation geometry — not just an engineering trick.</span>
               </span>
               <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
             </button>
             <div class="theme-panel">
               <div class="theme-panel-inner">
-                <p>I work on keeping capable systems aligned with human values and on human-centred applications of AI, such as supporting language learning.</p>
+                <p>I study representation convergence — when independently trained models arrive at compatible representations — and use mergeability as a window onto the geometry of what has been learned.</p>
                 <div class="theme-papers">
-                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.25/" target="_blank" rel="noopener">Teacher Demonstrations (Zone of Proximal Development)</a>
-                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.13/" target="_blank" rel="noopener">BLiSS — bilingual learner competence in small models</a>
+                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Ongoing work — see Google Scholar</a>
                 </div>
               </div>
             </div>
@@ -231,8 +192,95 @@
 
         </div>
 
+        <div class="xcut-callout">
+          <span class="xcut-ic">🧠</span>
+          <div>
+            <p class="xcut-title">Cross-cutting interest · Cognitive science &amp; language acquisition</p>
+            <p class="xcut-body">This is neither purely fundamental nor applied — it is an interest that informs the questions I ask. Decades of linguistic and cognitive theory give precise hypotheses about how humans acquire language. I use cognitive science as an independent <em>source of hypotheses</em>, and build computational models that put those theories to the test.</p>
+          </div>
+        </div>
+
         <div class="section-head left" style="margin-top:2.5rem">
           <a href="publications.html" class="btn-pill solid">See related publications <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Application areas -->
+    <section class="section tint">
+      <div class="container">
+        <div class="section-head left">
+          <p class="kicker">Applied · Impact</p>
+          <h2>Application areas</h2>
+          <p>The fundamental science radiates outward into three areas of real-world impact, each speaking to a different audience. Tap any card to learn more.</p>
+        </div>
+
+        <div class="theme-grid">
+
+          <article class="theme-card" style="--tint:#b0894a">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">⚙️</span>
+              <span class="theme-titles">
+                <span class="theme-aud">For founders · industry · ML researchers</span>
+                <span class="theme-title">Domain-general ML — model merging &amp; agentic small LMs</span>
+                <span class="theme-blurb">The applied face of the science: mergeable, composable, efficient small models, and agentic applications of small LMs that are cheaper and easier to deploy than frontier systems.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>Insights from representation convergence and mergeability translate directly into practical systems: small models that can be composed and merged, and agentic pipelines built from efficient small LMs. Relevant to founders, industry teams, and ML researchers looking to build and collaborate.</p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM — modular small-model tooling</a>
+                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="theme-card" style="--tint:#5e9e8b">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🌍</span>
+              <span class="theme-titles">
+                <span class="theme-aud">For global users · the wider ML community</span>
+                <span class="theme-title">Multilingual &amp; fairer AI</span>
+                <span class="theme-blurb">Most AI is built for English. I work on models that learn many languages at once — including under-served ones — so the technology is fairer and more culturally adaptive for more of the world.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I develop multilingual models and benchmarks that reach beyond English to under-served languages, making language technology fairer and more culturally adaptive across the world.</p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="beetle.html">Beetle — controlled bilingual pretraining (flagship)</a>
+                  <a class="theme-pill" href="https://babylm.github.io/babybabellm/" target="_blank" rel="noopener">BabyBabelLM — a multilingual benchmark</a>
+                  <a class="theme-pill" href="https://aclanthology.org/2024.conll-babylm.15/" target="_blank" rel="noopener">Less is More — cross-lingual curriculum learning</a>
+                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.13/" target="_blank" rel="noopener">BLiSS — bilingual learner competence</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="theme-card" style="--tint:#c1794e">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🌱</span>
+              <span class="theme-titles">
+                <span class="theme-aud">For social scientists · educators · policymakers</span>
+                <span class="theme-title">AI for social good — education, culture &amp; young people</span>
+                <span class="theme-blurb">Human-centred AI that helps people learn: cultural evaluation of models, and AI designed with and for young people. This connects to my public engagement work with Per Capita Media.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I work on human-centred applications of AI that support learning — including teacher-style demonstrations for language learning, culturally grounded evaluation, and AI for young people. This ties to public engagement through Per Capita Media, and speaks to social scientists, educators, and policymakers.</p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.25/" target="_blank" rel="noopener">Teacher Demonstrations (Zone of Proximal Development)</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
         </div>
       </div>
     </section>
@@ -302,6 +350,32 @@
     @media (max-width:520px){ .theme-panel-inner { padding-left:22px; } }
     .dark-background .theme-panel-inner p { color: var(--default-color); }
     .dark-background .theme-blurb { color:#cbc4b2; }
+    /* audience tag on application cards */
+    .theme-aud {
+      display:block; margin-bottom:6px;
+      font-family: var(--mono-font); font-size:11.5px; letter-spacing:.05em;
+      text-transform:uppercase; font-weight:500;
+      color: color-mix(in srgb, var(--tint), #000 18%);
+    }
+    .dark-background .theme-aud { color: color-mix(in srgb, var(--tint), #fff 30%); }
+    /* cross-cutting callout */
+    .xcut-callout {
+      display:flex; gap:18px; align-items:flex-start;
+      margin-top:34px; padding:22px 26px;
+      background: var(--accent-soft, color-mix(in srgb, #5f7a52, transparent 90%));
+      border:1px solid var(--line);
+      border-left:4px solid #5f7a52;
+      border-radius:0 14px 14px 0;
+    }
+    .xcut-ic {
+      flex:0 0 auto; font-size:26px; line-height:1.2;
+    }
+    .xcut-title {
+      margin:0 0 6px; font-family: var(--heading-font);
+      font-weight:600; font-size:17px; color: var(--heading-color);
+    }
+    .xcut-body { margin:0; font-size:15.5px; line-height:1.6; color:#3a372e; }
+    .dark-background .xcut-body { color: var(--default-color); }
   </style>
   <script>
     (function () {

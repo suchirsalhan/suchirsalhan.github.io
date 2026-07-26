@@ -268,6 +268,35 @@ a:hover { color: color-mix(in srgb, var(--accent-deep), #000 20%); }
 .footer .cols { display:flex; flex-wrap:wrap; justify-content:space-between; gap:20px; align-items:center; }
 .footer .fnav { display:flex; flex-wrap:wrap; gap:16px; }
 
+/* ---------- Publication previews + abstract accordion ---------- */
+.pub-extra { margin-top: 12px; display: flex; flex-direction: column; gap: 10px; align-items: flex-start; }
+.pub-thumb { display: inline-block; border: 1px solid var(--line); border-radius: 9px; overflow: hidden; line-height: 0;
+  background: var(--surface-color); box-shadow: 0 4px 14px rgba(42,39,32,0.08); transition: transform .25s, box-shadow .25s, border-color .25s; }
+.pub-thumb img { width: 158px; height: auto; display: block; }
+.pub-thumb:hover { transform: translateY(-3px); box-shadow: 0 12px 28px rgba(76,99,66,0.18);
+  border-color: color-mix(in srgb, var(--accent-color), #fff 45%); }
+
+.pub-abs-toggle { font-family: var(--mono-font); font-size: 12px; padding: 5px 13px; border-radius: 50px;
+  border: 1px solid var(--line); background: var(--surface-color); color: var(--accent-deep); cursor: pointer;
+  display: inline-flex; align-items: center; gap: 6px; transition: background .18s, border-color .18s; }
+.pub-abs-toggle:hover { background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent-color), #fff 45%); }
+.pub-abs-toggle .chev { display: inline-block; transition: transform .2s ease; font-size: 11px; }
+.pub-abs-toggle[aria-expanded="true"] .chev { transform: rotate(90deg); }
+
+.pub-abs-panel { font-size: 15px; line-height: 1.65; color: #54503f; background: var(--cream);
+  border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; max-width: 760px; }
+.pub-abs-panel[hidden] { display: none; }
+.pub-abs-panel .abs-label { font-family: var(--mono-font); font-size: 10.5px; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--accent-color); display: block; margin-bottom: 6px; }
+
+/* Poster / slide preview thumbnails on presentations page */
+.card-thumb { display: block; margin: 4px 0 14px; border: 1px solid var(--line); border-radius: 10px; overflow: hidden;
+  line-height: 0; background: var(--surface-color); box-shadow: 0 4px 14px rgba(42,39,32,0.07);
+  transition: transform .25s, box-shadow .25s, border-color .25s; }
+.card-thumb img { width: 100%; height: auto; display: block; }
+.card-thumb:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(76,99,66,0.18);
+  border-color: color-mix(in srgb, var(--accent-color), #fff 45%); }
+
 @media (max-width: 991px) {
   .navmenu a { color: #33302a; }
   .navmenu .active { color: var(--accent-deep); }
