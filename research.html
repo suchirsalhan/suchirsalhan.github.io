@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Research · Suchir Salhan</title>
+  <meta name="description" content="Cognitively-inspired multilingual AI and the learning dynamics of small language models.">
+  <link href="favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+  <link href="assets/css/site.css" rel="stylesheet">
+</head>
+<body class="index-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="brand"><img class="logo-ss" src="assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="research.html" class="active">Research</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="talks.html">Talks</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="index.html">Home</a> / Research</div>
+        <p class="eyebrow">Research</p>
+        <h1>Research</h1>
+        <p>Cognitively-inspired multilingual AI and the learning dynamics of small language models.</p>
+      </div>
+    </section>
+
+    <!-- Section 1: Research Orientation -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head left">
+          <p class="kicker">Overview</p>
+          <h2>Research Orientation</h2>
+          <p>How grammatical and semantic structure emerges in compact neural systems trained under multilingual and data-limited conditions.</p>
+        </div>
+        <div class="prose wide">
+          <p>I studied Computer Science and Linguistics at the University of Cambridge, completing both my undergraduate and master's degrees at Gonville &amp; Caius College. Over time, my interests shifted away from formal descriptions of language toward questions of acquisition: how structure arises without explicit instruction, how learning proceeds unevenly, and how competence is gradually assembled rather than suddenly attained.</p>
+
+          <p>I am currently supervised by Professor <a href="https://www.cl.cam.ac.uk/~pjb48/" target="_blank" rel="noopener">Paula Buttery</a>. My doctoral research examines how grammatical and semantic structure emerges in compact neural systems trained under multilingual and data-limited conditions.</p>
+
+          <p>Much of machine learning research is organised around endpoints: benchmarks, leaderboards, final accuracy. My own work is motivated by a discomfort with this framing.</p>
+
+          <blockquote class="pull-quote">Small language models are not merely scaled-down versions of larger ones. Their value lies less in what they achieve than in what they make intelligible.</blockquote>
+
+          <p>I approach language models instead as epistemic artefacts, focusing on learning dynamics rather than end states, and drawing on tools from psychometrics and developmental psychology—such as item response theory.</p>
+
+          <p>My research begins from a question that is often taken for granted: what does it mean to learn language at all? Not as a matter of fluency or scale, but as a problem of structure—how regularities are inferred from limited experience, how abstraction emerges, and where it fails.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Three Strands -->
+    <section class="section tint">
+      <div class="container">
+        <div class="section-head left">
+          <p class="kicker">Directions</p>
+          <h2>Three Strands</h2>
+          <p>Three connected threads run through my doctoral work, from tokenization and learning dynamics to cognitively-inspired evaluation and theoretical linguistics.</p>
+        </div>
+
+        <div class="prose wide">
+          <h3>Language Models: Learning Dynamics and Tokenization</h3>
+          <p>My research is concerned with building data-efficient small Language Models. While industry-led efforts have built competitive LLMs that have fundamentally shifted the job of the contemporary Natural Language Processing (academic) researcher in various ways, there are still several fundamental, open questions to address that are not obviously ancillary to those pursued commercial AI research labs.</p>
+          <p>For small LMs, tight parameter budgets make each decision critical, yet researchers still lack systematic, scientific ways to test and refine new ideas. We introduce <a href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM</a>, a lightweight, modular framework that enables systematic, hypothesis-driven research for small and medium-scale language model development. <a href="https://www.picolm.io/" target="_blank" rel="noopener">Pico</a> consists of two libraries that together provide a practical sandbox where researchers can make targeted changes to a model's architecture or training procedures and directly observe their effects on the model's behaviour. To support reproducible experimentation, we also release a suite of baseline models, trained under standardised conditions and open-sourced for the community. Check out the YouTube Video put together by Zeb Goriely: <a href="https://www.youtube.com/watch?v=llRUKwqMah4" target="_blank" rel="noopener">Introducing PicoLM | YouTube</a>.</p>
+          <p><strong>Developmental Interpretability (DevInterp)</strong> and Language Model Learning Dynamics Research are fundamental to developing small LMs. <strong>Small LMs are crucial for low-resourced and democratised Language Modelling</strong>, and should still be a serious focus of hypothesis-driven scientific exploration.</p>
+
+          <h3>Cognitively-Inspired AI: Linguistic Interpretability and Multilinguality</h3>
+          <p>The second strand of my research focuses on cognitively-inspired AI. The scientific study of the human capacity for language demands a multi-model approach that combines a characterisation of the universal and language- or speaker-specific substance of grammars and the inductive biases that support their emergence in language acquisition, and how these conditions interact with domain-general cognition. This is why I am, in part, drawn to the work of the <a href="https://babylm.github.io/" target="_blank" rel="noopener">BabyLM Workshop</a>.</p>
+          <p>In joint work, we introduce <a href="https://arxiv.org/abs/2506.18639" target="_blank" rel="noopener">ByteSpan</a>, a dynamic tokenisation scheme that groups predictable bytes rather than pooling their representations.</p>
+
+          <h3>Linguistics and Cognitive Science</h3>
+          <p>I also actively pursue research interests in <strong>Linguistics and Cognitive Science</strong>. My work aims to cross-cut modern Generativist approaches – specifically, neo-emergentist approaches pursued by several Cambridge-based theoretical linguists.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Key Themes -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head left">
+          <p class="kicker">Focus Areas</p>
+          <h2>Key Themes</h2>
+          <p>Six recurring themes that connect my work across machine learning, interpretability, and the language sciences.</p>
+        </div>
+
+        <div class="card-grid">
+          <article class="u-card">
+            <div class="ic"><i class="bi bi-diagram-3"></i></div>
+            <h4>Cognitively-Inspired Design &amp; Evaluation</h4>
+            <p>Treating language models as learners rather than accomplished speakers—drawing on developmental psychology, psychometrics, and item response theory to make competence legible.</p>
+            <a href="publications.html" class="more">Related publications <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="u-card">
+            <div class="ic"><i class="bi bi-activity"></i></div>
+            <h4>Pretraining &amp; Interpretability</h4>
+            <p>Developmental interpretability and learning dynamics in small LMs, with reproducible, hypothesis-driven pretraining through the PicoLM framework.</p>
+            <a href="publications.html" class="more">Related publications <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="u-card">
+            <div class="ic"><i class="bi bi-translate"></i></div>
+            <h4>Multilinguality</h4>
+            <p>Human-scale, cross-lingual language modelling under data-limited conditions, including low-resourced and typologically diverse languages.</p>
+            <a href="publications.html" class="more">Related publications <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="u-card">
+            <div class="ic"><i class="bi bi-scissors"></i></div>
+            <h4>Tokenization</h4>
+            <p>Information-driven subword tokenisation—such as ByteSpan—grouping predictable bytes to yield efficient, morphologically aligned vocabularies.</p>
+            <a href="publications.html" class="more">Related publications <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="u-card">
+            <div class="ic"><i class="bi bi-chat-square-dots"></i></div>
+            <h4>Alignment &amp; Interaction</h4>
+            <p>How compact systems can be adapted, transferred, and controlled—from meta-pretraining to complexity-controlled generation and cross-lingual transfer.</p>
+            <a href="publications.html" class="more">Related publications <i class="bi bi-arrow-right"></i></a>
+          </article>
+
+          <article class="u-card">
+            <div class="ic"><i class="bi bi-book"></i></div>
+            <h4>Cognitive Science &amp; Linguistics</h4>
+            <p>Neo-emergentist approaches that cross-cut modern Generativist theory, information-theoretic models of typology, and the study of grammatical diversity.</p>
+            <a href="publications.html" class="more">Related publications <i class="bi bi-arrow-right"></i></a>
+          </article>
+        </div>
+
+        <div class="section-head left" style="margin-top:2.5rem">
+          <a href="publications.html" class="btn-pill solid">See related publications <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="research.html">Research</a><a href="publications.html">Publications</a>
+          <a href="teaching.html">Teaching</a><a href="about.html">About</a>
+          <a href="assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>NLIP Seminars Michaelmas 2024 · Suchir Salhan</title>
+  <meta name="description" content="Personal takeaways from the Cambridge NLIP seminar series in Michaelmas Term 2024, across cognition, linguistics, and language models.">
+  <link href="../favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="index-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../publications.html">Publications</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../talks.html">Talks</a></li>
+          <li><a href="../people.html">People</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="../about.html#writing">Writing</a> / Essay</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="article">
+          <div class="meta">3 January 2025 · Department of Computer Science &amp; Technology</div>
+          <h1>NLIP Seminars Michaelmas 2024</h1>
+
+          <p>The Cambridge Natural Language &amp; Information Processing (NLIP) Seminars are series of weekly talks from researchers in the fields of Natural Language Processing and Computational Linguistics, and adjacent fields including Machine Learning and Linguistics/Cognitive Science. I had the privilege of organising the seminars in the first term of my PhD, inheriting the seminar from Richard Diehl Martinez and Eric Chamoun. It was an interesting exercise, alongside getting my teeth into my own research. The aim of the seminar series, as is the case for any term card, is to provide researchers in our group the opportunity to engage with thought-provoking and potentially challenging 'high-level' research ideas. This short post summarises some (personal) key takeaways of the research talks from the speakers that I invited to speak in our Michaelmas Term speakers and finish off with some of my own personal thoughts.</p>
+
+          <h2>Cognition, Linguistics and NLP</h2>
+
+          <h3>What about Linguistics? (Prof Janet Pierrehumbert, University of Oxford)</h3>
+
+          <h3>Truth-Conditional Semantics at Scale (Dr Guy Emerson, University of Cambridge)</h3>
+
+          <h3>Phonemic Pre-Training (Zebulon Goriely, University of Cambridge)</h3>
+
+          <h3>Lyric Generation (Yiwen Chen, University of Cambridge)</h3>
+
+          <h2>Language Models</h2>
+
+          <h3>Human Feedback (Max Bartolo, Cohere)</h3>
+
+          <p>Max Bartolo from Cohere – making him our only speaker from industry this term – delivered a talk entitled "10 slides on Human Feedback". Focussed reward models which are trained to predict a score reflecting on human preference (e.g., Reinforcement Learning from Human Feedback), Max provided a survey of different perspectives on aligning outputs of a language model to user preferences. The overall takeaway was that any notion of 'feedback' is inherently subjective. While this is not surprising, it means that we need to move to a position of having finer granularity to provide better rewards and additionally have more flexible models that can overcome biases. Max highlighted the PRISM Alignment Project from NEURIPS 2024, a dataset with sociodemographic and preference (Kirk et al 2024). However, like most efforts in NLP, the annotation efforts are computationally expensive. It is, therefore, not surprising that there are research efforts that are concerned with assessing the efficacy of synthetic data.</p>
+
+          <h3>Tokenisers &amp; Adaptive Memory (Dr Edoardo Ponti (Edinburgh/NVIDIA) and Benjamin Minixhofer (Language Technology Lab, Cambridge University))</h3>
+
+          <p>Edoardo came to discuss his work on adaptive memorisation and tokenisation, an exciting proposal on how to address two fundamental issues associated with Transformers.</p>
+
+          <p><strong>Memory Problems:</strong> Transformers experience a linear memory growth in the key-value cache, which is memory intensive and increases latency. As is well-discussed, <strong>fixed granularity</strong> of Transformer representations is a point of inefficiency. Edoardo proposed that we can 'retrofit' Transformers with adaptive memory – a technique that does not require training from scratch, which he defends as a preferential position to training from scratch. The key theoretical proposal is <strong>dynamic compression</strong>, a segmentation problem of separating key and value matrices in the Transformer, which <strong>accumulates or appends</strong> (rather than solely appending keys/values in standard self-attention). A causal</p>
+
+          <p>Augment causal mask in autoregressive with a DMC mask \(\alpha\) – at convergence, this will be zero or one. Limit of log of zero, or instead of zero — the element will be either entirely accessible or inaccessible.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="../research.html">Research</a><a href="../publications.html">Publications</a>
+          <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
+          <a href="../assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
