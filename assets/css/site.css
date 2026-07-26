@@ -69,7 +69,7 @@ a:hover { color: color-mix(in srgb, var(--accent-deep), #000 20%); }
 .hero::after { content:""; position:absolute; inset:0; z-index:1; pointer-events:none;
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='2' cy='2' r='1' fill='%23ffffff' fill-opacity='0.06'/%3E%3C/svg%3E"); }
 .hero .container { position: relative; z-index: 2; }
-.hero .eyebrow { font-family: var(--mono-font); font-size: 13px; letter-spacing: 0.16em; text-transform: uppercase; color: #cdd6bf; margin-bottom: 14px; }
+.hero .eyebrow { font-family: var(--heading-font); font-style: italic; font-size: 17px; letter-spacing: 0.01em; text-transform: none; color: #d5dcc8; margin-bottom: 12px; }
 .hero h1 { font-size: clamp(40px, 6vw, 66px); font-weight: 600; color: #fdfbf4; line-height: 1.02; letter-spacing: -0.015em; margin-bottom: 16px; }
 .hero .role { font-size: clamp(18px, 2.2vw, 22px); font-weight: 500; color: #ebe6d7; margin-bottom: 14px; font-style: italic; }
 .hero .lead { max-width: 620px; font-size: 18px; line-height: 1.65; color: #ded8c6; margin-bottom: 24px; }
@@ -224,6 +224,34 @@ a:hover { color: color-mix(in srgb, var(--accent-deep), #000 20%); }
 .contact-socials { display:flex; justify-content:center; flex-wrap:wrap; gap:12px; }
 .contact-socials a { width:46px; height:46px; border-radius:50%; border:1.5px solid rgba(255,255,255,0.4); color:#fff; display:inline-flex; align-items:center; justify-content:center; font-size:19px; transition:0.25s; }
 .contact-socials a:hover { background:#fdfbf4; color: var(--accent-deep); }
+
+/* ---------- Professional contact block ---------- */
+.contact-pro { background: var(--surface-color); border: 1px solid var(--line); border-radius: 18px; padding: 34px 38px; box-shadow: 0 10px 40px rgba(42,39,32,0.05); }
+.contact-pro h3 { font-size: 26px; margin-bottom: 10px; }
+.contact-pro .lede { color: var(--ink-2); font-size: 16.5px; line-height: 1.6; margin-bottom: 22px; max-width: 620px; }
+.contact-pro .rows { display: grid; gap: 12px; }
+.contact-pro .crow { display: flex; align-items: center; gap: 12px; font-size: 16px; }
+.contact-pro .crow i { color: var(--accent-color); font-size: 18px; width: 22px; text-align: center; }
+.contact-pro .crow a { color: var(--heading-color); }
+.contact-pro .crow a:hover { color: var(--accent-deep); }
+.contact-pro .links { display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 20px; padding-top: 20px; border-top: 1px solid var(--line); font-family: var(--ui-font); font-size: 14.5px; }
+.contact-pro .links a { color: var(--accent-deep); display: inline-flex; align-items: center; gap: 7px; }
+
+/* ---------- Sideblock (themes etc.) ---------- */
+.sideblock { background: var(--surface-color); border: 1px solid var(--line); border-radius: 16px; padding: 26px 28px; }
+.sideblock h4 { font-family: var(--mono-font); font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-deep); margin-bottom: 16px; }
+.sideblock ul { list-style: none; padding: 0; margin: 0; }
+.sideblock li { display: flex; gap: 12px; align-items: flex-start; padding: 9px 0; border-bottom: 1px solid var(--line); font-size: 15.5px; line-height: 1.4; }
+.sideblock li:last-child { border-bottom: 0; }
+.sideblock li i { color: var(--accent-color); font-size: 16px; margin-top: 3px; }
+.sideblock li b { color: var(--heading-color); font-weight: 600; }
+
+/* Home summary section: heading + lead + link */
+.home-sec .eyebrow-k { font-family: var(--mono-font); font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent-color); }
+.home-sec h2 { font-size: clamp(26px, 3.4vw, 36px); font-weight: 600; margin: 8px 0 14px; letter-spacing: -0.015em; }
+.home-sec .lead { font-size: 17.5px; line-height: 1.7; color: #3a372e; margin-bottom: 16px; }
+.chip-row { display:flex; flex-wrap:wrap; gap:8px; }
+.chip-row .chip { font-family: var(--ui-font); font-size: 13.5px; padding: 5px 13px; border-radius: 50px; background: var(--accent-soft); color: var(--accent-deep); border: 1px solid color-mix(in srgb, var(--accent-color), #fff 60%); }
 
 /* ---------- Article (blog) ---------- */
 .article { max-width: 700px; margin: 0 auto; }

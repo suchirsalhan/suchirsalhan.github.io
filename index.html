@@ -81,103 +81,46 @@
       </div>
     </section>
 
-    <!-- Explore hub: summaries of every page -->
-    <section class="section">
+    <!-- Research summary + themes sideblock -->
+    <section class="section home-sec">
       <div class="container">
-        <div class="section-head">
-          <span class="kicker">Explore</span>
-          <h2>Around the site</h2>
-          <p>A quick map of everything here — research, papers, teaching, talks, collaborators, and writing.</p>
-        </div>
-        <div class="card-grid">
-          <a class="u-card" href="research.html">
-            <div class="ic"><i class="bi bi-lightbulb"></i></div>
-            <h4>Research <i class="bi bi-arrow-right" style="font-size:0.8em"></i></h4>
-            <p>My approach — language models as learners, not just speakers — across three strands: learning dynamics &amp; tokenization, cognitively-inspired multilingual AI, and linguistics &amp; cognitive science.</p>
-          </a>
-          <a class="u-card" href="publications.html">
-            <div class="ic"><i class="bi bi-journal-bookmark"></i></div>
-            <h4>Publications <i class="bi bi-arrow-right" style="font-size:0.8em"></i></h4>
-            <p>~26 peer-reviewed conference, journal &amp; workshop papers and preprints — including <strong>two Outstanding Paper Awards</strong> at BabyLM 2025.</p>
-          </a>
-          <a class="u-card" href="teaching.html">
-            <div class="ic"><i class="bi bi-easel3"></i></div>
-            <h4>Teaching <i class="bi bi-arrow-right" style="font-size:0.8em"></i></h4>
-            <p>Guest lecturer for L95 (Syntax &amp; Parsing) and Li18; supervisor across CST IA/IB/II; and the 2025 Small Language Models UROP built on Pico.</p>
-          </a>
-          <a class="u-card" href="talks.html">
-            <div class="ic"><i class="bi bi-mic"></i></div>
-            <h4>Talks <i class="bi bi-arrow-right" style="font-size:0.8em"></i></h4>
-            <p>Invited talks and seminars — Copenhagen, Sheffield, Tübingen, McGill (Mental Lexicon keynote), and Cambridge Language Sciences.</p>
-          </a>
-          <a class="u-card" href="people.html">
-            <div class="ic"><i class="bi bi-people"></i></div>
-            <h4>People <i class="bi bi-arrow-right" style="font-size:0.8em"></i></h4>
-            <p>Collaborators across the PicoLM team, Cambridge NLIP, ALTA, KAIST/NAVER, and LTL — plus the students and theses I supervise.</p>
-          </a>
-          <a class="u-card" href="about.html#writing">
-            <div class="ic"><i class="bi bi-pen"></i></div>
-            <h4>Writing &amp; About <i class="bi bi-arrow-right" style="font-size:0.8em"></i></h4>
-            <p>Essays on research, journalism and academic life; my fuller bio, research philosophy, and life beyond research — plus Per Capita Media.</p>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Research orientation snippet -->
-    <section class="section">
-      <div class="container">
-        <div class="row g-5 align-items-center">
+        <div class="row g-5">
           <div class="col-lg-7">
-            <div class="section-head left" style="margin-bottom:22px">
-              <span class="kicker">Research Orientation</span>
-              <h2>Language models as learners, not just speakers</h2>
-            </div>
-            <p style="font-size:16.5px;line-height:1.75;color:#3a3956">Much of machine learning is organised around endpoints — benchmarks, leaderboards, final accuracy. My work is motivated by a discomfort with this framing. I approach language models instead as <strong>epistemic artefacts</strong>, focusing on learning dynamics rather than end states, and drawing on tools from psychometrics and developmental psychology.</p>
-            <p style="font-size:16.5px;line-height:1.75;color:#3a3956">Small language models are not merely scaled-down versions of larger ones. Their value lies less in what they achieve than in what they make <em>intelligible</em>.</p>
-            <a href="research.html" class="btn-pill outline" style="margin-top:8px"><i class="bi bi-arrow-right"></i> Read my research approach</a>
+            <span class="eyebrow-k">Research</span>
+            <h2>Language models as learners, not just speakers</h2>
+            <p class="lead">Much of machine learning is organised around endpoints — benchmarks, leaderboards, final accuracy. I approach language models instead as <strong>epistemic artefacts</strong>, focusing on learning dynamics rather than end states and drawing on tools from psychometrics and developmental psychology. Small language models are not merely scaled-down versions of larger ones — their value lies in what they make <em>intelligible</em>.</p>
+            <p class="lead">My work spans three strands: learning dynamics &amp; tokenization, cognitively-inspired multilingual AI, and linguistics &amp; cognitive science.</p>
+            <a href="research.html" class="btn-pill solid"><i class="bi bi-arrow-right"></i> Explore my research</a>
           </div>
           <div class="col-lg-5">
-            <div class="stat-band" style="grid-template-columns:1fr 1fr">
-              <div class="stat"><div class="n">26+</div><div class="l">Papers &amp; preprints</div></div>
-              <div class="stat"><div class="n">2</div><div class="l">Outstanding Paper Awards, BabyLM 2025</div></div>
-              <div class="stat"><div class="n">8</div><div class="l">Papers in PhD year one</div></div>
-              <div class="stat"><div class="n">PicoLM</div><div class="l">Head of Research</div></div>
+            <div class="sideblock">
+              <h4>Research Themes</h4>
+              <ul>
+                <li><i class="bi bi-diagram-3"></i><span><b>Cognitively-Inspired Design &amp; Evaluation</b> — developmentally plausible models &amp; evaluation.</span></li>
+                <li><i class="bi bi-cpu"></i><span><b>Pretraining &amp; Interpretability</b> — learning dynamics of small LMs via Pico.</span></li>
+                <li><i class="bi bi-globe2"></i><span><b>Multilinguality</b> — human-scale, cross-lingual, bilingual competence.</span></li>
+                <li><i class="bi bi-flower1"></i><span><b>Tokenization</b> — information-driven subword segmentation (ByteSpan).</span></li>
+                <li><i class="bi bi-pencil-square"></i><span><b>Alignment &amp; Interaction</b> — pedagogical alignment, student proxies.</span></li>
+                <li><i class="bi bi-soundwave"></i><span><b>Cognitive Science &amp; Linguistics</b> — grammar induction, cross-lingual phonology.</span></li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Key themes -->
-    <section class="section tint">
+    <!-- Publications summary -->
+    <section class="section tint home-sec">
       <div class="container">
-        <div class="section-head">
-          <span class="kicker">Research</span>
-          <h2>Key Themes</h2>
-          <p>Data-efficient small language models and cognitively-inspired AI — combining developmental interpretability, multilinguality, and the linguistic and information-theoretic study of language.</p>
+        <div class="d-flex flex-wrap justify-content-between align-items-end" style="gap:16px;margin-bottom:26px">
+          <div>
+            <span class="eyebrow-k">Publications</span>
+            <h2 style="margin-bottom:6px">Selected work</h2>
+            <p class="lead" style="margin:0">~26 peer-reviewed papers &amp; preprints, including <strong>two Outstanding Paper Awards</strong> at BabyLM 2025.</p>
+          </div>
+          <a href="publications.html" class="btn-pill outline"><i class="bi bi-journal-text"></i> All publications</a>
         </div>
-        <div class="card-grid">
-          <div class="u-card"><div class="ic"><i class="bi bi-diagram-3"></i></div><h4>Cognitively-Inspired Design &amp; Evaluation</h4><p>Developmentally plausible models, interpretability, and evaluation grounded in how humans acquire language.</p></div>
-          <div class="u-card"><div class="ic"><i class="bi bi-cpu"></i></div><h4>Pretraining &amp; Interpretability</h4><p>Learning dynamics and developmental interpretability of small LMs — via the <a href="https://www.picolm.io/">Pico</a> framework.</p></div>
-          <div class="u-card"><div class="ic"><i class="bi bi-globe2"></i></div><h4>Multilinguality</h4><p>Human-scale multilingual modelling, cross-lingual representations, and bilingual learner competence.</p></div>
-          <div class="u-card"><div class="ic"><i class="bi bi-flower1"></i></div><h4>Tokenization</h4><p>Information-driven, language-adaptive subword tokenisation (e.g. <a href="https://arxiv.org/abs/2506.18639">ByteSpan</a>).</p></div>
-          <div class="u-card"><div class="ic"><i class="bi bi-pencil-square"></i></div><h4>Alignment &amp; Interaction</h4><p>Pedagogical alignment, contingent interaction, and cognitively-inspired student proxies.</p></div>
-          <div class="u-card"><div class="ic"><i class="bi bi-soundwave"></i></div><h4>Cognitive Science &amp; Linguistics</h4><p>Neo-emergentist syntax, grammar induction, and information-theoretic models of cross-lingual phonology.</p></div>
-        </div>
-        <div class="text-center" style="margin-top:30px"><a href="research.html" class="btn-pill solid"><i class="bi bi-arrow-right"></i> Explore the research</a></div>
-      </div>
-    </section>
-
-    <!-- Selected publications -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head">
-          <span class="kicker">Selected Work</span>
-          <h2>Recent Highlights</h2>
-          <p>A few recent papers — see the <a href="publications.html">full list of ~26 publications</a>.</p>
-        </div>
-        <div class="prose wide">
+        <div class="prose wide" style="max-width:none">
           <div class="pub"><div class="idx">★</div><div class="body">
             <div class="t"><a href="https://aclanthology.org/2025.babylm-main.25/">Teacher Demonstrations in a BabyLM's Zone of Proximal Development for Contingent Multi-Turn Interaction</a></div>
             <div class="auth"><b>Suchir Salhan</b>, Hongyi Gu, Donya Rooein, Diana Galvan-Sosa, Gabrielle Gaudeau, Andrew Caines, Zheng Yuan, Paula Buttery</div>
@@ -203,7 +146,65 @@
             <div class="meta"><a class="lnk" href="https://babylm.github.io/babybabellm/"><i class="bi bi-globe"></i> Project</a></div>
           </div></div>
         </div>
-        <div class="text-center" style="margin-top:30px"><a href="publications.html" class="btn-pill outline"><i class="bi bi-journal-text"></i> All publications</a></div>
+      </div>
+    </section>
+
+    <!-- Teaching & Talks -->
+    <section class="section home-sec">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6">
+            <span class="eyebrow-k">Teaching</span>
+            <h2 style="font-size:28px">Teaching &amp; Supervision</h2>
+            <p class="lead">Guest lecturer for <strong>L95 — Natural Language Syntax &amp; Parsing</strong> (MPhil ACS) and Li18 Computational Linguistics; supervisor across CST IA, IB &amp; II; and lead of the 2025 Small Language Models UROP, built on Pico.</p>
+            <a href="teaching.html" class="btn-pill outline"><i class="bi bi-arrow-right"></i> Teaching &amp; resources</a>
+          </div>
+          <div class="col-lg-6">
+            <span class="eyebrow-k">Talks</span>
+            <h2 style="font-size:28px">Invited Talks &amp; Seminars</h2>
+            <div class="sideblock" style="margin-top:4px">
+              <ul>
+                <li><i class="bi bi-mic"></i><span>Language &amp; Multimodal Processing Group, <b>University of Copenhagen</b> — 2026</span></li>
+                <li><i class="bi bi-mic"></i><span><b>Sheffield NLP</b> — Human-Scale AI Frontier — 2026</span></li>
+                <li><i class="bi bi-mic"></i><span>13th Mental Lexicon Conference, <b>McGill University</b> — Invited Keynote — 2025</span></li>
+              </ul>
+            </div>
+            <a href="talks.html" class="btn-pill outline" style="margin-top:16px"><i class="bi bi-arrow-right"></i> All talks</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- People -->
+    <section class="section tint home-sec">
+      <div class="container">
+        <span class="eyebrow-k">People</span>
+        <h2 style="font-size:28px">Collaborators &amp; Students</h2>
+        <p class="lead" style="max-width:820px">I work with researchers across the Cambridge PicoLM team, the Cambridge NLIP Group, the ALTA Institute, KAIST AI / NAVER Cloud, and the Language Technology Lab — and supervise MPhil and undergraduate students in Computer Science and Linguistics.</p>
+        <div class="chip-row" style="margin:18px 0 22px">
+          <span class="chip">PicoLM Team</span><span class="chip">Cambridge NLIP</span><span class="chip">ALTA Institute</span>
+          <span class="chip">KAIST AI / NAVER Cloud</span><span class="chip">Cambridge LTL &amp; TAL</span>
+        </div>
+        <a href="people.html" class="btn-pill outline"><i class="bi bi-arrow-right"></i> View collaborators &amp; students</a>
+      </div>
+    </section>
+
+    <!-- Writing -->
+    <section class="section home-sec">
+      <div class="container">
+        <div class="d-flex flex-wrap justify-content-between align-items-end" style="gap:16px;margin-bottom:26px">
+          <div>
+            <span class="eyebrow-k">Writing</span>
+            <h2 style="margin-bottom:6px;font-size:28px">Essays &amp; Reflections</h2>
+            <p class="lead" style="margin:0">On research, journalism, and academic life.</p>
+          </div>
+          <a href="writing/" class="btn-pill outline"><i class="bi bi-arrow-right"></i> All writing</a>
+        </div>
+        <div class="card-grid">
+          <a class="write-card" href="writing/phd-year-one.html"><span class="tag">Essay</span><h4>Year One of a Cambridge PhD</h4><p>Eight papers, one framework, and a lot of coffee — reflections on the first year.</p></a>
+          <a class="write-card" href="writing/ocp23-reflections.html"><span class="tag">Academic</span><h4>Phonology at Home: Hosting OCP23 at Caius</h4><p>What phonology has to teach AI, and on being a host to ~150 phonologists.</p></a>
+          <a class="write-card" href="writing/per-capita-three-years.html"><span class="tag">Journalism</span><h4>Three Years of Per Capita Media</h4><p>What student journalism taught me about independence.</p></a>
+        </div>
       </div>
     </section>
 
@@ -222,19 +223,23 @@
     </section>
 
     <!-- Contact -->
-    <section class="section">
+    <section class="section home-sec">
       <div class="container">
-        <div class="contact-card">
-          <h2>Get in touch</h2>
-          <p>I welcome inquiries related to my research, and am happy to discuss projects with current or prospective students.</p>
-          <p style="font-family:var(--mono-font);font-size:18px"><a href="mailto:sas245@cam.ac.uk" style="color:#fff;text-decoration:underline">sas245@cam.ac.uk</a></p>
-          <div class="contact-socials">
-            <a href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&hl=en" title="Google Scholar"><i class="bi bi-mortarboard"></i></a>
-            <a href="https://aclanthology.org/people/s/suchir-salhan/" title="ACL Anthology"><i class="bi bi-journal-text"></i></a>
-            <a href="https://www.linkedin.com/in/ssalhan/" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-            <a href="https://twitter.com/suchirsalhan" title="X / Twitter"><i class="bi bi-twitter-x"></i></a>
-            <a href="https://www.cst.cam.ac.uk/people/sas245" title="Cambridge CST"><i class="bi bi-building"></i></a>
-            <a href="https://www.per-capita.co.uk" title="Per Capita Media"><i class="bi bi-newspaper"></i></a>
+        <div class="contact-pro">
+          <span class="eyebrow-k">Contact</span>
+          <h3>Get in touch</h3>
+          <p class="lede">I welcome enquiries related to my research and am happy to discuss potential projects with current and prospective students. I may have limited availability at certain times of year, but will do my best to respond to all enquiries.</p>
+          <div class="rows">
+            <div class="crow"><i class="bi bi-envelope"></i><a href="mailto:sas245@cam.ac.uk">sas245@cam.ac.uk</a></div>
+            <div class="crow"><i class="bi bi-geo-alt"></i><span>Department of Computer Science &amp; Technology, University of Cambridge · Gonville &amp; Caius College</span></div>
+            <div class="crow"><i class="bi bi-file-earmark-pdf"></i><a href="assets/academic_cv.pdf" target="_blank">Curriculum Vitae (PDF)</a></div>
+          </div>
+          <div class="links">
+            <a href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&hl=en"><i class="bi bi-mortarboard"></i> Google Scholar</a>
+            <a href="https://aclanthology.org/people/s/suchir-salhan/"><i class="bi bi-journal-text"></i> ACL Anthology</a>
+            <a href="https://www.cst.cam.ac.uk/people/sas245"><i class="bi bi-building"></i> Cambridge CST</a>
+            <a href="https://www.linkedin.com/in/ssalhan/"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            <a href="https://twitter.com/suchirsalhan"><i class="bi bi-twitter-x"></i> X</a>
           </div>
         </div>
       </div>
