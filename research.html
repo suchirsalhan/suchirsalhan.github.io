@@ -95,57 +95,139 @@
       </div>
     </section>
 
-    <!-- Section 3: Key Themes -->
+    <!-- Section 3: Key Themes (expandable colourful cards) -->
     <section class="section">
       <div class="container">
         <div class="section-head left">
           <p class="kicker">Focus Areas</p>
           <h2>Key Themes</h2>
-          <p>Six recurring themes that connect my work across machine learning, interpretability, and the language sciences.</p>
+          <p>Six recurring themes that connect my work across machine learning, interpretability, and the language sciences — in plain English. Tap any card to learn more and see representative papers.</p>
+          <div class="theme-links">
+            <a class="btn-pill solid" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">📚 See all my papers on Google Scholar</a>
+            <a class="btn-pill outline" href="publications.html">Full publications page <i class="bi bi-arrow-right"></i></a>
+          </div>
         </div>
 
-        <div class="card-grid">
-          <article class="u-card">
-            <div class="ic"><i class="bi bi-diagram-3"></i></div>
-            <h4>Cognitively-Inspired Design &amp; Evaluation</h4>
-            <p>Treating language models as learners rather than accomplished speakers—drawing on developmental psychology, psychometrics, and item response theory to make competence legible.</p>
-            <a href="publications.html" class="more">Related publications <i class="bi bi-arrow-right"></i></a>
+        <div class="theme-grid">
+
+          <article class="theme-card" style="--tint:#5f7a52">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🧠</span>
+              <span class="theme-titles">
+                <span class="theme-title">Small, human-scale language models</span>
+                <span class="theme-blurb">Children pick up language from a tiny fraction of the data that powers today's AI. I build small models that learn under those same human-scale limits — and help maintain open-source tools so anyone can run these experiments.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I build and study language models that learn from human-scale amounts of data, and maintain open tooling so these experiments are reproducible for everyone.</p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://aclanthology.org/2025.emnlp-demos.22/" target="_blank" rel="noopener">Pico — a framework for small-model research</a>
+                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.10/" target="_blank" rel="noopener">What's the Best Sequence Length for BabyLM?</a>
+                </div>
+              </div>
+            </div>
           </article>
 
-          <article class="u-card">
-            <div class="ic"><i class="bi bi-activity"></i></div>
-            <h4>Pretraining &amp; Interpretability</h4>
-            <p>Developmental interpretability and learning dynamics in small LMs, with reproducible, hypothesis-driven pretraining through the PicoLM framework.</p>
-            <a href="publications.html" class="more">Related publications <i class="bi bi-arrow-right"></i></a>
+          <article class="theme-card" style="--tint:#b0894a">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🌍</span>
+              <span class="theme-titles">
+                <span class="theme-title">Multilingual &amp; fairer AI</span>
+                <span class="theme-blurb">Most AI is built for English. I work on models that learn many languages at once, including under-served ones, so the technology is fairer and more culturally adaptive for more of the world.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I develop multilingual models and benchmarks that reach beyond English to under-served languages, making language technology fairer and more culturally adaptive.</p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://babylm.github.io/babybabellm/" target="_blank" rel="noopener">BabyBabelLM — a multilingual benchmark</a>
+                  <a class="theme-pill" href="https://aclanthology.org/2024.conll-babylm.15/" target="_blank" rel="noopener">Less is More — cross-lingual curriculum learning</a>
+                </div>
+              </div>
+            </div>
           </article>
 
-          <article class="u-card">
-            <div class="ic"><i class="bi bi-translate"></i></div>
-            <h4>Multilinguality</h4>
-            <p>Human-scale, cross-lingual language modelling under data-limited conditions, including low-resourced and typologically diverse languages.</p>
-            <a href="publications.html" class="more">Related publications <i class="bi bi-arrow-right"></i></a>
+          <article class="theme-card" style="--tint:#7a86c9">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🔤</span>
+              <span class="theme-titles">
+                <span class="theme-title">Tokenisation — how models read language</span>
+                <span class="theme-blurb">Before a model understands text it has to break it into pieces. I research smarter 'tokenisers' so models handle any language more fairly and efficiently.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I design information-driven ways of splitting text into units, so models process any language more fairly and efficiently.</p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://arxiv.org/abs/2506.18639" target="_blank" rel="noopener">ByteSpan — information-driven subword tokenisation</a>
+                </div>
+              </div>
+            </div>
           </article>
 
-          <article class="u-card">
-            <div class="ic"><i class="bi bi-scissors"></i></div>
-            <h4>Tokenization</h4>
-            <p>Information-driven subword tokenisation—such as ByteSpan—grouping predictable bytes to yield efficient, morphologically aligned vocabularies.</p>
-            <a href="publications.html" class="more">Related publications <i class="bi bi-arrow-right"></i></a>
+          <article class="theme-card" style="--tint:#b06a8f">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">📊</span>
+              <span class="theme-titles">
+                <span class="theme-title">Language processing &amp; evaluation</span>
+                <span class="theme-blurb">I study how models process language and design more human-like ways to test them — measuring what they really understand, not just what they score.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I build more human-like evaluations of language models, measuring genuine understanding rather than surface benchmark scores.</p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://direct.mit.edu/coli/article/doi/10.1162/coli.a.15/131070" target="_blank" rel="noopener">Measuring Grammatical Diversity from Small Corpora</a>
+                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.25/" target="_blank" rel="noopener">Teacher Demonstrations for multi-turn interaction</a>
+                </div>
+              </div>
+            </div>
           </article>
 
-          <article class="u-card">
-            <div class="ic"><i class="bi bi-chat-square-dots"></i></div>
-            <h4>Alignment &amp; Interaction</h4>
-            <p>How compact systems can be adapted, transferred, and controlled—from meta-pretraining to complexity-controlled generation and cross-lingual transfer.</p>
-            <a href="publications.html" class="more">Related publications <i class="bi bi-arrow-right"></i></a>
+          <article class="theme-card" style="--tint:#5e9e8b">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🔬</span>
+              <span class="theme-titles">
+                <span class="theme-title">Interpretability — how models learn</span>
+                <span class="theme-blurb">I open up small models to see how linguistic structure emerges as they learn — using linguistics and cognitive science to make sense of what's happening inside.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I look inside small models as they train to understand how linguistic structure emerges, drawing on linguistics and cognitive science.</p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.15/" target="_blank" rel="noopener">Looking to Learn — dynamic gating for vision-language</a>
+                </div>
+              </div>
+            </div>
           </article>
 
-          <article class="u-card">
-            <div class="ic"><i class="bi bi-book"></i></div>
-            <h4>Cognitive Science &amp; Linguistics</h4>
-            <p>Neo-emergentist approaches that cross-cut modern Generativist theory, information-theoretic models of typology, and the study of grammatical diversity.</p>
-            <a href="publications.html" class="more">Related publications <i class="bi bi-arrow-right"></i></a>
+          <article class="theme-card" style="--tint:#c1794e">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🛡️</span>
+              <span class="theme-titles">
+                <span class="theme-title">Alignment, interaction &amp; AI safety</span>
+                <span class="theme-blurb">I care about keeping capable systems aligned with human values, and about human-centred uses of AI — including helping people learn a language.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I work on keeping capable systems aligned with human values and on human-centred applications of AI, such as supporting language learning.</p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.25/" target="_blank" rel="noopener">Teacher Demonstrations (Zone of Proximal Development)</a>
+                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.13/" target="_blank" rel="noopener">BLiSS — bilingual learner competence in small models</a>
+                </div>
+              </div>
+            </div>
           </article>
+
         </div>
 
         <div class="section-head left" style="margin-top:2.5rem">
@@ -155,6 +237,89 @@
     </section>
 
   </main>
+
+  <!-- Expandable theme-cards styles -->
+  <style>
+    .theme-links { display:flex; flex-wrap:wrap; gap:12px; margin-top:22px; }
+    .theme-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap:20px; }
+    .theme-card {
+      background: var(--surface-color);
+      border:1px solid var(--line);
+      border-top:4px solid var(--tint);
+      border-radius:16px;
+      overflow:hidden;
+      transition: box-shadow .25s, transform .25s, border-color .25s;
+    }
+    .theme-card:hover { transform: translateY(-3px); box-shadow: 0 16px 40px color-mix(in srgb, var(--tint), transparent 82%); }
+    .theme-card.open { box-shadow: 0 16px 44px color-mix(in srgb, var(--tint), transparent 80%); border-color: color-mix(in srgb, var(--tint), var(--line) 45%); }
+    .theme-toggle {
+      display:flex; align-items:flex-start; gap:16px;
+      width:100%; text-align:left; cursor:pointer;
+      background:transparent; border:0; padding:22px 22px 20px;
+      font-family: var(--default-font); color: inherit;
+    }
+    .theme-chip {
+      flex:0 0 auto; width:48px; height:48px; border-radius:13px;
+      display:inline-flex; align-items:center; justify-content:center;
+      font-size:24px; line-height:1;
+      background: color-mix(in srgb, var(--tint), transparent 84%);
+      border:1px solid color-mix(in srgb, var(--tint), transparent 62%);
+    }
+    .theme-titles { flex:1 1 auto; min-width:0; }
+    .theme-title { display:block; font-family: var(--heading-font); font-weight:600; font-size:19px; color: var(--heading-color); line-height:1.25; }
+    .theme-blurb { display:block; margin-top:7px; font-size:15.5px; line-height:1.55; color: var(--ink-2); }
+    .theme-caret {
+      flex:0 0 auto; margin-top:4px; color: var(--tint); font-size:18px;
+      transition: transform .3s ease; display:inline-flex;
+    }
+    .theme-card.open .theme-caret { transform: rotate(180deg); }
+    .theme-panel { max-height:0; overflow:hidden; transition: max-height .35s ease; }
+    .theme-card.open .theme-panel { max-height:420px; }
+    .theme-panel-inner {
+      padding:0 22px 22px 86px;
+      border-top:1px solid color-mix(in srgb, var(--tint), transparent 80%);
+      margin-top:0; padding-top:16px;
+    }
+    .theme-panel-inner p { font-size:15.5px; line-height:1.6; color: #3a372e; margin:0 0 14px; }
+    .theme-papers { display:flex; flex-wrap:wrap; gap:8px; }
+    .theme-pill {
+      font-family: var(--mono-font); font-size:12.5px; line-height:1.3;
+      padding:6px 13px; border-radius:50px;
+      background: color-mix(in srgb, var(--tint), transparent 88%);
+      color: color-mix(in srgb, var(--tint), #000 30%);
+      border:1px solid color-mix(in srgb, var(--tint), transparent 66%);
+      display:inline-flex; align-items:center; gap:6px;
+      transition: background .2s, color .2s;
+    }
+    .theme-pill:hover { background: var(--tint); color:#fff; }
+    /* affordance hint line */
+    .theme-hint {
+      display:block; margin-top:11px;
+      font-family: var(--mono-font); font-size:11.5px; letter-spacing:.04em;
+      text-transform:uppercase; color: color-mix(in srgb, var(--tint), #000 20%);
+    }
+    @media (max-width:520px){ .theme-panel-inner { padding-left:22px; } }
+    .dark-background .theme-panel-inner p { color: var(--default-color); }
+    .dark-background .theme-blurb { color:#cbc4b2; }
+  </style>
+  <script>
+    (function () {
+      var cards = document.querySelectorAll('.theme-card');
+      cards.forEach(function (card) {
+        var btn = card.querySelector('.theme-toggle');
+        // add the "tap to learn more / close" affordance line
+        var hint = document.createElement('span');
+        hint.className = 'theme-hint';
+        hint.textContent = 'Tap to learn more ›';
+        card.querySelector('.theme-titles').appendChild(hint);
+        btn.addEventListener('click', function () {
+          var isOpen = card.classList.toggle('open');
+          btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          hint.textContent = isOpen ? 'Tap to close ‹' : 'Tap to learn more ›';
+        });
+      });
+    })();
+  </script>
 
   <footer class="footer">
     <div class="container">
