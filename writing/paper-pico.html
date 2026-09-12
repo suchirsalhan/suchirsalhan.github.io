@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Pico: A Modular Framework for Hypothesis-Driven Small Language Model Research · Suchir Salhan</title>
+  <meta name="description" content="Notes on Pico, a modular sandbox and baseline suite for controlled small language model experiments, presented at EMNLP 2025 System Demonstrations.">
+  <link href="../favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <link href="../assets/css/writing.css" rel="stylesheet">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="index-page writing-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../beetle.html">Beetle</a></li>
+          <li><a href="index.html" class="active">Writing</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../presentations.html">Talks</a></li>
+          <li><a href="../people.html">People</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Paper</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="tufte-article">
+          <div class="meta">EMNLP 2025 · System Demonstrations</div>
+          <h1>Pico: A Modular Framework for Hypothesis-Driven Small Language Model Research</h1>
+          <p class="standfirst">A lightweight sandbox and a matched suite of baseline models, built so that a single change to a small model's architecture or training can be isolated and its effect observed.</p>
+
+          <figure><img src="../assets/images/photos/photo-poster-pico.jpg" alt="The Pico demo at EMNLP 2025, with Richard Diehl Martinez (Suzhou)." loading="lazy"><figcaption>The Pico demo at EMNLP 2025, with Richard Diehl Martinez (Suzhou).</figcaption></figure>
+
+          <p>Most of what we know about scaling comes from large models, where sheer size covers for a lot of design uncertainty. Small and medium-sized models do not have that luxury. Under tight parameter budgets, a choice about tokenisation, an optimiser setting, or a change to the attention block can decide whether a model works at all, and there has been no easy way to test those choices one at a time. This is the gap Pico sets out to close.<span class="sn"><span class="sn-ref">1</span><span class="sidenote" data-n="1">Diehl Martinez, Africa, Weiss, Salhan, Daniels, Buttery. <a href="https://aclanthology.org/2025.emnlp-demos.22/">Pico: A Modular Framework for Hypothesis-Driven Small Language Model Research</a>, EMNLP 2025 System Demonstrations.</span></span></p>
+
+          <h2>Why a sandbox</h2>
+
+          <p>The framing in the paper is that developing small models is still closer to an experimental craft than a science. Researchers have intuitions about what should help, but few controlled settings in which to check them. Pico is described as a lightweight, modular framework that makes hypothesis-driven research on small and medium-scale language models practical, by letting you make a targeted change to a model's architecture or training procedure and then watch how its behaviour shifts.</p>
+
+          <p>The design splits into two libraries. One provides the sandbox itself, where a modification can be dropped in without rebuilding the whole training stack around it. The other supplies pico-decoder, a suite of baseline decoder models trained under standardised conditions, so that any new result has a fixed point of comparison rather than an ad-hoc one.</p>
+
+          <h2>Baselines you can trust</h2>
+
+          <p>The value of the baseline suite is that it removes a common source of noise. When two research groups report different outcomes for what sounds like the same idea, the difference often lives in the training setup rather than the idea. By fixing those conditions and releasing the models trained under them, Pico gives a shared reference so that a reported effect can be attributed to the change being studied.</p>
+
+          <p>The paper works through case studies showing how this supports iterative development: make a controlled architectural or procedural change, measure against the standardised baselines, and use the outcome to decide the next step. The emphasis throughout is on reproducibility and on keeping the unit of experimentation small enough that its effect is legible.</p>
+
+          <h2>Where it sits</h2>
+
+          <p>For me the appeal is that it treats small-model research as something you can run experiments on properly, rather than a sequence of one-off training runs whose results are hard to compare. The project is maintained with documentation and released models on its own site.<span class="sn"><span class="sn-ref">2</span><span class="sidenote" data-n="2">Project site and released models: <a href="https://www.picolm.io/">picolm.io</a>.</span></span> The claim the paper makes is modest and useful: a controlled setting plus matched baselines turns vague intuitions about small models into questions you can actually test.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+<nav class="dock" aria-label="Primary">
+    <a href="../research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="../beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="../research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="../teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="../presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="../people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="../about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="../assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="../research.html">Research</a><a href="../research.html#publications">Publications</a>
+          <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
+          <a href="../assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/explore.js"></script>
+  <script defer src="../assets/js/toc.js"></script>
+</body>
+</html>

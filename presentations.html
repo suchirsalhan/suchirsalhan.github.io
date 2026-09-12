@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Presentations &amp; Posters · Suchir Salhan</title>
-  <meta name="description" content="Slides, invited keynotes and conference posters by Suchir Salhan.">
+  <title>Talks &amp; Presentations · Suchir Salhan</title>
+  <meta name="description" content="Slides, invited keynotes, conference posters, and invited talks &amp; seminars by Suchir Salhan.">
   <link href="favicon.ico" rel="icon" sizes="any">
   <link rel="icon" href="assets/images/logo-ss.svg" type="image/svg+xml">
   <link href="assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -25,14 +26,14 @@
         <ul>
           <li><a href="research.html">Research</a></li>
           <li><a href="beetle.html">Beetle</a></li>
-          <li><a href="publications.html">Publications</a></li>
+          <li><a href="writing/index.html">Writing</a></li>
           <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="talks.html">Talks</a></li>
-          <li><a href="presentations.html" class="active">Presentations</a></li>
+          <li><a href="presentations.html" class="active">Talks</a></li>
           <li><a href="people.html">People</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
         </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
@@ -41,15 +42,20 @@
   <main class="main">
     <section class="page-hero">
       <div class="container">
-        <div class="breadcrumb-mini"><a href="index.html">Home</a> / Presentations</div>
-        <p class="eyebrow">Presentations</p>
-        <h1>Presentations &amp; Posters</h1>
-        <p>Slides, keynotes and conference posters.</p>
+        <div class="breadcrumb-mini"><a href="index.html">Home</a> / Talks &amp; Presentations</div>
+        <p class="eyebrow">Talks &amp; Presentations</p>
+        <h1>Presentations, Posters &amp; Invited Talks</h1>
+        <p>Talks and posters on how intelligence emerges in minds and machines: slides and keynotes, conference and workshop posters, and a full list of invited talks &amp; seminars.</p>
+        <div class="theme-links" style="margin-top:18px;display:flex;flex-wrap:wrap;gap:12px">
+          <a class="btn-pill outline" href="#slides">Slides &amp; keynotes</a>
+          <a class="btn-pill outline" href="#posters">Posters</a>
+          <a class="btn-pill outline" href="#talks">Invited talks &amp; seminars</a>
+        </div>
       </div>
     </section>
 
     <!-- SLIDES -->
-    <section class="section">
+    <section id="slides" class="section">
       <div class="container">
         <div class="section-head left">
           <p class="kicker">Slides &amp; Keynotes</p>
@@ -67,7 +73,7 @@
                 <div class="venue">ACL 2025 Main Conference (Poster / Slides) · Vienna, Austria</div>
                 <div class="meta">
                   <a class="lnk" href="assets/presentations/acl2025.pdf" target="_blank"><i class="bi bi-easel"></i> Slides (PDF)</a>
-                  <a class="lnk" href="publications.html"><i class="bi bi-journal-text"></i> Related paper</a>
+                  <a class="lnk" href="research.html#publications"><i class="bi bi-journal-text"></i> Related paper</a>
                 </div>
                 <div class="pub-extra">
                   <a class="pub-thumb" href="assets/presentations/acl2025.pdf" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/acl2025.jpg" alt="ACL 2025 slides preview"></a>
@@ -82,7 +88,7 @@
                 <div class="venue">13th Conference on the Mental Lexicon · Invited Keynote · Montreal, Canada · 2025</div>
                 <div class="meta">
                   <a class="lnk" href="assets/presentations/ML2025.pdf" target="_blank"><i class="bi bi-easel"></i> Slides (PDF)</a>
-                  <a class="lnk" href="publications.html"><i class="bi bi-journal-text"></i> Related paper</a>
+                  <a class="lnk" href="research.html#publications"><i class="bi bi-journal-text"></i> Related paper</a>
                 </div>
                 <div class="pub-extra">
                   <a class="pub-thumb" href="assets/presentations/ML2025.pdf" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/ML2025.jpg" alt="Mental Lexicon keynote slides preview"></a>
@@ -96,13 +102,15 @@
     </section>
 
     <!-- POSTERS -->
-    <section class="section tint">
+    <section id="posters" class="section tint">
       <div class="container">
         <div class="section-head left">
           <p class="kicker">Posters</p>
           <h2>Conference &amp; Workshop Posters</h2>
           <p>Posters presented at conferences, workshops and departmental showcases.</p>
         </div>
+        <figure class="inline-photo"><img src="assets/images/photos/photo-poster-sequence-length.jpg" alt="Presenting a BabyLM poster at EMNLP 2025" loading="lazy"><figcaption>Presenting at the BabyLM Workshop, EMNLP 2025 (Suzhou).</figcaption></figure>
+        <figure class="inline-photo"><img src="assets/images/photos/photo-poster-theoretical-linguistics.jpg" alt="Theoretical Linguistics poster at CogInterp, NeurIPS 2025" loading="lazy"><figcaption>Theoretical Linguistics Constrains Causal Abstraction — CogInterp @ NeurIPS 2025.</figcaption></figure>
 
         <div class="card-grid">
 
@@ -230,15 +238,67 @@
       </div>
     </section>
 
+    <!-- INVITED TALKS & SEMINARS -->
+    <section id="talks" class="section">
+      <div class="container">
+        <div class="section-head left">
+          <p class="kicker">Invited Talks &amp; Seminars</p>
+          <h2>Invited Talks &amp; Seminars</h2>
+          <p>Selected talks, keynotes, and seminar presentations. I also organise the <a href="service.html">NLIP Seminar Series</a> at Cambridge — see <a href="service.html">Service</a>.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+
+            <div class="talk"><i class="bi bi-mic ic"></i><div><div class="t">Structured Exposure Pretraining in Bilingual Language Models for Modelling L2 Language Processing</div><div class="w">X-PPL-26: Crosslinguistic Perspectives on Processing and Learning · Bayonne, Basque Country · September 2026</div></div></div>
+
+            <div class="talk"><i class="bi bi-mic ic"></i><div><div class="t">Multilingual and Interactional Approaches to Human-Scale Language Modelling</div><div class="w">Invited Seminar, Language and Multimodal Processing Group, University of Copenhagen · jointly delivered with Dr Diana Galvan-Sosa · May 2026</div></div></div>
+
+            <div class="talk"><i class="bi bi-mic ic"></i><div><div class="t">Understanding the Human-Scale AI Frontier: Sample-Efficient and Human-Scale Language Modelling</div><div class="w">Invited Seminar, SheffieldNLP · Sheffield, UK · May 2026</div></div></div>
+
+            <div class="talk"><i class="bi bi-mic ic"></i><div><div class="t">Bilingual language models as computational models of human bilingualism and AI-based solutions to support second-language learning.</div><div class="w">Cambridge Language Sciences Workshop: Toward a more ecological investigation of bilingualism, and Workshop on Computational Linguistic Methods for Language Learning Technology (ALTA CST) · Computer Science &amp; Technology, University of Cambridge · March 2026</div></div></div>
+
+            <div class="talk"><i class="bi bi-mic ic"></i><div><div class="t"><a href="https://aclanthology.org/2024.conll-babylm.15/">Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies</a></div><div class="w">Cambridge Language Sciences Symposium (November 2024) · Poster at HumanCLAIM Workshop, Göttingen, Germany (March 2025) · Poster and Demonstration at Cambridge CHIA (Centre for Human-Inspired AI) Annual Conference (June 2025)</div></div></div>
+
+            <div class="talk"><i class="bi bi-mic ic"></i><div><div class="t">Human-Validated Grammar Profiles for Language Models</div><div class="w">Workshop organised by Prof Detmar Meurers · Tübingen, Germany · March 2025</div></div></div>
+
+            <div class="talk"><i class="bi bi-mic ic"></i><div><div class="t">The Distribution of Phonemes across Languages: Chance, Costs, and Integration across Linguistic Tiers.</div><div class="w">13th Conference on the Mental Lexicon · Invited Keynote delivered by Fermin Moscoso del Prado Martin, McGill University, Montreal · June 2025</div></div></div>
+
+            <div class="talk"><i class="bi bi-mic ic"></i><div><div class="t">L1 Influence in L2 Language Models: A Human-centric Approach</div><div class="w">2026 HumanCLAIM Workshop (Göttingen, Germany) and Multilingual Minds and Machines Meeting 2026, Max Planck Institute for Psycholinguistics · Nijmegen, Netherlands · March 2026</div></div></div>
+
+            <div class="talk"><i class="bi bi-mic ic"></i><div><div class="t">LLMs "off-the-shelf" or Pretrain-from-Scratch? Recalibrating Biases and Improving Transparency using Small-Scale Language Models</div><div class="w">Learning and Human Intelligence Group, Department of Computer Science &amp; Technology, University of Cambridge · 2024</div></div></div>
+
+            <div class="talk"><i class="bi bi-mic ic"></i><div><div class="t">On the Potential for Maximising Minimal Means in Transformer Language Models</div><div class="w">SyntaxLab, Department of Theoretical and Applied Linguistics, University of Cambridge · seminar organised by Dr Theresa Biberauer · 14 February 2023</div></div></div>
+
+            <div class="talk"><i class="bi bi-mic ic"></i><div><div class="t">UROP Project Report 2021: Providing Automatic Feedback on Argumentation Quality to Learners of English</div><div class="w">Natural Language and Information Processing Group, Department of Computer Science and Technology, University of Cambridge · 2021</div></div></div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
+<nav class="dock" aria-label="Primary">
+    <a href="research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="writing/index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
 
   <footer class="footer">
     <div class="container">
-      <div class="cols">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
         <div>© 2026 Suchir Salhan · University of Cambridge</div>
         <div class="fnav">
-          <a href="research.html">Research</a><a href="publications.html">Publications</a>
-          <a href="teaching.html">Teaching</a><a href="about.html">About</a>
+          <a href="research.html">Research</a><a href="research.html#publications">Publications</a>
+          <a href="service.html">Service</a><a href="about.html">About</a>
           <a href="assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
           <a href="privacy.html">Privacy</a>
         </div>

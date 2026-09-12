@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Beetle: a framework for controlled bilingual &amp; multilingual pretraining · Suchir Salhan</title>
+  <meta name="description" content="Announcing the open-source release of Beetle — a framework for controlled bilingual and multilingual language-model pretraining and interpretability.">
+  <link href="../favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <link href="../assets/css/writing.css" rel="stylesheet">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="index-page writing-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../beetle.html">Beetle</a></li>
+          <li><a href="index.html" class="active">Writing</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../presentations.html">Talks</a></li>
+          <li><a href="../people.html">People</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Launch</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="tufte-article">
+          <div class="meta">8 September 2026 · Software Release</div>
+          <h1>Beetle: a framework for controlled bilingual &amp; multilingual pretraining</h1>
+
+          <p class="standfirst">Small models. Big questions. Today I am open-sourcing Beetle, the framework I built to study how language models acquire a second language under tightly controlled, fully reproducible conditions.<span class="sn"><span class="sn-ref">1</span><span class="sidenote" data-n="1"><a href="https://beetlelm.github.io/">Beetle software release — beetlelm.github.io</a></span></span></p>
+
+          <p>Beetle is a framework I designed and built for <strong>controlled bilingual and multilingual pretraining</strong>. It gives you a single, declarative interface in which the tokeniser, the target language, the training budget, and the exposure structure of the data can each be manipulated independently. Everything is configured through declarative YAML, which turns what used to be a tangle of bespoke scripts into a systematic, large-scale ablation of how learning dynamics and data structure shape acquisition. As of today it is open source, and the release — the engine, the curricula, the model suite, and the analysis tooling — is available at <a href="https://beetlelm.github.io/">beetlelm.github.io</a>.</p>
+
+          <p>Although Beetle grew out of computational psycholinguistics — modelling how humans process a second language — it is much more than a psycholinguistics tool. It is a general interpretability and controlled-pretraining infrastructure. Because every model is checkpointed densely across training, and because exposure is a first-class, configurable variable, Beetle lets you ask mechanistic questions about <em>when</em> and <em>how</em> abilities emerge, not just whether a final model has them.</p>
+
+          <figure>
+            <img src="../assets/beetle/beetle-fig1.jpg" alt="The Beetle framework: independently manipulable tokeniser, target language, training budget, and exposure structure, all configured via YAML.">
+            <figcaption>The Beetle framework. Tokeniser, target language, training budget, and exposure curriculum are independently configurable, feeding a controlled-pretraining engine that emits densely checkpointed models for analysis and interpretability.</figcaption>
+          </figure>
+
+          <h2>Why controlled pretraining</h2>
+
+          <p>Most claims about what a language model has learned rest on inspecting the finished model. That misses almost everything interesting about acquisition. I built Beetle so that exposure structure becomes an experimental variable, letting us watch a second language being acquired checkpoint by checkpoint rather than only reading off the end state. The same models, the same budget — only the way the second language is introduced changes. That is what makes the results below controlled rather than anecdotal.</p>
+
+          <h2>What I trained</h2>
+
+          <p>Beetle is not a single script but a large, reproducible model suite, and I trained the whole thing. The release includes <strong>285 bilingual and 45 monolingual models</strong> (330 in total), with rich checkpoints across a range of typologically-diverse L1s, exposure curricula (B1–B5) and three data scales (100M / 2B / 24B tokens) — released to study multilingual pretraining and the computational modelling of bilingualism and second-language learning.</p>
+
+          <p>The 13 L1s span German, Dutch, Chinese, Italian, Hindi, Russian, Turkish, Basque and more, deliberately chosen to vary typological distance from English. Checkpoints follow a log<sub>2</sub> schedule and preserve gradients, activations and circuits, so the suite supports interpretability out of the box; for several of these languages these are the first densely checkpointed models released. The default backbone is a 125M LLaMA-style PicoDecoder,<span class="sn"><span class="sn-ref">2</span><span class="sidenote" data-n="2"><a href="https://www.picolm.io/">PicoDecoder / PicoLM — picolm.io. Pico is inherited, collaborative infrastructure; Beetle builds on it.</a></span></span> with encoder-decoder, MoE and SSM variants also supported. Models are evaluated on MECO L2 reading-time, BLiSS, CEFR, JFLEG and Mono/Multi-BLiMP.</p>
+
+          <h2>The five exposure curricula</h2>
+
+          <p>The heart of the design is five ways of introducing the second language during pretraining. Each is a declarative configuration in Beetle. <strong>B1 (Balanced)</strong> interleaves L1 and L2 evenly throughout training. <strong>B2 (Simultaneous)</strong> mixes both languages into a single stream from the first step. <strong>B3 (Sequential)</strong> establishes the L1 first, then introduces the L2 in a distinct later stage. <strong>B4 (Classroom / episodic)</strong> delivers the L2 in spaced bursts interspersed with L1, an analogue of classroom instruction rather than immersion. <strong>B5 (Late)</strong> introduces the L2 only near the end of training, after extensive L1 exposure.</p>
+
+          <h2>What we find</h2>
+
+          <p>Exposure structure is not a cosmetic training detail. It changes what the model learns, and how well small models mirror human second-language processing. This work is the subject of my first first-author main-conference paper, currently under review.<span class="sn"><span class="sn-ref">3</span><span class="sidenote" data-n="3"><a href="../beetle.html">Structured Exposure Pretraining in Bilingual Language Models for Modelling L2 Language Processing — Salhan, Arnett, Michaelov, Buttery. Paper available on request.</a></span></span></p>
+
+          <h3>Small Beetle models rival 8B LLMs on human L2 reading-time</h3>
+
+          <p>Models trained with structured, staged exposure align with human L2 reading times (MECO L2) as well as, and often better than, multilingual LLMs of up to 8B parameters, at a tiny fraction of the size. Human-scale, controlled pretraining turns out to be competitive with brute-force scale for this cognitive-modelling target.</p>
+
+          <figure>
+            <img src="../assets/beetle/fig_meco_beetle_vs_baselines_bars.jpg" alt="Bar chart: small Beetle models match or beat multilingual LLMs up to 8B parameters on MECO L2 reading-time alignment.">
+            <figcaption>MECO L2 reading-time alignment. Small Beetle models (structured exposure) match or exceed multilingual LLM baselines up to 8B parameters.</figcaption>
+          </figure>
+
+          <h3>A dissociation: staged exposure for processing, balanced for grammaticality</h3>
+
+          <p>The best curriculum depends on what you measure. Staged exposure yields the best fit to online reading-time behaviour, whereas balanced exposure produces stronger offline grammatical judgement (CEFR, JFLEG). This dissociation between online processing and offline competence mirrors a distinction long drawn in the psycholinguistics of second-language acquisition.</p>
+
+          <figure>
+            <img src="../assets/beetle/fig_bliss_vs_meco_final-1.jpg" alt="Comparison of BLiSS grammaticality versus MECO reading-time outcomes across exposure curricula, showing a dissociation.">
+            <figcaption>BLiSS (grammaticality) versus MECO (reading-time): balanced exposure favours grammatical judgement while staged exposure favours human-like processing — a clear dissociation.</figcaption>
+          </figure>
+
+          <h3>Learning dynamics: phase transitions, curricula, and forgetting</h3>
+
+          <p>Because Beetle checkpoints densely, we can watch these abilities emerge. Acquisition proceeds in phase transitions rather than smoothly; curricula interact with typological proximity to English; and sequential and late curricula expose catastrophic forgetting of the L1 that balanced exposure avoids. These dynamics are invisible if you only inspect the final model.</p>
+
+          <h2>Reproducible by design</h2>
+
+          <p>Beetle is not one script but three pip-installable libraries and several supporting infrastructures: a controlled-pretraining engine, an exposure-curriculum system, and an analysis and interpretability toolkit. Everything needed to reproduce the work is released — the 330 model checkpoints, the tokenisers, the decontaminated, pretokenised training data at all three scales, and the full analysis pipelines. The goal is that any result here can be re-derived from the released artefacts alone. Beetle is my own framework: I designed and built the system, I trained the 330 models, and I authored the curriculum engine, the analysis toolkit and the libraries. It builds on the PicoDecoder backbone from PicoLM, which I did not create; everything else is my individual contribution.</p>
+
+          <p>The software is live now. If you want to run controlled bilingual or multilingual pretraining, or reuse the checkpoints for interpretability, start at <a href="https://beetlelm.github.io/">beetlelm.github.io</a>.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+<nav class="dock" aria-label="Primary">
+    <a href="../research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="../beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="../research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="../teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="../presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="../people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="../about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="../assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="../research.html">Research</a><a href="../research.html#publications">Publications</a>
+          <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
+          <a href="../assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/explore.js"></script>
+  <script defer src="../assets/js/toc.js"></script>
+</body>
+</html>

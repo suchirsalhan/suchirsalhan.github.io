@@ -2,24 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Page not found · Suchir Salhan</title>
+  <meta name="description" content="404 — this page wandered off. Head back home to Suchir Salhan's site.">
   <link href="favicon.ico" rel="icon" sizes="any">
   <link rel="icon" href="assets/images/logo-ss.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/site.css" rel="stylesheet">
 </head>
-<body>
-  <section class="page-hero" style="min-height:100vh;display:flex;align-items:center;padding:60px 0">
-    <div class="container text-center">
-      <div style="font-family:var(--mono-font);letter-spacing:0.2em;color:#cdd6bf">404</div>
-      <h1 style="margin:14px 0">Page not found</h1>
-      <p style="margin:0 auto 26px">The page you were looking for doesn't exist or has moved.</p>
-      <a href="/index.html" class="btn-pill primary"><i class="bi bi-arrow-left"></i> Back home</a>
+<body class="index-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="index.html" class="brand"><img class="logo-ss" src="assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="research.html">Research</a></li>
+          <li><a href="beetle.html">Beetle</a></li>
+          <li><a href="writing/index.html">Writing</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="presentations.html">Talks</a></li>
+          <li><a href="people.html">People</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
     </div>
-  </section>
+  </header>
+
+  <main class="main">
+    <section class="page-hero" style="min-height:82vh;display:flex;align-items:center">
+      <div class="container text-center">
+        <div class="eyebrow" style="font-family:var(--mono-font);letter-spacing:0.28em">ERROR · OUT-OF-DISTRIBUTION</div>
+        <h1 style="font-size:clamp(72px,16vw,150px);line-height:1;margin:10px 0 6px">404</h1>
+        <p style="font-size:20px;max-width:640px;margin:0 auto 8px">This page wandered off — like a BabyLM that ran out of training data.</p>
+        <p style="max-width:600px;margin:0 auto 30px;color:var(--ink-2)">We searched the whole corpus and couldn't find it. It may have been renamed, moved, or lost to a tokeniser somewhere. No perplexity intended.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;align-items:center">
+          <a href="index.html" class="btn-pill primary"><i class="bi bi-house-door"></i> Back home</a>
+          <a href="research.html" class="btn-pill"><i class="bi bi-lightbulb"></i> Research</a>
+          <a href="writing/index.html" class="btn-pill"><i class="bi bi-pencil"></i> Writing</a>
+        </div>
+      </div>
+    </section>
+  </main>
+<nav class="dock" aria-label="Primary">
+    <a href="research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="writing/index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="research.html">Research</a><a href="research.html#publications">Publications</a>
+          <a href="teaching.html">Teaching</a><a href="about.html">About</a>
+          <a href="assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/explore.js"></script>
 </body>
 </html>

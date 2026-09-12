@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Teacher Demonstrations in a BabyLM's Zone of Proximal Development for Contingent Multi-Turn Interaction · Suchir Salhan</title>
+  <meta name="description" content="ContingentChat: benchmarking and improving multi-turn contingency in a BabyLM trained on 100M words, with an alignment dataset and adaptive decoding.">
+  <link href="../favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <link href="../assets/css/writing.css" rel="stylesheet">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="index-page writing-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../beetle.html">Beetle</a></li>
+          <li><a href="index.html" class="active">Writing</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../presentations.html">Talks</a></li>
+          <li><a href="../people.html">People</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Paper</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="tufte-article">
+          <div class="meta">November 2025 · BabyLM Workshop, EMNLP 2025 — Outstanding Paper Award</div>
+          <h1>Teacher Demonstrations in a BabyLM's Zone of Proximal Development for Contingent Multi-Turn Interaction</h1>
+          <p class="standfirst">Child–caregiver dialogue is contingent: turns are prompt, direct, and meaningful. We ask whether a small model trained on 100M words can be taught to hold up its end of that kind of exchange.</p>
+
+          <figure><img src="../assets/images/photos/photo-poster-pedagogical-alignment.jpg" alt="Related work on pedagogical alignment (CogInterp @ NeurIPS 2025)." loading="lazy"><figcaption>Related work on pedagogical alignment (CogInterp @ NeurIPS 2025).</figcaption></figure>
+
+          <p>When a caregiver and a child talk, the back-and-forth has a property developmental linguists call contingency. A response arrives quickly, it connects to what the other person just said, and it moves the exchange somewhere.<span class="sn"><span class="sn-ref">1</span><span class="sidenote" data-n="1">Salhan, Gu, Rooein, Galvan-Sosa, Gaudeau, Caines, Yuan &amp; Buttery. <a href="https://aclanthology.org/2025.babylm-main.25/">Teacher Demonstrations in a BabyLM's Zone of Proximal Development for Contingent Multi-Turn Interaction</a>, BabyLM Workshop, EMNLP 2025.</span></span> That is easy to describe and hard to build. In this paper, with my co-authors, I take contingency seriously as a target for a BabyLM: a language model constrained to roughly the amount of language a child hears, on the order of 100 million words.</p>
+
+          <p>The framing borrows from Vygotsky. A learner has a zone of proximal development, the space of things they cannot yet do alone but can manage with the right support. A caregiver, or a teacher, supplies that support through well-timed demonstrations. We ask what the analogue of a teacher demonstration is for a small dialogue model, and whether providing one at the right moment helps the model produce more contingent turns.</p>
+
+          <h2>ContingentChat</h2>
+
+          <p>To study this concretely we built ContingentChat, a framework for benchmarking and then improving multi-turn contingency in a data-limited model. The benchmark side gives us a way to measure whether a response is actually grammatical and coherent in context, rather than merely fluent in isolation. The intervention side is a post-training step: we align the base BabyLM against a dataset assembled for this purpose, so that the model's replies become more grammatical and more cohesive across turns.</p>
+
+          <p>The alignment dataset is the load-bearing piece. Rather than hoping contingency emerges from more pretraining, we curate examples that show what a good contingent turn looks like and train the model against them. This is where the teacher-demonstration idea earns its keep: the demonstrations are the supervision signal that pulls the model's dialogue behaviour into a better region.</p>
+
+          <h2>What the decoding could and could not do</h2>
+
+          <p>We also looked at inference-time control. The intuition was that adaptive decoding, adjusting how the model samples depending on the conversational state, might supply some of the same benefit more cheaply than retraining. In practice the adaptive strategies we tried added little on top of the post-training. The gains came from the alignment data, not from clever sampling. I find that a useful negative result: it says the problem is one of what the model has been taught to prefer, not merely how we read out its distribution at test time.</p>
+
+          <p>Taken together, the results position contingency as a genuinely difficult optimisation goal for small models. Post-training on targeted demonstrations moves grammaticality and coherence in the right direction, and the improvements are real, but holding a contingent conversation remains a demanding ask of a model that has seen so little language. The paper received an Outstanding Paper Award at the BabyLM Workshop,<span class="sn"><span class="sn-ref">2</span><span class="sidenote" data-n="2">First BabyLM Workshop, EMNLP 2025, Suzhou, China. See the <a href="https://aclanthology.org/2025.babylm-main.25/">ACL Anthology entry</a>.</span></span> which I read as encouragement to keep pushing on interaction, and not only on the static benchmarks that dominate the sample-efficient pretraining literature.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+<nav class="dock" aria-label="Primary">
+    <a href="../research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="../beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="../research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="../teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="../presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="../people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="../about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="../assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="../research.html">Research</a><a href="../research.html#publications">Publications</a>
+          <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
+          <a href="../assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/explore.js"></script>
+  <script defer src="../assets/js/toc.js"></script>
+</body>
+</html>

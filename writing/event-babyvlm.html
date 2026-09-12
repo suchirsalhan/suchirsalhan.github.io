@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>The BabyVLM Workshop: Developmentally Plausible Multimodal Systems · Suchir Salhan</title>
+  <meta name="description" content="A write-up of the BabyVLM Workshop at NeurIPS 2026 on sample-efficient, developmentally plausible vision-language learning.">
+  <link href="../favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <link href="../assets/css/writing.css" rel="stylesheet">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="index-page writing-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../beetle.html">Beetle</a></li>
+          <li><a href="index.html" class="active">Writing</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../presentations.html">Talks</a></li>
+          <li><a href="../people.html">People</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Event</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="tufte-article">
+          <div class="meta">NeurIPS 2026 · Atlanta</div>
+          <h1>The BabyVLM Workshop: Developmentally Plausible Multimodal Systems</h1>
+          <p class="standfirst">A workshop I helped organise on whether vision can make language learning as sample-efficient in machines as it appears to be in children.</p>
+
+          <p>The BabyVLM Workshop, held at the Georgia World Congress Center alongside NeurIPS 2026,<span class="sn"><span class="sn-ref">1</span><span class="sidenote" data-n="1"><a href="https://babyvlm.github.io/">Event site</a>.</span></span> starts from a gap that is easy to state and hard to close. A child learns language from something like 100 million words over the first years of life. A frontier language model is trained on well over a trillion. That is roughly a ten-thousand-fold difference in exposure, and children arrive at robust, grounded language anyway. The workshop asks a pointed version of the question: does the difference come down to the fact that children learn from more than text? A toddler hears words while seeing faces, objects, and actions, and the workshop's premise is that this multimodal signal, and vision in particular, may be part of what makes infant learning so efficient.</p>
+
+          <h2>Aims</h2>
+
+          <p>Rather than treat data efficiency as a purely architectural problem, BabyVLM frames it developmentally. The call invited work along three lines: developmentally plausible pretraining, where the training signal is constrained to something an infant could plausibly receive; developmentally aligned evaluation, where benchmarks measure the kinds of competence children acquire rather than adult exam performance; and longitudinal egocentric learning, which uses recordings taken from a child's own point of view. The framing is a deliberate sibling to the text-only BabyLM effort,<span class="sn"><span class="sn-ref">2</span><span class="sidenote" data-n="2"><a href="https://babylm.github.io/">BabyLM Challenge</a>.</span></span> extended to the harder case where pixels and words arrive together.</p>
+
+          <h2>The shared task</h2>
+
+          <p>Attached to the workshop is the BabyVLM Challenge, a competition on developmentally plausible, sample-efficient vision-language modelling. Participants pretrain models on infant-scale datasets, roughly the volume and character of what a young child actually experiences, and are evaluated on developmental benchmarks rather than the large web-scale suites usual in the field. The submission deadline fell on 8 September 2026, with notifications later that month, and the challenge results are set to be presented at CVPR 2027, giving the multimodal side of the effort a natural home in a vision venue.</p>
+
+          <h2>My role</h2>
+
+          <p>I was a co-organiser, working with colleagues including Paula Buttery at Cambridge, Leshem Choshen, Boqing Gong, and Aaron Mueller. Much of my contribution sat around the shared task and the developmental framing that ties the workshop and challenge together. What I find compelling about the exercise is that it inverts the usual scaling instinct. Instead of asking what more data buys, it asks what a fixed, child-sized budget can be made to yield when the input is grounded in a scene. That is a good constraint to reason under, and it keeps the cognitive question honest rather than letting it dissolve into a race for larger corpora.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+<nav class="dock" aria-label="Primary">
+    <a href="../research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="../beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="../research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="../teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="../presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="../people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="../about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="../assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="../research.html">Research</a><a href="../research.html#publications">Publications</a>
+          <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
+          <a href="../assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/explore.js"></script>
+  <script defer src="../assets/js/toc.js"></script>
+</body>
+</html>

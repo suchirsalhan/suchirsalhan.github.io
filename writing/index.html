@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Writing · Suchir Salhan</title>
   <meta name="description" content="Essays on research, journalism, and academic life by Suchir Salhan.">
@@ -16,8 +17,9 @@
   <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="../assets/css/main.css" rel="stylesheet">
   <link href="../assets/css/site.css" rel="stylesheet">
+  <link href="../assets/css/writing.css" rel="stylesheet">
 </head>
-<body class="index-page">
+<body class="index-page writing-page">
   <header id="header" class="header header--solid d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
@@ -25,14 +27,14 @@
         <ul>
           <li><a href="../research.html">Research</a></li>
           <li><a href="../beetle.html">Beetle</a></li>
-          <li><a href="../publications.html">Publications</a></li>
+          <li><a href="index.html" class="active">Writing</a></li>
           <li><a href="../teaching.html">Teaching</a></li>
-          <li><a href="../talks.html">Talks</a></li>
-          <li><a href="../presentations.html">Presentations</a></li>
+          <li><a href="../presentations.html">Talks</a></li>
           <li><a href="../people.html">People</a></li>
           <li><a href="../about.html">About</a></li>
           <li><a href="../assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
         </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
@@ -44,44 +46,154 @@
         <div class="breadcrumb-mini"><a href="../index.html">Home</a> / Writing</div>
         <p class="eyebrow">Writing</p>
         <h1>Writing &amp; Essays</h1>
-        <p>Essays on research, journalism, and academic life.</p>
+        <p>Essays on research, journalism, and academic life, from minds to machines.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <div class="card-grid">
-          <a class="write-card" href="phd-year-one.html">
+        <div class="section-head left"><p class="kicker">Essays &amp; Reflections</p><h2>Essays</h2></div>
+        <div class="tufte-index">
+          <a class="essay" href="beetle-launch.html">
+            <span class="tag">Launch</span>
+            <h3>Beetle: a framework for controlled bilingual &amp; multilingual pretraining</h3>
+            <p>The open-source Beetle release — 114 controlled models, and why controlled pretraining is worth the effort.</p>
+          </a>
+          <a class="essay" href="phd-year-one.html">
             <span class="tag">Personal</span>
-            <h4>Year One of a Cambridge PhD: Eight Papers, One Framework, and a Lot of Coffee</h4>
+            <h3>Year One of a Cambridge PhD: Eight Papers, One Framework, and a Lot of Coffee</h3>
             <p>Taking stock after the first year of a PhD — the output, the collaborators, and what I would do differently.</p>
           </a>
-          <a class="write-card" href="per-capita-three-years.html">
-            <span class="tag">Journalism</span>
-            <h4>Three Years of Per Capita Media: What Student Journalism Taught Me About Independence</h4>
-            <p>What worked, what was harder, and why independent student journalism still matters.</p>
-          </a>
-          <a class="write-card" href="ocp23-reflections.html">
+          <a class="essay" href="ocp23-reflections.html">
             <span class="tag">Academic</span>
-            <h4>Phonology at Home: Reflections on Hosting OCP23 at Caius</h4>
+            <h3>Phonology at Home: Reflections on Hosting OCP23 at Caius</h3>
             <p>Hosting the Old-World Conference in Phonology at Caius — and what phonology has to teach AI.</p>
           </a>
-          <a class="write-card" href="nlip-michaelmas-2024.html">
+          <a class="essay" href="nlip-michaelmas-2024.html">
             <span class="tag">Seminars</span>
-            <h4>NLIP Seminars Michaelmas 2024</h4>
+            <h3>NLIP Seminars Michaelmas 2024</h3>
             <p>Personal takeaways from a term of NLIP talks across cognition, linguistics, and language models.</p>
           </a>
         </div>
       </div>
     </section>
+
+    <section class="section tint">
+      <div class="container">
+        <div class="section-head left"><p class="kicker">The Papers</p><h2>On my research</h2><p>Short write-ups of individual papers, with references in the margins.</p></div>
+        <div class="tufte-index">
+          <a class="essay" href="paper-teacher-demonstrations.html">
+            <span class="tag">Paper · Award</span>
+            <h3>Teacher Demonstrations in a BabyLM's Zone of Proximal Development</h3>
+            <p>How a slightly-stronger "teacher" improves multi-turn learning in a small model. Outstanding Paper, EMNLP 2025.</p>
+          </a>
+          <a class="essay" href="paper-looking-to-learn.html">
+            <span class="tag">Paper · Award</span>
+            <h3>Looking to Learn: Token-wise Dynamic Gating for Vision-Language Modelling</h3>
+            <p>Token-wise gating for low-resource vision-language models. Outstanding Paper, EMNLP 2025.</p>
+          </a>
+          <a class="essay" href="paper-bytespan.html">
+            <span class="tag">Paper</span>
+            <h3>ByteSpan: Information-Driven Subword Tokenisation</h3>
+            <p>Tokenisation that groups predictable bytes instead of pooling their representations.</p>
+          </a>
+          <a class="essay" href="paper-langmap.html">
+            <span class="tag">Paper · EMNLP 2026</span>
+            <h3>LangMAP: A Language-Adaptive Approach to Tokenization</h3>
+            <p>Adapting tokenisation to the language rather than committing to one fixed scheme.</p>
+          </a>
+          <a class="essay" href="paper-babybabellm.html">
+            <span class="tag">Paper</span>
+            <h3>BabyBabelLM: A Multilingual Developmentally-Plausible Benchmark</h3>
+            <p>A multilingual pretraining benchmark built to a child's scale of language input.</p>
+          </a>
+          <a class="essay" href="paper-crosslingual-alignment.html">
+            <span class="tag">Paper · EMNLP 2026</span>
+            <h3>Cross-Lingual Alignment Without Joint Training</h3>
+            <p>Do monolingual models converge on universal representations with no joint training?</p>
+          </a>
+          <a class="essay" href="paper-pico.html">
+            <span class="tag">Paper · Framework</span>
+            <h3>Pico: Hypothesis-Driven Small Language Model Research</h3>
+            <p>A modular sandbox and baseline suite for controlled small-model experiments.</p>
+          </a>
+          <a class="essay" href="paper-sequence-length.html">
+            <span class="tag">Paper</span>
+            <h3>What's the Best Sequence Length for BabyLM?</h3>
+            <p>How the training sequence length shapes what a human-scale model learns.</p>
+          </a>
+          <a class="essay" href="paper-bliss.html">
+            <span class="tag">Paper</span>
+            <h3>BLiSS: Bilingual Learner Competence in Small Models</h3>
+            <p>Evaluating second-language learner competence in small language models.</p>
+          </a>
+          <a class="essay" href="paper-less-is-more.html">
+            <span class="tag">Paper</span>
+            <h3>Less is More: Cognitively-Plausible Curricula for Cross-Lingual Small Models</h3>
+            <p>Curriculum-learning strategies for pre-training multilingual BabyLMs.</p>
+          </a>
+          <a class="essay" href="paper-grammatical-diversity.html">
+            <span class="tag">Paper</span>
+            <h3>Measuring Grammatical Diversity from Small Corpora</h3>
+            <p>Annotation-invariant measures of grammatical diversity from limited data.</p>
+          </a>
+          <a class="essay" href="paper-linear-truth-encodings.html">
+            <span class="tag">Paper · BlackboxNLP 2026</span>
+            <h3>Development of Linear Truth Encodings in Language Models</h3>
+            <p>A replication study of how linear "truth" directions emerge during training.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head left"><p class="kicker">Events I organise</p><h2>Workshops &amp; symposia</h2></div>
+        <div class="tufte-index">
+          <a class="essay" href="event-babyvlm.html">
+            <span class="tag">Event · NeurIPS 2026</span>
+            <h3>The BabyVLM Workshop: Developmentally Plausible Multimodal Systems</h3>
+            <p>Co-organising a NeurIPS 2026 workshop on sample-efficient, infant-scale multimodal learning.</p>
+          </a>
+          <a class="essay" href="event-babylm.html">
+            <span class="tag">Event · EMNLP 2026</span>
+            <h3>BabyLM: Sample-Efficient Pretraining on a Developmentally Plausible Corpus</h3>
+            <p>The shared task and workshop for human-scale pretraining — now with a multilingual track.</p>
+          </a>
+          <a class="essay" href="event-language-sciences-2025.html">
+            <span class="tag">Event</span>
+            <h3>Cambridge Language Sciences Symposium 2025</h3>
+            <p>Organising the poster session at Cambridge's cross-disciplinary language-sciences symposium.</p>
+          </a>
+          <a class="essay" href="event-human-in-the-loop.html">
+            <span class="tag">Event</span>
+            <h3>The Human in the Loop: Human–AI Collaboration in Language Assessment</h3>
+            <p>A Cambridge symposium on the reliability, fairness and transparency of AI in language assessment.</p>
+          </a>
+        </div>
+      </div>
+    </section>
   </main>
+<nav class="dock" aria-label="Primary">
+    <a href="../research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="../beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="../research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="../teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="../presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="../people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="../about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="../assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
 
   <footer class="footer">
     <div class="container">
-      <div class="cols">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
         <div>© 2026 Suchir Salhan · University of Cambridge</div>
         <div class="fnav">
-          <a href="../research.html">Research</a><a href="../publications.html">Publications</a>
+          <a href="../research.html">Research</a><a href="../research.html#publications">Publications</a>
           <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
           <a href="../assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
           <a href="../privacy.html">Privacy</a>
@@ -93,5 +205,6 @@
   <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="../assets/vendor/aos/aos.js"></script>
   <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/explore.js"></script>
 </body>
 </html>

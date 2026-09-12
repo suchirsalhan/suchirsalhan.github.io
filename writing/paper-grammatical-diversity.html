@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Measuring Grammatical Diversity from Small Corpora · Suchir Salhan</title>
+  <meta name="description" content="Notes on derivational entropy rates, mean length of utterances, and a method for estimating syntactic complexity from very small treebanks. Computational Linguistics, 2025.">
+  <link href="../favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <link href="../assets/css/writing.css" rel="stylesheet">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="index-page writing-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../beetle.html">Beetle</a></li>
+          <li><a href="index.html" class="active">Writing</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../presentations.html">Talks</a></li>
+          <li><a href="../people.html">People</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Paper</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="tufte-article">
+          <div class="meta">2025 · Computational Linguistics</div>
+          <h1>Measuring Grammatical Diversity from Small Corpora</h1>
+          <p class="standfirst">A theoretical and empirical case that mean length of utterances is not a rough stand-in for syntactic complexity but a fundamental measure of it, tied to the entropy of the grammar that produces the sentences.</p>
+
+          <figure><img src="../assets/images/photos/photo-poster-grammatical-diversity.jpg" alt="Presenting Measuring Grammatical Diversity from Small Corpora at ACL 2025, Vienna." loading="lazy"><figcaption>Presenting Measuring Grammatical Diversity from Small Corpora at ACL 2025, Vienna.</figcaption></figure>
+
+          <p>Several fields lean on corpora to estimate how varied someone's grammar is: language acquisition, the neuropsychology of language, the study of aging, historical linguistics. In each, a treebank is treated as a representative sample of the syntactic structures a speaker or community might produce. The trouble is that these samples are small, and generalising the full range of possible structures from a limited set requires careful extrapolation whose accuracy is bounded by how little data you have.<span class="sn"><span class="sn-ref">1</span><span class="sidenote" data-n="1">Moscoso del Prado Martín. <a href="https://direct.mit.edu/coli/article/doi/10.1162/coli.a.15/131070">Measuring Grammatical Diversity from Small Corpora: Derivational Entropy Rates, Mean Length of Utterances, and Annotation Invariance</a>, Computational Linguistics, 2025.</span></span></p>
+
+          <h2>The central link</h2>
+
+          <p>The paper's core claim is that a grammar's derivational entropy and the mean length of the utterances it generates are fundamentally linked. From that link comes a new quantity, the derivational entropy rate. The consequence is a reappraisal of mean length of utterances (MLU), a measure long used as a convenient index in acquisition research.<span class="sn"><span class="sn-ref">2</span><span class="sidenote" data-n="2">MLU has a long history as a developmental yardstick in child language research; the paper's contribution is to give it a formal grounding rather than treat it as a heuristic. Preprint: <a href="https://arxiv.org/abs/2412.06095">arXiv:2412.06095</a>.</span></span> The argument is that MLU is not a mere proxy but a genuine measure of syntactic diversity in its own right.</p>
+
+          <h2>Annotation invariance</h2>
+
+          <p>The other strand concerns the framework you annotate with. Different grammatical annotation schemes assign different complexities to the same treebank, which makes cross-study comparison fragile. The derivational entropy rate indexes the rate at which the choice of annotation framework determines the measured complexity. Read together with MLU, it offers a theory-free reading of grammatical complexity, one that does not depend on committing to a particular grammar formalism.</p>
+
+          <h2>Estimating from little data</h2>
+
+          <p>To make the measures usable, the paper introduces the Smoothed Induced Treebank Entropy, or SITE, a tool for estimating these quantities accurately even from very small treebanks. That is the practical payoff: the settings where these measures are needed most, such as a child's early speech or a fragment of a historical corpus, are exactly the settings where data is scarce, and a method that stays reliable there is what these fields have been missing.</p>
+
+          <p>What I take from it is a tidy result. A measure people already compute out of convenience turns out to sit on a firm theoretical footing, and pairing it with the entropy rate gives a way to talk about grammatical complexity without first arguing about which annotation scheme is correct. The closing discussion draws out what this means for both NLP and human language processing.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+<nav class="dock" aria-label="Primary">
+    <a href="../research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="../beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="../research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="../teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="../presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="../people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="../about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="../assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="../research.html">Research</a><a href="../research.html#publications">Publications</a>
+          <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
+          <a href="../assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/explore.js"></script>
+  <script defer src="../assets/js/toc.js"></script>
+</body>
+</html>

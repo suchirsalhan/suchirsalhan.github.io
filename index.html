@@ -2,30 +2,262 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Suchir Salhan — Cambridge Computer Science PhD</title>
-  <meta name="description" content="Suchir Salhan is a PhD Candidate in Computer Science at the University of Cambridge (Gonville & Caius College), working on cognitively-inspired multilingual AI and small language models.">
-  <meta name="keywords" content="Suchir Salhan, Cambridge, small language models, BabyLM, multilingual, interpretability, tokenization, computational linguistics, PicoLM">
+  <title>Suchir Salhan — Language Models &amp; Cognitively-Inspired AI</title>
+  <meta name="description" content="Suchir Salhan is a PhD Candidate in Computer Science at the University of Cambridge, working across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.">
+  <meta name="keywords" content="Suchir Salhan, Cambridge, small language models, BabyLM, multilingual, interpretability, tokenization, Beetle, PicoLM">
   <link href="favicon.ico" rel="icon" sizes="any">
   <link rel="icon" href="assets/images/logo-ss.svg" type="image/svg+xml">
   <link href="assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://suchirsalhan.github.io/">
-  <meta property="og:title" content="Suchir Salhan — Cambridge Computer Science PhD">
-  <meta property="og:description" content="Cognitively-inspired multilingual AI and small language models. University of Cambridge.">
+  <meta property="og:title" content="Suchir Salhan — Language Models &amp; Cognitively-Inspired AI">
+  <meta property="og:description" content="I research how AI systems learn and gain capabilities.">
   <meta property="og:image" content="https://suchirsalhan.github.io/assets/images/suchir_salhan_web.jpg">
-  <meta name="twitter:card" content="summary_large_image">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/site.css" rel="stylesheet">
+  <style>
+    /* ============ Shorthand-style editorial homepage ============ */
+    .cover { position: relative; min-height: min(84vh, 680px); display: flex; align-items: stretch; color: #f4efe3; overflow: hidden;
+      background: linear-gradient(90deg, rgba(18,17,12,.86) 0%, rgba(18,17,12,.62) 40%, rgba(18,17,12,.34) 70%, rgba(18,17,12,.16) 100%),
+                  linear-gradient(0deg, rgba(18,17,12,.5) 0%, rgba(18,17,12,0) 32%),
+                  url('assets/images/photos/IMG_0588.jpeg') 72% 18%/cover no-repeat; }
+    @media (max-width: 700px){ .cover { background-position: 66% 16%; min-height: 72vh; } }
+    .cover::after { content:""; position:absolute; inset:0; pointer-events:none;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Ccircle cx='2' cy='2' r='1' fill='%23ffffff' fill-opacity='0.06'/%3E%3C/svg%3E"); }
+    .cover .wrap { position: relative; z-index: 2; max-width: 1100px; margin: 0 auto; padding: 110px 26px 70px; width: 100%; display:flex; flex-direction:column; }
+    .cover .kick { font-family: var(--mono-font); font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: #cdd6bf; margin-bottom: 22px; }
+    .cover h1 { font-size: clamp(42px, 6vw, 80px); line-height: 1.0; letter-spacing: -.02em; color: #fdfbf4; font-weight: 600; margin: 0 0 8px; }
+    .cover .sub { font-family: var(--heading-font); font-style: italic; font-size: clamp(20px, 3vw, 30px); color: #e7e2d2; max-width: 720px; margin: 14px 0 0; line-height: 1.35; }
+    .cover .who { margin-top: 22px; font-size: 16px; color: #cdd6bf; font-family: var(--ui-font); }
+    .cover .wrap-split { display:flex; flex-direction:column; justify-content:space-between; gap:30px; flex:1 1 auto; }
+    .cover-right { text-align:left; max-width:720px; }
+    .cover-right .sub { max-width:none; }
+    .cover-right p { text-shadow: 0 2px 14px rgba(0,0,0,.5); }
+    /* hero text sits in the bottom-right so it clears the face */
+    .cover .wrap-split { justify-content: flex-end; }
+    .cover-left { align-self: flex-start; }
+    .cover-right { align-self: flex-end; text-align: right; max-width: 560px; }
+    .cover-right .hero-cta, .cover-right .hero-links { justify-content: flex-end; }
+    @media (max-width: 700px){ .cover-right { text-align: left; align-self: stretch; } .cover-right .hero-cta, .cover-right .hero-links { justify-content: flex-start; } }
+    .cover .scrollcue { position: absolute; left: 50%; bottom: 26px; transform: translateX(-50%); z-index:2; color:#e7e2d2; font-family: var(--mono-font); font-size: 12px; letter-spacing:.15em; text-transform:uppercase; opacity:.85; animation: bob 2s ease-in-out infinite; }
+    @keyframes bob { 0%,100%{ transform: translate(-50%,0);} 50%{ transform: translate(-50%,7px);} }
+
+    .story { max-width: 1040px; margin: 0 auto; padding: 76px 26px 40px; }
+    .story .chapter { font-family: var(--mono-font); font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-color); margin: 78px 0 10px; }
+    /* extra breathing room between the major homepage blocks */
+    .story .news-talks-grid { margin-top: 60px; margin-bottom: 60px; }
+    .story .workme-grid { margin-top: 64px; }
+    .story .fact-block { margin-top: 56px; }
+    #bioFold, #researchFold { margin-bottom: 40px; }
+    .story .contact-pro { margin-top: 24px; }
+    .story h2 { font-size: clamp(28px, 3.4vw, 38px); line-height: 1.12; letter-spacing: -.015em; margin: 0 0 20px; max-width: 22ch; }
+    .story p { font-size: 18.5px; line-height: 1.72; color: var(--default-color); margin: 0 0 20px; }
+    .story p.big { font-size: clamp(22px, 2.6vw, 28px); line-height: 1.45; font-family: var(--heading-font); color: var(--heading-color); }
+    .story .lead-first::first-letter { float: left; font-family: var(--heading-font); font-weight: 600; font-size: 58px; line-height: .78; padding: 6px 10px 0 0; color: var(--accent-deep); }
+    .story a { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 2px; }
+    .story strong { color: var(--heading-color); }
+
+    .fig { margin: 12px 0 22px; }
+    .fig img { width: 100%; display: block; border-radius: 14px; border: 1px solid var(--line); box-shadow: 0 18px 44px rgba(42,39,32,0.14); transition: transform .5s ease, filter .5s ease; cursor: pointer; }
+    .fig figcaption { font-family: var(--mono-font); font-size: 11.5px; color: var(--ink-2); margin-top: 8px; letter-spacing: .01em; }
+    .fig.left { float: left; width: min(400px, 46%); margin: 10px 34px 20px 0; }
+    .fig.right { float: right; width: min(400px, 46%); margin: 10px 0 20px 34px; }
+    .fig.wide { clear: both; width: 100%; margin: 30px 0; }
+    .story .fig.wide:not(.grad-banner):not(#randomFig) img { max-height: 440px; object-fit: cover; }
+    /* the shuffle image shows at natural size (pool has mixed aspect ratios) */
+    #randomFig img { max-height: none; height: auto; object-fit: contain; width: 100%; }
+    @media (max-width: 680px){ .fig.left, .fig.right { float: none; width: 100%; margin: 16px 0; } }
+    .clearfix::after { content:""; display: block; clear: both; }
+
+    .js-reveal .reveal { opacity: 0; clip-path: inset(0 100% 0 0); -webkit-clip-path: inset(0 100% 0 0); transition: opacity .7s ease, clip-path .95s cubic-bezier(.22,.61,.36,1), -webkit-clip-path .95s cubic-bezier(.22,.61,.36,1); }
+    .js-reveal .reveal.in { opacity: 1; clip-path: inset(0 0 0 0); -webkit-clip-path: inset(0 0 0 0); }
+    @media (prefers-reduced-motion: reduce){ .js-reveal .reveal { opacity:1; clip-path:none; -webkit-clip-path:none; transition:none; } }
+    .down-guide { text-align:center; margin: 66px 0 52px; }
+    .down-guide a { display:inline-flex; width:56px; height:56px; border:1px solid var(--line); border-radius:50%; align-items:center; justify-content:center; color:var(--accent-deep); background:var(--surface-color); font-size:26px; text-decoration:none; animation: bobg 1.8s ease-in-out infinite; box-shadow:0 8px 24px rgba(42,39,32,.10); }
+    .down-guide a:hover { background:var(--accent-color); color:#fff; border-color:var(--accent-color); }
+    @keyframes bobg { 0%,100%{ transform: translateY(0);} 50%{ transform: translateY(7px);} }
+    .poke-hint { font-family: var(--mono-font); font-size: 13px; color: var(--accent-deep); background: var(--accent-soft); display: inline-block; padding: 9px 15px; border-radius: 50px; border: 1px dashed color-mix(in srgb, var(--accent-color), transparent 45%); margin: 0 0 22px; }
+    .poke-hint.in { animation: pokepop .5s cubic-bezier(.2,.9,.3,1.2) .15s both; }
+    @keyframes pokepop { from { opacity:0; transform: scale(.82) translateY(6px);} to { opacity:1; transform: none;} }
+    html { scroll-behavior: smooth; }
+
+    .pull-n { font-family: var(--heading-font); font-weight: 700; font-size: clamp(70px, 12vw, 150px); line-height: .9; color: var(--accent-deep); letter-spacing: -.02em; }
+    .pull-n small { display:block; font-size: 17px; font-weight: 500; letter-spacing:0; color: var(--ink-2); font-family: var(--ui-font); margin-top: 8px; max-width: 40ch; }
+
+    body.imgs-off .fig { display: none; }
+    /* always-visible figures (Research Impact + PicoLM + random About-me image):
+       shown statically in normal flow, and NOT hidden by the psst / "hide the photos" toggle */
+    body.imgs-off .fig.fig-sticky, body.imgs-off #randomFig, body.imgs-off .grad-bottom { display: block; }
+
+    /* random FX (toggled by the playground) */
+    .fx-tilt img { transform: rotate(-2.2deg) scale(1.01); }
+    .fx-tilt2 img { transform: rotate(2.2deg) scale(1.01); }
+    .fx-gray img { filter: grayscale(1) contrast(1.05); }
+    .fx-sepia img { filter: sepia(.55) saturate(1.2); }
+    .fx-zoom img { transform: scale(1.05); }
+    .fx-flip img { transform: scaleX(-1); }
+    .fx-expand img { transform: scale(1.14); position: relative; z-index: 5; box-shadow: 0 30px 70px rgba(42,39,32,.3); }
+
+    .particle { position: fixed; width: 9px; height: 9px; border-radius: 50%; pointer-events: none; z-index: 90; will-change: transform, opacity; }
+    /* Hover-once: images pixelate then explode */
+    @keyframes pixelFlash {
+      0%   { filter: none; transform: scale(1); }
+      20%  { filter: contrast(1.6) saturate(1.5) hue-rotate(6deg); transform: scale(1.02); image-rendering: pixelated; }
+      45%  { filter: contrast(2.2) brightness(1.12); transform: scale(.96) translateX(2px); image-rendering: pixelated; }
+      70%  { filter: contrast(1.5) brightness(1.05); transform: scale(1.06) translateX(-2px); image-rendering: pixelated; }
+      100% { filter: none; transform: scale(1); }
+    }
+    .fig img.pixelating { animation: pixelFlash .5s steps(5) both; }
+
+    /* Playground control */
+    .playbar { position: fixed; right: 18px; bottom: 18px; z-index: 60; display: flex; gap: 6px; align-items:center; background: rgba(255,253,248,.94);
+      border: 1px solid var(--line); border-radius: 50px; padding: 7px 9px; box-shadow: 0 12px 34px rgba(42,39,32,.16); backdrop-filter: blur(6px); }
+    .playbar button { font-family: var(--ui-font); font-size: 13px; font-weight: 600; color: var(--accent-deep); background: transparent; border: 0; border-radius: 50px; padding: 7px 12px; cursor: pointer; display:inline-flex; align-items:center; gap:6px; }
+    .playbar button:hover { background: var(--accent-soft); }
+    .playbar .lbl { font-family: var(--mono-font); font-size: 10.5px; letter-spacing:.12em; text-transform:uppercase; color: var(--ink-2); padding-left:6px; }
+    @media (max-width: 560px){ .playbar .lbl { display:none; } }
+    .dark-background .playbar { background: rgba(53,50,42,.94); }
+
+    .kicker-links { display:flex; flex-wrap:wrap; gap:10px; margin-top:12px; }
+    .kicker-links a { font-family: var(--mono-font); font-size: 13px; padding: 8px 15px; border:1px solid var(--line); border-radius:50px; color: var(--heading-color); text-decoration:none; }
+    .kicker-links a:hover { background: var(--accent-color); color:#fff; border-color: var(--accent-color); }
+    .playbin { display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin:0 0 26px; padding:0; background:transparent; border:0; }
+    .playbin span { font-family:var(--mono-font); font-size:13px; color:var(--accent-deep); margin-right:4px; }
+    .playbin button { font-family:var(--ui-font); font-size:13px; font-weight:600; color:var(--accent-deep); background:var(--surface-color); border:1px solid var(--line); border-radius:50px; padding:7px 13px; cursor:pointer; }
+    .playbin button:hover { background:var(--accent-color); color:#fff; border-color:var(--accent-color); }
+    .playbin.in { animation: pokepop .5s cubic-bezier(.2,.9,.3,1.2) .15s both; }
+    /* Progressive-disclosure triggers — make them clearly clickable (highlighted, underlined) */
+    .story .ex { cursor: pointer; color: var(--accent-deep); font-weight: 500;
+      background: color-mix(in srgb, var(--accent-color), transparent 88%);
+      border-radius: 4px; padding: 0 4px;
+      text-decoration: underline; text-decoration-style: dotted; text-underline-offset: 3px;
+      text-decoration-color: color-mix(in srgb, var(--accent-color), transparent 30%);
+      transition: background .15s, color .15s; }
+    .story .ex:hover { background: color-mix(in srgb, var(--accent-color), transparent 74%); color: var(--accent-deep); text-decoration-color: var(--accent-color); }
+    .story .ex.is-open { background: color-mix(in srgb, var(--accent-color), transparent 82%); box-shadow: inset 0 -2px 0 0 var(--accent-color); text-decoration: none; }
+    .story a.btn-pill.btn-red { background:#c0566a; color:#fff; text-decoration:none; box-shadow:none; text-shadow:none; }
+    .story a.btn-pill.btn-red:hover { background:#a23a50; color:#fff; transform:translateY(-2px); text-decoration:none; }
+    .story a.btn-pill.btn-red i { color:#fff; }
+    .story .ex-hint { display: none; }
+    /* Deeply-nested, quiet reveals — buried CV detail (more clicks = more hidden) */
+    .deep-fold { margin: 10px 0 0; }
+    .deep-fold > summary { cursor: pointer; list-style: none; font-family: var(--mono-font);
+      font-size: 12.5px; letter-spacing: .02em; color: var(--ink-2); padding: 4px 0; user-select: none; }
+    .deep-fold > summary::-webkit-details-marker { display: none; }
+    .deep-fold > summary::before { content: "\25B8  "; color: var(--accent-color); }
+    .deep-fold[open] > summary::before { content: "\25BE  "; }
+    .deep-fold > summary:hover { color: var(--heading-color); }
+    .deep-fold .deep-fold, .deep-fold > p { margin-left: 16px; padding-left: 12px;
+      border-left: 1px solid var(--line); }
+    .story .deep-fold p { font-size: 15px; line-height: 1.6; color: var(--ink-2); margin: 6px 0 10px; }
+    .story .deep-fold a { color: var(--accent-deep); }
+    .story .ex-more { color: var(--default-color); }
+    .playbin .psst { background:transparent; border:0; cursor:pointer; font-family:var(--mono-font); font-size:13px; font-weight:700; color:#c0566a; padding:0; letter-spacing:.01em; }
+    .playbin .psst:hover { color:#a23a50; }
+    .playbin .play-controls { display:none; align-items:center; gap:8px; margin-left:6px; }
+    .playbin.open .play-controls { display:inline-flex; }
+    .playbin .poke-note { font-family:var(--mono-font); font-size:12px; color:var(--ink-2); }
+    .fig.appear { animation: figIn .6s ease both; }
+    @keyframes figIn { from { opacity:0; transform: translateY(14px);} to { opacity:1; transform:none;} }
+
+    /* Hero professional links */
+    .cover .hero-links { margin-top:20px; display:flex; flex-wrap:wrap; gap:8px 18px; }
+    .cover .hero-links a { font-family:var(--ui-font); font-size:14.5px; color:#eef1e6; text-decoration:none; border-bottom:1px solid rgba(238,241,230,.35); padding-bottom:1px; text-shadow:0 2px 14px rgba(0,0,0,.5); }
+    .cover .hero-links a:hover { color:#fff; border-bottom-color:#fff; }
+
+    /* FACTS: sticky professional column + scrolling news/talks/teaching/themes.
+       Content uses the shared site.css classes (btn-pill, sideblock, news-item, contact-pro). */
+    .facts, .contact-sec { background: var(--background-color); }
+    .facts-grid { display:grid; grid-template-columns: 250px 1fr; gap:56px; align-items:start; max-width:1080px; margin:0 auto; padding:0 26px; }
+    .facts-aside { position:sticky; top:104px; }
+    .facts-name { font-family:var(--heading-font); font-size:24px; font-weight:600; color:var(--heading-color); margin:0 0 4px; }
+    .facts-affil { font-size:13.5px; color:var(--ink-2); margin:0 0 16px; line-height:1.4; }
+    .facts-links { display:flex; flex-direction:column; gap:9px; margin:0; }
+    .facts-links a { font-family:var(--ui-font); font-size:14.5px; color:var(--accent-deep); text-decoration:none; display:inline-flex; align-items:center; gap:8px; }
+    .facts-links a i { width:18px; text-align:center; color:var(--accent-color); }
+    .facts-links a:hover { color:var(--accent-color); }
+    .fact-block { margin:0 0 46px; }
+    .fact-block:last-child { margin-bottom:0; }
+    .fact-block h2 { margin:6px 0 14px; letter-spacing:-.01em; }
+    .facts .news-list { max-width:none; margin:0; }
+    @media (max-width:820px){
+      .facts-grid { grid-template-columns:1fr; gap:26px; }
+      .facts-aside { position:static; }
+    }
+    /* eyebrow-k usable inside the story (site.css only scopes it to .home-sec) */
+    .story .eyebrow-k { font-family:var(--mono-font); font-size:12.5px; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-color); display:block; margin-bottom:2px; }
+    .story .fact-block { margin:40px 0; }
+    .story .fact-block h2 { margin:6px 0 14px; }
+    .story .news-list { max-width:none; margin:0; }
+    /* News + Talks side by side */
+    .news-talks-grid { display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:start; margin:8px 0; }
+    .news-talks-grid .fact-block { margin:0; }
+    @media (max-width:820px){ .news-talks-grid { grid-template-columns:1fr; gap:26px; } }
+    /* Work with me: PicoLM image beside the text */
+    .workme-grid { display:grid; grid-template-columns:300px minmax(0,1fr); gap:44px; align-items:start; margin:10px 0; }
+    .workme-body { min-width:0; }
+    .workme-body > *:first-child { margin-top:0; }
+    .fig.workme-img { float:none; width:100%; margin:0; }
+    .fig.workme-img img { max-height:400px; object-fit:cover; }
+    @media (max-width:820px){ .workme-grid { grid-template-columns:1fr; gap:20px; } }
+    /* one-line "work with me" CTAs */
+    .story p.work-cta { font-size:18px; }
+    /* collapsed disciplines expander */
+    .disc-fold { margin:14px 0 4px; }
+    .disc-fold > summary { cursor:pointer; list-style:none; font-family:var(--heading-font); font-size:19px; line-height:1.5; color:var(--heading-color); }
+    .disc-fold > summary::-webkit-details-marker { display:none; }
+    .disc-fold > summary::before { content:"＋ "; color:var(--accent-color); font-weight:600; }
+    .disc-fold[open] > summary::before { content:"– "; }
+    .disc-fold[open] > summary { margin-bottom:8px; }
+    .disc-fold p { margin:6px 0; }
+    /* grad banner above news */
+    .grad-banner img { width:100%; height:auto; object-fit:contain; border-radius:14px; border:1px solid var(--line); }
+    /* Professional links block (near About / CV) */
+    .profile-block { margin:14px 0 6px; }
+    .profile-block .facts-affil { font-size:14px; color:var(--ink-2); margin:0 0 10px; }
+    .profile-block .facts-links { display:flex; flex-direction:row; flex-wrap:wrap; gap:8px 20px; }
+    .profile-block .facts-links a { font-family:var(--ui-font); font-size:14.5px; color:var(--accent-deep); text-decoration:none; display:inline-flex; align-items:center; gap:7px; }
+    .profile-block .facts-links a i { color:var(--accent-color); }
+    .profile-block .facts-links a:hover { color:var(--accent-color); }
+
+    /* Collapsible "Who I am" — short bio by default, expands to the full section */
+    .bio-fold { border:0; margin:0 0 8px; }
+    .bio-fold > summary { list-style:none; cursor:pointer; display:block; padding:6px 0 2px; outline:none; }
+    .bio-fold > summary::-webkit-details-marker { display:none; }
+    .bio-fold > summary .chapter { display:block; }
+    .bio-fold[open] > summary { margin-bottom:4px; }
+    /* Professional card: large photo + lead sentence — stays visible (sticky) when expanded */
+    .bio-fold .bio-card { display:flex; align-items:center; gap:34px; margin:14px 0 8px; }
+    .bio-fold .bio-photo-wrap { flex:0 0 48vw; max-width:52%; }
+    .bio-fold .bio-photo { width:100%; height:auto; object-fit:cover; border-radius:16px; border:1px solid var(--line); box-shadow:0 16px 40px rgba(42,39,32,.16); display:block; }
+    .bio-fold .bio-lead { font-family:var(--heading-font); font-size:clamp(22px,2.8vw,30px); line-height:1.45; color:var(--heading-color); margin:0; flex:1; }
+    /* Curved pop-up arrow hint pointing UP at the photo — hidden once expanded */
+    .bio-fold .bio-hint { display:inline-flex; flex-direction:column; align-items:center; gap:2px; margin:8px 0 0 24px; color:#c0566a; animation:bioBob 1.8s ease-in-out infinite; }
+    .bio-fold .bio-arrow { width:70px; height:56px; }
+    /* Research block reads as a flipped-column "shorthand" panel: photo on the right, smaller cover text */
+    #researchFold .bio-card { flex-direction:row-reverse; }
+    #researchFold .bio-lead { font-size:clamp(16px,1.7vw,19px); line-height:1.55; color:var(--ink-2); }
+    #researchFold .bio-arrow { transform:scaleX(-1); }
+    /* "The work, briefly" body text — same size as the research cover text */
+    .story p.work-lead { font-size:clamp(16px,1.7vw,19px); line-height:1.55; color:var(--ink-2); }
+    /* Expanded fold content (Who I am + Research Interests) — matching compact size */
+    #researchFold h2, #bioFold h2 { font-size:clamp(18px,2vw,22px); }
+    #researchFold p:not(.bio-lead), #bioFold p:not(.bio-lead) { font-size:clamp(16px,1.7vw,19px); line-height:1.55; }
+    @media (max-width:760px){ #researchFold .bio-card { flex-direction:column; } }
+    .bio-fold .bio-hint-text { font-family:var(--mono-font); font-size:13px; font-weight:700; letter-spacing:.02em; }
+    @keyframes bioBob { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-6px);} }
+    .bio-fold[open] .bio-hint { display:none; }
+    @media (max-width:760px){ .bio-fold .bio-card { flex-direction:column; align-items:flex-start; gap:16px; } .bio-fold .bio-photo-wrap { flex:0 0 auto; max-width:100%; width:100%; } }
+  </style>
 </head>
-<body class="index-page">
+<body class="index-page imgs-off">
 
   <header id="header" class="header header--onhero d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
@@ -34,14 +266,14 @@
         <ul>
           <li><a href="research.html">Research</a></li>
           <li><a href="beetle.html">Beetle</a></li>
-          <li><a href="publications.html">Publications</a></li>
+          <li><a href="writing/index.html">Writing</a></li>
           <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="talks.html">Talks</a></li>
-          <li><a href="presentations.html">Presentations</a></li>
+          <li><a href="presentations.html">Talks</a></li>
           <li><a href="people.html">People</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
         </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
@@ -49,257 +281,448 @@
 
   <main class="main">
 
-    <!-- Hero -->
-    <section id="hero" class="hero">
-      <div class="container">
-        <div class="row align-items-center g-5">
-          <div class="col-lg-7">
-            <p class="eyebrow">University of Cambridge · Gonville &amp; Caius College</p>
-            <h1>Suchir Salhan</h1>
-            <p class="role">PhD Candidate in Computer Science · Head of Research at PicoLM</p>
-            <p class="lead">I work on <strong>cognitively-inspired multilingual AI</strong> and <strong>small language models</strong> — human-scale, data-efficient language modelling and the interpretability and learning dynamics of small LMs. Supervised by <a href="https://www.cl.cam.ac.uk/~pjb48/">Prof. Paula Buttery</a>.</p>
-            <div class="hero-cta">
-              <a href="publications.html" class="btn-pill primary"><i class="bi bi-journal-text"></i> Publications</a>
-              <a href="assets/academic_cv.pdf" target="_blank" class="btn-pill ghost"><i class="bi bi-file-earmark-pdf"></i> Curriculum Vitae</a>
-              <a href="mailto:sas245@cam.ac.uk" class="btn-pill ghost"><i class="bi bi-envelope"></i> Email</a>
+    <!-- COVER -->
+    <section class="cover">
+      <div class="wrap wrap-split">
+        <div class="cover-left">
+          <h1>Suchir Salhan</h1>
+        </div>
+        <div class="cover-right">
+          <p class="sub">I research how AI systems learn and gain capabilities.</p>
+          <p class="who">PhD Candidate in Computer Science · University of Cambridge · Gonville &amp; Caius College</p>
+          <div class="hero-cta">
+            <a href="research.html#publications" class="btn-pill primary"><i class="bi bi-journal-text"></i> Publications</a>
+            <a href="assets/academic_cv.pdf" target="_blank" class="btn-pill ghost"><i class="bi bi-file-earmark-pdf"></i> Curriculum Vitae</a>
+            <a href="mailto:sas245@cam.ac.uk" class="btn-pill ghost"><i class="bi bi-envelope"></i> Email</a>
+          </div>
+          <div class="hero-links">
+            <a href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="bi bi-mortarboard"></i> Google Scholar</a>
+            <a href="https://aclanthology.org/people/s/suchir-salhan/" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> ACL Anthology</a>
+            <a href="https://www.cst.cam.ac.uk/people/sas245" target="_blank" rel="noopener"><i class="bi bi-building"></i> Cambridge CST</a>
+            <a href="https://www.linkedin.com/in/ssalhan/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE ARTICLE -->
+    <article class="story" id="story">
+
+      <details class="bio-fold reveal" id="bioFold">
+        <summary>
+          <span class="chapter">About me</span>
+          <div class="bio-card">
+            <div class="bio-photo-wrap">
+              <img class="bio-photo" src="assets/images/suchir_salhan.png" alt="Suchir Salhan">
+              <span class="bio-hint">
+                <svg class="bio-arrow" viewBox="0 0 80 70" aria-hidden="true">
+                  <path d="M64 62 C 20 56, 12 28, 26 10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M15 22 L 26 8 L 38 22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="bio-hint-text">click to read more</span>
+              </span>
             </div>
-            <div class="hero-links">
-              <a href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&hl=en"><i class="bi bi-mortarboard"></i> Google Scholar</a>
-              <a href="https://aclanthology.org/people/s/suchir-salhan/"><i class="bi bi-link-45deg"></i> ACL Anthology</a>
-              <a href="https://www.cst.cam.ac.uk/people/sas245"><i class="bi bi-building"></i> Cambridge CST</a>
-              <a href="https://www.linkedin.com/in/ssalhan/"><i class="bi bi-linkedin"></i> LinkedIn</a>
+            <p class="bio-lead">Suchir Salhan is a PhD candidate at the University of Cambridge <span class="ex" data-more="(<span class=&quot;ex&quot; data-more=&quot;&mdash; I studied Computer Science and Linguistics at the University of Cambridge, completing both my undergraduate and master&rsquo;s degrees at Gonville &amp;amp; Caius College. My interdisciplinary background in Computer Science, Cognitive Science and Linguistics drives my interest in leveraging insights from human cognition to develop AI systems that are interpretable, fair and equitable. I&rsquo;ve had a long fascination with the intersection of language and computation &mdash; how humans acquire natural language to communicate, learn and reason despite the diversity of linguistic systems, and how we might build machines that can do the same. I arrived in Cambridge in 2020 for a BA and MEng in Computer Science &amp;amp; Linguistics at Gonville &amp;amp; Caius College, earning a starred First and a Distinction.&quot;>Gonville &amp;amp; Caius College</span>), <span class=&quot;ex&quot; data-more=&quot; working on Language Models and Cognitively-Inspired AI. I investigate how language models learn. <span class=&amp;quot;ex&amp;quot; data-more=&amp;quot; I previously studied Computer Science &amp;amp;amp;amp; Linguistics at Cambridge, completing a BA with a Starred First (Class I with Distinction) and an MEng with Distinction.&amp;quot;>+</span>&quot;>+</span>">+</span></p>
+          </div>
+        </summary>
+
+
+      <figure class="fig right reveal">
+        <img src="assets/images/photos/photo-lecturing.jpg" alt="Lecturing at Cambridge" loading="lazy">
+        <figcaption>Lecturing Li18 Computational Linguistics, Cambridge. <span style="opacity:.7">(click me)</span></figcaption>
+      </figure>
+
+      <p class="lead-first reveal">My work is guided by a single central question: <strong>how do intelligent systems learn?</strong> I ask it across minds and machines at once, tracing the same puzzle through human and machine learning, language and intelligence, cognition and computation. Language is where these threads meet: it offers rich structure (syntax, semantics, morphology, phonology) alongside decades of developmental theory, cross-linguistic variation, and behavioural evidence against which learning can be measured.</p>
+
+      <p class="reveal">I&rsquo;ve had a long fascination with the intersection of language and computation&mdash;how humans have developed the capability to acquire natural language to communicate, learn, and reason, despite the diversity of linguistic systems; and how we might build machines that can do the same. I arrived in Cambridge in 2020 to pursue a BA and MEng in Computer Science &amp; Linguistics at Gonville &amp; Caius College, Cambridge, where I earned a &ldquo;starred First&rdquo; and a Distinction.</p>
+
+      <p class="reveal">I got into <span class="ex" data-more="&mdash; across three undergraduate summers: in <strong>Summer 2021</strong>, an ALTA UROP with Thiemo Wambsganss (ALTA Institute), building the back-end model behind a language-learning app; <span class=&quot;ex&quot; data-more=&quot; in <strong>December 2021</strong>, a research assistantship with Dr Li Nguyen on Vietnamese&ndash;English bilingual syntax; <span class=&amp;quot;ex&amp;quot; data-more=&amp;quot; and in <strong>Summer 2022</strong>, multimodal language models in the Language Technology Lab with Prof Nigel Collier and Dr Fangyu Liu.&amp;quot;>+</span>&quot;>+</span>">research early</span>, and slowly the two worlds stopped competing. This is what my work is about &mdash; <strong>minds and machines</strong>: cognition, language and learning on one side; AI, agents and small models on the other; and, between them, questions of interpretability, representation and behaviour. My <span class="ex" data-more="&mdash; <a href='research.html#pub-less-is-more'>&lsquo;Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies&rsquo;</a>, accepted at the BabyLM Challenge, CoNLL / EMNLP 2024.">master&rsquo;s thesis</span> pulled me into <strong>BabyLM</strong>, and the <span class="ex" data-more="&mdash; what began as one shared task on training language models from a child-sized amount of text now spans multilingual and multimodal spin-offs.">BabyLM cinematic universe is expanding</span>. I co-organise <strong><span class="ex" data-more="&mdash; its multimodal spin-off, which asks how vision-language models might learn as sample-efficiently as human infants.">BabyVLM</span></strong>. At first glance, a small language model looks like a weaker version of a large one. I think that misses the point. So rather than asking only &ldquo;How good is the model?&rdquo;, I became interested in a different question.</p>
+
+      <figure class="fig wide reveal" id="randomFig" title="Click to shuffle">
+        <img id="randomFigImg" src="assets/images/photos/photo-team.jpg" alt="On the road" loading="lazy"
+             data-pool="photo-emnlp-awards.jpg|tubingen-1.jpg|tubingen-2.jpg|tubingen-3.jpg|photo-team.jpg|photo-team-dinner.jpg|photo-lecturing.jpg|vancouver.jpg|photo-poster-pico.jpg|photo-emnlp-awards-team.jpg">
+        <figcaption>A snapshot from research life. <span style="opacity:.7">(click to shuffle 🔀)</span></figcaption>
+      </figure>
+
+      <div class="clearfix"></div>
+      </details>
+
+      <p class="chapter reveal">Get in touch</p>
+      <div class="contact-pro reveal">
+        <h3>Say hello 👋</h3>
+        <p class="lede">Always happy to hear from students, collaborators, and anyone curious about small language models — drop me a line.</p>
+        <div class="rows">
+          <div class="crow"><i class="bi bi-envelope"></i><a href="mailto:sas245@cam.ac.uk">sas245@cam.ac.uk</a></div>
+          <div class="crow"><i class="bi bi-geo-alt"></i><span>Department of Computer Science &amp; Technology, University of Cambridge · Gonville &amp; Caius College</span></div>
+        </div>
+        <div class="links">
+          <a href="research.html#publications"><i class="bi bi-journal-text"></i> Publications</a>
+          <a href="assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> Curriculum Vitae</a>
+          <a href="about.html"><i class="bi bi-person"></i> About</a>
+          <a href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="bi bi-mortarboard"></i> Google Scholar</a>
+          <a href="https://aclanthology.org/people/s/suchir-salhan/" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> ACL Anthology</a>
+          <a href="https://www.cst.cam.ac.uk/people/sas245" target="_blank" rel="noopener"><i class="bi bi-building"></i> Cambridge CST</a>
+          <a href="https://www.linkedin.com/in/ssalhan/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
+          <a href="https://twitter.com/suchirsalhan" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i> X</a>
+        </div>
+      </div>
+
+      <details class="bio-fold reveal" id="researchFold">
+        <summary>
+          <span class="chapter" id="interested">Research Interests</span>
+          <div class="bio-card">
+            <div class="bio-photo-wrap">
+              <img class="bio-photo" src="assets/images/photos/computer-lab.jpg" alt="The Computer Laboratory, Cambridge">
+              <span class="bio-hint">
+                <svg class="bio-arrow" viewBox="0 0 80 70" aria-hidden="true">
+                  <path d="M64 62 C 20 56, 12 28, 26 10" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M15 22 L 26 8 L 38 22" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="bio-hint-text">click to read more</span>
+              </span>
             </div>
+            <p class="bio-lead">My research sits at the intersection of Machine Learning, Cognitive Science, and Linguistics, with a particular focus on developing Small Language Models. <span class="ex" data-more=" I study how models learn, how their internal representations emerge, why they generalise, and how training experience shapes what they ultimately know. <span class=&quot;ex&quot; data-more=&quot; I&amp;rsquo;m interested in what we can learn by making AI smaller, more interpretable, and more scientifically tractable, and applying this to design better, more efficient, trustworthy and equitable AI systems. <span class=&amp;quot;ex&amp;quot; data-more=&amp;quot; I am interested in the broader landscape of AI governance, agentic systems, high-stakes applications, and what it means to build AI responsibly, which demands interdisciplinary approaches.&amp;quot;>+</span>&quot;>+</span>">+</span></p>
           </div>
-          <div class="col-lg-5">
-            <div class="hero-portrait">
-              <img src="assets/images/suchir_salhan_web.jpg" alt="Suchir Salhan">
-            </div>
-          </div>
-        </div>
-        <div class="theme-chips">
-          <span>Interpretability</span><span>Multilinguality</span><span>Tokenization</span>
-          <span>Computational Cognitive Science &amp; Linguistics</span><span>Alignment</span>
-        </div>
-      </div>
-    </section>
+        </summary>
 
-    <!-- Flagship: Beetle -->
-    <section class="section beetle-flag">
-      <div class="container">
-        <div class="row g-5 align-items-center">
-          <div class="col-lg-6">
-            <a class="beetle-flag-img" href="beetle.html">
-              <img src="assets/beetle/beetle-fig1.jpg" alt="The Beetle framework diagram" loading="lazy">
-            </a>
-          </div>
-          <div class="col-lg-6">
-            <span class="eyebrow-k">Flagship framework · the foundation of my PhD</span>
-            <h2 style="margin:8px 0 12px">Beetle</h2>
-            <p class="lead">An open-source framework <strong>I designed and built</strong> for <strong>controlled bilingual &amp; multilingual pretraining and interpretability</strong>. I trained <strong>114 language models</strong> across 13 typologically-diverse first languages, 5 exposure curricula and 3 data scales — small Beetle models rival multilingual LLMs up to <strong>8B parameters</strong> on human L2 reading-time.</p>
-            <div class="chip-row" style="margin-bottom:18px">
-              <span class="chip">114 models</span><span class="chip">13 L1s</span><span class="chip">5 curricula</span><span class="chip">first-author paper · under review</span>
-            </div>
-            <a href="beetle.html" class="btn-pill solid"><i class="bi bi-arrow-right"></i> Explore Beetle</a>
-          </div>
-        </div>
-      </div>
-    </section>
+      <h2 class="reveal">My Research Agenda</h2>
 
-    <!-- Research summary + themes sideblock -->
-    <section class="section home-sec">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-7">
-            <span class="eyebrow-k">Research</span>
-            <h2>Language models as learners, not just speakers</h2>
-            <p class="lead">Much of machine learning is organised around endpoints — benchmarks, leaderboards, final accuracy. I approach language models instead as <strong>epistemic artefacts</strong>, focusing on learning dynamics rather than end states and drawing on tools from psychometrics and developmental psychology. Small language models are not merely scaled-down versions of larger ones — their value lies in what they make <em>intelligible</em>.</p>
-            <p class="lead">My work spans three strands: learning dynamics &amp; tokenization, cognitively-inspired multilingual AI, and linguistics &amp; cognitive science.</p>
-            <a href="research.html" class="btn-pill solid"><i class="bi bi-arrow-right"></i> Explore my research</a>
-          </div>
-          <div class="col-lg-5">
-            <div class="sideblock">
-              <h4>Research Themes</h4>
-              <ul>
-                <li><i class="bi bi-diagram-3"></i><span><b>Cognitively-Inspired Design &amp; Evaluation</b> — developmentally plausible models &amp; evaluation.</span></li>
-                <li><i class="bi bi-cpu"></i><span><b>Pretraining &amp; Interpretability</b> — learning dynamics of small LMs via Pico.</span></li>
-                <li><i class="bi bi-globe2"></i><span><b>Multilinguality</b> — human-scale, cross-lingual, bilingual competence via <a href="beetle.html">Beetle</a>.</span></li>
-                <li><i class="bi bi-flower1"></i><span><b>Tokenization</b> — information-driven subword segmentation (ByteSpan).</span></li>
-                <li><i class="bi bi-pencil-square"></i><span><b>Alignment &amp; Interaction</b> — pedagogical alignment, student proxies.</span></li>
-                <li><i class="bi bi-soundwave"></i><span><b>Cognitive Science &amp; Linguistics</b> — grammar induction, cross-lingual phonology.</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <figure class="fig right reveal">
+        <img src="assets/images/photos/photo-poster-sequence-length.jpg" alt="BabyLM poster at EMNLP 2025" loading="lazy">
+        <figcaption>Human-scale modelling — what sequence length is best for BabyLM? EMNLP 2025.</figcaption>
+      </figure>
+      <p class="reveal"><span class="ex" data-more="&mdash; not just what a model knows at the end of training, but how it gets there. I study <span class=&quot;ex&quot; data-more=&quot;&amp;mdash; how a model&amp;rsquo;s abilities and internal representations change over the course of training, not just where they end up&quot;>learning dynamics</span>, <span class=&quot;ex&quot; data-more=&quot;&amp;mdash; opening up a small model as it learns, to watch structure and competence form phase by phase&quot;>developmental interpretability</span> and <span class=&quot;ex&quot; data-more=&quot;&amp;mdash; training on roughly the language a child hears (~100M words), so learning is data-bounded and measurable&quot;>human-scale language modelling</span> &mdash; work closely tied to <span class=&quot;ex&quot; data-more=&quot;&amp;mdash; the shared tasks and workshops I co-organise on sample-efficient, developmentally-plausible language and vision-language models&quot;>BabyLM and BabyVLM</span>. And I don&rsquo;t only study language models: I <span class=&quot;ex&quot; data-more=&quot;I contrast neural learners with <span class=&amp;quot;ex&amp;quot; data-more=&amp;quot;(a recent example: <a href='research.html#pub-grammar-induction'>A Computational Operationalisation of Competing Maturational Theories of Syntactic Development via Statistical Grammar Induction</a>, which uses statistical grammar induction over child-directed speech to test competing theories of how syntax matures)&amp;quot;>symbolic ones</span>. I&amp;rsquo;m also interested in <span class=&amp;quot;ex&amp;quot; data-more=&amp;quot;(e.g. <a href='research.html#pub-phoneme-distribution'>The Distribution of Phoneme Frequencies across the World&amp;amp;rsquo;s Languages</a> and <a href='research.html#pub-diachronic-phonemes'>Modelling the Diachronic Emergence of Phoneme Frequency Distributions</a>)&amp;quot;>how neural and symbolic models can be used to simulate and model language change</span>.&quot;>compare them to symbolic learning</span>."><strong>How do models learn?</strong></span></p>
 
-    <!-- Publications summary -->
-    <section class="section tint home-sec">
-      <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-end" style="gap:16px;margin-bottom:26px">
-          <div>
-            <span class="eyebrow-k">Publications</span>
-            <h2 style="margin-bottom:6px"><a href="publications.html" style="color:inherit">Selected work</a></h2>
-            <p class="lead" style="margin:0">~26 peer-reviewed papers &amp; preprints, including <strong>two Outstanding Paper Awards</strong> at BabyLM 2025. <a href="publications.html" style="font-weight:600">All publications →</a></p>
-          </div>
-          <div class="d-flex flex-wrap" style="gap:10px">
-            <a href="publications.html" class="btn-pill outline"><i class="bi bi-journal-text"></i> All publications</a>
-            <a href="presentations.html" class="btn-pill outline"><i class="bi bi-easel"></i> Presentations &amp; Posters</a>
-          </div>
-        </div>
-        <div class="prose wide" style="max-width:none">
-          <div class="pub"><div class="idx">★</div><div class="body">
-            <div class="t"><a href="https://aclanthology.org/2025.babylm-main.25/">Teacher Demonstrations in a BabyLM's Zone of Proximal Development for Contingent Multi-Turn Interaction</a></div>
-            <div class="auth"><b>Suchir Salhan</b>, Hongyi Gu, Donya Rooein, Diana Galvan-Sosa, Gabrielle Gaudeau, Andrew Caines, Zheng Yuan, Paula Buttery</div>
-            <div class="venue">BabyLM Workshop, EMNLP 2025 · Suzhou, China</div>
-            <div class="meta"><span class="badge-award"><i class="bi bi-award"></i> Outstanding Paper Award</span><a class="lnk" href="https://aclanthology.org/2025.babylm-main.25/"><i class="bi bi-file-text"></i> Paper</a></div>
-          </div></div>
-          <div class="pub"><div class="idx">★</div><div class="body">
-            <div class="t"><a href="https://aclanthology.org/2025.babylm-main.15/">Looking to Learn: Token-wise Dynamic Gating for Low-Resource Vision-Language Modelling</a></div>
-            <div class="auth">Bianca-Mihaela Ganescu, <b>Suchir Salhan</b>, Andrew Caines, Paula Buttery</div>
-            <div class="venue">BabyLM Workshop, EMNLP 2025 · Suzhou, China</div>
-            <div class="meta"><span class="badge-award"><i class="bi bi-award"></i> Outstanding Paper Award</span><a class="lnk" href="https://aclanthology.org/2025.babylm-main.15/"><i class="bi bi-file-text"></i> Paper</a></div>
-          </div></div>
-          <div class="pub"><div class="idx">☆</div><div class="body">
-            <div class="t"><a href="https://aclanthology.org/2025.emnlp-demos.22/">Pico: A Modular Framework for Hypothesis-Driven Small Language Model Research</a></div>
-            <div class="auth">Richard Diehl-Martinez, David Demitri Africa, Yuval Weiss, <b>Suchir Salhan</b>, Ryan Daniels, Paula Buttery</div>
-            <div class="venue">EMNLP 2025 — Systems Demonstrations · Suzhou, China</div>
-            <div class="meta"><a class="lnk" href="https://aclanthology.org/2025.emnlp-demos.22/"><i class="bi bi-file-text"></i> Paper</a><a class="lnk" href="https://www.picolm.io/"><i class="bi bi-globe"></i> picolm.io</a></div>
-          </div></div>
-          <div class="pub"><div class="idx">☆</div><div class="body">
-            <div class="t"><a href="https://babylm.github.io/babybabellm/">BabyBabelLM: A Multilingual Benchmark of Developmentally Plausible Training Data</a></div>
-            <div class="auth">Jaap Jumelet, … , <b>Suchir Salhan</b>, … , Alex Warstadt, Leshem Choshen</div>
-            <div class="venue">EACL 2026 (Main Conference) · Rabat, Morocco</div>
-            <div class="meta"><a class="lnk" href="https://babylm.github.io/babybabellm/"><i class="bi bi-globe"></i> Project</a></div>
-          </div></div>
-        </div>
-      </div>
-    </section>
+      <p class="reveal"><span class="ex" data-more="&mdash; languages don't all give a learner <span class=&quot;ex&quot; data-more=&quot;&mdash; I study multilingual, bilingual and second-language learning to understand how linguistic experience transfers across languages, especially when data is scarce &mdash; see, for example, <a href='research.html#pub-beetle'>Beetle</a>, <a href='research.html#pub-less-is-more'>Less is More</a>, <a href='research.html#pub-bliss'>BLiSS</a> and <a href='research.html#pub-l1-influence'>L1 Influence</a>.&quot;>the same problem</span><span class=&quot;ex-hint&quot;>+</span>"><strong>How does language shape learning?</strong></span><span class="ex-hint">+</span></p>
 
-    <!-- Teaching & Talks -->
-    <section class="section home-sec">
-      <div class="container">
-        <div class="row g-5">
-          <div class="col-lg-6">
-            <span class="eyebrow-k">Teaching</span>
-            <h2 style="font-size:28px">Teaching &amp; Supervision</h2>
-            <p class="lead">Guest lecturer for <strong>L95 — Natural Language Syntax &amp; Parsing</strong> (MPhil ACS) and Li18 Computational Linguistics; supervisor across CST IA, IB &amp; II; and lead of the 2025 Small Language Models UROP, built on Pico.</p>
-            <a href="teaching.html" class="btn-pill outline"><i class="bi bi-arrow-right"></i> Teaching &amp; resources</a>
-          </div>
-          <div class="col-lg-6">
-            <span class="eyebrow-k">Talks</span>
-            <h2 style="font-size:28px">Invited Talks &amp; Seminars</h2>
-            <div class="sideblock" style="margin-top:4px">
-              <ul>
-                <li><i class="bi bi-mic"></i><span>Language &amp; Multimodal Processing Group, <b>University of Copenhagen</b> — 2026</span></li>
-                <li><i class="bi bi-mic"></i><span><b>Sheffield NLP</b> — Human-Scale AI Frontier — 2026</span></li>
-                <li><i class="bi bi-mic"></i><span>13th Mental Lexicon Conference, <b>McGill University</b> — Invited Keynote — 2025</span></li>
-              </ul>
-            </div>
-            <a href="talks.html" class="btn-pill outline" style="margin-top:16px"><i class="bi bi-arrow-right"></i> All talks</a>
-          </div>
-        </div>
-      </div>
-    </section>
+      <p class="reveal"><span class="ex" data-more="&mdash; two models can be trained independently and still end up understanding things in <span class=&quot;ex&quot; data-more=&quot;&mdash; when does that happen? Why? And what does it tell us about the representations intelligence builds? &mdash; see, for example, <a href='research.html#pub-goldfish'>Merged Goldfish Models</a>, <a href='research.html#pub-universal-conceptual'>Universal Conceptual Representations</a> and <a href='research.html#pub-crosslingual-align'>Cross-Lingual Alignment</a>.&quot;>surprisingly similar ways</span><span class=&quot;ex-hint&quot;>+</span>"><strong>What representations emerge?</strong></span><span class="ex-hint">+</span></p>
 
-    <!-- People -->
-    <section class="section tint home-sec">
-      <div class="container">
-        <span class="eyebrow-k">People</span>
-        <h2 style="font-size:28px">Collaborators &amp; Students</h2>
-        <p class="lead" style="max-width:820px">I work with researchers across the Cambridge PicoLM team, the Cambridge NLIP Group, the ALTA Institute, KAIST AI / NAVER Cloud, and the Language Technology Lab — and supervise MPhil and undergraduate students in Computer Science and Linguistics.</p>
-        <div class="chip-row" style="margin:18px 0 22px">
-          <span class="chip">PicoLM Team</span><span class="chip">Cambridge NLIP</span><span class="chip">ALTA Institute</span>
-          <span class="chip">KAIST AI / NAVER Cloud</span><span class="chip">Cambridge LTL &amp; TAL</span>
-        </div>
-        <a href="people.html" class="btn-pill outline"><i class="bi bi-arrow-right"></i> View collaborators &amp; students</a>
-      </div>
-    </section>
+      <p class="reveal"><span class="ex" data-more="&mdash; capability is not the same thing as <span class=&quot;ex&quot; data-more=&quot;&mdash; I study evaluation, model judges, agents, reinforcement learning and safety, especially where compact models are asked to make decisions about people or other AI systems &mdash; see, for example, <a href='research.html#pub-repertoires'>Repertoires, Not Scores</a>, <a href='research.html#pub-pedagogical-alignment'>Pedagogical Alignment</a> and <a href='research.html#pub-protocol-competence'>Protocol Competence</a>.&quot;>reliability</span><span class=&quot;ex-hint&quot;>+</span>"><strong>Can we trust small AI?</strong></span><span class="ex-hint">+</span></p>
 
-    <!-- Writing -->
-    <section class="section home-sec">
-      <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-end" style="gap:16px;margin-bottom:26px">
-          <div>
-            <span class="eyebrow-k">Writing</span>
-            <h2 style="margin-bottom:6px;font-size:28px">Essays &amp; Reflections</h2>
-            <p class="lead" style="margin:0">On research, journalism, and academic life.</p>
-          </div>
-          <a href="writing/" class="btn-pill outline"><i class="bi bi-arrow-right"></i> All writing</a>
-        </div>
-        <div class="card-grid">
-          <a class="write-card" href="writing/phd-year-one.html"><span class="tag">Essay</span><h4>Year One of a Cambridge PhD</h4><p>Eight papers, one framework, and a lot of coffee — reflections on the first year.</p></a>
-          <a class="write-card" href="writing/ocp23-reflections.html"><span class="tag">Academic</span><h4>Phonology at Home: Hosting OCP23 at Caius</h4><p>What phonology has to teach AI, and on being a host to ~150 phonologists.</p></a>
-          <a class="write-card" href="writing/per-capita-three-years.html"><span class="tag">Journalism</span><h4>Three Years of Per Capita Media</h4><p>What student journalism taught me about independence.</p></a>
+      <p class="reveal">Addressing these questions are directly beneficial for the AI community and stakeholders using AI in their systems. My work helps stakeholders build <strong>mergeable, efficient small models</strong> and agentic pipelines that are cheaper to deploy than frontier systems. More generally, I aim to contribute to the AI community by understanding and building a foundation for <strong>multilingual, fairer AI</strong> that reaches beyond English into under-served languages and build more human-centered AI that is culturally-adaptive, safe, fair and trustworthy.</p>
+
+      <div class="fact-block reveal">
+        <span class="eyebrow-k">Research</span>
+        <h2 style="font-size:28px">Research Themes</h2>
+        <div class="sideblock" style="margin-top:8px">
+          <ul>
+            <li><i class="bi bi-diagram-3"></i><span><b>Cognitively-Inspired Design &amp; Evaluation</b> — developmentally plausible models &amp; evaluation.</span></li>
+            <li><i class="bi bi-cpu"></i><span><b>Pretraining &amp; Interpretability</b> — learning dynamics of small LMs via Pico.</span></li>
+            <li><i class="bi bi-globe2"></i><span><b>Multilinguality</b> — human-scale, cross-lingual, bilingual competence via <a href="beetle.html">Beetle</a>.</span></li>
+            <li><i class="bi bi-flower1"></i><span><b>Tokenization</b> — information-driven subword segmentation (ByteSpan).</span></li>
+            <li><i class="bi bi-pencil-square"></i><span><b>Alignment &amp; Interaction</b> — pedagogical alignment, student proxies.</span></li>
+            <li><i class="bi bi-soundwave"></i><span><b>Cognitive Science &amp; Linguistics</b> — grammar induction, cross-lingual phonology.</span></li>
+          </ul>
         </div>
       </div>
-    </section>
 
-    <!-- Latest news -->
-    <section class="section tint">
-      <div class="container">
-        <div class="section-head"><span class="kicker">News</span><h2>Latest</h2></div>
-        <div class="news-list">
-          <!-- AUTO:news:start -->
-          <div class="news-item"><div class="date">May 2026</div><div class="txt">Co-organising the <a href="https://babylm.github.io/">BabyLM 2026 Workshop &amp; Shared Task</a> (Multilingual Human-Scale Language Modelling) at EMNLP 2026.</div></div>
-          <div class="news-item"><div class="date">January 2026</div><div class="txt">Two oral papers at the <a href="https://www.phonetics.mmll.cam.ac.uk/ocp23">23rd Old-World Conference in Phonology (OCP23)</a>, hosted at Gonville &amp; Caius College. See my <a href="writing/ocp23-reflections.html">reflections on hosting OCP23</a>.</div></div>
-          <div class="news-item"><div class="date">September 2025</div><div class="txt">🎉 <strong>Eight accepted papers</strong> at EMNLP and NeurIPS workshops — including <strong>two Outstanding Paper Awards</strong> at BabyLM 2025.</div></div>
-          <div class="news-item"><div class="date">March 2025</div><div class="txt">Released <a href="https://www.picolm.io/">PicoLM</a>, the Cambridge Small Language Model &amp; Learning Dynamics Framework.</div></div>
-<!-- AUTO:news:end -->
+      <div class="clearfix"></div>
+      </details>
+      <p class="reveal" style="margin-top:10px">
+        <a href="research.html" class="btn-pill btn-red"><i class="bi bi-arrow-right"></i> Explore my Research &amp; Publications</a>
+      </p>
+
+      <p class="chapter reveal">Research Impact</p>
+      <div class="workme-grid">
+        <figure class="fig reveal fig-sticky workme-img">
+          <img src="assets/images/photos/hero-babylm-solo.jpg" alt="BabyLM at EMNLP" loading="lazy">
+          <figcaption>Human-scale AI — BabyLM at EMNLP.</figcaption>
+        </figure>
+        <div class="workme-body">
+          <p class="reveal work-lead">I study how small language models learn languages, using a collection of 330 open-source models trained in different bilingual and monolingual settings, known as <a href="beetle.html">BEETLE</a>. <span class="ex" data-more=" Alongside this, I developed the <a href=&quot;https://www.picolm.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;>PicoLM</a> research framework and open-source tools for pretraining, interpretability, and tokenization. <span class=&quot;ex&quot; data-more=&quot; My work has received two Outstanding Paper Awards and led to three EMNLP 2026 papers, and I co-organise the BabyLM and BabyVLM workshops on human-scale AI.&quot;>+</span>">+</span></p>
+          <p class="reveal" style="margin:2px 0 10px"><a href="beetle.html" class="btn-pill solid"><i class="bi bi-arrow-right"></i> Explore Beetle</a></p>
         </div>
-        <div class="text-center" style="margin-top:24px"><a href="about.html#writing" class="btn-pill outline"><i class="bi bi-pen"></i> Writing &amp; essays</a></div>
       </div>
-    </section>
 
-    <!-- Contact -->
-    <section class="section home-sec">
-      <div class="container">
-        <div class="contact-pro">
-          <span class="eyebrow-k">Contact</span>
-          <h3>Get in touch</h3>
-          <p class="lede">I welcome enquiries related to my research and am happy to discuss potential projects with current and prospective students. I may have limited availability at certain times of year, but will do my best to respond to all enquiries.</p>
-          <div class="rows">
-            <div class="crow"><i class="bi bi-envelope"></i><a href="mailto:sas245@cam.ac.uk">sas245@cam.ac.uk</a></div>
-            <div class="crow"><i class="bi bi-geo-alt"></i><span>Department of Computer Science &amp; Technology, University of Cambridge · Gonville &amp; Caius College</span></div>
-            <div class="crow"><i class="bi bi-file-earmark-pdf"></i><a href="assets/academic_cv.pdf" target="_blank">Curriculum Vitae (PDF)</a></div>
-          </div>
-          <div class="links">
-            <a href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&hl=en"><i class="bi bi-mortarboard"></i> Google Scholar</a>
-            <a href="https://aclanthology.org/people/s/suchir-salhan/"><i class="bi bi-journal-text"></i> ACL Anthology</a>
-            <a href="https://www.cst.cam.ac.uk/people/sas245"><i class="bi bi-building"></i> Cambridge CST</a>
-            <a href="https://www.linkedin.com/in/ssalhan/"><i class="bi bi-linkedin"></i> LinkedIn</a>
-            <a href="https://twitter.com/suchirsalhan"><i class="bi bi-twitter-x"></i> X</a>
+      <div class="clearfix"></div>
+
+      <figure class="fig wide reveal">
+        <img src="assets/images/photos/photo-emnlp-awards.jpg" alt="Two Outstanding Paper Awards at EMNLP 2025" loading="lazy">
+        <figcaption>Two Outstanding Paper Awards at the BabyLM Workshop, EMNLP 2025 (Suzhou).</figcaption>
+      </figure>
+
+      <div class="clearfix"></div>
+
+      <div class="news-talks-grid">
+        <div class="fact-block reveal">
+          <span class="eyebrow-k">News</span>
+          <h2 style="font-size:28px">Latest</h2>
+          <div class="news-list">
+            <div class="news-item"><div class="date">2026</div><div class="txt">Three EMNLP 2026 main-conference papers &mdash; <a href="research.html#pub-beetle">Beetle</a>, <a href="research.html#pub-langmap">LangMAP</a> and <a href="research.html#pub-crosslingual-align">Cross-Lingual Alignment</a> &mdash; accepted at EMNLP 2026 (Budapest).</div></div>
+            <div class="news-item"><div class="date">January 2026</div><div class="txt"><a href="research.html#pub-babybabellm">BabyBabelLM</a> accepted to EACL 2026 (Main Conference, Rabat); two oral papers at the <a href="https://www.phonetics.mmll.cam.ac.uk/ocp23" target="_blank" rel="noopener">23rd Old-World Conference in Phonology (OCP23)</a>, hosted at Gonville &amp; Caius College. See my <a href="writing/ocp23-reflections.html">reflections on hosting OCP23</a>.</div></div>
+            <div class="news-item"><div class="date">September 2025</div><div class="txt">🎉 <strong>Eight accepted papers</strong> at EMNLP and NeurIPS workshops — including <strong>two Outstanding Paper Awards</strong> at BabyLM 2025.</div></div>
+            <div class="news-item"><div class="date">March 2025</div><div class="txt">Released <a href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM</a>, the Cambridge Small Language Model &amp; Learning Dynamics Framework.</div></div>
           </div>
         </div>
+
+        <div class="fact-block reveal">
+          <span class="eyebrow-k">Talks</span>
+          <h2 style="font-size:28px">Invited Talks &amp; Seminars</h2>
+          <div class="sideblock" style="margin-top:8px">
+            <ul>
+              <li><i class="bi bi-mic"></i><span><b>X-PPL-26</b> — Crosslinguistic Perspectives on Processing &amp; Learning, Bayonne — 2026</span></li>
+              <li><i class="bi bi-mic"></i><span>Language &amp; Multimodal Processing Group, <b>University of Copenhagen</b> (with Dr Diana Galvan-Sosa) — 2026</span></li>
+              <li><i class="bi bi-mic"></i><span><b>Sheffield NLP</b> — Understanding the Human-Scale AI Frontier — 2026</span></li>
+              <li><i class="bi bi-mic"></i><span>13th Conference on the Mental Lexicon, <b>McGill University</b> — Invited Keynote — 2025</span></li>
+            </ul>
+          </div>
+          <a href="presentations.html#talks" class="btn-pill outline" style="margin-top:16px"><i class="bi bi-arrow-right"></i> All talks</a>
+        </div>
       </div>
-    </section>
+
+      <div class="clearfix"></div>
+
+      <div class="workme-grid">
+        <figure class="fig reveal fig-sticky workme-img">
+          <img src="assets/images/photos/photo-poster-pico.jpg" alt="Pico demo at EMNLP 2025" loading="lazy">
+          <figcaption>PicoLM — hypothesis-driven small-model research.</figcaption>
+        </figure>
+
+        <div class="workme-body">
+          <p class="chapter reveal" style="margin-top:0">Work with me</p>
+          <h2 class="reveal">Work with me.</h2>
+
+          <p class="reveal work-cta"><span class="ex" data-more="&mdash; work with me as a <span class=&quot;ex&quot; data-more=&quot;Part II or Part III in Computer Science, Engineering or Linguistics? Work with me and take an idea from &ldquo;that&rsquo;s interesting&rdquo; to experiment to result to paper. You&rsquo;ll get a research question of your own, work with real models and data, learn to read and challenge the literature, and experience the full research process&mdash;not just the polished version that appears in a paper. I&rsquo;ve worked individually with six Cambridge undergraduates; two returned for a second year, and their projects went on to work presented at <a href=&amp;quot;research.html#pub-teacher-demos&amp;quot;>EMNLP</a>, <a href=&amp;quot;research.html#pub-claude-reinvestigates&amp;quot;>BlackboxNLP</a> and <a href=&amp;quot;research.html#pub-theoretical-linguistics&amp;quot;>NeurIPS</a> workshops.&quot;>Part II / Part III undergraduate</span> or on an <span class=&quot;ex&quot; data-more=&quot; &mdash; I supervise Part III Computer Science Tripos, MPhil Advanced Computer Science, and MPhil Machine Learning and Machine Intelligence dissertation projects. These projects are an opportunity to develop an ambitious research question in AI, language technology or cognitive science and pursue it through the full research process. I&rsquo;ve also supervised MPhil Advanced Computer Science projects recognised with an <a href=&amp;quot;research.html#pub-looking-to-learn&amp;quot;>Outstanding Paper Award</a>.&quot;>MPhil dissertation</span>."><strong>At Cambridge?</strong></span></p>
+
+          <details class="disc-fold reveal">
+            <summary>I enjoy working with students and collaborators from a wide range of disciplines.</summary>
+            <p><span class="ex" data-more=", I would like to collaborate, mentor or supervise research on representation learning, model merging, tokenization, mechanistic interpretability, agentic systems, world modelling, trustworthy AI, alignment, and small language models in applied (legal, financial and educational) contexts &mdash; see, for example, <a href=&quot;research.html#pub-pico&quot;>Pico</a>, <a href=&quot;research.html#pub-bytespan&quot;>ByteSpan</a>, <a href=&quot;research.html#pub-langmap&quot;>LangMAP</a>, <a href=&quot;research.html#pub-goldfish&quot;>Goldfish</a>, <a href=&quot;research.html#pub-protocol-competence&quot;>Protocol Competence</a> and <a href=&quot;research.html#pub-linear-truth&quot;>Linear Truth Encodings</a>."><strong>If you're a computer scientist</strong></span></p>
+            <p><span class="ex" data-more=", I would like to collaborate, mentor or supervise research on multilinguality, computational psycholinguistics, modelling human language processing, first- and second-language acquisition, diachronic language change, and computational phonology &mdash; see, for example, <a href=&quot;research.html#pub-beetle&quot;>Beetle</a>, <a href=&quot;research.html#pub-l1-influence&quot;>L1 Influence</a>, <a href=&quot;research.html#pub-bliss&quot;>BLiSS</a>, <a href=&quot;research.html#pub-grammar-induction&quot;>Grammar Induction</a>, <a href=&quot;research.html#pub-grammatical-diversity&quot;>Grammatical Diversity</a>, <a href=&quot;research.html#pub-phoneme-distribution&quot;>Phoneme Frequencies</a> and <a href=&quot;research.html#pub-diachronic-phonemes&quot;>Diachronic Phonemes</a>."><strong>If you're a linguist</strong></span></p>
+            <p><span class="ex" data-more=", I would like to collaborate, mentor or supervise research on human-scale language modelling, learning dynamics, developmental AI, brain alignment, computational cognitive science, and cognitive perspectives on AI &mdash; see, for example, <a href=&quot;research.html#pub-teacher-demos&quot;>Teacher Demonstrations</a>, <a href=&quot;research.html#pub-seq-length&quot;>Best Sequence Length for BabyLM</a>, <a href=&quot;research.html#pub-theoretical-linguistics&quot;>Theoretical Linguistics &amp; Interpretability</a>, <a href=&quot;research.html#pub-claude-reinvestigates&quot;>Claude reinvestigates herself</a> and <a href=&quot;research.html#pub-linguistics-age&quot;>Linguistics in the Age of LMs</a>."><strong>If you're interested in cognitive science</strong></span></p>
+            <p><span class="ex" data-more=", I would like to collaborate, mentor or supervise research on educational applications of small language models, developmental AI, pedagogical alignment, human-scale modelling, and automated assessment &mdash; see, for example, <a href=&quot;research.html#pub-teacher-demos&quot;>Teacher Demonstrations</a>, <a href=&quot;research.html#pub-pedagogical-alignment&quot;>Pedagogical Alignment</a> and <a href=&quot;research.html#pub-bliss&quot;>BLiSS</a>."><strong>If you're interested in education</strong></span></p>
+            <p><span class="ex" data-more=", I would like to collaborate, mentor or supervise research on AI safety, trustworthy AI, ethics of AI systems, cultural adaptivity, computational social science, alignment, agentic systems, and world modelling &mdash; see, for example, <a href=&quot;research.html#pub-repertoires&quot;>Repertoires, Not Scores</a>, <a href=&quot;research.html#pub-pedagogical-alignment&quot;>Pedagogical Alignment</a>, <a href=&quot;research.html#pub-protocol-competence&quot;>Protocol Competence</a> and <a href=&quot;research.html#pub-goldfish&quot;>Goldfish</a>."><strong>If you're interested in AI more broadly</strong></span></p>
+            <p><span class="ex" data-more=", I would like to collaborate, mentor or supervise research on multimodality (vision-language and speech-language models), cultural adaptivity, developmental AI, and cross-modal representation learning &mdash; see, for example, <a href=&quot;research.html#pub-looking-to-learn&quot;>Looking to Learn</a>, <a href=&quot;research.html#pub-multimodal&quot;>Multimodal Grounding</a>, <a href=&quot;research.html#pub-babybabellm&quot;>BabyBabelLM</a> and <a href=&quot;research.html#pub-beetle&quot;>Beetle</a>."><strong>And if you're working somewhere in between?</strong></span></p>
+          </details>
+
+          <p class="reveal" style="margin-top:10px"><a href="people.html">Find out more about research that I have mentored →</a></p>
+
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+      <figure class="fig right reveal">
+        <img src="assets/images/photos/photo-poster-theoretical-linguistics.jpg" alt="Theoretical linguistics poster, CogInterp NeurIPS 2025" loading="lazy">
+        <figcaption>Representations &amp; interpretability — CogInterp @ NeurIPS 2025.</figcaption>
+      </figure>
+
+      <div class="playbin reveal" id="playbar" aria-label="Image playground">
+        <button type="button" class="psst" id="psstBtn">👉 psst — see this in pictures?</button>
+        <span class="play-controls">
+          <span class="poke-note">poke an image to explode it ·</span>
+          <button type="button" data-act="shuffle" title="Shuffle the image order">🔀 Shuffle</button>
+          <button type="button" data-act="fx" title="Random image animations">✨ FX</button>
+        </span>
+      </div>
+
+      <div class="fact-block reveal">
+        <span class="eyebrow-k">Teaching</span>
+        <h2 style="font-size:28px">Teaching &amp; Supervision</h2>
+        <p class="lead">I lecture and supervise several courses in Cambridge. <span class="ex" data-more=" Guest lecturer for L95 &mdash; Natural Language Syntax &amp; Parsing (MPhil ACS) and Li18 Computational Linguistics; supervisor across CST IA, IB &amp; II; and lead of the 2025 Small Language Models UROP, built on Pico.">+</span></p>
+        <p class="lead">I also organise the <a href="service.html">Cambridge Natural Language Processing Seminars (NLIP)</a>, which take place every Friday at midday in the <a href="https://www.cst.cam.ac.uk/" target="_blank" rel="noopener">Computer Lab</a> and are open to the public. Please feel free to attend if you are interested!</p>
+        <a href="teaching.html" class="btn-pill outline"><i class="bi bi-arrow-right"></i> Teaching &amp; resources</a>
+      </div>
+
+      <figure class="fig wide reveal grad-banner grad-bottom">
+        <img src="assets/images/photos/grad-bkg%20copy.jpg" alt="" loading="lazy">
+      </figure>
+    </article>
   </main>
 
-  <style>
-    .beetle-flag { background: linear-gradient(135deg, var(--accent-soft) 0%, var(--tint-bg) 100%); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
-    .beetle-flag .eyebrow-k { color: var(--accent-deep); }
-    .beetle-flag-img { display:block; border-radius:18px; overflow:hidden; border:1px solid var(--line); box-shadow: 0 18px 44px rgba(42,39,32,0.16); background: var(--surface-color); transition: transform .25s, box-shadow .25s; }
-    .beetle-flag-img:hover { transform: translateY(-4px); box-shadow: 0 24px 56px rgba(76,99,66,0.22); }
-    .beetle-flag-img img { display:block; width:100%; max-width:100%; height:auto; }
-  </style>
+<nav class="dock" aria-label="Primary">
+    <a href="research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="writing/index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
 
   <footer class="footer">
     <div class="container">
-      <div class="cols">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
         <div>© 2026 Suchir Salhan · University of Cambridge</div>
         <div class="fnav">
-          <a href="research.html">Research</a><a href="publications.html">Publications</a>
-          <a href="teaching.html">Teaching</a><a href="about.html">About</a>
-          <a href="assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
-          <a href="privacy.html">Privacy</a>
+          <a href="research.html">Research</a><a href="research.html#publications">Publications</a>
+          <a href="writing/index.html">Writing</a><a href="people.html">People</a>
+          <a href="about.html">About</a><a href="assets/academic_cv.pdf">CV</a>
+          <a href="https://www.suchirsalhan.com">suchirsalhan.com</a><a href="privacy.html">Privacy</a>
         </div>
       </div>
     </div>
   </footer>
 
-  <a href="#hero" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script>
+    /* Scroll-reveal: the article unfolds as it enters the viewport */
+    (function(){
+      var els = Array.prototype.slice.call(document.querySelectorAll('.reveal'));
+      document.body.classList.add('js-reveal');
+      function show(){
+        for (var i=0;i<els.length;i++){
+          var e = els[i]; if (e.classList.contains('in')) continue;
+          var r = e.getBoundingClientRect();
+          if (r.top < window.innerHeight * 0.92) e.classList.add('in');
+        }
+      }
+      window.addEventListener('scroll', show, { passive: true });
+      window.addEventListener('resize', show);
+      window.addEventListener('load', show);
+      show();
+      var folds = document.querySelectorAll('.bio-fold');
+      for (var f=0; f<folds.length; f++){
+        (function(fold){
+          fold.addEventListener('toggle', function(){
+            if (fold.open) {
+              var inner = fold.querySelectorAll('.reveal');
+              for (var j=0;j<inner.length;j++) inner[j].classList.add('in');
+            }
+            setTimeout(show, 0);
+          });
+        })(folds[f]);
+      }
+    })();
+
+    /* Hover an image → its pixels shatter across the whole page, then reassemble. */
+    (function(){
+      var story = document.querySelector('.story'); if (!story) return;
+      var cv = document.createElement('canvas');
+      cv.style.cssText = 'position:fixed;inset:0;width:100vw;height:100vh;pointer-events:none;z-index:9000;';
+      document.body.appendChild(cv);
+      var ctx = cv.getContext('2d');
+      var DPR = Math.min(window.devicePixelRatio || 1, 2);
+      function sizeCanvas(){ cv.width = Math.floor(innerWidth*DPR); cv.height = Math.floor(innerHeight*DPR); ctx.setTransform(DPR,0,0,DPR,0,0); }
+      sizeCanvas(); addEventListener('resize', sizeCanvas);
+      var busy = false, lastRun = 0;
+
+      function shatter(img){
+        if (busy) return;
+        var r = img.getBoundingClientRect();
+        if (r.width < 6 || r.height < 6) return;
+        var COLS = Math.max(16, Math.min(48, Math.round(r.width/12)));
+        var tw = r.width/COLS, ROWS = Math.max(8, Math.round(r.height/tw)), th = r.height/ROWS;
+        var oc = document.createElement('canvas'); oc.width = COLS; oc.height = ROWS;
+        var octx = oc.getContext('2d'); var data;
+        try { octx.drawImage(img, 0, 0, COLS, ROWS); data = octx.getImageData(0,0,COLS,ROWS).data; }
+        catch(e){ return; }
+        var tiles = [];
+        for (var yy=0; yy<ROWS; yy++){ for (var xx=0; xx<COLS; xx++){
+          var idx = (yy*COLS+xx)*4; if (data[idx+3] < 8) continue;
+          tiles.push({
+            hx: r.left + xx*tw, hy: r.top + yy*th, w: tw+0.7, h: th+0.7,
+            col: 'rgb('+data[idx]+','+data[idx+1]+','+data[idx+2]+')',
+            sx: Math.random()*innerWidth, sy: Math.random()*innerHeight,
+            rot: (Math.random()-0.5)*Math.PI*1.6
+          });
+        }}
+        if (!tiles.length) return;
+        busy = true; img.style.transition = 'opacity .12s'; img.style.opacity = '0';
+        var EXP = 680, HOLD = 130, ASM = 760, total = EXP+HOLD+ASM, start = null;
+        function eOut(t){ return 1 - Math.pow(1-t,3); }
+        function eInOut(t){ return t<0.5 ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2; }
+        function frame(ts){
+          if (start === null) start = ts; var e = ts - start, p;
+          if (e < EXP) p = eOut(e/EXP);
+          else if (e < EXP+HOLD) p = 1;
+          else p = 1 - eInOut((e-EXP-HOLD)/ASM);
+          ctx.clearRect(0,0,innerWidth,innerHeight);
+          for (var i=0;i<tiles.length;i++){ var t = tiles[i];
+            var x = t.hx + (t.sx-t.hx)*p, y = t.hy + (t.sy-t.hy)*p, rr = t.rot*p;
+            ctx.fillStyle = t.col;
+            if (rr){ ctx.save(); ctx.translate(x+t.w/2, y+t.h/2); ctx.rotate(rr); ctx.fillRect(-t.w/2,-t.h/2,t.w,t.h); ctx.restore(); }
+            else ctx.fillRect(x, y, t.w, t.h);
+          }
+          if (e < total) requestAnimationFrame(frame);
+          else { ctx.clearRect(0,0,innerWidth,innerHeight); img.style.opacity = ''; busy = false; }
+        }
+        requestAnimationFrame(frame);
+      }
+
+      story.addEventListener('mouseover', function(ev){
+        var img = ev.target.closest('.fig img'); if (!img || busy) return;
+        var now = Date.now(); if (now - lastRun < 250) return; lastRun = now;
+        shatter(img);
+      });
+      story.addEventListener('click', function(ev){
+        if (ev.target.closest('a')) return;
+        var img = ev.target.closest('.fig img'); if (img) shatter(img);
+      });
+    })();
+
+    /* Reader playground: shuffle image order, hide images, random FX */
+    (function(){
+      var bar = document.getElementById('playbar'); if(!bar) return;
+      var psst = document.getElementById('psstBtn');
+      if (psst) {
+        psst.addEventListener('click', function(){
+          var hidden = document.body.classList.toggle('imgs-off');
+          if (!hidden) {
+            var fs = figs();
+            fs.forEach(function(f){ f.classList.add('appear'); });
+            bar.classList.add('open');
+            psst.textContent = '🙈 hide the photos? click here';
+            setTimeout(function(){ fs.forEach(function(f){ f.classList.add('fx-tilt'); }); setTimeout(function(){ figs().forEach(function(f){ f.classList.remove('fx-tilt'); }); }, 700); }, 650);
+          } else {
+            bar.classList.remove('open');
+            psst.textContent = '👉 psst — see this in pictures?';
+          }
+        });
+      }
+      var FX = ['fx-tilt','fx-tilt2','fx-gray','fx-sepia','fx-zoom','fx-flip','fx-expand'];
+      var POOL = ['photo-emnlp-awards.jpg','photo-emnlp-award-pair.jpg','photo-emnlp-awards-team.jpg','photo-lecturing.jpg','photo-team.jpg','photo-team-dinner.jpg','photo-team-square.jpg','tubingen-1.jpg','tubingen-2.jpg','tubingen-3.jpg','vancouver.jpg','photo-poster-pico.jpg','photo-poster-theoretical-linguistics.jpg','photo-poster-sequence-length.jpg','photo-poster-bliss.jpg','photo-poster-grammatical-diversity.jpg','photo-poster-pedagogical-alignment.jpg'];
+      function figs(){ return Array.prototype.slice.call(document.querySelectorAll('.story .fig')); }
+      // figures the shuffle should touch: skip the grad banner and the About-me random image
+      function shuffleFigs(){ return figs().filter(function(f){ return !f.classList.contains('grad-banner') && f.id !== 'randomFig'; }); }
+      bar.addEventListener('click', function(e){
+        var btn = e.target.closest('button'); if(!btn) return;
+        var act = btn.getAttribute('data-act');
+        if (act === 'shuffle') {
+          document.body.classList.remove('imgs-off');
+          var deck = POOL.slice();
+          for (var i=deck.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=deck[i]; deck[i]=deck[j]; deck[j]=t; }
+          shuffleFigs().forEach(function(f,k){
+            f.classList.add('appear','in');
+            var img=f.querySelector('img'); if(!img) return;
+            var src='assets/images/photos/'+deck[k % deck.length];
+            img.style.opacity=0;
+            (function(im,s){ setTimeout(function(){ im.setAttribute('src',s); im.style.transition='opacity .45s ease'; im.style.opacity=1; }, 160); })(img,src);
+          });
+        } else if (act === 'toggle') {
+          var off = document.body.classList.toggle('imgs-off');
+          btn.innerHTML = off ? '🖼 Show' : '🖼 Hide';
+        } else if (act === 'fx') {
+          figs().forEach(function(f){ FX.forEach(function(c){ f.classList.remove(c); }); f.classList.add(FX[Math.floor(Math.random()*FX.length)]); });
+        }
+      });
+    })();
+
+    /* About me: random shuffleable photo */
+    (function(){
+      var fig = document.getElementById('randomFig');
+      var img = document.getElementById('randomFigImg');
+      if (!fig || !img) return;
+      var base = 'assets/images/photos/';
+      var pool = (img.getAttribute('data-pool')||'').split('|').filter(Boolean);
+      if (!pool.length) return;
+      function pick(){
+        var cur = img.getAttribute('src').replace(base,'');
+        var choices = pool.filter(function(p){ return p !== cur; });
+        var next = choices[Math.floor(Math.random()*choices.length)] || pool[0];
+        img.style.opacity = 0;
+        setTimeout(function(){ img.setAttribute('src', base + next); img.style.transition='opacity .4s ease'; img.style.opacity = 1; }, 160);
+      }
+      pick(); // random on load
+      fig.style.cursor = 'pointer';
+      fig.addEventListener('click', function(e){ e.stopPropagation(); e.preventDefault(); pick(); }, true);
+    })();
+  </script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/explore.js"></script>
 </body>
 </html>

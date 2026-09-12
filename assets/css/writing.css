@@ -1,0 +1,161 @@
+/* ============================================================
+   writing.css — Tufte / vec2vec-style reading layout
+   Black serif on white (light) · white serif on black (dark).
+   Narrow measure, generous margin for sidenotes.
+   Loaded AFTER site.css on writing pages only.
+   ============================================================ */
+
+/* Minimal top on writing pages: no dark hero block, just air */
+.writing-page .page-hero {
+  background: var(--background-color) !important;
+  color: var(--default-color) !important;
+  padding: 120px 0 8px !important;
+}
+.writing-page .page-hero::before,
+.writing-page .page-hero::after { display: none !important; }
+.writing-page .breadcrumb-mini { color: var(--ink-2); }
+.writing-page .breadcrumb-mini a { color: var(--accent-deep); }
+.writing-page .breadcrumb-mini a:hover { color: var(--accent-color); }
+.writing-page .page-hero .eyebrow { color: var(--accent-color); }
+.writing-page .page-hero h1 { color: var(--heading-color); }
+.writing-page .page-hero p { color: var(--ink-2); }
+.writing-page .section { padding: 20px 0 60px; }
+
+/* ---- Index: essays as a clean list, not cards ---- */
+.tufte-index { max-width: 760px; margin: 0 auto; }
+.tufte-index .essay { display: block; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.tufte-index .essay:hover h3 { color: var(--accent-color); }
+.tufte-index .essay .tag { font-family: var(--mono-font); font-size: 11.5px; text-transform: uppercase;
+  letter-spacing: .08em; color: var(--accent-color); }
+.tufte-index .essay h3 { font-family: var(--heading-font); font-size: 24px; font-weight: 600;
+  line-height: 1.2; margin: 6px 0 8px; color: var(--heading-color); transition: color .15s; }
+.tufte-index .essay p { font-size: 17px; line-height: 1.55; color: var(--ink-2); margin: 0; }
+
+/* ---- Article: the Tufte reading column ---- */
+.tufte-article { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+.tufte-article > * { max-width: 660px; }          /* the measure */
+.tufte-article .meta { font-family: var(--mono-font); font-size: 13px; color: var(--ink-2);
+  letter-spacing: .02em; margin-bottom: 10px; }
+.tufte-article h1 { font-family: var(--heading-font); font-weight: 600; letter-spacing: -0.015em;
+  font-size: clamp(30px, 4.4vw, 46px); line-height: 1.1; color: var(--heading-color);
+  max-width: 780px; margin: 0 0 8px; }
+.tufte-article .standfirst { font-size: 20px; line-height: 1.5; color: var(--ink-2);
+  font-style: italic; max-width: 700px; margin: 0 0 34px; padding-bottom: 26px; border-bottom: 1px solid var(--line); }
+.tufte-article p { font-family: var(--heading-font); font-size: 20px; line-height: 1.7;
+  color: var(--default-color); margin: 0 0 22px; }
+.tufte-article h2 { font-family: var(--heading-font); font-size: 26px; font-weight: 600;
+  color: var(--heading-color); margin: 40px 0 12px; }
+.tufte-article h3 { font-family: var(--heading-font); font-size: 21px; font-weight: 600;
+  color: var(--heading-color); margin: 30px 0 10px; font-style: italic; }
+.tufte-article a { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 2px;
+  text-decoration-thickness: 1px; }
+.tufte-article a:hover { color: var(--accent-color); }
+.tufte-article blockquote { border-left: 3px solid var(--accent-color); margin: 26px 0; padding: 4px 0 4px 22px;
+  font-style: italic; color: var(--ink-2); }
+.tufte-article figure { margin: 30px 0; max-width: 660px; }
+.tufte-article figure img { width: 100%; border-radius: 6px; border: 1px solid var(--line); }
+.tufte-article figcaption { font-size: 14px; line-height: 1.5; color: var(--ink-2); margin-top: 8px; }
+
+/* ---- Tufte margin sidenotes ---- */
+.tufte-article .sn { position: relative; }
+.tufte-article .sn-ref { color: var(--accent-color); font-family: var(--mono-font);
+  font-size: .7em; vertical-align: super; cursor: pointer; }
+.tufte-article .sidenote {
+  font-family: var(--heading-font); font-size: 14.5px; line-height: 1.5; color: var(--ink-2); font-style: normal;
+}
+.tufte-article .sidenote::before { content: attr(data-n); font-family: var(--mono-font);
+  color: var(--accent-color); font-size: 11px; vertical-align: super; margin-right: 4px; }
+
+/* DEFAULT (narrow / medium): sidenotes are inline call-out boxes in the text flow. */
+.tufte-article .sidenote { display: block; margin: 10px 0 18px;
+  background: var(--accent-soft); border-left: 2px solid var(--accent-color); padding: 12px 16px; border-radius: 0 8px 8px 0; }
+
+/* WIDE, no TOC (>=1120px): reserve a right gutter and float notes into the margin. */
+@media (min-width: 1120px) {
+  .writing-page:not(.has-toc) .tufte-article { padding-right: 320px; }
+  .writing-page:not(.has-toc) .tufte-article > * { max-width: 640px; }
+  .writing-page:not(.has-toc) .tufte-article .sidenote {
+    float: right; clear: right; width: 280px; margin: 4px -300px 18px 0;
+    background: transparent; border: 0; padding: 0; border-radius: 0; }
+}
+/* WIDE, with TOC (>=1320px): three columns — TOC, text, right note gutter. */
+@media (min-width: 1320px) {
+  .writing-page.has-toc .tufte-article { padding-right: 300px; }
+  .writing-page.has-toc .tufte-article > * { max-width: 620px; }
+  .writing-page.has-toc .tufte-article .sidenote {
+    float: right; clear: right; width: 260px; margin: 4px -280px 18px 0;
+    background: transparent; border: 0; padding: 0; border-radius: 0; }
+}
+
+/* Progressive-disclosure concepts sit nicely in serif body */
+.tufte-article .ex { font-weight: 500; }
+
+/* Serendipity footer already styled in site.css (.serendipity) */
+.tufte-article .serendipity { max-width: 660px; }
+
+/* ============================================================
+   Table of contents sidebar (built by assets/js/toc.js)
+   Sticky on wide screens, hidden on narrow screens.
+   ============================================================ */
+
+/* Headings become jump targets: keep them clear of the fixed header. */
+.tufte-article .toc-target { scroll-margin-top: 96px; }
+
+/* Lay article + sidebar side by side without disturbing the reading measure. */
+@media (min-width: 1260px) {
+  .writing-page.has-toc .section > .container {
+    display: flex;
+    align-items: flex-start;
+    gap: 36px;
+    max-width: 1400px;
+  }
+  .writing-page.has-toc .section > .container > .tufte-article {
+    flex: 1 1 auto;
+    min-width: 0;
+    margin: 0;                 /* flex handles placement */
+  }
+  .writing-page.has-toc .toc {
+    flex: 0 0 200px;
+    width: 200px;
+    position: sticky;
+    top: 108px;                /* clear the fixed header */
+    max-height: calc(100vh - 140px);
+    overflow-y: auto;
+    padding-right: 8px;
+  }
+}
+
+/* Hide the sidebar on narrow screens; article returns to its normal flow. */
+.toc { display: none; }
+@media (min-width: 1260px) {
+  .writing-page.has-toc .toc { display: block; }
+}
+
+.toc .toc-label {
+  font-family: var(--mono-font);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  color: var(--accent-color);
+  margin-bottom: 12px;
+}
+.toc nav ul { list-style: none; margin: 0; padding: 0; }
+.toc nav li { margin: 0; }
+.toc nav a {
+  display: block;
+  font-family: var(--heading-font);
+  font-size: 14.5px;
+  line-height: 1.35;
+  color: var(--ink-2);
+  text-decoration: none;
+  padding: 5px 0 5px 12px;
+  border-left: 2px solid var(--line);
+  transition: color .15s, border-color .15s;
+}
+.toc nav a:hover { color: var(--heading-color); border-left-color: var(--accent-2); }
+.toc nav li.toc-sub a { padding-left: 24px; font-size: 13.5px; font-style: italic; }
+.toc nav a.active {
+  color: var(--accent-color);
+  border-left-color: var(--accent-color);
+  font-weight: 600;
+}

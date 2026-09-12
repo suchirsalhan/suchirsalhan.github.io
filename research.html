@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Research · Suchir Salhan</title>
   <meta name="description" content="Cognitively-inspired multilingual AI and the learning dynamics of small language models.">
@@ -16,6 +17,32 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/site.css" rel="stylesheet">
+
+  <style>
+    .tldr-sep { color: var(--accent-color); margin:0 6px; }
+    .tldr-take { color: var(--ink-2); font-style: italic; }
+    /* Nested clickable PhD questions (homepage-style expanders) */
+    .q-folds { margin-top:6px; }
+    .q-fold { border-bottom:1px solid var(--line); }
+    .q-fold > summary { cursor:pointer; list-style:none; padding:12px 0; font-family:var(--heading-font); font-size:19px; color:var(--heading-color); }
+    .q-fold > summary::-webkit-details-marker { display:none; }
+    .q-fold > summary::before { content:"＋ "; color:var(--accent-color); font-weight:600; }
+    .q-fold[open] > summary::before { content:"– "; }
+    .q-fold p { margin:0 0 14px; color:var(--ink-2); }
+    /* Agenda questions → linked to interest groups */
+    .agenda-questions .agenda-q { color: var(--accent-deep); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--accent-color), transparent 60%); }
+    .agenda-questions .agenda-q:hover { color: var(--accent-color); border-bottom-color: var(--accent-color); }
+    .q-group-head { scroll-margin-top: 90px; font-family: var(--heading-font); font-size: clamp(22px, 2.6vw, 30px); font-weight: 600; color: var(--heading-color); letter-spacing: -.015em; margin: 2.2rem 0 .2rem; }
+    .q-group-head:first-of-type { margin-top: .4rem; }
+    .q-group-intro { color: var(--ink-2); font-size: 16px; max-width: 760px; margin: 0 0 1rem; }
+    .agenda-fold > summary, .thesis-fold > summary { cursor:pointer; }
+    .agenda-fold > summary { font-family: var(--mono-font); font-size:13px; letter-spacing:.04em; color: var(--accent-deep); margin:4px 0 8px; }
+    .thesis-fold > summary { list-style:none; display:block; margin-bottom:6px; }
+    .thesis-fold > summary::-webkit-details-marker { display:none; }
+    .thesis-fold > summary .kicker { display:block; }
+    .thesis-fold > summary .thesis-fold-h2 { display:block; font-family: var(--heading-font); font-size: clamp(24px, 3vw, 34px); font-weight:600; color: var(--heading-color); letter-spacing:-.015em; }
+    .thesis-fold[open] > summary { margin-bottom:14px; }
+  </style>
 </head>
 <body class="index-page">
   <header id="header" class="header header--solid d-flex align-items-center fixed-top">
@@ -25,14 +52,14 @@
         <ul>
           <li><a href="research.html" class="active">Research</a></li>
           <li><a href="beetle.html">Beetle</a></li>
-          <li><a href="publications.html">Publications</a></li>
+          <li><a href="writing/index.html">Writing</a></li>
           <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="talks.html">Talks</a></li>
-          <li><a href="presentations.html">Presentations</a></li>
+          <li><a href="presentations.html">Talks</a></li>
           <li><a href="people.html">People</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
         </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
@@ -44,89 +71,136 @@
         <div class="breadcrumb-mini"><a href="index.html">Home</a> / Research</div>
         <p class="eyebrow">Research</p>
         <h1>Research</h1>
-        <p>Cognitively-inspired multilingual AI and the learning dynamics of small language models.</p>
+        <p>From minds to machines: how do intelligent systems learn, represent, and behave? I work across artificial intelligence, cognitive science, and linguistics, using small, human-scale language models as the instrument that lets me watch learning happen.</p>
       </div>
     </section>
 
-    <!-- Section 1: Research Orientation -->
+    <!-- Section 1: Research Orientation (BROAD framing, leads) -->
     <section class="section">
       <div class="container">
         <div class="section-head left">
           <p class="kicker">Overview</p>
-          <h2>Research Orientation</h2>
-          <p>I study how neural networks acquire, organise, and transfer knowledge — using language models as a controlled scientific instrument to uncover the mechanisms of learning and representation formation.</p>
+          <h2>Research Agenda</h2>
+          <p>I study how intelligent systems learn, represent, and behave, working across artificial intelligence, cognitive science, and linguistics. Cognitive science and linguistics supply the questions; small language models are the instrument I use to answer them.</p>
         </div>
+
+        <div class="prose wide agenda-questions">
+          <p><strong><a class="agenda-q" href="#q-learn">How do models learn?</a></strong></p>
+          <p><strong><a class="agenda-q" href="#q-language">How does language shape learning?</a></strong></p>
+          <p><strong><a class="agenda-q" href="#q-representations">What representations emerge?</a></strong></p>
+          <p><strong><a class="agenda-q" href="#q-trust">Can we trust small AI?</a></strong></p>
+          <p>Addressing these questions are directly beneficial for the AI community and stakeholders using AI in their systems. My work helps stakeholders build mergeable, efficient small models and agentic pipelines that are cheaper to deploy than frontier systems. More generally, I aim to contribute to the AI community by understanding and building a foundation for multilingual, fairer AI that reaches beyond English into under-served languages and build more human-centered AI that is culturally-adaptive, safe, fair and trustworthy.</p>
+        </div>
+
         <div class="prose wide">
-          <p>My work is guided by a single central question: <strong>how do learning systems acquire, organise, and converge upon structured knowledge?</strong> Language is the ideal testbed, because it offers rich structure — syntax, semantics, morphology — alongside decades of developmental theory, cross-linguistic variation, and behavioural benchmarks against which learning can be measured.</p>
-
-          <p>I studied Computer Science and Linguistics at the University of Cambridge, completing both my undergraduate and master's degrees at Gonville &amp; Caius College, and I am now supervised by Professor <a href="https://www.cl.cam.ac.uk/~pjb48/" target="_blank" rel="noopener">Paula Buttery</a>. Over time my interests shifted away from formal descriptions of language toward questions of acquisition: how structure arises without explicit instruction, how learning proceeds unevenly, and how competence is gradually assembled rather than suddenly attained.</p>
-
-          <p>My core instrument is the <strong>small, human-scale language model (BabyLM)</strong> — a deliberately constrained system whose limits make learning <em>visible</em> and measurable. Everything in my research radiates from this core. Much of machine learning is organised around endpoints — benchmarks, leaderboards, final accuracy — and my work is motivated by a discomfort with that framing.</p>
-
-          <blockquote class="pull-quote">Small language models are not merely scaled-down versions of larger ones. Their value lies less in what they achieve than in what they make intelligible.</blockquote>
-
-          <p>I therefore approach language models as epistemic artefacts, focusing on learning dynamics rather than end states, and drawing on tools from psychometrics and developmental psychology — such as item response theory.</p>
-
-          <p>The long-term vision is a scientific framework for how structured knowledge emerges, is organised, and becomes transferable in learning systems — combining learning dynamics, representation theory, mergeability, and computational cognitive science. Language models are the focus; the questions concern representation learning broadly.</p>
+          <p>I use small language models to study a big question: <strong>how does intelligence emerge through learning?</strong></p>
+          <p>Small models are valuable not because they can compete with large ones, but because their constraints make learning visible, measurable, and interpretable. I study models as epistemic artefacts, focusing on learning dynamics rather than final performance: how representations form, how knowledge transfers, and how learned structure can be recombined. Drawing on machine learning, psychometrics, and developmental psychology, my broader goal is a scientific account of learning across minds and machines.</p>
+          <p><strong>My PhD tackles four questions:</strong></p>
+          <div class="q-folds">
+            <details class="q-fold"><summary>Can we trace where representations come from?</summary><p>When can independently trained models be merged without losing what each learned?</p></details>
+            <details class="q-fold"><summary>Can models learn their own words?</summary><p>Can segmentation emerge during training, particularly for low-resource languages?</p></details>
+            <details class="q-fold"><summary>Can small models teach small models?</summary><p>What determines a machine&rsquo;s zone of proximal development?</p></details>
+            <details class="q-fold"><summary>What does scale obscure?</summary><p>When small models reproduce human-like behaviour, what are they getting right that larger models get wrong?</p></details>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Section 2: Three Strands -->
+    <!-- Section 2: Research Interests — the full map -->
     <section class="section tint">
       <div class="container">
         <div class="section-head left">
-          <p class="kicker">Directions</p>
-          <h2>Three Strands</h2>
-          <p>Three connected threads run through my doctoral work, from tokenization and learning dynamics to cognitively-inspired evaluation and theoretical linguistics.</p>
-        </div>
-
-        <div class="prose wide">
-          <h3>Language Models: Learning Dynamics and Tokenization</h3>
-          <p>My research is concerned with building data-efficient small Language Models. While industry-led efforts have built competitive LLMs that have fundamentally shifted the job of the contemporary Natural Language Processing (academic) researcher in various ways, there are still several fundamental, open questions to address that are not obviously ancillary to those pursued commercial AI research labs.</p>
-          <p>For small LMs, tight parameter budgets make each decision critical, yet researchers still lack systematic, scientific ways to test and refine new ideas. We introduce <a href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM</a>, a lightweight, modular framework that enables systematic, hypothesis-driven research for small and medium-scale language model development. <a href="https://www.picolm.io/" target="_blank" rel="noopener">Pico</a> consists of two libraries that together provide a practical sandbox where researchers can make targeted changes to a model's architecture or training procedures and directly observe their effects on the model's behaviour. To support reproducible experimentation, we also release a suite of baseline models, trained under standardised conditions and open-sourced for the community. Check out the YouTube Video put together by Zeb Goriely: <a href="https://www.youtube.com/watch?v=llRUKwqMah4" target="_blank" rel="noopener">Introducing PicoLM | YouTube</a>.</p>
-          <p><strong>Developmental Interpretability (DevInterp)</strong> and Language Model Learning Dynamics Research are fundamental to developing small LMs. <strong>Small LMs are crucial for low-resourced and democratised Language Modelling</strong>, and should still be a serious focus of hypothesis-driven scientific exploration.</p>
-
-          <h3>Cognitively-Inspired AI: Linguistic Interpretability and Multilinguality</h3>
-          <p>The second strand of my research focuses on cognitively-inspired AI. The scientific study of the human capacity for language demands a multi-model approach that combines a characterisation of the universal and language- or speaker-specific substance of grammars and the inductive biases that support their emergence in language acquisition, and how these conditions interact with domain-general cognition. This is why I am, in part, drawn to the work of the <a href="https://babylm.github.io/" target="_blank" rel="noopener">BabyLM Workshop</a>.</p>
-          <p>In joint work, we introduce <a href="https://arxiv.org/abs/2506.18639" target="_blank" rel="noopener">ByteSpan</a>, a dynamic tokenisation scheme that groups predictable bytes rather than pooling their representations.</p>
-
-          <h3>Linguistics and Cognitive Science</h3>
-          <p>I also actively pursue research interests in <strong>Linguistics and Cognitive Science</strong>. My work aims to cross-cut modern Generativist approaches – specifically, neo-emergentist approaches pursued by several Cambridge-based theoretical linguists.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Section 3: Key Themes (expandable colourful cards) -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head left">
-          <p class="kicker">The Science · Fundamental</p>
-          <h2>Language Model Science</h2>
-          <p>Four connected threads make up the fundamental core of my work — for academics, cognitive scientists, and computer scientists. Each treats small language models as a scientific instrument for studying how structured knowledge is learned. Tap any card to learn more and see representative papers.</p>
           <div class="theme-links">
             <a class="btn-pill solid" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">📚 See all my papers on Google Scholar</a>
-            <a class="btn-pill outline" href="publications.html">Full publications page <i class="bi bi-arrow-right"></i></a>
           </div>
         </div>
 
+        <h3 class="q-group-head" id="q-learn">How do models learn?</h3>
+        <p class="q-group-intro">Not just what a model knows at the end, but how it gets there — sample-efficiency, the phases of learning, and how post-training shapes behaviour.</p>
         <div class="theme-grid">
 
           <article class="theme-card" style="--tint:#5f7a52">
             <button class="theme-toggle" type="button" aria-expanded="false">
-              <span class="theme-chip">📈</span>
+              <span class="theme-chip">👶</span>
               <span class="theme-titles">
-                <span class="theme-title">Learning dynamics</span>
-                <span class="theme-blurb">How do linguistic abstractions emerge over the course of training? I study the phases of learning, and how data and optimisation interact — working towards a theory of how representations form.</span>
+                <span class="theme-title">Sample-efficient, human-scale language modelling</span>
+                <span class="theme-blurb">Data-efficient pretraining under human-scale budgets (10M–100M words). What can a model learn from the amount of language a child hears, and what does that tell us about learning itself?</span>
               </span>
               <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
             </button>
             <div class="theme-panel">
               <div class="theme-panel-inner">
-                <p>I trace how abstractions emerge across training — the phases of learning, and how data and optimisation shape representation formation. I also maintain open tooling so these experiments are reproducible for everyone.</p>
+                <p>I build and study small language models trained on developmentally plausible data, in and around the BabyLM Challenge. Under tight budgets each design choice — curriculum, sequence length, supervision signal — becomes measurable, so these models double as scientific instruments for the mechanisms of acquisition. <span class="pub-refs">Representative papers: <a href="#pub-teacher-demos">Teacher Demonstrations (ZPD)</a>, <a href="#pub-seq-length">Best Sequence Length for BabyLM</a>, <a href="#pub-less-is-more">Less is More</a>, <a href="#pub-babylm-turns-4">BabyLM Turns 4 (2026 shared task)</a>.</span></p>
                 <div class="theme-papers">
-                  <a class="theme-pill" href="https://aclanthology.org/2025.emnlp-demos.22/" target="_blank" rel="noopener">Pico — a framework for small-model research</a>
-                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.10/" target="_blank" rel="noopener">What's the Best Sequence Length for BabyLM?</a>
+                  <a class="theme-pill" href="https://babylm.github.io/" target="_blank" rel="noopener">BabyLM Challenge</a>
+                  <a class="theme-pill" href="#pub-teacher-demos">Teacher Demonstrations (ZPD)</a>
+                  <a class="theme-pill" href="#pub-seq-length">What's the Best Sequence Length for BabyLM?</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="theme-card" style="--tint:#5f7a52">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">📈</span>
+              <span class="theme-titles">
+                <span class="theme-title">Learning dynamics &amp; developmental interpretability</span>
+                <span class="theme-blurb">How do linguistic abstractions emerge over the course of training? I study the phases of learning — how data and optimisation interact — and open up small models to watch competence being assembled.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I trace how abstractions emerge across training and look inside small models as they develop, drawing on linguistics and cognitive science. I maintain open tooling — PicoLM — so these developmental-interpretability experiments are reproducible for the wider community. <span class="pub-refs">Representative papers: <a href="#pub-pico">Pico</a>, <a href="#pub-theoretical-linguistics">Theoretical Linguistics &amp; Causal Abstraction</a>, <a href="#pub-claude-reinvestigates">Claude reinvestigates herself</a>, <a href="#pub-minimal-means">Maximising Minimal Means</a>.</span></p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM — small-model research framework</a>
+                  <a class="theme-pill" href="#pub-pico">Pico — demo paper</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="theme-card" style="--tint:#c1794e">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🎯</span>
+              <span class="theme-titles">
+                <span class="theme-title">RL post-training &amp; alignment</span>
+                <span class="theme-blurb">What actually limits reinforcement learning after pretraining, and how should models be aligned to human goals? I study exploration, entropy and pedagogically motivated alignment.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I study reinforcement-learning post-training — what constrains exploration under algorithms like GRPO — and alignment objectives inspired by how teachers scaffold learners. Ongoing work includes <em>From Entropy to Exploration: What Limits Post-Training under GRPO?</em> and work on pedagogical alignment. <span class="pub-refs">Representative papers: <a href="#pub-pedagogical-alignment">Pedagogical Alignment of LLMs</a>, <a href="#pub-protocol-competence">Protocol Competence of Small LMs</a>.</span></p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Ongoing work — Google Scholar</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <h3 class="q-group-head" id="q-language">How does language shape learning?</h3>
+        <p class="q-group-intro">Languages don't all give a learner the same problem — I study multilingual, bilingual and second-language learning, how text is segmented, and how fairly progress is measured.</p>
+        <div class="theme-grid">
+
+          <article class="theme-card" style="--tint:#5e9e8b">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🌍</span>
+              <span class="theme-titles">
+                <span class="theme-title">Multilingual, cross-lingual &amp; bilingual (L2) modelling</span>
+                <span class="theme-blurb">Most language technology is built for English. I work on models that learn many languages at once — and on bilingual and second-language acquisition as a controlled setting for studying transfer.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>My flagship project, Beetle, uses controlled bilingual pretraining to isolate how a second language is acquired and how cross-lingual transfer arises. This connects to multilingual benchmarks and curricula that reach beyond high-resource English into under-served languages. <span class="pub-refs">Representative papers: <a href="#pub-beetle">Beetle</a>, <a href="#pub-babybabellm">BabyBabelLM</a>, <a href="#pub-bliss">BLiSS</a>, <a href="#pub-l1-influence">L1 Influence in L2 Models</a>, <a href="#pub-meta-pretraining">Meta-Pretraining for Cross-Lingual NER</a>, <a href="#pub-multimodal">Multimodal Grounding across Languages &amp; Cultures</a>.</span></p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="beetle.html">Beetle — controlled bilingual pretraining (flagship)</a>
+                  <a class="theme-pill" href="https://babylm.github.io/babybabellm/" target="_blank" rel="noopener">BabyBabelLM — multilingual benchmark</a>
+                  <a class="theme-pill" href="#pub-less-is-more">Less is More — cross-lingual curriculum</a>
                 </div>
               </div>
             </div>
@@ -136,55 +210,101 @@
             <button class="theme-toggle" type="button" aria-expanded="false">
               <span class="theme-chip">🔤</span>
               <span class="theme-titles">
-                <span class="theme-title">Tokenisation &amp; representation</span>
-                <span class="theme-blurb">Input representation is a fundamental part of representation learning, not mere preprocessing. How does the choice of input representation constrain what a network can learn — and which representations best support efficient, robust, cross-lingual learning?</span>
+                <span class="theme-title">Tokenisation &amp; input representation</span>
+                <span class="theme-blurb">Input representation is part of representation learning, not mere preprocessing. How does the way text is segmented constrain what a network can learn — and can segmentation be learned rather than fixed?</span>
               </span>
               <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
             </button>
             <div class="theme-panel">
               <div class="theme-panel-inner">
-                <p>I treat input representation as central to what a model can learn, designing information-driven ways of splitting text so that learning is more efficient, robust, and cross-lingual.</p>
+                <p>I design information-driven ways of splitting text so that learning is more efficient, robust and cross-lingual — grouping predictable bytes dynamically, and studying language-adaptive tokenisation that lets the input representation shift with the language being modelled. <span class="pub-refs">Representative papers: <a href="#pub-bytespan">ByteSpan</a>, <a href="#pub-langmap">LangMAP</a>, <a href="#pub-tokenizer-fertility">Is Tokenizer Cognitive Plausibility just Fertility?</a>.</span></p>
                 <div class="theme-papers">
-                  <a class="theme-pill" href="https://arxiv.org/abs/2506.18639" target="_blank" rel="noopener">ByteSpan — information-driven subword tokenisation</a>
+                  <a class="theme-pill" href="#pub-bytespan">ByteSpan — information-driven subword tokenisation</a>
+                  <a class="theme-pill" href="#pub-langmap">LangMAP — language-adaptive tokenisation (EMNLP 2026)</a>
                 </div>
               </div>
             </div>
           </article>
 
-          <article class="theme-card" style="--tint:#5e9e8b">
+          <article class="theme-card" style="--tint:#c1794e">
             <button class="theme-toggle" type="button" aria-expanded="false">
-              <span class="theme-chip">🔬</span>
+              <span class="theme-chip">⚖️</span>
               <span class="theme-titles">
-                <span class="theme-title">Developmental interpretability</span>
-                <span class="theme-blurb">I open up small models (BabyLMs) to see how structure forms as they learn — using linguistics and cognitive science to make sense of what is happening inside as competence is assembled.</span>
+                <span class="theme-title">Equitable evaluation for low-resource languages</span>
+                <span class="theme-blurb">Benchmarks quietly encode which languages count. I build evaluation that is grammatically grounded and fair to languages with little data, so progress is measured beyond English.</span>
               </span>
               <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
             </button>
             <div class="theme-panel">
               <div class="theme-panel-inner">
-                <p>I look inside small models as they train to understand how linguistic structure emerges over development, drawing on linguistics and cognitive science.</p>
+                <p>Through the xBLiMPs grant and related community work, I develop minimal-pair and grammaticality benchmarks that extend equitable linguistic evaluation to low-resource languages — the infrastructure needed to make fairer multilingual claims credible. <span class="pub-refs">Representative papers: <a href="#pub-babybabellm">BabyBabelLM</a>, <a href="#pub-grammatical-diversity">Measuring Grammatical Diversity</a>, <a href="#pub-bliss">BLiSS</a>, <a href="#pub-phoneme-distribution">Phoneme Frequencies across Languages</a>, <a href="#pub-phonemes-chance">Phonemes: Chance, Costs &amp; Tiers</a>, <a href="#pub-diachronic-phonemes">Diachronic Phoneme Frequencies</a>, <a href="#pub-convergent-equilibria">Convergent Phoneme Surprisal</a>.</span></p>
                 <div class="theme-papers">
-                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.15/" target="_blank" rel="noopener">Looking to Learn — dynamic gating for vision-language</a>
-                  <a class="theme-pill" href="https://direct.mit.edu/coli/article/doi/10.1162/coli.a.15/131070" target="_blank" rel="noopener">Measuring Grammatical Diversity from Small Corpora</a>
+                  <a class="theme-pill" href="service.html">xBLiMPs grant — equitable evaluation</a>
+                  <a class="theme-pill" href="https://babylm.github.io/babybabellm/" target="_blank" rel="noopener">BabyBabelLM — multilingual benchmark</a>
                 </div>
               </div>
             </div>
           </article>
+
+          <article class="theme-card" style="--tint:#a05ea0">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🗺️</span>
+              <span class="theme-titles">
+                <span class="theme-title">Cultural knowledge &amp; evaluation of LLMs</span>
+                <span class="theme-blurb">Whose culture does a model encode, and how stable is what it knows? I study cultural knowledge in pretrained models and treat instability as signal rather than noise.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I study cultural knowledge in pretrained language models — including code-switching and cultural localisation — and argue that the instability of cultural responses is itself informative. Ongoing work includes <em>Repertoires, Not Scores: Instability as Signal in Cultural Evaluation of LLMs</em>. <span class="pub-refs">Representative paper: <a href="#pub-repertoires">Repertoires, Not Scores</a>.</span></p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Ongoing work — Google Scholar</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <h3 class="q-group-head" id="q-representations">What representations emerge?</h3>
+        <p class="q-group-intro">When do independently trained models converge on compatible representations — and do those representations line up with the brain?</p>
+        <div class="theme-grid">
 
           <article class="theme-card" style="--tint:#b06a8f">
             <button class="theme-toggle" type="button" aria-expanded="false">
               <span class="theme-chip">🧩</span>
               <span class="theme-titles">
-                <span class="theme-title">Convergence &amp; mergeability</span>
-                <span class="theme-blurb">When and why do independently trained models converge on compatible representations? I treat model merging as a scientific probe of representation geometry — not just an engineering trick.</span>
+                <span class="theme-title">Representation convergence &amp; model merging</span>
+                <span class="theme-blurb">When and why do independently trained models converge on compatible representations? I treat mergeability as a scientific probe of representation geometry — not just an engineering trick.</span>
               </span>
               <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
             </button>
             <div class="theme-panel">
               <div class="theme-panel-inner">
-                <p>I study representation convergence — when independently trained models arrive at compatible representations — and use mergeability as a window onto the geometry of what has been learned.</p>
+                <p>I study representation convergence — when independently trained models arrive at compatible representations — and use model merging as a window onto the geometry of what has been learned. Ongoing work includes <em>Mergeability is Constrained by Initialisation</em>, <em>Similarity is not Mergeability</em>, and <em>Representations Bound the Generalizability of Model Merging</em>. <span class="pub-refs">Representative papers: <a href="#pub-goldfish">Merged Monolingual Goldfish Models</a>, <a href="#pub-universal-conceptual">Cross-Lingual Universal Conceptual Representations</a>, <a href="#pub-crosslingual-align">Cross-Lingual Alignment Without Joint Training</a>, <a href="#pub-linguistic-universals">Linguistic Universals via Sparse Autoencoders</a>.</span></p>
                 <div class="theme-papers">
-                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Ongoing work — see Google Scholar</a>
+                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Ongoing work — Google Scholar</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="theme-card" style="--tint:#a05ea0">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🧠</span>
+              <span class="theme-titles">
+                <span class="theme-title">Neuro-AI, brain alignment &amp; mechanistic interpretability</span>
+                <span class="theme-blurb">Do the representations models learn line up with the brain, and can we locate the circuits behind specific linguistic competences? I connect model internals to neural and behavioural signatures of language.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I study how language-model representations align with the brain across linguistic domains, and use mechanistic interpretability to locate structure inside models — syntactic-agreement units and linear encodings of truth among them. Ongoing work includes <em>Distinct Patterns of Brain Alignment of LMs across Linguistic Domains</em>. <span class="pub-refs">Representative papers: <a href="#pub-theoretical-linguistics">Theoretical Linguistics &amp; Mechanistic Interpretability</a>, <a href="#pub-claude-reinvestigates">Claude reinvestigates herself</a>, <a href="#pub-linear-truth">Linear Truth Encodings</a>, <a href="#pub-linguistics-age">Linguistics in the Age of Language Models</a>.</span></p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="#pub-grammatical-diversity">Measuring Grammatical Diversity from Small Corpora</a>
+                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Ongoing work — Google Scholar</a>
                 </div>
               </div>
             </div>
@@ -192,21 +312,73 @@
 
         </div>
 
-        <div class="xcut-callout">
-          <span class="xcut-ic">🧠</span>
-          <div>
-            <p class="xcut-title">Cross-cutting interest · Cognitive science &amp; language acquisition</p>
-            <p class="xcut-body">This is neither purely fundamental nor applied — it is an interest that informs the questions I ask. Decades of linguistic and cognitive theory give precise hypotheses about how humans acquire language. I use cognitive science as an independent <em>source of hypotheses</em>, and build computational models that put those theories to the test.</p>
-          </div>
+        <h3 class="q-group-head" id="q-trust">Can we trust small AI?</h3>
+        <p class="q-group-intro">Capability is not the same as reliability — I study compact judges, small-model agents, and who a model is actually safe for.</p>
+        <div class="theme-grid">
+
+          <article class="theme-card" style="--tint:#b0894a">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">⚖️</span>
+              <span class="theme-titles">
+                <span class="theme-title">Evaluation, LLM-as-judge &amp; trustworthy compact AI</span>
+                <span class="theme-blurb">Can small models be trusted to evaluate other models? I study the reliability of compact judges and the evidence standards needed to deploy them responsibly.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>Evaluation is where scientific claims are won or lost. I work on whether small language models can serve as judges, and on the governance and evidence standards for trustworthy compact AI. Ongoing work (NeurIPS 2026 workshops) includes <em>Can We Trust Small Language Models as Judges?</em>, <em>Towards Trustworthy Compact Judges</em>, and <em>Governing the Evidence Standard for Trustworthy Compact AI</em>. <span class="pub-refs">Representative papers: <a href="#pub-pedagogical-alignment">Pedagogical Alignment of LLMs</a>, <a href="#pub-repertoires">Repertoires, Not Scores</a>.</span></p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Ongoing work — Google Scholar</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="theme-card" style="--tint:#7a86c9">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🤖</span>
+              <span class="theme-titles">
+                <span class="theme-title">Small-model agents</span>
+                <span class="theme-blurb">Can small language models act as capable, on-device agents? I study routing, execution-awareness and the protocol competence that interactive tasks demand.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I work on agentic uses of small LMs that are cheap enough to run on-device, including execution-aware routing and the protocol competence needed for interactive language games. Ongoing work includes <em>Execution-Aware Routing for On-Device SLM Agents</em> and studies of protocol competence in interactive settings. <span class="pub-refs">Representative paper: <a href="#pub-protocol-competence">Protocol Competence of Small LMs</a>.</span></p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Ongoing work — Google Scholar</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="theme-card" style="--tint:#8a6d3b">
+            <button class="theme-toggle" type="button" aria-expanded="false">
+              <span class="theme-chip">🛡️</span>
+              <span class="theme-titles">
+                <span class="theme-title">AI safety &amp; governance</span>
+                <span class="theme-blurb">Who is a model actually safe for? I study child audiences, safety gaps and the position work needed to align capability with responsible deployment.</span>
+              </span>
+              <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
+            </button>
+            <div class="theme-panel">
+              <div class="theme-panel-inner">
+                <p>I work on AI safety and governance, with a focus on vulnerable audiences and the gap between recognising risk and acting on it. Ongoing work includes <em>Models Recognise Child Audiences, But Child Safety Does Not Follow</em> and related position papers. <span class="pub-refs">Representative papers: <a href="#pub-repertoires">Repertoires, Not Scores</a>, <a href="#pub-pedagogical-alignment">Pedagogical Alignment of LLMs</a>.</span></p>
+                <div class="theme-papers">
+                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Ongoing work — Google Scholar</a>
+                </div>
+              </div>
+            </div>
+          </article>
+
         </div>
 
-        <div class="section-head left" style="margin-top:2.5rem">
-          <a href="publications.html" class="btn-pill solid">See related publications <i class="bi bi-arrow-right"></i></a>
-        </div>
       </div>
     </section>
 
-    <!-- Section 4: Application areas -->
+    <!-- Section 4: Application areas / Impact -->
     <section class="section tint">
       <div class="container">
         <div class="section-head left">
@@ -229,10 +401,10 @@
             </button>
             <div class="theme-panel">
               <div class="theme-panel-inner">
-                <p>Insights from representation convergence and mergeability translate directly into practical systems: small models that can be composed and merged, and agentic pipelines built from efficient small LMs. Relevant to founders, industry teams, and ML researchers looking to build and collaborate.</p>
+                <p>Insights from representation convergence, mergeability and RL post-training translate directly into practical systems: small models that can be composed and merged, and execution-aware agentic pipelines built from efficient small LMs. Relevant to founders, industry teams, and ML researchers looking to build and collaborate.</p>
                 <div class="theme-papers">
                   <a class="theme-pill" href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM — modular small-model tooling</a>
-                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
+                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Ongoing work — Google Scholar</a>
                 </div>
               </div>
             </div>
@@ -244,18 +416,17 @@
               <span class="theme-titles">
                 <span class="theme-aud">For global users · the wider ML community</span>
                 <span class="theme-title">Multilingual &amp; fairer AI</span>
-                <span class="theme-blurb">Most AI is built for English. I work on models that learn many languages at once — including under-served ones — so the technology is fairer and more culturally adaptive for more of the world.</span>
+                <span class="theme-blurb">Most AI is built for English. I work on models that learn many languages at once — including under-served ones — and on equitable evaluation, so the technology is fairer and more culturally adaptive for more of the world.</span>
               </span>
               <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
             </button>
             <div class="theme-panel">
               <div class="theme-panel-inner">
-                <p>I develop multilingual models and benchmarks that reach beyond English to under-served languages, making language technology fairer and more culturally adaptive across the world.</p>
+                <p>I develop multilingual models, bilingual pretraining, and evaluation that reaches beyond English to under-served languages — including equitable benchmarks through the xBLiMPs grant — making language technology fairer and more culturally adaptive across the world.</p>
                 <div class="theme-papers">
                   <a class="theme-pill" href="beetle.html">Beetle — controlled bilingual pretraining (flagship)</a>
-                  <a class="theme-pill" href="https://babylm.github.io/babybabellm/" target="_blank" rel="noopener">BabyBabelLM — a multilingual benchmark</a>
-                  <a class="theme-pill" href="https://aclanthology.org/2024.conll-babylm.15/" target="_blank" rel="noopener">Less is More — cross-lingual curriculum learning</a>
-                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.13/" target="_blank" rel="noopener">BLiSS — bilingual learner competence</a>
+                  <a class="theme-pill" href="https://babylm.github.io/babybabellm/" target="_blank" rel="noopener">BabyBabelLM — multilingual benchmark</a>
+                  <a class="theme-pill" href="service.html">xBLiMPs — equitable evaluation</a>
                 </div>
               </div>
             </div>
@@ -267,25 +438,531 @@
               <span class="theme-titles">
                 <span class="theme-aud">For social scientists · educators · policymakers</span>
                 <span class="theme-title">AI for social good — education, culture &amp; young people</span>
-                <span class="theme-blurb">Human-centred AI that helps people learn: cultural evaluation of models, and AI designed with and for young people. This connects to my public engagement work with Per Capita Media.</span>
+                <span class="theme-blurb">Human-centred AI that helps people learn: teacher-style demonstrations, cultural evaluation of models, safety for young people, and AI designed with and for them. This connects to my public engagement work with Per Capita Media.</span>
               </span>
               <span class="theme-caret"><i class="bi bi-chevron-down"></i></span>
             </button>
             <div class="theme-panel">
               <div class="theme-panel-inner">
-                <p>I work on human-centred applications of AI that support learning — including teacher-style demonstrations for language learning, culturally grounded evaluation, and AI for young people. This ties to public engagement through Per Capita Media, and speaks to social scientists, educators, and policymakers.</p>
+                <p>I work on human-centred applications of AI that support learning — teacher-style demonstrations for language learning, culturally grounded evaluation, child-safety, and AI for young people. This ties to public engagement through <a href="https://www.percapita.media" target="_blank" rel="noopener">Per Capita Media</a>, and speaks to social scientists, educators, and policymakers.</p>
                 <div class="theme-papers">
-                  <a class="theme-pill" href="https://aclanthology.org/2025.babylm-main.25/" target="_blank" rel="noopener">Teacher Demonstrations (Zone of Proximal Development)</a>
+                  <a class="theme-pill" href="#pub-teacher-demos">Teacher Demonstrations (Zone of Proximal Development)</a>
+                  <a class="theme-pill" href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Cultural evaluation — Google Scholar</a>
                 </div>
               </div>
             </div>
           </article>
 
         </div>
+
+        <div class="section-head left" style="margin-top:2.5rem">
+          <a href="research.html#publications" class="btn-pill solid">See related publications <i class="bi bi-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Section 5: Publications (merged from research.html#publications) -->
+    <section class="section" id="publications">
+      <div class="container">
+        <div class="section-head left">
+          <p class="kicker">Publications</p>
+          <h2>Publications</h2>
+          <p>Papers across artificial intelligence, cognitive science, and linguistics on how intelligent systems learn and behave. Author names in bold indicate my contribution; ✦ marks equal contribution.</p>
+        </div>
+        <div class="pub-filters">
+          <button class="pub-filter active" data-filter="all">All</button>
+          <button class="pub-filter" data-filter="conference">Conference &amp; Journal</button>
+          <button class="pub-filter" data-filter="workshop">Workshop</button>
+          <button class="pub-filter" data-filter="working">Working Papers</button>
+        </div>
+
+        
+        <!-- AUTO:publications:start -->
+        <div class="pub-group" data-group="conference">
+          <h3>Peer-Reviewed Conference &amp; Journal Publications <span class="count">9</span></h3>
+          <div class="pub" id="pub-pico">
+            <div class="idx">1</div>
+            <div class="body">
+              <div class="t"><a href="https://aclanthology.org/2025.emnlp-demos.22/">Pico: A Modular Framework for Hypothesis-Driven Small Language Model Research</a></div>
+              <div class="auth">Richard Diehl-Martinez, David Demitri Africa, Yuval Weiss, <b>Suchir Salhan</b>, Ryan Daniels, Paula Buttery</div>
+              <div class="venue">EMNLP 2025 Systems Demonstration · Suzhou, China</div>
+              <div class="tldr"><span class="tldr-sum">A modular framework that lets you change one thing in a small language model's architecture or training and directly watch what it does.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Small-model research should be a science, not guesswork.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://aclanthology.org/2025.emnlp-demos.22/">ACL Anthology</a>
+                <a class="lnk" href="https://www.picolm.io/">Project</a>
+                <a class="lnk" href="writing/paper-pico.html">📝 Read the write-up</a>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="https://aclanthology.org/2025.emnlp-demos.22/" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/babylm%20+%20pico.jpg" alt="Pico: A Modular Framework for Hypothesis-Driven Small Language Model Research thumbnail"></a>
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-1">In 5 minutes <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-1" hidden><span class="abs-label">🟡 5 minutes</span>Building small and medium language models is still more art than science: tight parameter budgets make every design choice matter, yet researchers lack systematic ways to test and refine ideas. We introduce Pico, a lightweight, modular framework of two libraries that give researchers a sandbox for making targeted changes to a model&#x27;s architecture or training procedures and directly observing the effect on its behaviour. To support reproducible experiments, we release a suite of baseline models, pico-decoder, trained under standardised conditions and open-sourced for the community. Case studies show how Pico supports iterative small-LM design and analysis.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-babybabellm">
+            <div class="idx">2</div>
+            <div class="body">
+              <div class="t"><a href="https://babylm.github.io/babybabellm/">BabyBabelLM: A Multilingual Benchmark of Developmentally Plausible Training Data</a></div>
+              <div class="auth">Jaap Jumelet, Abdellah Fourtassi, Akari Haga, Bastian Bunzeck, Bhargav Shandilya, Diana Galvan-Sosa, Faiz Ghifari Haznitrama, Francesca Padovani, François Meyer, Hai Hu, Julen Etxaniz, Laurent Prévot, Linyang He, María Grandury, Mila Marcheva, Negar Foroutan, Nikitas Theodoropoulos, Pouya Sadeghi, Siyuan Song, <b>Suchir Salhan</b>, Susana Zhou, Yurii Paniv, Ziyin Zhang, Arianna Bisazza, Alex Warstadt, Leshem Choshen</div>
+              <div class="venue">EACL 2026 (Main Conference) · Rabat, Morocco</div>
+              <div class="tldr"><span class="tldr-sum">A multilingual collection of datasets modelling the language a child hears from birth to fluency across 45 languages, with benchmarks and baseline models.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Developmental data has no business being English-only.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://babylm.github.io/babybabellm/">Project</a>
+                <a class="lnk" href="writing/paper-babybabellm.html">📝 Read the write-up</a>
+              </div>
+              <div class="pub-extra">
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-2">In 5 minutes <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-2" hidden><span class="abs-label">🟡 5 minutes</span>We built BabyBabelLM, a multilingual collection of datasets that model the language a person hears from birth until they acquire a native language. The collection curates developmentally plausible training data of roughly 100 million English word-equivalents across 45 languages. Alongside the data we create evaluation benchmarks and train baseline models. The aim is to support multilingual pretraining research and language acquisition studies.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-babylm-turns-4">
+            <div class="idx">3</div>
+            <div class="body">
+              <div class="t"><a href="https://arxiv.org/abs/2602.20092">BabyLM Turns 4 and Goes Multilingual: Call for Papers for the 2026 BabyLM Workshop</a></div>
+              <div class="auth">Leshem Choshen, Ryan Cotterell, Mustafa Omer Gul, Jaap Jumelet, Tal Linzen, Aaron Mueller, <b>Suchir Salhan</b>, Raj Sanjay Shah, Alex Warstadt, Ethan Gotlieb Wilcox</div>
+              <div class="venue">BabyLM Workshop 2026 @ EMNLP · Budapest, Hungary</div>
+              <div class="tldr"><span class="tldr-sum">The call for papers for the 2026 BabyLM Workshop, which opens the sample-efficient pretraining challenge up to multilingual training data.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Data-efficient pretraining grows up and stops being English-only.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://arxiv.org/abs/2602.20092">arXiv</a>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-grammar-induction">
+            <div class="idx">4</div>
+            <div class="body">
+              <div class="t">A Computational Operationalisation of Competing Maturational Theories of Syntactic Development via Statistical Grammar Induction</div>
+              <div class="auth">Mila Marcheva, <b>Suchir Salhan</b>, Weiwei Sun</div>
+              <div class="venue">CogSci 2026 (Main Conference), Proceedings of the Annual Meeting of the Cognitive Science Society · Rio de Janeiro, Brazil</div>
+              <div class="tldr"><span class="tldr-sum">Statistical grammar induction over child-directed speech is used to test competing maturational theories of how children's syntax develops.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Grammar induction can adjudicate theories of how syntax matures.</span></div>
+            </div>
+          </div>
+          <div class="pub" id="pub-phoneme-distribution">
+            <div class="idx">5</div>
+            <div class="body">
+              <div class="t"><a href="https://arxiv.org/abs/2603.02860">The Distribution of Phoneme Frequencies across the World&#x27;s Languages: Macroscopic and Microscopic Information-Theoretic Models</a></div>
+              <div class="auth">Fermín Moscoso del Prado Martín, <b>Suchir Salhan</b></div>
+              <div class="venue">under review</div>
+              <div class="tldr"><span class="tldr-sum">Macroscopic and microscopic information-theoretic models of how phoneme frequencies are distributed across the world's languages.</span> <span class="tldr-sep">|</span> <span class="tldr-take">The shape of a language's sound system may be predictable from information theory.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://arxiv.org/abs/2603.02860">arXiv</a>
+                <span class="badge-status review">under review</span>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-diachronic-phonemes">
+            <div class="idx">6</div>
+            <div class="body">
+              <div class="t"><a href="https://openpublishing.library.umass.edu/scil/issues/">Modelling the Diachronic Emergence of Phoneme Frequency Distributions</a></div>
+              <div class="auth">Fermín Moscoso del Prado Martín, <b>Suchir Salhan</b></div>
+              <div class="venue">Proceedings of the Society for Computation in Linguistics (SCiL) · Presentation at ACL 2026, San Diego, USA</div>
+              <div class="tldr"><span class="tldr-sum">A model of how the frequency distribution of phonemes emerges over time as languages change.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Today's phoneme frequencies are the fossil record of a language's history.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://openpublishing.library.umass.edu/scil/issues/">Proceedings</a>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-beetle">
+            <div class="idx">7</div>
+            <div class="body">
+              <div class="t"><a href="beetle.html">Beetle: A Bilingual Model Suite for Modelling Second-Language Processing</a></div>
+              <div class="auth"><b>Suchir Salhan</b>, Catherine Arnett, James Michaelov, Paula Buttery</div>
+              <div class="venue">EMNLP 2026 Main Conference · Budapest, Hungary</div>
+              <div class="tldr"><span class="tldr-sum">A suite of bilingual models trained with controlled exposure to a second language, used to model how people process an L2.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Controlling what a model sees, and when, mirrors how humans pick up a second language.</span></div>
+              <div class="meta">
+                <a class="lnk" href="beetle.html">Project</a>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-langmap">
+            <div class="idx">8</div>
+            <div class="body">
+              <div class="t">LangMAP: A Language-Adaptive Approach to Tokenization</div>
+              <div class="auth">Clara Meister, <b>Suchir Salhan</b>, Andrzej Szablewski, Pietro Lesci, Paula Buttery, Tiago Pimentel</div>
+              <div class="venue">EMNLP 2026 Main Conference · Budapest, Hungary (also Second Tokenization Workshop, COLM)</div>
+              <div class="tldr"><span class="tldr-sum">A tokenisation method that adapts its segmentation to each language rather than applying one fixed scheme everywhere.</span> <span class="tldr-sep">|</span> <span class="tldr-take">One tokeniser for every language leaves performance on the table.</span></div>
+              <div class="meta">
+                <a class="lnk" href="writing/paper-langmap.html">📝 Read the write-up</a>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-crosslingual-align">
+            <div class="idx">9</div>
+            <div class="body">
+              <div class="t">Cross-Lingual Alignment Without Joint Training: Do Monolingual Language Models Converge on Universal Representations?</div>
+              <div class="auth">EJ Zhou, <b>Suchir Salhan</b>, Catherine Arnett</div>
+              <div class="venue">EMNLP 2026 Main Conference · Budapest, Hungary</div>
+              <div class="tldr"><span class="tldr-sum">Tests whether language models trained separately on single languages arrive at the same underlying representations without ever sharing training.</span> <span class="tldr-sep">|</span> <span class="tldr-take">If monolingual models converge on their own, the structure is in the languages, not the training.</span></div>
+              <div class="meta">
+                <a class="lnk" href="writing/paper-crosslingual-alignment.html">📝 Read the write-up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pub-group" data-group="workshop">
+          <h3>Peer-Reviewed Workshop Publications <span class="count">17</span></h3>
+          <div class="pub" id="pub-less-is-more">
+            <div class="idx">1</div>
+            <div class="body">
+              <div class="t"><a href="https://aclanthology.org/2024.conll-babylm.15/">Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies</a></div>
+              <div class="auth"><b>Salhan, S.A.</b>✦, Diehl-Martinez, Richard, Goriely, Zebulon &amp; Buttery, Paula (2024)</div>
+              <div class="venue">CoNLL 2024 BabyLM Challenge (Paper Track) · Miami, Florida, USA (Nov 2024)</div>
+              <div class="tldr"><span class="tldr-sum">Curricula that follow real theories of child language acquisition, applied language by language, can beat non-curriculum baselines across four language families.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Copy how children actually learn, not just how much.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://aclanthology.org/2024.conll-babylm.15/">ACL Anthology</a>
+                <a class="lnk" href="writing/paper-less-is-more.html">📝 Read the write-up</a>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="https://aclanthology.org/2024.conll-babylm.15/" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/2410.22886v1.jpg" alt="Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies thumbnail"></a>
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-13">In 5 minutes <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-13" hidden><span class="abs-label">🟡 5 minutes</span>Curriculum learning is a popular way to make Small-Scale Language Models (SSLMs) more cognitively plausible in the BabyLM Challenge, but it has rarely improved much over non-curriculum models. We ask whether theories of linguistic acquisition can specify finer-grained curricula. We build age-ordered corpora of Child-Directed Speech for four typologically distant language families and implement acquisition-inspired curricula cross-lingually. Comparing three curricula that replicate the predictions of acquisition theories (Growing, Inwards and MMM) on a standard SSLM architecture, we find fine-grained, language-specific curricula can outperform non-curriculum baselines.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-bytespan">
+            <div class="idx">2</div>
+            <div class="body">
+              <div class="t"><a href="https://arxiv.org/abs/2506.18639">ByteSpan: Information-Driven Subword Tokenisation</a></div>
+              <div class="auth">Zebulon Goriely, <b>Suchir Salhan</b>, Pietro Lesci, Julius Cheng, Paula Buttery</div>
+              <div class="venue">ICML 2025 Tokenization Workshop (TokShop) · Vancouver, Canada (August 2025)</div>
+              <div class="tldr"><span class="tldr-sum">ByteSpan builds a subword vocabulary by grouping bytes a language model finds predictable, giving vocabularies that align with morphology better than BPE for English.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Maybe tokenisers should learn morphology, not just compress.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://arxiv.org/abs/2506.18639">arXiv</a>
+                <a class="lnk" href="https://openreview.net/forum?id=5AnYuCoCsf&amp;noteId=z9aNzxmVFt">OpenReview</a>
+                <a class="lnk" href="writing/paper-bytespan.html">📝 Read the write-up</a>
+              </div>
+              <div class="pub-extra">
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-14">In 5 minutes <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-14" hidden><span class="abs-label">🟡 5 minutes</span>Recent dynamic tokenisers work directly on bytes and pool their latent representations into patches, much like word-segmentation models that mark boundaries where an autoregressive model&#x27;s prediction error spikes. We ask whether grouping predictable bytes, rather than pooling their representations, can yield a useful fixed subword vocabulary. ByteSpan is an information-driven subword tokeniser that uses an external byte-level LM during training to find contiguous predictable byte sequences and group them into subwords. It produces efficient vocabularies with higher morphological alignment scores than BPE for English, and shows similar compression and Rényi efficiency across 25 languages.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-grammatical-diversity">
+            <div class="idx">3</div>
+            <div class="body">
+              <div class="t"><a href="https://direct.mit.edu/coli/article/doi/10.1162/coli.a.15/131070">Measuring Grammatical Diversity from Small Corpora: Derivational Entropy Rates, Mean Length of Utterances, and Annotation Invariance</a></div>
+              <div class="auth">Fermín Moscoso del Prado Martín, <b>Suchir Salhan</b></div>
+              <div class="venue">ACL 2025 Main Conference (Poster) · Vienna, Austria (August 2025)</div>
+              <div class="tldr"><span class="tldr-sum">New information-theoretic measures quantify grammatical diversity from small corpora, staying stable across syntactic annotation scheme and corpus size.</span> <span class="tldr-sep">|</span> <span class="tldr-take">You don't need a huge corpus to measure grammatical richness.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://direct.mit.edu/coli/article/doi/10.1162/coli.a.15/131070">Paper</a>
+                <a class="lnk" href="assets/presentations/acl2025.pdf">Slides</a>
+                <a class="lnk" href="assets/posters/ACL_Poster.pdf">Poster</a>
+                <a class="lnk" href="writing/paper-grammatical-diversity.html">📝 Read the write-up</a>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="https://direct.mit.edu/coli/article/doi/10.1162/coli.a.15/131070" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/ACL_Poster.jpg" alt="Measuring Grammatical Diversity from Small Corpora thumbnail"></a>
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-15">In 5 minutes <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-15" hidden><span class="abs-label">🟡 5 minutes</span>We introduce information-theoretic measures, derivational entropy rates alongside mean length of utterance, for quantifying grammatical diversity from small corpora. We show the estimates stay robust to the choice of syntactic annotation scheme, a property we call annotation invariance. They also hold up under limited corpus size.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-meta-pretraining">
+            <div class="idx">4</div>
+            <div class="body">
+              <div class="t"><a href="https://aclanthology.org/2025.mrl-main.8/">Meta-Pretraining for Zero-Shot Cross-Lingual Named Entity Recognition in Low-Resource Philippine Languages</a></div>
+              <div class="auth">David Demitri Africa, <b>Suchir Salhan</b>, Yuval Weiss, Paula Buttery, Richard Diehl-Martinez</div>
+              <div class="venue">5th Workshop on Multilingual Representation Learning (MRL), EMNLP 2025 · Suzhou, China</div>
+              <div class="tldr"><span class="tldr-sum">Adding meta-learning to the pretraining of small decoder models lets them transfer named-entity recognition zero-shot to Philippine languages unseen during training.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Teach small models to adapt and they travel to new languages.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://aclanthology.org/2025.mrl-main.8/">ACL Anthology</a>
+                <a class="lnk" href="assets/posters/Pico_MAML_Multilingual_Representation_Learning_Workshop.pdf">Poster</a>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="https://aclanthology.org/2025.mrl-main.8/" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/Pico_MAML_Multilingual_Representation_Learning_Workshop.jpg" alt="Meta-Pretraining for Zero-Shot Cross-Lingual Named Entity Recognition thumbnail"></a>
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-16">In 5 minutes <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-16" hidden><span class="abs-label">🟡 5 minutes</span>Named-entity recognition in low-resource languages usually means finetuning very large multilingual LMs, which is often infeasible under memory or latency limits. We ask whether small decoder LMs can be pretrained so that they adapt quickly and transfer zero-shot to languages unseen during pretraining. To do this we replace part of the autoregressive objective with first-order model-agnostic meta-learning (MAML), testing on Tagalog and Cebuano, which are typologically similar yet differ in their actor/non-actor voice systems. Across four model sizes (11M–570M), MAML lifts zero-shot micro-F1 by 2–6 points under head-only tuning and 1–3 points after full tuning, and cuts convergence time by up to 8%. Gains are largest for single-token person entities that co-occur with the Tagalog case particles si and ni.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-teacher-demos">
+            <div class="idx">5</div>
+            <div class="body">
+              <div class="t"><a href="https://aclanthology.org/2025.babylm-main.25/">Teacher Demonstrations in a BabyLM’s Zone of Proximal Development for Contingent Multi-Turn Interaction</a></div>
+              <div class="auth"><b>Suchir Salhan</b>, Hongyi Gu, Donya Rooein, Diana Galvan-Sosa, Gabrielle Gaudeau, Andrew Caines, Zheng Yuan, Paula Buttery</div>
+              <div class="venue">BabyLM Workshop, EMNLP 2025 · Suzhou, China</div>
+              <div class="tldr"><span class="tldr-sum">ContingentChat, a Teacher–Student framework, teaches a 100M-word BabyLM to hold more grammatical, cohesive back-and-forth conversation.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Tiny models can learn to actually hold a conversation.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://aclanthology.org/2025.babylm-main.25/">ACL Anthology</a>
+                <a class="lnk" href="writing/paper-teacher-demonstrations.html">📝 Read the write-up</a>
+                <span class="badge-award"><i class="bi bi-award"></i> Outstanding Paper Award</span>
+              </div>
+              <div class="pub-extra">
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-17">In 5 minutes <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-17" hidden><span class="abs-label">🟡 5 minutes</span>Child–caregiver dialogue has a property called contingency: prompt, direct, meaningful exchanges between the speakers. We introduce ContingentChat, a Teacher–Student framework that benchmarks and improves multi-turn contingency in a BabyLM trained on 100M words. Using a new alignment dataset for post-training, the BabyLM produces responses that are more grammatical and cohesive. Adaptive Teacher decoding strategies give only limited further gains. The work shows targeted post-training helps dialogue quality, and frames contingency as a hard goal for BabyLMs.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-looking-to-learn">
+            <div class="idx">6</div>
+            <div class="body">
+              <div class="t"><a href="https://aclanthology.org/2025.babylm-main.15/">Looking to Learn: Token-wise Dynamic Gating for Low-Resource Vision-Language Modelling</a></div>
+              <div class="auth">Bianca-Mihaela Ganescu, <b>Suchir Salhan</b>, Andrew Caines, Paula Buttery</div>
+              <div class="venue">BabyLM Workshop, EMNLP 2025 · Suzhou, China</div>
+              <div class="tldr"><span class="tldr-sum">A lightweight vision-language model with token-wise dynamic gating learns from very little data and leans on images for content words, language for function words.</span> <span class="tldr-sep">|</span> <span class="tldr-take">The model learned when to look, nobody told it to.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://aclanthology.org/2025.babylm-main.15/">ACL Anthology</a>
+                <a class="lnk" href="writing/paper-looking-to-learn.html">📝 Read the write-up</a>
+                <span class="badge-award"><i class="bi bi-award"></i> Outstanding Paper Award</span>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="https://aclanthology.org/2025.babylm-main.15/" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/Bmg44_MPhil_Project%20(1).jpg" alt="Looking to Learn: Token-wise Dynamic Gating thumbnail"></a>
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-18">In 5 minutes <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-18" hidden><span class="abs-label">🟡 5 minutes</span>Training vision-language models on cognitively plausible amounts of data means rethinking how models combine words and images. Within the Vision track of the BabyLM Challenge 2025, we propose a lightweight decoder architecture with token-wise dynamic gating for adaptive fusion of linguistic and visual cues, feature modulation and channel attention to stretch limited visual information, and auxiliary contrastive objectives for visual grounding. Across five benchmarks (BLiMP, BLiMP Supplement, EWoK, Winoground and VQA) it matches or beats multimodal baselines. The dynamic gate also discovers interpretable patterns without supervision, favouring visual cues for content words and linguistic cues for function words.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-bliss">
+            <div class="idx">7</div>
+            <div class="body">
+              <div class="t"><a href="https://aclanthology.org/2025.babylm-main.13/">BLiSS: Evaluating Bilingual Learner Competence in Second Language Small Language Models</a></div>
+              <div class="auth">Yuan Gao, <b>Suchir Salhan</b>, Andrew Caines, Paula Buttery, Weiwei Sun</div>
+              <div class="venue">BabyLM Workshop, EMNLP 2025 · Suzhou, China</div>
+              <div class="tldr"><span class="tldr-sum">BLiSS is a benchmark of 1.5M minimal pairs built from real learner errors, testing how well second-language small models capture the systematic patterns of learner language.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Learner mistakes are data, not noise.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://aclanthology.org/2025.babylm-main.13/">ACL Anthology</a>
+                <a class="lnk" href="writing/paper-bliss.html">📝 Read the write-up</a>
+              </div>
+              <div class="pub-extra">
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-19">In 5 minutes <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-19" hidden><span class="abs-label">🟡 5 minutes</span>Cross-lingual extensions of the BabyLM Shared Task push Small Language Models to simulate a wider range of acquisition scenarios, including code-switching, simultaneous and successive bilingualism, and second language acquisition. Yet there is no benchmark for the formal competence of cognitively inspired models of L2 acquisition (L2LMs). We introduce the Benchmark of Learner Interlingual Syntactic Structure (BLiSS): 1.5M naturalistic minimal pairs derived from errorful sentence–correction pairs in parallel learner corpora. We use them to evaluate L2LMs trained under different regimes on specific properties of learner language, giving a linguistically motivated, controlled measure of interlanguage competence.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-seq-length">
+            <div class="idx">8</div>
+            <div class="body">
+              <div class="t"><a href="https://aclanthology.org/2025.babylm-main.10/">What&#x27;s the Best Sequence Length for BabyLM?</a></div>
+              <div class="auth"><b>Suchir Salhan</b>, Richard Diehl-Martinez, Zebulon Goriely, Paula Buttery</div>
+              <div class="venue">BabyLM Workshop, EMNLP 2025 · Suzhou, China</div>
+              <div class="tldr"><span class="tldr-sum">For BabyLM pretraining, longer context often helps but not always: short sequences suffice for grammar tasks, while morphological reasoning benefits from longer ones.</span> <span class="tldr-sep">|</span> <span class="tldr-take">There is no single best context length; it depends on the task.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://aclanthology.org/2025.babylm-main.10/">ACL Anthology</a>
+                <a class="lnk" href="assets/posters/BabyLM%20Sequence%20Length%20Poster.pdf">Poster</a>
+                <a class="lnk" href="writing/paper-sequence-length.html">📝 Read the write-up</a>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="https://aclanthology.org/2025.babylm-main.10/" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/BabyLM%20Sequence%20Length%20Poster.jpg" alt="What&#x27;s the Best Sequence Length for BabyLM? thumbnail"></a>
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-20">In 5 minutes <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-20" hidden><span class="abs-label">🟡 5 minutes</span>Transformer language models use a fixed context window that has grown in step with pretraining dataset size, yet many BabyLM submissions default to much shorter sequences. We ask a simple question: what sequence length should we use when training BabyLMs? Using 100M words of training data and fixed compute budgets, we compare 125M-parameter Mamba and OPT models. Longer is often better, but the best length depends on both task and architecture. Shorter sequences are enough for grammatical generalization, while longer contexts help morphological analogical reasoning.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-pedagogical-alignment">
+            <div class="idx">9</div>
+            <div class="body">
+              <div class="t">Pedagogical Alignment of LLMs Requires Diverse Cognitively-Inspired Student Proxies</div>
+              <div class="auth"><b>Suchir Salhan</b>, Andrew Caines, Paula Buttery</div>
+              <div class="venue">NeurIPS First Workshop on CogInterp: Interpreting Cognition in Deep Learning Models, 2025 · San Diego, California, USA</div>
+              <div class="tldr"><span class="tldr-sum">Argues that aligning tutoring models to learners needs a diverse set of cognitively-inspired student simulators, not one generic proxy.</span> <span class="tldr-sep">|</span> <span class="tldr-take">A tutor trained against one imaginary student teaches only that student.</span></div>
+              <div class="meta">
+                <a class="lnk" href="assets/posters/CogInterp%20NEURIPS%20Poster.pdf">Poster</a>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="assets/thumbs/CogInterp%20NEURIPS%20Poster.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/CogInterp%20NEURIPS%20Poster.jpg" alt="Pedagogical Alignment of LLMs Requires Diverse Cognitively-Inspired Student Proxies thumbnail"></a>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-theoretical-linguistics">
+            <div class="idx">10</div>
+            <div class="body">
+              <div class="t">Theoretical Linguistics Constrains Hypothesis-Driven Causal Abstraction in Mechanistic Interpretability</div>
+              <div class="auth"><b>Suchir Salhan</b>, Konstantinos Voudouris</div>
+              <div class="venue">NeurIPS First Workshop on CogInterp: Interpreting Cognition in Deep Learning Models, 2025 · San Diego, California, USA</div>
+              <div class="tldr"><span class="tldr-sum">Uses theoretical linguistics to constrain which causal abstractions are worth testing in mechanistic interpretability.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Linguistic theory tells interpretability where to look.</span></div>
+              <div class="meta">
+                <a class="lnk" href="assets/posters/CogInterp%20NEURIPS%20Poster_2.pdf">Poster</a>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="assets/thumbs/CogInterp%20NEURIPS%20Poster_2.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/CogInterp%20NEURIPS%20Poster_2.jpg" alt="Theoretical Linguistics Constrains Hypothesis-Driven Causal Abstraction thumbnail"></a>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-goldfish">
+            <div class="idx">11</div>
+            <div class="body">
+              <div class="t">Glints of Gold or Troubling Waters? Can a School of Merged Monolingual Goldfish Models Swim in Bilingual Seas?</div>
+              <div class="auth"><b>Suchir Salhan</b>, EJ Zhou, Laura Barbenel, Lily Goulder, Lucas Resck, Catherine Arnett &amp; Paula Buttery</div>
+              <div class="venue">EACL Workshop on Multilingual Multicultural Evaluation (MME), Non-Archival Full Paper, 2026 · Rabat, Morocco</div>
+              <div class="tldr"><span class="tldr-sum">Asks whether merging separately trained monolingual Goldfish models produces a working bilingual model.</span></div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="assets/thumbs/EACL_2026_MME_Workshop.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/EACL_2026_MME_Workshop.jpg" alt="Glints of Gold or Troubling Waters? thumbnail"></a>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-universal-conceptual">
+            <div class="idx">12</div>
+            <div class="body">
+              <div class="t">Do Monolingual Language Models Learn Cross-Lingual Universal Conceptual Representations?</div>
+              <div class="auth"><b>Suchir Salhan</b>, EJ Zhou &amp; Paula Buttery</div>
+              <div class="venue">ICLR Workshop on Unifying Concept Representation Learning (UCRL) &amp; ICLR Workshop on Representational Alignment (Re-Align), 2026 · Rio de Janeiro, Brazil</div>
+              <div class="tldr"><span class="tldr-sum">Probes whether models trained on a single language nonetheless build concept representations that line up across languages.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Shared concepts can show up even without shared training data.</span></div>
+            </div>
+          </div>
+          <div class="pub" id="pub-l1-influence">
+            <div class="idx">13</div>
+            <div class="body">
+              <div class="t">L1 Influence in L2 Language Models: A Human-Centric Approach</div>
+              <div class="auth">Laura Barbenel, Lily Goulder, Aoife O&#x27;Driscoll, <b>Suchir Salhan</b>, Catherine Arnett, Andrew Caines &amp; Paula Buttery</div>
+              <div class="venue">Computational Developmental Linguistics (CDL) Workshop @ ACL 2026</div>
+              <div class="tldr"><span class="tldr-sum">A human-centred study of how a model's first language shapes its behaviour when it goes on to learn a second.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Models carry an accent from their first language, much like people do.</span></div>
+            </div>
+          </div>
+          <div class="pub" id="pub-repertoires">
+            <div class="idx">14</div>
+            <div class="body">
+              <div class="t">Repertoires, Not Scores: Instability as Signal in Cultural Evaluation of LLMs</div>
+              <div class="auth"><b>Suchir Salhan</b>, Filip Trhlik, Diana Galvan-Sosa &amp; Paula Buttery</div>
+              <div class="venue">Culture x AI Workshop, ICML 2026 · Seoul, Korea</div>
+              <div class="tldr"><span class="tldr-sum">Argues that the instability in an LLM's cultural responses is itself the signal, so evaluation should report repertoires rather than single scores.</span> <span class="tldr-sep">|</span> <span class="tldr-take">A model's cultural variation is data, not measurement error.</span></div>
+            </div>
+          </div>
+          <div class="pub" id="pub-protocol-competence">
+            <div class="idx">15</div>
+            <div class="body">
+              <div class="t">Protocol Competence of Small Language Models in Interactive Language Game Environments</div>
+              <div class="auth"><b>Suchir Salhan</b>, Paula Buttery</div>
+              <div class="venue">The LM Playschool (Improving Language Models through Learning from Dialogue Interaction) @ EMNLP 2026 · Budapest, Hungary</div>
+              <div class="tldr"><span class="tldr-sum">Tests whether small language models can follow the protocols of interactive language games learned through dialogue.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Playing language games is a demanding test of a small model's competence.</span></div>
+            </div>
+          </div>
+          <div class="pub" id="pub-claude-reinvestigates">
+            <div class="idx">16</div>
+            <div class="body">
+              <div class="t">Claude reinvestigates herself: A replication of different types of syntactic agreement recruit the same units in LLMs</div>
+              <div class="auth">Elena Polyakova-Reed, Shivan Arora, <b>Suchir Salhan</b>, Paula Buttery</div>
+              <div class="venue">9th BlackboxNLP Workshop Special Track (Reproducibility &amp; Reliability), EMNLP 2026 · Budapest, Hungary</div>
+              <div class="tldr"><span class="tldr-sum">A replication asking whether different kinds of syntactic agreement are handled by the same units inside an LLM.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Does one grammar circuit do many jobs? Replication puts it to the test.</span></div>
+            </div>
+          </div>
+          <div class="pub" id="pub-linear-truth">
+            <div class="idx">17</div>
+            <div class="body">
+              <div class="t">Development of Linear Truth Encodings in Language Models: A Replication Study</div>
+              <div class="auth">Mingchuan Zou, <b>Suchir Salhan</b>, Paula Buttery</div>
+              <div class="venue">9th BlackboxNLP Workshop Special Track (Reproducibility &amp; Reliability), EMNLP 2026 · Budapest, Hungary</div>
+              <div class="tldr"><span class="tldr-sum">Replicates how linear representations of truth emerge in language models over the course of training.</span> <span class="tldr-sep">|</span> <span class="tldr-take">When does a model start encoding true-vs-false as a direction you can read off?</span></div>
+              <div class="meta">
+                <a class="lnk" href="writing/paper-linear-truth-encodings.html">📝 Read the write-up</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pub-group" data-group="working">
+          <h3>Working Papers <span class="count">7</span></h3>
+          <div class="pub" id="pub-minimal-means">
+            <div class="idx">1</div>
+            <div class="body">
+              <div class="t"><a href="https://www.mmll.cam.ac.uk/files/v15_salhan_2.pdf">On the Potential for Maximising Minimal Means in Transformer Language Models: A Dynamical Systems Perspective</a></div>
+              <div class="auth"><b>Salhan, S.A.</b>✦ (2023)</div>
+              <div class="venue">Cambridge Occasional Papers in Linguistics, Volume 15, Article 3: pp. 55–110. ISSN: 2050-5949</div>
+              <div class="tldr"><span class="tldr-sum">A dynamical-systems reading of Transformer language models through the linguistic principle of maximising minimal means.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Efficiency principles from linguistics can describe what Transformers do.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://www.mmll.cam.ac.uk/files/v15_salhan_2.pdf">PDF</a>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="https://www.mmll.cam.ac.uk/files/v15_salhan_2.pdf" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/v15_salhan_2.jpg" alt="On the Potential for Maximising Minimal Means in Transformer Language Models thumbnail"></a>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-multimodal">
+            <div class="idx">2</div>
+            <div class="body">
+              <div class="t">Multimodal Language Modelling across Languages and Cultures: Grounding Strategies for Nouns and Verbs</div>
+              <div class="auth"><b>Suchir Salhan</b>, Fangyu Liu &amp; Nigel Collier (2022 / preprint)</div>
+              <div class="venue">Research Project, Language Technology Lab, Department of Theoretical and Applied Linguistics, University of Cambridge</div>
+              <div class="tldr"><span class="tldr-sum">Compares grounding strategies for nouns and verbs when modelling language across languages and cultures with images.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Nouns and verbs don't ground in images the same way.</span></div>
+              <div class="meta">
+                <span class="badge-status review">preprint</span>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="assets/thumbs/CollierLiu.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/CollierLiu.jpg" alt="Multimodal Language Modelling across Languages and Cultures thumbnail"></a>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-phonemes-chance">
+            <div class="idx">3</div>
+            <div class="body">
+              <div class="t">The Distribution of Phonemes across Languages: Chance, Costs, and Integration across Linguistic Tiers</div>
+              <div class="auth">Fermín Moscoso del Prado Martín, <b>Suchir Salhan</b> (2026)</div>
+              <div class="venue">23rd Old-World Conference in Phonology (OCP23), Gonville &amp; Caius College (Accepted Oral)</div>
+              <div class="tldr"><span class="tldr-sum">Examines how phoneme distributions across languages reflect chance, articulatory cost, and integration across linguistic tiers.</span> <span class="tldr-sep">|</span> <span class="tldr-take">A sound system balances what's easy to say against what's easy to tell apart.</span></div>
+              <div class="meta">
+                <a class="lnk" href="assets/papers/ocp_fermin.pdf">PDF</a>
+                <a class="lnk" href="assets/presentations/ML2025.pdf">Keynote Slides</a>
+              </div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="assets/thumbs/ocp_fermin.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/ocp_fermin.jpg" alt="The Distribution of Phonemes across Languages thumbnail"></a>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-convergent-equilibria">
+            <div class="idx">4</div>
+            <div class="body">
+              <div class="t">Convergent Equilibria in Cross-Lingual Phoneme Surprisal Distributions: Statistical and Simulation-Based Analysis</div>
+              <div class="auth"><b>Suchir Salhan</b>, Fermín Moscoso del Prado Martín (2026)</div>
+              <div class="venue">23rd Old-World Conference in Phonology (OCP23), Gonville &amp; Caius College (Accepted Oral)</div>
+              <div class="tldr"><span class="tldr-sum">Statistical and simulation-based analysis of whether phoneme surprisal distributions settle into the same equilibrium across languages.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Different languages may drift toward the same statistical resting point.</span></div>
+            </div>
+          </div>
+          <div class="pub" id="pub-linguistic-universals">
+            <div class="idx">5</div>
+            <div class="body">
+              <div class="t"><a href="https://aclanthology.org/2025.mrl-main.9/">Extended Abstract for “Linguistic Universals&quot;: Emergent Shared Features in Independent Monolingual Language Models via Sparse Autoencoders</a></div>
+              <div class="auth">EJ Zhou, <b>Suchir Salhan</b></div>
+              <div class="venue">5th Workshop on Multilingual Representation Learning (MRL), EMNLP 2025 · Suzhou, China</div>
+              <div class="tldr"><span class="tldr-sum">Aligns sparse-autoencoder features across separately trained monolingual models to look for universal features that emerge independently.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Languages may share structure that models rediscover on their own.</span></div>
+              <div class="meta">
+                <a class="lnk" href="https://aclanthology.org/2025.mrl-main.9/">ACL Anthology</a>
+              </div>
+              <div class="pub-extra">
+                <button class="pub-abs-toggle" type="button" aria-expanded="false" aria-controls="abs-31">In 5 minutes <span class="chev">&#9656;</span></button>
+                <div class="pub-abs-panel" id="abs-31" hidden><span class="abs-label">🟡 5 minutes</span>Do independently trained monolingual language models converge on shared linguistic principles? We analyse a suite of models trained separately on single languages with identical architectures and budgets. We train sparse autoencoders on their activations to get interpretable latent features, then align those features across languages using activation correlations. Pairwise analyses test whether the feature spaces converge in non-trivial ways, and we look for universal features that recur across models.</div>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-linguistics-age">
+            <div class="idx">6</div>
+            <div class="body">
+              <div class="t">Linguistics in the Age of Language Models: What can Cognitively-Inspired Language Models offer to Linguistic Theory?</div>
+              <div class="auth"><b>Salhan, S.A.</b> (2025)</div>
+              <div class="venue">Position Paper in Cambridge Occasional Papers in Linguistics (CoPiL), Accepted, Volume 17</div>
+              <div class="tldr"><span class="tldr-sum">A position paper on what cognitively-inspired language models can offer linguistic theory.</span> <span class="tldr-sep">|</span> <span class="tldr-take">Language models can be evidence for linguistics, not just tools built from it.</span></div>
+              <div class="pub-extra">
+                <a class="pub-thumb" href="assets/thumbs/v17_salhan.jpg" target="_blank" rel="noopener"><img loading="lazy" src="assets/thumbs/v17_salhan.jpg" alt="Linguistics in the Age of Language Models thumbnail"></a>
+              </div>
+            </div>
+          </div>
+          <div class="pub" id="pub-tokenizer-fertility">
+            <div class="idx">7</div>
+            <div class="body">
+              <div class="t">Is Tokenizer Cognitive Plausibility just Fertility?</div>
+              <div class="auth"><b>Suchir Salhan</b></div>
+              <div class="venue">Extended Abstract, Second Tokenization Workshop, Conference of Language Modelling (COLM) · San Francisco, USA</div>
+              <div class="tldr"><span class="tldr-sum">Asks whether what looks like cognitive plausibility in a tokenizer reduces to fertility (how many tokens it uses).</span> <span class="tldr-sep">|</span> <span class="tldr-take">Maybe the tokenizer's "plausibility" is just counting tokens.</span></div>
+            </div>
+          </div>
+        </div>
+<!-- AUTO:publications:end -->
+
+
       </div>
     </section>
 
   </main>
+<nav class="dock" aria-label="Primary">
+    <a href="research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="writing/index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
 
   <!-- Expandable theme-cards styles -->
   <style>
@@ -314,6 +991,18 @@
       background: color-mix(in srgb, var(--tint), transparent 84%);
       border:1px solid color-mix(in srgb, var(--tint), transparent 62%);
     }
+    /* Playful hover: emoji chips give a gentle wiggle/bounce */
+    @keyframes theme-chip-wiggle {
+      0%   { transform: translateY(0) rotate(0deg) scale(1); }
+      25%  { transform: translateY(-3px) rotate(-7deg) scale(1.08); }
+      50%  { transform: translateY(0) rotate(6deg) scale(1.08); }
+      75%  { transform: translateY(-2px) rotate(-4deg) scale(1.05); }
+      100% { transform: translateY(0) rotate(0deg) scale(1); }
+    }
+    .theme-toggle:hover .theme-chip { animation: theme-chip-wiggle .6s ease-in-out; }
+    @media (prefers-reduced-motion: reduce) {
+      .theme-toggle:hover .theme-chip { animation: none; }
+    }
     .theme-titles { flex:1 1 auto; min-width:0; }
     .theme-title { display:block; font-family: var(--heading-font); font-weight:600; font-size:19px; color: var(--heading-color); line-height:1.25; }
     .theme-blurb { display:block; margin-top:7px; font-size:15.5px; line-height:1.55; color: var(--ink-2); }
@@ -330,6 +1019,9 @@
       margin-top:0; padding-top:16px;
     }
     .theme-panel-inner p { font-size:15.5px; line-height:1.6; color: #3a372e; margin:0 0 14px; }
+    .pub-refs { display:inline; font-size:14px; color: var(--ink-2); }
+    .pub-refs a { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 2px; }
+    .pub-refs a:hover { color: var(--accent-color); }
     .theme-papers { display:flex; flex-wrap:wrap; gap:8px; }
     .theme-pill {
       font-family: var(--mono-font); font-size:12.5px; line-height:1.3;
@@ -398,11 +1090,12 @@
 
   <footer class="footer">
     <div class="container">
-      <div class="cols">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
         <div>© 2026 Suchir Salhan · University of Cambridge</div>
         <div class="fnav">
-          <a href="research.html">Research</a><a href="publications.html">Publications</a>
-          <a href="teaching.html">Teaching</a><a href="about.html">About</a>
+          <a href="research.html">Research</a><a href="research.html#publications">Publications</a>
+          <a href="service.html">Service</a><a href="about.html">About</a>
           <a href="assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
           <a href="privacy.html">Privacy</a>
         </div>
@@ -413,5 +1106,35 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/explore.js"></script>
+  <script>
+    (function () {
+      var filters = document.querySelectorAll('.pub-filter');
+      var groups = document.querySelectorAll('.pub-group');
+      filters.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var f = btn.getAttribute('data-filter');
+          filters.forEach(function (b) { b.classList.remove('active'); });
+          btn.classList.add('active');
+          groups.forEach(function (g) {
+            g.style.display = (f === 'all' || g.getAttribute('data-group') === f) ? '' : 'none';
+          });
+        });
+      });
+    })();
+  </script>
+  <script>
+    (function () {
+      document.querySelectorAll('.pub-abs-toggle').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var panel = document.getElementById(btn.getAttribute('aria-controls'));
+          if (!panel) return;
+          var open = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', open ? 'false' : 'true');
+          panel.hidden = open;
+        });
+      });
+    })();
+  </script>
 </body>
 </html>

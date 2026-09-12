@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>BabyBabelLM: A Multilingual Benchmark of Developmentally Plausible Training Data · Suchir Salhan</title>
+  <meta name="description" content="BabyBabelLM is a multilingual collection of developmentally plausible pretraining data spanning dozens of languages, with evaluation suites and baseline models.">
+  <link href="../favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <link href="../assets/css/writing.css" rel="stylesheet">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="index-page writing-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../beetle.html">Beetle</a></li>
+          <li><a href="index.html" class="active">Writing</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../presentations.html">Talks</a></li>
+          <li><a href="../people.html">People</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Paper</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="tufte-article">
+          <div class="meta">2026 · BabyLM / Multilingual Pretraining</div>
+          <h1>BabyBabelLM: A Multilingual Benchmark of Developmentally Plausible Training Data</h1>
+
+          <p class="standfirst">A multilingual companion to the developmentally plausible pretraining agenda: instead of one child's language environment in English, a curated approximation of it across dozens of languages.</p>
+
+          <p>The BabyLM effort has spent the last few years asking a pointed question: how much of what large language models learn actually needs internet-scale data, and how much could a model learn from something closer to the amount of language a child hears while acquiring their first tongue? BabyBabelLM<span class="sn"><span class="sn-ref">1</span><span class="sidenote" data-n="1">Jumelet, Fourtassi, Haga et al. <a href="https://babylm.github.io/babybabellm/">BabyBabelLM: A Multilingual Benchmark of Developmentally Plausible Training Data</a>, 2026.</span></span> takes that question out of its heavily English setting and asks it in many languages at once. I am a co-author on this work.</p>
+
+          <h2>What the resource is</h2>
+
+          <p>BabyBabelLM is a collection of pretraining datasets meant to approximate the language a child is exposed to, from birth through the years of native acquisition. Rather than scraping whatever text is abundant, the team prioritised the kinds of input a child actually encounters: child-directed speech, educational materials, children's books, and transcribed conversation. Synthetic data was deliberately left out, which keeps the corpus honest as a model of real developmental input.</p>
+
+          <p>Coverage spans 45 languages, organised into three tiers by how much data could be gathered. The top tier reaches roughly 100 million English-word-equivalents, the middle tier around 10 million, and the smallest tier around 1 million. Sorting languages into tiers rather than forcing a single fixed budget is a practical concession: language communities differ enormously in how much child-appropriate text exists, and pretending otherwise would either starve the well-resourced languages or fabricate data for the rest.</p>
+
+          <h2>How it was built</h2>
+
+          <p>The collection was led language by language. Researchers who know a given language ran its collection effort, drawing on language-specific sources and supplementing with multilingual resources where needed. Everything then went through uniform preprocessing and standardised metadata annotation, so the corpora are comparable across languages rather than a patchwork of incompatible formats. The release also carries document-level licensing information and source attribution, which matters if the resource is going to be reused responsibly.</p>
+
+          <h2>What ships with it</h2>
+
+          <p>Beyond the raw curated data, hosted on HuggingFace, BabyBabelLM provides an evaluation suite for each language and a set of baseline models, both monolingual and multilingual. That combination is what turns a data dump into a benchmark: you can train under a controlled, developmentally motivated budget and then measure against a shared yardstick within and across languages.</p>
+
+          <p>The reason I care about this is that it makes multilingual developmental questions answerable on comparable footing. If we want to ask whether smaller, plausibly scaled data teaches models the right things, we should be able to ask it in Japanese or Basque as readily as in English. BabyBabelLM is an attempt to lay down that common ground.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+<nav class="dock" aria-label="Primary">
+    <a href="../research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="../beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="../research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="../teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="../presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="../people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="../about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="../assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="../research.html">Research</a><a href="../research.html#publications">Publications</a>
+          <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
+          <a href="../assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/explore.js"></script>
+  <script defer src="../assets/js/toc.js"></script>
+</body>
+</html>

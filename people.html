@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>People · Suchir Salhan</title>
-  <meta name="description" content="The researchers, students, and groups I work with.">
+  <title>Research Team · Suchir Salhan</title>
+  <meta name="description" content="The students Suchir Salhan supervises and mentors, the collaborators and groups he works with, and the theses and projects they have produced together.">
   <link href="favicon.ico" rel="icon" sizes="any">
   <link rel="icon" href="assets/images/logo-ss.svg" type="image/svg+xml">
   <link href="assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -25,14 +26,14 @@
         <ul>
           <li><a href="research.html">Research</a></li>
           <li><a href="beetle.html">Beetle</a></li>
-          <li><a href="publications.html">Publications</a></li>
+          <li><a href="writing/index.html">Writing</a></li>
           <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="talks.html">Talks</a></li>
-          <li><a href="presentations.html">Presentations</a></li>
+          <li><a href="presentations.html">Talks</a></li>
           <li><a href="people.html" class="active">People</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
         </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
@@ -41,19 +42,160 @@
   <main class="main">
     <section class="page-hero">
       <div class="container">
-        <div class="breadcrumb-mini"><a href="index.html">Home</a> / People</div>
-        <p class="eyebrow">People</p>
-        <h1>Collaborators &amp; Students</h1>
-        <p>The researchers, students, and groups I work with.</p>
+        <div class="breadcrumb-mini"><a href="index.html">Home</a> / Research Team</div>
+        <p class="eyebrow">Research Team</p>
+        <h1>Students, Mentees &amp; Collaborators</h1>
+        <p>The students I supervise and mentor across artificial intelligence, cognitive science, and linguistics, the theses and papers we've produced together, and the groups and collaborators I work with.</p>
       </div>
     </section>
 
+    <!-- SUPERVISED STUDENTS + THESES/PAPERS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head left">
+          <p class="kicker">Supervision &amp; Mentorship</p>
+          <h2>Students &amp; Mentees</h2>
+          <p>Mentoring is the part of the job I take most seriously — and it produces real research. Several supervised projects have become papers at EMNLP, BlackboxNLP and NeurIPS workshops.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+
+            <div class="sv-group">MPhil Thesis Supervision · Advanced Computer Science (ACS) &amp; MLMI</div>
+
+            <div class="sv">
+              <div class="sv-head"><span class="sv-name"><a href="https://github.com/biancaganescu" target="_blank" rel="noopener">Bianca-Mihaela Ganescu</a></span><span class="sv-yr">MPhil ACS · 2024–25</span></div>
+              <div class="sv-thesis"><i class="bi bi-journal-bookmark"></i> Thesis: <em>Integrating Cognitively-Inspired Selective Attention Cues in Small Vision-Language Models</em>. Co-supervised with <a href="https://www.cl.cam.ac.uk/~apc38/" target="_blank" rel="noopener">Dr Andrew Caines</a> and Prof Paula Buttery.</div>
+              <div class="sv-pubs">
+                <a class="sv-pill" href="https://aclanthology.org/2025.babylm-main.15/" target="_blank" rel="noopener">Looking to Learn: Token-wise Dynamic Gating for Low-Resource Vision-Language Modelling — BabyLM @ EMNLP 2025 · Outstanding Paper Award</a>
+                <a class="sv-pill ghost" href="assets/teaching/Bmg44_MPhil_Project.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-text"></i> Thesis report (PDF)</a>
+              </div>
+            </div>
+
+            <div class="sv">
+              <div class="sv-head"><span class="sv-name">Yeji Heo</span><span class="sv-yr">MPhil ACS · 2025–26</span></div>
+              <div class="sv-pubs">
+                <a class="sv-pill" href="research.html#publications">Cultural Knowledge in Pretrained Language Models through Behaviour, Neuron Localisation, and Pretraining Regimes — BlackboxNLP 2026 (under review)</a>
+              </div>
+            </div>
+
+            <div class="sv">
+              <div class="sv-head"><span class="sv-name">Adam El-Kholy</span><span class="sv-yr">MPhil MLMI · 2025–26</span></div>
+              <div class="sv-pubs">
+                <a class="sv-pill" href="research.html#publications">From Entropy to Exploration: What Limits Post-Training under GRPO? — NeurIPS 2026 Workshop (Pre-to-Post)</a>
+              </div>
+            </div>
+
+            <div class="sv-group">Undergraduate Research Students &amp; UROP</div>
+
+            <div class="sv">
+              <div class="sv-head"><span class="sv-name">Ellie Polyakova Reed</span><span class="sv-yr">Undergraduate · 2025, 2026</span></div>
+              <div class="sv-thesis"><i class="bi bi-journal-bookmark"></i> UROP: <em>Evaluating Typological Effects of L2 English in Language Model Benchmarks</em> (2025).</div>
+              <div class="sv-pubs">
+                <a class="sv-pill" href="research.html#publications">Claude Reinvestigates Herself: syntactic-agreement units in LLMs (replication) — BlackboxNLP 2026</a>
+                <a class="sv-pill" href="research.html#publications">Shared Units, Divergent Trajectories: Syntactic Representations in Bilingual &amp; Multilingual LMs — MRL @ EMNLP 2026</a>
+                <a class="sv-pill ghost" href="assets/teaching/ep757_urop.pdf" target="_blank" rel="noopener"><i class="bi bi-file-earmark-text"></i> UROP report (PDF)</a>
+              </div>
+            </div>
+
+            <div class="sv">
+              <div class="sv-head"><span class="sv-name">Shivan Arora</span><span class="sv-yr">Undergraduate · 2025, 2026</span></div>
+              <div class="sv-thesis"><i class="bi bi-journal-bookmark"></i> UROP: <em>Controlled Text Generation: a teacher–student paradigm for CEFR-levelled complexity control</em> (2025).</div>
+              <div class="sv-pubs">
+                <a class="sv-pill" href="research.html#publications">Code-Switching as a Probe of Cross-Lingual Knowledge Transfer and Cultural Localisation — MRL @ EMNLP 2026</a>
+                <a class="sv-pill" href="research.html#publications">Claude Reinvestigates Herself (co-author) — BlackboxNLP 2026</a>
+              </div>
+            </div>
+
+            <div class="sv">
+              <div class="sv-head"><span class="sv-name">Mingchuan Zou</span><span class="sv-yr">Undergraduate · 2026</span></div>
+              <div class="sv-pubs">
+                <a class="sv-pill" href="research.html#publications">Can We Trust Small Language Models as Judges? — NeurIPS 2026 Workshops (TAE / JUDGe)</a>
+                <a class="sv-pill" href="research.html#publications">Development of Linear Truth Encodings in Language Models (replication) — BlackboxNLP 2026</a>
+                <a class="sv-pill" href="research.html#publications">Execution-Aware Routing for On-Device SLM Agents — NeurIPS 2026 (SLM-Agents)</a>
+              </div>
+            </div>
+
+            <div class="sv">
+              <div class="sv-head"><span class="sv-name">Jacy To</span><span class="sv-yr">Undergraduate</span></div>
+            </div>
+
+            <div class="sv">
+              <div class="sv-head"><span class="sv-name">Abdullah Akram · Alisa Potomkiva</span><span class="sv-yr">Undergraduate · 2026</span></div>
+            </div>
+
+            <div class="sv-group">Visiting Students, Interns &amp; Research Assistants</div>
+
+            <div class="sv">
+              <div class="sv-head"><span class="sv-name">Andrzej Szablewski</span><span class="sv-yr">Visiting student</span></div>
+              <div class="sv-pubs">
+                <a class="sv-pill" href="research.html#publications">LangMAP: A Language-Adaptive Approach to Tokenization — EMNLP 2026 (co-author)</a>
+              </div>
+            </div>
+
+            <div class="sv">
+              <div class="sv-head"><span class="sv-name">Ali Kheirkhah</span><span class="sv-yr">PicoLM Research Intern · Summer 2025</span></div>
+              <div class="sv-thesis">Co-supervised with <a href="https://www.richarddiehlmartinez.com/" target="_blank" rel="noopener">Richard Diehl Martinez</a>; mentored through the <b>Google DeepMind Research Ready</b> programme.</div>
+            </div>
+
+            <div class="sv">
+              <div class="sv-head"><span class="sv-name">ALTA Institute Research Assistants</span><span class="sv-yr">2025–26</span></div>
+              <div class="sv-thesis">Line-managed together with Prof Andrew Caines and Prof Paula Buttery.</div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECT MATERIALS (moved from Teaching) -->
+    <section class="section tint">
+      <div class="container">
+        <div class="section-head left">
+          <p class="kicker">Project Supervision</p>
+          <h2>Proposals, Theses &amp; Supervised Reports</h2>
+          <p>Project proposals for prospective MPhil students, together with materials from theses, UROP projects and research reports I have supervised or co-authored.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="teach-card">
+              <h4><i class="bi bi-lightbulb"></i> MPhil Project Proposals 2025–26</h4>
+              <ul>
+                <li>Proposed MPhil (Advanced Computer Science / MLMI) project topics in small language models, multilinguality and interpretability.</li>
+              </ul>
+              <div class="res-links">
+                <a href="assets/teaching/Salhan_2526_MPhil_Project_Proposals.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> Project Proposals 2025–26</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="teach-card">
+              <h4><i class="bi bi-journal-text"></i> Supervised Projects &amp; Reports</h4>
+              <ul>
+                <li>Selected reports and write-ups from MPhil theses, UROP projects and research projects I have supervised or co-authored.</li>
+              </ul>
+              <div class="res-links">
+                <a href="assets/teaching/Bmg44_MPhil_Project.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i> MPhil Project (Ganescu)</a>
+                <a href="assets/teaching/ep757_urop.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i> UROP Report (Reed)</a>
+                <a href="assets/teaching/ArgMining.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i> Argument Mining</a>
+                <a href="assets/teaching/CollierLiu.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i> Multimodal Grounding Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLLABORATORS & GROUPS -->
     <section class="section">
       <div class="container">
         <div class="section-head left">
           <p class="kicker">Collaborators</p>
           <h2>Groups &amp; Collaborators</h2>
           <p>I am very grateful to a number of academics, researchers and PhD students whom I am currently working with and/or previously worked with.</p>
+          <figure class="inline-photo"><img src="assets/images/photos/photo-team.jpg" alt="The Cambridge NLIP / ALTA team" loading="lazy"><figcaption>The Cambridge team I work alongside.</figcaption></figure>
         </div>
 
         <div class="people-block">
@@ -102,51 +244,13 @@
           <h4>Individual Collaborators</h4>
           <div class="names">
             <a href="https://milanlproc.github.io/authors/donya_rooein/">Dr Donya Rooin</a> (MilaNLP, Bocconi University) and Hongyi (Sam) Gu (KCL/NetMind.AI). <a href="http://kv301.user.srcf.net/">Dr Konstantinos Voudouris</a> (Institute for Human-Centered AI at Helmholtz Munich). <a href="https://marekmasiak.github.io/">Marek Masiak</a> (Oxford University). <a href="https://thiemowa.github.io/">Dr Thiemo Wambsganss</a> (University of St Gallen, now Bern University &ndash; UROP Supervisor 2021).
+          <figure class="inline-photo"><img src="assets/images/photos/photo-team-dinner.jpg" alt="Team dinner" loading="lazy"><figcaption>A team dinner on the road.</figcaption></figure>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section tint">
-      <div class="container">
-        <div class="section-head left">
-          <p class="kicker">Students Supervised</p>
-          <h2>Students</h2>
-          <p>I have had the pleasure of supervising the following students for their research projects.</p>
-        </div>
-
-        <div class="people-block">
-          <h4>MPhil Advanced Computer Science (ACS) / Part III CST</h4>
-          <div class="names">
-            <a href="https://github.com/biancaganescu">Bianca-Mihaela Ganescu</a> &ndash; my MPhil student, completed a thesis on Small Multimodal (Vision-Language Models) for the MPhil in Advanced Computer Science. Co-supervised with <a href="https://www.cl.cam.ac.uk/~apc38/">Dr Andrew Caines</a> and Prof Paula Buttery.
-          </div>
-        </div>
-
-        <div class="people-block">
-          <h4>Undergraduate</h4>
-          <div class="names">
-            Ellie Polyakova Reed (ep757), Shivan Arora (sa2200), Jacy To (cyt33), Ali Kheirkhah (PicoLM Research Intern, co-supervised by <a href="https://www.richarddiehlmartinez.com/">Richard Diehl Martinez</a>).
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section">
-      <div class="container">
-        <div class="section-head left">
-          <p class="kicker">Theses</p>
-          <h2>Supervised Theses &amp; Dissertations</h2>
-        </div>
-        <div class="prose wide">
-          <ul>
-            <li>&ldquo;Integrating Cognitively-Inspired Selective Attention Cues in Small Vision-Language Models&rdquo;. 2025. Bianca Ganescu, MPhil Advanced Computer Science Thesis.</li>
-            <li>Evaluating Typological Effects of L2 English in Language Model Benchmarks. Ellie P. Reed, 2025. Supervised UROP Report.</li>
-            <li>Controlled Text Generation: a teacher-student model paradigm for CEFR-levelled complexity control. Shivan Arora, 2025. Supervised UROP Report.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
+    <!-- ACKNOWLEDGEMENTS -->
     <section class="section tint">
       <div class="container">
         <div class="section-head left">
@@ -161,47 +265,57 @@
         </div>
       </div>
     </section>
-
-    <section class="section" id="students">
-      <div class="container">
-        <div class="section-head left"><p class="kicker">Mentorship</p><h2>Students &amp; Mentees</h2><p>Students I supervise, mentor, or line-manage.</p></div>
-        <!-- AUTO:students:start -->
-        <div class="people-block">
-          <h3>MPhil Advanced Computer Science Thesis Supervision</h3>
-          <div class="names">Bianca-Mihaela Ganescu <span class="yr">(2024-25)</span>, Yeji Heo <span class="yr">(2025-26)</span></div>
-        </div>
-        <div class="people-block">
-          <h3>MPhil Machine Learning &amp; Machine Intelligence Thesis Supervision</h3>
-          <div class="names">Adam El-Kholy <span class="yr">(2025-26)</span></div>
-        </div>
-        <div class="people-block">
-          <h3>Undergraduate Research Students</h3>
-          <div class="names">Ellie Polyakova Reed <span class="yr">(2025, 2026)</span>, Shivan Arora <span class="yr">(2025, 2026)</span>, Mingyuan Zou <span class="yr">(2026)</span>, Abdullah Akram <span class="yr">(2026)</span>, Alisa Potomkiva <span class="yr">(2026)</span></div>
-        </div>
-        <div class="people-block">
-          <h3>Research Assistants</h3>
-          <div class="names">ALTA Institute 2025-26 Research Assistants , line-managed by Prof Andrew Caines and Prof Paula Buttery</div>
-        </div>
-        <div class="people-block">
-          <h3>Visiting Students</h3>
-          <div class="names">Andrzej Szalewski</div>
-        </div>
-        <div class="people-block">
-          <h3>Research Mentor</h3>
-          <div class="names">Ali Kheirkhah <span class="yr">(Summer 2025)</span></div>
-        </div>
-<!-- AUTO:students:end -->
-      </div>
-    </section>
   </main>
+<nav class="dock" aria-label="Primary">
+    <a href="research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="writing/index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <style>
+    .sv-group {
+      font-family: var(--mono-font); font-size:12px; letter-spacing:.08em; text-transform:uppercase;
+      color: var(--accent-color, #5f7a52); margin:34px 0 12px; padding-bottom:8px;
+      border-bottom:1px solid var(--line); font-weight:600;
+    }
+    .sv-group:first-child { margin-top:0; }
+    .sv { padding:16px 0; border-bottom:1px solid color-mix(in srgb, var(--line), transparent 30%); }
+    .sv-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:10px 16px; margin-bottom:6px; }
+    .sv-name { font-family: var(--heading-font); font-weight:600; font-size:18px; color: var(--heading-color); }
+    .sv-name a { color: inherit; }
+    .sv-yr { font-family: var(--mono-font); font-size:12px; color: var(--ink-2, #6b6656); }
+    .sv-thesis { font-size:15px; line-height:1.55; color: var(--ink-2, #3a372e); margin-bottom:10px; }
+    .sv-thesis i { color: var(--accent-color, #5f7a52); margin-right:6px; }
+    .sv-pubs { display:flex; flex-wrap:wrap; gap:8px; }
+    .sv-pill {
+      font-family: var(--mono-font); font-size:12px; line-height:1.35;
+      padding:7px 13px; border-radius:10px;
+      background: color-mix(in srgb, var(--accent-color, #5f7a52), transparent 90%);
+      color: color-mix(in srgb, var(--accent-color, #5f7a52), #000 25%);
+      border:1px solid color-mix(in srgb, var(--accent-color, #5f7a52), transparent 70%);
+      display:inline-flex; align-items:center; gap:6px; transition: background .2s, color .2s;
+    }
+    .sv-pill:hover { background: var(--accent-color, #5f7a52); color:#fff; }
+    .sv-pill.ghost { background:transparent; color: var(--ink-2); border-color: var(--line); }
+    .dark-background .sv-thesis { color: var(--default-color); }
+    .dark-background .sv-pill { color: color-mix(in srgb, var(--accent-color, #8aa06f), #fff 20%); }
+  </style>
 
   <footer class="footer">
     <div class="container">
-      <div class="cols">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
         <div>© 2026 Suchir Salhan · University of Cambridge</div>
         <div class="fnav">
-          <a href="research.html">Research</a><a href="publications.html">Publications</a>
-          <a href="teaching.html">Teaching</a><a href="about.html">About</a>
+          <a href="research.html">Research</a><a href="research.html#publications">Publications</a>
+          <a href="service.html">Service</a><a href="about.html">About</a>
           <a href="assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
           <a href="privacy.html">Privacy</a>
         </div>
@@ -212,5 +326,6 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/explore.js"></script>
 </body>
 </html>

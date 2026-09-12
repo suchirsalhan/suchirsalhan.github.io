@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>About · Suchir Salhan</title>
   <meta name="description" content="About Suchir Salhan — PhD Candidate in Computer Science at the University of Cambridge, working on small and constrained language models.">
@@ -25,14 +26,14 @@
         <ul>
           <li><a href="research.html">Research</a></li>
           <li><a href="beetle.html">Beetle</a></li>
-          <li><a href="publications.html">Publications</a></li>
+          <li><a href="writing/index.html">Writing</a></li>
           <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="talks.html">Talks</a></li>
-          <li><a href="presentations.html">Presentations</a></li>
+          <li><a href="presentations.html">Talks</a></li>
           <li><a href="people.html">People</a></li>
           <li><a href="about.html" class="active">About</a></li>
           <li><a href="assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
         </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
     </div>
@@ -44,20 +45,7 @@
         <div class="breadcrumb-mini"><a href="index.html">Home</a> / About</div>
         <p class="eyebrow">About</p>
         <h1>About</h1>
-        <p>PhD Candidate in Computer Science, University of Cambridge.</p>
-      </div>
-    </section>
-
-    <!-- Intro feature -->
-    <section class="section">
-      <div class="container">
-        <div class="feature">
-          <img src="assets/images/suchir_salhan_web.jpg" alt="Suchir Salhan">
-          <div>
-            <h3>Language models as learners</h3>
-            <p>Contemporary language models are often treated as accomplished speakers. I am more interested in them as learners. In particular, I study small and deliberately constrained systems, not despite their limitations but because of them. Constraint renders learning visible. It makes errors interpretable and generalisation legible. What such systems cannot do is often as revealing as what they can.</p>
-          </div>
-        </div>
+        <p>From minds to machines — I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
       </div>
     </section>
 
@@ -69,24 +57,27 @@
           <h2>Short Bio</h2>
         </div>
         <div class="prose wide">
-          <p>I am a PhD Candidate in Computer Science at the University of Cambridge (Gonville &amp; Caius College), researching Machine Learning and Natural Language Processing under Professor <a href="https://www.cl.cam.ac.uk/~pjb48/">Paula Buttery</a>.</p>
+          <p>I am a PhD Candidate in Computer Science at the University of Cambridge (Gonville &amp; Caius College), working across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn. I study Machine Learning and Natural Language Processing under Professor <a href="https://www.cl.cam.ac.uk/~pjb48/">Paula Buttery</a>, asking how the same question of learning connects human minds and machines, language and intelligence, cognition and computation.</p>
           <p>I previously completed my Bachelor of Arts and Masters in Engineering in Computer Science and Linguistics at Gonville &amp; Caius College, University of Cambridge, obtaining a Starred First (Class I with Distinction) and a Distinction respectively. My research focuses on Small-Scale Language Models to improve the interpretability of Foundation Models.</p>
           <p>Outside of academia, I lead a publication called <a href="https://www.per-capita.co.uk">Per Capita Media</a>, Cambridge University's newest independent publication. My journalistic work includes collaborations with <em>The One Show</em> and interactions with <em>The Sunday Times</em> and <em>BBC Radio 5 Live</em>.</p>
           <p>I am also involved in student policy think tanks, as the Head of Policy at <em>The Wilberforce Society</em>, and organise speaker events throughout the University. A copy of my CV can be found on my <a href="https://www.cst.cam.ac.uk/people/sas245">Department Page (Computer Science &amp; Technology)</a>.</p>
+          <figure class="inline-photo"><img src="assets/images/photos/photo-team-square.jpg" alt="The Cambridge NLIP / ALTA team" loading="lazy"><figcaption>With the Cambridge team outside the Computer Laboratory.</figcaption></figure>
         </div>
       </div>
     </section>
 
-    <!-- Research Philosophy -->
-    <section class="section tint">
+
+    <section class="section">
       <div class="container">
         <div class="section-head left" style="margin-bottom:22px">
-          <span class="kicker">Orientation</span>
-          <h2>Research Philosophy</h2>
+          <span class="kicker">Speaking</span>
+          <h2>Featured talk</h2>
         </div>
         <div class="prose wide">
-          <p>I am a PhD candidate in Computer Science at the University of Cambridge, based at Gonville &amp; Caius College. My research begins from a question that is often taken for granted: what does it mean to learn language at all? Not as a matter of fluency or scale, but as a problem of structure—how regularities are inferred from limited experience, how abstraction emerges, and where it fails.</p>
-          <div class="pull-quote">Constraint renders learning visible. It makes errors interpretable and generalisation legible.</div>
+          <h3 style="margin:0 0 10px">Understanding the Human-Scale AI Frontier: Sample-Efficient and Human-Scale Language Modelling</h3>
+          <p>In contemporary AI systems, &ldquo;human-like&rdquo; capabilities emerge at scales far beyond what is human-scale. This talk argues that the sample-efficiency of neural models is an important &mdash; though often overlooked &mdash; frontier goal for AI, and secondarily raises interesting questions for cognitive science. We survey community-wide efforts to understand and advance the human-scale AI frontier in the NLP community through the BabyLM Challenge, and in the wider ML community (e.g. through OpenAI&rsquo;s Parameter Golf and the NanoGPT Speedrunning challenges).</p>
+          <p>Collectively, these efforts highlight the importance of learning dynamics for building better-performing smaller language models. I present work on multilingual learning dynamics in the Multilingual BabyLM Challenge (EMNLP 2026) and a new multilingual learning-dynamics framework, <strong>Beetle</strong>, which I have been developing. I conclude with thoughts on challenging and promising directions: developing better input representations, and the challenges of modality and multi-agent learning.</p>
+          <p class="lede" style="margin-top:18px"><strong>Speaker biography.</strong> Suchir Salhan is a PhD Candidate at the University of Cambridge, working on sample-efficient language modelling, learning dynamics and computational cognitive science. He is an organiser of the BabyLM Challenge and Workshop at EMNLP and has won two Outstanding Paper Awards for his work on BabyLMs.</p>
         </div>
       </div>
     </section>
@@ -106,10 +97,6 @@
           <a class="write-card" href="writing/phd-year-one.html">
             <span class="tag">Essay</span>
             <h4>Year One of a Cambridge PhD: Eight Papers, One Framework, and a Lot of Coffee</h4>
-          </a>
-          <a class="write-card" href="writing/per-capita-three-years.html">
-            <span class="tag">Journalism</span>
-            <h4>Three Years of Per Capita Media: What Student Journalism Taught Me About Independence</h4>
           </a>
           <a class="write-card" href="writing/ocp23-reflections.html">
             <span class="tag">Academic</span>
@@ -133,6 +120,12 @@
         <div class="prose wide">
           <p>I travel a lot! Recently, I've spent time in China, San Diego, Vancouver, Vienna, Paris, and Germany – it's always a lot of fun meeting new researchers, trying new food, and exploring new cities.</p>
           <div class="pull-quote">It's always a lot of fun meeting new researchers, trying new food, and exploring new cities.</div>
+        </div>
+        <div class="photo-strip" style="margin-top:20px">
+          <figure><img src="assets/images/photos/tubingen-1.jpg" alt="Tübingen, Germany" loading="lazy"><figcaption>Tübingen, Germany — HumanCLAIM &amp; grammar-profiles workshops.</figcaption></figure>
+          <figure><img src="assets/images/photos/tubingen-2.jpg" alt="Tübingen, Germany" loading="lazy"><figcaption>Tübingen.</figcaption></figure>
+          <figure><img src="assets/images/photos/tubingen-3.jpg" alt="Tübingen, Germany" loading="lazy"><figcaption>Tübingen.</figcaption></figure>
+          <figure><img src="assets/images/photos/vancouver.jpg" alt="Vancouver, Canada" loading="lazy"><figcaption>Vancouver — ICML Tokenisation Workshop.</figcaption></figure>
         </div>
       </div>
     </section>
@@ -170,13 +163,26 @@
       </div>
     </section>
   </main>
+<nav class="dock" aria-label="Primary">
+    <a href="research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="writing/index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
 
   <footer class="footer">
     <div class="container">
-      <div class="cols">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
         <div>© 2026 Suchir Salhan · University of Cambridge</div>
         <div class="fnav">
-          <a href="research.html">Research</a><a href="publications.html">Publications</a>
+          <a href="research.html">Research</a><a href="research.html#publications">Publications</a>
           <a href="teaching.html">Teaching</a><a href="about.html">About</a>
           <a href="assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
           <a href="privacy.html">Privacy</a>
@@ -188,5 +194,6 @@
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/explore.js"></script>
 </body>
 </html>

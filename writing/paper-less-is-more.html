@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies · Suchir Salhan</title>
+  <meta name="description" content="Notes on acquisition-inspired curricula for small-scale language models across four language families, using age-ordered child-directed speech. CoNLL BabyLM Challenge 2024.">
+  <link href="../favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <link href="../assets/css/writing.css" rel="stylesheet">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="index-page writing-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../beetle.html">Beetle</a></li>
+          <li><a href="index.html" class="active">Writing</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../presentations.html">Talks</a></li>
+          <li><a href="../people.html">People</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Paper</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="tufte-article">
+          <div class="meta">2024 · CoNLL BabyLM Challenge</div>
+          <h1>Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies</h1>
+          <p class="standfirst">Curriculum learning has been popular in BabyLM work but rarely beats a plain baseline. We asked whether the problem is the idea or the level of detail, and built curricula that follow specific acquisition theories closely across four language families.</p>
+
+          <p>Ordering training data from simple to complex, in imitation of how children encounter language, is an appealing idea for small-scale language models. It has shown up repeatedly in the BabyLM Challenge. In practice, though, curriculum learning has not delivered much of an improvement over models trained without any ordering at all.<span class="sn"><span class="sn-ref">1</span><span class="sidenote" data-n="1">Salhan, Diehl Martinez, Goriely, Buttery. <a href="https://aclanthology.org/2024.conll-babylm.15/">Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies</a>, CoNLL BabyLM Challenge, 2024.</span></span> Our starting suspicion was that earlier curricula were too coarse to capture what acquisition theories actually predict.</p>
+
+          <h2>Building the corpora</h2>
+
+          <p>To test theories about how children learn language, the training data has to resemble what children hear. We assembled age-ordered corpora of child-directed speech for four typologically distant language families,<span class="sn"><span class="sn-ref">2</span><span class="sidenote" data-n="2">Child-directed speech corpora of this kind are drawn from resources like <a href="https://childes.talkbank.org/">CHILDES</a>, the standard archive of child language transcripts.</span></span> so that the curricula could be studied beyond English and across genuinely different grammatical systems rather than a single language's quirks.</p>
+
+          <h2>Three structured curricula</h2>
+
+          <p>On standard model architectures we tested three curricula, named Growing, Inwards, and MMM. The design principle was to replicate the predictions of acquisition theories precisely, rather than approximate them with a rough ordering. Each curriculum encodes a specific account of the order in which linguistic structure is acquired, so that the training schedule mirrors a theory closely enough to be a fair test of it.</p>
+
+          <h2>What came out</h2>
+
+          <p>The fine-grained, acquisition-inspired curricula outperformed the non-curriculum baselines. The reading we take from this is that the earlier disappointment with curriculum learning was about granularity, not about the underlying idea. When the schedule replicates a specific acquisition theory precisely, and is specified per language rather than in one generic form, the benefit shows up.</p>
+
+          <p>The conclusion we draw is that the gains from curriculum strategies in small-scale language models come from specifying fine-grained, language-specific curricula that faithfully replicate language acquisition theories. The title is the short version: less data, ordered well, does more than the same data left in an arbitrary order, provided the ordering is detailed and tied to a real theory of how the language is learned.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+<nav class="dock" aria-label="Primary">
+    <a href="../research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="../beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="../research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="../teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="../presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="../people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="../about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="../assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="../research.html">Research</a><a href="../research.html#publications">Publications</a>
+          <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
+          <a href="../assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/explore.js"></script>
+  <script defer src="../assets/js/toc.js"></script>
+</body>
+</html>

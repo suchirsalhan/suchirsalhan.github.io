@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Looking to Learn: Token-wise Dynamic Gating for Low-Resource Vision-Language Modelling · Suchir Salhan</title>
+  <meta name="description" content="A lightweight decoder with token-wise dynamic gating for low-resource vision-language modelling: adaptive fusion of visual and linguistic cues under data constraints.">
+  <link href="../favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <link href="../assets/css/writing.css" rel="stylesheet">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="index-page writing-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../beetle.html">Beetle</a></li>
+          <li><a href="index.html" class="active">Writing</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../presentations.html">Talks</a></li>
+          <li><a href="../people.html">People</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Paper</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="tufte-article">
+          <div class="meta">November 2025 · BabyLM Workshop, EMNLP 2025 — Outstanding Paper Award</div>
+          <h1>Looking to Learn: Token-wise Dynamic Gating for Low-Resource Vision-Language Modelling</h1>
+          <p class="standfirst">A child learns words while looking at the world. This paper asks how a small vision-language model should combine what it sees with what it reads when both the text and the compute are scarce.</p>
+
+          <p>This work was led by Bianca-Mihaela Ganescu, an MPhil student I co-supervised, and it grew out of a simple question: under cognitively plausible data constraints, how should a model decide when to trust its eyes and when to trust its words?<span class="sn"><span class="sn-ref">1</span><span class="sidenote" data-n="1">Ganescu, Salhan, Caines &amp; Buttery. <a href="https://aclanthology.org/2025.babylm-main.15/">Looking to Learn: Token-wise Dynamic Gating for Low-Resource Vision-Language Modelling</a>, BabyLM Workshop, EMNLP 2025.</span></span> Most vision-language systems are trained on far more image-text data than a child ever encounters. The multimodal track of the BabyLM Shared Task turns that assumption around and asks what can be learned from a developmentally realistic budget.</p>
+
+          <h2>Token-wise dynamic gating</h2>
+
+          <p>The core proposal is a lightweight decoder-based architecture built around token-wise dynamic gating. Instead of fusing linguistic and visual signals in a fixed way, the model learns a gate that decides, token by token, how much visual information to let in. Two further ingredients support this: feature modulation, which shapes how the visual features are injected, and a contrastive objective that keeps the learned representations aligned. The design stays small on purpose, since the whole point is to work well when resources are limited.</p>
+
+          <p>What I find most appealing is not the raw scores but what the gate learns on its own. Without any explicit supervision telling it to do so, the model comes to favour visual information for content words, the nouns and other tokens that name things in a scene, while leaning on linguistic context for function words, the glue of grammar that the image cannot help with. That the split falls out of training is a small piece of evidence that the architecture is capturing something sensible about how vision and language ought to combine.</p>
+
+          <h2>Evaluation and honest limits</h2>
+
+          <p>The model was evaluated across five benchmarks: BLiMP, the BLiMP Supplement, EWoK, Winoground, and VQA.<span class="sn"><span class="sn-ref">2</span><span class="sidenote" data-n="2">These span grammatical knowledge, world knowledge, compositional image-text matching, and visual question answering. See the <a href="https://aclanthology.org/2025.babylm-main.15/">ACL Anthology entry</a>.</span></span> Across this spread the approach reached competitive or superior performance relative to multimodal baselines, which is a meaningful result for an architecture deliberately kept lightweight.</p>
+
+          <p>The paper is also candid about where it strains. Working from global image embeddings, a single vector for a whole image, limits how finely the model can ground individual words, and some of the dataset splits introduced training instability. Even so, the dynamic gating mechanism kept working under those constraints, which suggests the idea is robust rather than a lucky artefact of one clean setting.<span class="sn"><span class="sn-ref">3</span><span class="sidenote" data-n="3">First BabyLM Workshop, EMNLP 2025, Suzhou, China. The paper received an Outstanding Paper Award.</span></span></p>
+
+          <p>For me the takeaway is that adaptivity is worth more than scale when the data is small. Letting a model decide, at each token, how much to look versus how much to read gives it a cheap and interpretable way to make the most of limited grounding, and it is a direction I would like to keep exploring with finer-grained visual features.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+<nav class="dock" aria-label="Primary">
+    <a href="../research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="../beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="../research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="../teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="../presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="../people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="../about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="../assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="../research.html">Research</a><a href="../research.html#publications">Publications</a>
+          <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
+          <a href="../assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/explore.js"></script>
+  <script defer src="../assets/js/toc.js"></script>
+</body>
+</html>

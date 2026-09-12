@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>ByteSpan: Information-Driven Subword Tokenisation · Suchir Salhan</title>
+  <meta name="description" content="ByteSpan groups predictable byte sequences into a fixed subword vocabulary using an external byte-level language model.">
+  <link href="../favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <link href="../assets/css/writing.css" rel="stylesheet">
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="index-page writing-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../beetle.html">Beetle</a></li>
+          <li><a href="index.html" class="active">Writing</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../presentations.html">Talks</a></li>
+          <li><a href="../people.html">People</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Paper</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="tufte-article">
+          <div class="meta">2025 · ICML 2025 Tokenization Workshop (TokShop)</div>
+          <h1>ByteSpan: Information-Driven Subword Tokenisation</h1>
+
+          <p class="standfirst">A tokeniser that decides where a subword begins by watching a byte-level language model hesitate, then freezes those groupings into a fixed vocabulary.</p>
+
+          <p>Most subword tokenisers, including the ubiquitous Byte Pair Encoding, build a vocabulary from surface statistics: they merge the byte or character pairs that co-occur most often until they hit a target vocabulary size. That works, but it has little to say about where one meaningful unit ends and the next begins. ByteSpan<span class="sn"><span class="sn-ref">1</span><span class="sidenote" data-n="1">Goriely, Salhan, Lesci, Cheng &amp; Buttery. <a href="https://arxiv.org/abs/2506.18639">ByteSpan: Information-Driven Subword Tokenisation</a>, ICML 2025 Tokenization Workshop.</span></span> starts from a different intuition, borrowed from cognitive models of how humans might segment a continuous speech or text stream.</p>
+
+          <h2>The idea: boundaries live where prediction breaks down</h2>
+
+          <p>There is a line of work in computational modelling of word segmentation that places lexical boundaries at spikes in prediction error. When an autoregressive model is reading through a stream and suddenly becomes much less certain about the next symbol, that surprise is a decent signal that a unit has just ended and a new one is starting. Inside a familiar chunk the next byte is easy to guess; at the seam between chunks it is not.</p>
+
+          <p>ByteSpan turns that observation into a tokenisation procedure. During training it runs an external byte-level language model over the corpus and uses the model's predictability to identify contiguous runs of bytes that hang together, then groups each run into a single subword. The result is not a dynamic, per-example segmentation but a fixed subword vocabulary you can reuse, in the same slot where you would otherwise drop in BPE.</p>
+
+          <h2>How it differs from dynamic byte models</h2>
+
+          <p>This is worth separating from a nearby family of methods. Recent dynamic tokenisation approaches also operate directly on bytes, but they pool the latent byte representations into patches inside the model. ByteSpan does something more conservative: it groups the bytes themselves into reusable subword units rather than pooling their representations. You keep a discrete vocabulary and all the tooling that assumes one, while choosing the vocabulary on information-theoretic grounds instead of raw frequency.</p>
+
+          <h2>What the paper reports</h2>
+
+          <p>For English, the authors report that ByteSpan produces efficient vocabularies whose subwords align better with morphology than BPE's do, measured by morphological alignment scores. They then extend the evaluation to a multilingual setting spanning 25 languages, where ByteSpan achieves compression and Rényi efficiency comparable to existing tokenisers. So the claim is not that predictability-driven grouping blows past BPE on every axis, but that it recovers more morphologically sensible units in English while staying competitive on standard efficiency measures across languages.</p>
+
+          <p>I like this direction because it treats the tokeniser as a place where a small amount of linguistic structure can be recovered cheaply, without changing the downstream model architecture. The segmentation signal comes from a model that already knows how to predict bytes; ByteSpan just listens for where that model gets surprised and writes the answer down as a vocabulary.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+<nav class="dock" aria-label="Primary">
+    <a href="../research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="../beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="../research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="../teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="../presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="../people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="../about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="../assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline">From minds to machines &mdash; I work across artificial intelligence, cognitive science and linguistics to understand how intelligent systems learn.</p>
+        <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="../research.html">Research</a><a href="../research.html#publications">Publications</a>
+          <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
+          <a href="../assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/explore.js"></script>
+  <script defer src="../assets/js/toc.js"></script>
+</body>
+</html>
