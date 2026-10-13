@@ -31,7 +31,7 @@
           <li><a href="presentations.html">Talks</a></li>
           <li><a href="people.html">People</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="assets/academic_cv.pdf" class="nav-cv" target="_blank">CV</a></li>
+          <li><a href="assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" class="nav-cv" target="_blank">CV</a></li>
         </ul>
         <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -45,7 +45,163 @@
         <div class="breadcrumb-mini"><a href="index.html">Home</a> / Teaching</div>
         <p class="eyebrow">Teaching</p>
         <h1>Teaching &amp; Supervision</h1>
-        <p>Teaching across artificial intelligence, cognitive science, and linguistics, as a guest lecturer, teaching assistant, and supervisor on the Cambridge Computer Science and Linguistics Tripos.</p>
+        <p>Teaching across artificial intelligence, cognitive science, and linguistics, as a guest lecturer, teaching assistant, and supervisor on the Cambridge Computer Science and Linguistics Tripos — including <a href="#mphil-projects">MPhil and Part III research project proposals</a> for prospective students.</p>
+      </div>
+    </section>
+
+    <!-- MPHIL / PART III PROJECT PROPOSALS -->
+    <section class="section" id="mphil-projects">
+      <div class="container">
+        <div class="section-head left">
+          <p class="kicker">Prospective Students</p>
+          <h2>MPhil &amp; Part III Research Projects</h2>
+          <p>I am looking for motivated MPhil students interested in developing and understanding language models. Projects will be based in the Cambridge Natural Language and Information Processing (NLIP) research group, with opportunities to collaborate with researchers across Computer Science, Linguistics, and Cognitive Science. Depending on the project, there may also be opportunities for co-supervision from researchers with expertise in language model fundamentals, AI safety, interpretability, or computational psycholinguistics.</p>
+        </div>
+
+        <div class="hero-cta" style="display:flex;flex-wrap:wrap;gap:12px;margin:0 0 30px">
+          <a href="assets/teaching/Salhan_2627_MPhil_Project_Proposals.pdf" target="_blank" class="btn-pill solid"><i class="bi bi-file-earmark-pdf"></i> 2026–27 Project Proposals (PDF)</a>
+          <a href="mailto:sas245@cam.ac.uk" class="btn-pill outline"><i class="bi bi-envelope"></i> Email me</a>
+        </div>
+
+        <div class="prose wide">
+          <h3>About my research</h3>
+          <p>I am a PhD researcher in Computer Science at the University of Cambridge, supervised by Professor <a href="https://www.cl.cam.ac.uk/~pjb48/">Paula Buttery</a>. My research sits at the intersection of machine learning, computational linguistics, cognitive science, and AI safety. I study how language models acquire capabilities, how their internal representations develop during training, and how insights from human language learning can help us build more efficient, interpretable, and reliable AI systems.</p>
+          <p>I have co-authored more than 25 accepted peer-reviewed publications, including first-author work at EMNLP, EACL, and specialist venues across machine learning, computational linguistics, and cognitive science. My recent work has received two Oral Paper Awards at EMNLP 2026 and two Outstanding Paper Awards at the 2025 BabyLM Workshop. I also co-organise the BabyLM and BabyVLM research challenges, which bring together researchers developing language and multimodal models under constrained training budgets.</p>
+          <p>A central theme of my work is <strong>developmental AI</strong>: studying not only what a trained model can do, but how it acquires its capabilities, what determines the representations it develops, and whether we can monitor and influence that process. I use small language models as controlled scientific instruments, allowing us to test hypotheses about learning that would be difficult to investigate in larger, less transparent systems.</p>
+          <p>I am particularly interested in projects that combine technically rigorous machine learning with a clear scientific question. The following are four broad project areas, with example directions rather than fixed specifications. We can refine individual projects around your interests, technical background, and the time available for an MPhil.</p>
+        </div>
+
+        <!-- Project area 1 -->
+        <div class="teach-card" style="margin-top:22px">
+          <h4><i class="bi bi-diagram-3"></i> 1 · Dynamic Tokenization — Learning What a Model Should Process Together</h4>
+          <p style="font-style:italic;color:var(--ink-2);margin:0 0 12px"><b>Research area:</b> Language model architectures, tokenization, adaptive computation, multilingual NLP.</p>
+          <p>Tokenization is often treated as a preprocessing step. An alternative view is that tokenization is a resource allocation policy: it determines how much computation and memory a model spends processing different parts of its input.</p>
+          <p>Conventional subword tokenizers assign fixed segmentation rules before a model begins learning. But not all input sequences are equally difficult. A familiar word, an unfamiliar name, a piece of code, and a morphologically complex word may benefit from very different granularities of processing. Could a model learn to allocate its computational resources dynamically, rather than being constrained by a fixed vocabulary? Recent approaches to byte-level and patch-based language modelling, alongside work on transferring pretrained tokenizers into byte-level models, create promising opportunities to investigate this question.</p>
+          <p><b>Possible research directions.</b></p>
+          <ul>
+            <li><b>Transferring pretrained tokenization:</b> can we transfer useful segmentation structure from a pretrained BPE language model into a byte-level or tokenizer-free architecture without inheriting its fixed vocabulary?</li>
+            <li><b>Adaptive tokenization:</b> can a model learn when to process text as individual bytes, characters, subwords, or longer patches, using signals such as uncertainty or information content?</li>
+            <li><b>Multilingual resource allocation:</b> does dynamic tokenization allocate computation more effectively across languages with different writing systems, morphological structures, and levels of representation in the training data?</li>
+            <li><b>Interpreting segmentation decisions:</b> can we understand which features of an input cause a model to change its processing granularity, and whether those decisions improve downstream performance?</li>
+          </ul>
+          <p>A particularly interesting direction is to investigate whether tokenization can be transferred as a learned computational strategy, rather than as a fixed collection of boundaries.</p>
+          <p><b>What you could do:</b> implement or adapt a tokenization architecture, design controlled comparisons against standard BPE and byte-level baselines, and evaluate the resulting models on language modelling, multilingual tasks, or computational efficiency. Depending on the project, there may also be scope for analysing learned representations and segmentation behaviour.</p>
+          <p><b>A good fit if you enjoy:</b> deep learning systems, model architectures, efficient training, multilingual NLP, or the interface between language and computation.</p>
+          <p style="margin-bottom:4px"><b>Selected references</b></p>
+          <ul>
+            <li>Cognetta et al. (2026), <i>Tokenization: A Survey for Modern NLP</i>.</li>
+            <li>Pagnoni et al. (2025), <i>Byte Latent Transformer: Patches Scale Better Than Tokens</i>.</li>
+            <li>Meister et al. (2026), <i>LangMAP: A Language-Adaptive Approach to Tokenization</i>.</li>
+          </ul>
+        </div>
+
+        <!-- Project area 2 -->
+        <div class="teach-card" style="margin-top:22px">
+          <h4><i class="bi bi-cpu"></i> 2 · Sample-Efficient AI — Building Models That Learn More from Less</h4>
+          <p style="font-style:italic;color:var(--ink-2);margin:0 0 12px"><b>Research area:</b> Language model training, efficient architectures, cognitive science, multimodal learning.</p>
+          <p>Modern AI systems are trained on enormous quantities of data, yet humans acquire language and other complex skills from comparatively limited experience. Can we develop learning systems that make better use of the data they receive?</p>
+          <p>The BabyLM initiative investigates this question by challenging researchers to train language models under constrained data budgets. I co-organise the BabyLM and BabyVLM challenges, which provide benchmarks and shared tasks for investigating sample-efficient language and multimodal learning. The goal is not simply to produce a smaller model; it is to understand which architectural and learning choices allow a model to acquire useful capabilities from limited experience. Cognitive science offers hypotheses about structured learning, curriculum, memory, and inductive biases; machine learning provides the tools to test and extend them.</p>
+          <p><b>Possible research directions.</b></p>
+          <ul>
+            <li><b>Architectures for limited-data learning:</b> test whether recurrence, parameter sharing, adaptive computation, or alternative architectural choices improve learning when training data are scarce.</li>
+            <li><b>Cognitively inspired learning strategies:</b> investigate whether structured curricula, linguistic inductive biases, or models of human language acquisition improve sample efficiency.</li>
+            <li><b>From text to multimodal learning:</b> test whether techniques that help language models learn from limited text also benefit models trained on restricted amounts of visual or speech data.</li>
+            <li><b>Evaluating what small models know:</b> develop or apply evaluations that distinguish genuine acquisition of a capability from memorisation, superficial task performance, or reliance on dataset artefacts.</li>
+          </ul>
+          <p>A strong project might start with a specific hypothesis about learning, implement a controlled comparison, and establish not only whether an approach works but under what conditions and why.</p>
+          <p><b>What you could do:</b> train small models under controlled data budgets, develop new architectures or training strategies, and evaluate learning curves across model sizes, datasets, or training regimes. Existing open-source frameworks and shared-task infrastructure can provide a starting point.</p>
+          <p><b>A good fit if you enjoy:</b> machine learning, neural network architectures, learning theory, cognitive science, or building AI systems under practical resource constraints.</p>
+          <div class="res-links">
+            <a href="https://babylm.github.io/" target="_blank"><i class="bi bi-box-arrow-up-right"></i> BabyLM</a>
+            <a href="https://babylm.github.io/" target="_blank"><i class="bi bi-box-arrow-up-right"></i> BabyVLM</a>
+          </div>
+        </div>
+
+        <!-- Project area 3 -->
+        <div class="teach-card" style="margin-top:22px">
+          <h4><i class="bi bi-activity"></i> 3 · Developmental Interpretability — Monitoring Capabilities as They Emerge</h4>
+          <p style="font-style:italic;color:var(--ink-2);margin:0 0 12px"><b>Research area:</b> Mechanistic interpretability, AI safety, training dynamics, capability evaluation.</p>
+          <p>Most language model evaluations examine a model after training, and most interpretability studies investigate the internal mechanisms of an already-trained system. Both approaches can miss an important question: what happens internally as a model acquires a new capability, and can we detect that development reliably?</p>
+          <p>A model's capabilities do not necessarily emerge all at once. Training may create internal representations that later support particular behaviours, or produce bottlenecks that limit what subsequent post-training can achieve. Understanding these dynamics could help us identify which capabilities are developing, when existing evaluations become informative, and whether apparent signs of progress or risk correspond to meaningful changes in the model. Rather than treating an internal component as inherently meaningful, we can test whether it predicts behaviour, whether interventions establish a causal relationship, and whether findings replicate across checkpoints, random seeds, or model families.</p>
+          <p><b>Possible research directions.</b></p>
+          <ul>
+            <li><b>Monitoring capability emergence:</b> can internal representations or activation patterns reveal that a model is acquiring a capability before standard behavioural evaluations reliably detect it?</li>
+            <li><b>Replicating interpretability findings:</b> do proposed circuits, neurons, or linear representations persist across random seeds, training checkpoints, and model architectures?</li>
+            <li><b>Pretraining and post-training:</b> which capabilities are constrained by representations learned during pretraining, and which can be developed through subsequent optimisation?</li>
+            <li><b>Reliable evaluation and AI safety:</b> when do interpretability metrics provide useful evidence about a model's behaviour, and when can they give false reassurance?</li>
+            <li><b>Cultural and social capabilities:</b> how do models acquire culturally specific knowledge, and can we identify the training conditions or internal representations associated with reliable performance across different cultural contexts?</li>
+          </ul>
+          <p>These questions are particularly relevant to AI safety because an evaluation that works only at the end of training may provide little warning about how a system is developing. Equally, an internal signal that looks promising but does not generalise or predict behaviour can be misleading.</p>
+          <p><b>What you could do:</b> analyse model checkpoints, design behavioural and internal evaluations, perform activation interventions, or replicate existing findings under controlled conditions. Projects can range from focused empirical studies to more ambitious investigations of how capabilities develop during training.</p>
+          <p><b>A good fit if you enjoy:</b> mechanistic interpretability, AI safety, experimental machine learning, causal inference, or the scientific study of neural networks.</p>
+          <p style="margin-bottom:4px"><b>Related research</b></p>
+          <ul>
+            <li>Chen et al. (2026), <i>The Coverage Principle: How Pre-Training Enables Post-Training</i>.</li>
+            <li>Zou, Salhan &amp; Buttery (2026), <i>Development of Linear Truth Encodings in Language Models: A Replication Study</i>.</li>
+            <li>Polyakova-Reed et al. (2026), <i>Claude Reinvestigates Herself: A Replication of Different Types of Syntactic Agreement Recruit the Same Units in LLMs</i>.</li>
+          </ul>
+          <p style="font-size:15px;color:var(--ink-2)">The latter two projects form part of our work on reproducibility and reliability in interpretability research.</p>
+        </div>
+
+        <!-- Project area 4 -->
+        <div class="teach-card" style="margin-top:22px">
+          <h4><i class="bi bi-globe2"></i> 4 · Beetle — Computational Models of Bilingual and Multilingual Language Processing</h4>
+          <p style="font-style:italic;color:var(--ink-2);margin:0 0 12px"><b>Research area:</b> Computational psycholinguistics, multilingual language models, language acquisition, cognitive modelling.</p>
+          <p>Most people in the world use more than one language, but computational models of human language processing have historically focused heavily on monolingual speakers. This creates a scientific gap: how can we understand the effects of language experience when our computational models do not adequately represent the diversity of that experience?</p>
+          <p>I developed <a href="beetle.html">Beetle</a>, a framework and suite of controlled bilingual language models designed to investigate second-language processing. By controlling which languages a model encounters, when it encounters them, and how much exposure it receives, we can test hypotheses about human bilingualism in a systematic way. This makes it possible to investigate not only whether a model can process multiple languages, but also how the history of its language experience shapes its behaviour.</p>
+          <p><b>Possible research directions.</b></p>
+          <ul>
+            <li><b>Code-switching:</b> how does the balance and ordering of language exposure affect a model's ability to switch between languages within and across sentences?</li>
+            <li><b>Language attrition:</b> when a model receives substantially more exposure to a second language, under what conditions does its performance in its first language deteriorate?</li>
+            <li><b>Heritage bilingualism:</b> can controlled training regimes capture aspects of learning a minority language at home while becoming increasingly dominant in a majority language?</li>
+            <li><b>Human-model alignment:</b> do model predictions and internal representations align with human reading times, behavioural experiments, or neural measurements across linguistic tasks?</li>
+            <li><b>Developmental trajectories:</b> do two models with similar final performance develop different internal representations because they encountered their languages in different orders or proportions?</li>
+            <li><b>Language production:</b> how does prior language experience affect syntactic choices, lexical selection, and cross-linguistic influence in model-generated language?</li>
+          </ul>
+          <p>A key advantage of this framework is experimental control. Rather than comparing unrelated models trained on different datasets, we can construct matched populations that differ in a specific aspect of their learning history and test the consequences.</p>
+          <p><b>What you could do:</b> train or analyse controlled bilingual models, design computational psycholinguistic experiments, compare model predictions with human behavioural data, or investigate how multilingual training influences representations and language production.</p>
+          <p><b>A good fit if you enjoy:</b> language, linguistics, cognitive science, multilingual NLP, experimental psychology, or using computational models to test theories of human learning.</p>
+          <div class="res-links">
+            <a href="beetle.html"><i class="bi bi-bug"></i> Beetle model suite</a>
+          </div>
+          <p style="margin:12px 0 4px"><b>Selected publications</b></p>
+          <ul>
+            <li>Salhan, Arnett, Michaelov &amp; Buttery (2026), <i>Beetle: A Bilingual Model Suite for Modelling Second-Language Processing</i>.</li>
+            <li>Kubiak, Salhan, Buttery &amp; Moscoso del Prado Martín (2026), <i>Distinct Patterns of Brain Alignment of Language Models across Linguistic Domains</i>.</li>
+            <li>Barbenel et al. (2026), <i>L1 Influence in L2 Language Models: A Human-Centric Approach</i>.</li>
+          </ul>
+        </div>
+
+        <!-- What I look for -->
+        <div class="prose wide" style="margin-top:30px">
+          <h3>What I look for in MPhil students</h3>
+          <p>You do not need to have worked on all these topics before applying. I am interested in students who can formulate a clear research question, work independently on technical problems, and critically evaluate experimental results. Depending on the project, useful preparation may include:</p>
+          <ul>
+            <li><b>Machine learning:</b> experience with Python and PyTorch, neural networks, model training, or empirical machine learning.</li>
+            <li><b>Computer systems:</b> an interest in efficient training, computational constraints, model architectures, or experimental infrastructure.</li>
+            <li><b>Linguistics and cognitive science:</b> experience with formal linguistics, language acquisition, psycholinguistics, or experimental methods.</li>
+            <li><b>Interpretability and evaluation:</b> an interest in causal reasoning, statistical analysis, reproducibility, or understanding the limitations of model evaluations.</li>
+          </ul>
+          <p>These are complementary backgrounds rather than a checklist. For example, a student with a strong machine learning background might develop a new tokenization architecture, while a student with a linguistics background might design controlled experiments to test how bilingual experience changes model behaviour. I particularly value projects that go beyond reporting a benchmark improvement to explain why an approach works, where it fails, and what the results tell us about learning or intelligence.</p>
+        </div>
+
+        <!-- How to get in touch -->
+        <div class="prose wide" style="margin-top:12px">
+          <h3>How to get in touch</h3>
+          <p>If you are interested in one of these directions, please get in touch with a brief introduction outlining:</p>
+          <ul>
+            <li>Your academic background and relevant technical or research experience.</li>
+            <li>Which project area interests you and what question you would like to investigate.</li>
+            <li>Any relevant projects, papers, code, or other work you would like to share.</li>
+          </ul>
+          <p>You are also welcome to suggest a related research question of your own. The four areas above are starting points, and I am happy to discuss how an idea could be developed into a focused MPhil project.</p>
+          <p><b>Proposed supervisors:</b> Suchir Salhan and Professor Paula Buttery, University of Cambridge.</p>
+        </div>
+
+        <div class="hero-cta" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px">
+          <a href="assets/teaching/Salhan_2627_MPhil_Project_Proposals.pdf" target="_blank" class="btn-pill solid"><i class="bi bi-file-earmark-pdf"></i> 2026–27 Project Proposals (PDF)</a>
+          <a href="mailto:sas245@cam.ac.uk" class="btn-pill outline"><i class="bi bi-envelope"></i> Email me</a>
+        </div>
       </div>
     </section>
 
@@ -247,7 +403,7 @@
     <a href="presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
     <a href="people.html"><i class="bi bi-people"></i><span>People</span></a>
     <a href="about.html"><i class="bi bi-person"></i><span>About</span></a>
-    <a href="assets/academic_cv.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+    <a href="assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
   </nav>
 
   <footer class="footer">
@@ -258,7 +414,7 @@
         <div class="fnav">
           <a href="research.html">Research</a><a href="research.html#publications">Publications</a>
           <a href="teaching.html">Teaching</a><a href="about.html">About</a>
-          <a href="assets/academic_cv.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
           <a href="privacy.html">Privacy</a>
         </div>
       </div>
