@@ -1,0 +1,99 @@
+/* Quiet, text-first academic layout (homepage; reused by other pages).
+   Loaded after site.css. Built on the site's tokens (--accent-color, --line, fonts). */
+/* ============ Quiet, text-first homepage ============
+   Two columns: a sticky profile (name, photo, section nav, links)
+   beside a single column of prose. No cards, banners or shadows. */
+html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+@media (prefers-reduced-motion: reduce){ html { scroll-behavior: auto; } }
+
+.home { max-width: 980px; margin: 0 auto; padding: 128px 24px 72px; overflow-wrap: break-word;
+  display: grid; grid-template-columns: 210px minmax(0, 660px); gap: 64px; align-items: start; }
+
+/* ---- profile column ---- */
+.profile { position: sticky; top: 112px; font-family: var(--ui-font); }
+.profile h1 { font-size: 30px; line-height: 1.1; letter-spacing: -.01em; font-weight: 600; margin: 0 0 16px; color: var(--heading-color); }
+.profile .portrait { width: 168px; height: 168px; object-fit: cover; object-position: 50% 22%;
+  border-radius: 4px; border: 1px solid var(--line); display: block; margin: 0 0 16px; }
+.profile .role { font-size: 13.5px; line-height: 1.5; color: var(--ink-2); margin: 0 0 22px; }
+.profile .role strong { color: var(--heading-color); font-weight: 600; }
+.profile ul { list-style: none; padding: 0; margin: 0 0 20px; }
+.profile .secnav li { margin: 0 0 4px; }
+.profile .secnav a { font-size: 14px; color: var(--default-color); }
+.profile .secnav a:hover { color: var(--accent-color); }
+.profile .links { font-size: 13px; padding-top: 16px; border-top: 1px solid var(--line); }
+.profile .links li { margin: 0 0 3px; }
+.profile .links a { color: var(--ink-2); }
+.profile .links a:hover { color: var(--accent-color); }
+
+/* ---- prose column ---- */
+.col { font-family: var(--default-font); font-size: 18px; line-height: 1.72; color: var(--default-color); }
+.col p { margin: 0 0 1em; text-wrap: pretty; }
+.col a { color: inherit; text-decoration: underline; text-decoration-thickness: 1px;
+  text-underline-offset: 3px; text-decoration-color: color-mix(in srgb, var(--accent-color) 45%, transparent); }
+.col a:hover { color: var(--accent-color); text-decoration-color: var(--accent-color); }
+.col strong { color: var(--heading-color); font-weight: 600; }
+.col .lead { font-size: 21px; line-height: 1.6; color: var(--heading-color); }
+
+.col section { padding: 10px 0 0; margin-bottom: 44px; background: transparent; overflow: visible; }
+.col h2 { font-family: var(--heading-font); font-variant: small-caps; text-transform: lowercase;
+  font-size: 22px; letter-spacing: .06em; font-weight: 600; color: var(--heading-color);
+  margin: 0 0 18px; padding-bottom: 6px; border-bottom: 1px solid var(--line); }
+.col h3 { font-family: var(--heading-font); font-size: 20px; font-weight: 600; margin: 26px 0 4px; color: var(--heading-color); }
+.col h3 + .kicker { margin-top: 0; }
+.kicker { font-family: var(--mono-font); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 10px; }
+.q { font-style: italic; color: var(--heading-color); }
+.outs { font-family: var(--ui-font); font-size: 14px; color: var(--ink-2); }
+.muted { color: var(--ink-2); }
+.small { font-size: 15.5px; line-height: 1.6; }
+
+/* ---- progressive disclosure: understated text links ---- */
+details.more { margin: 4px 0 1em; }
+details.more > summary { display: inline; list-style: none; cursor: pointer;
+  font-family: var(--ui-font); font-size: 14.5px; color: var(--accent-color);
+  border-bottom: 1px solid color-mix(in srgb, var(--accent-color) 40%, transparent); }
+details.more > summary::-webkit-details-marker { display: none; }
+details.more > summary::after { content: " \2192"; }
+details.more[open] > summary::after { content: " \2191"; }
+details.more > summary:hover { border-bottom-color: var(--accent-color); }
+details.more > summary:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 3px; border-radius: 2px; }
+details.more > .body { margin-top: 18px; padding-left: 18px; border-left: 2px solid var(--line); }
+details.more[open] > .body { animation: fadein .35s ease; }
+@keyframes fadein { from { opacity: 0; } to { opacity: 1; } }
+@media (prefers-reduced-motion: reduce){ details.more[open] > .body { animation: none; } }
+.body h4 { font-family: var(--heading-font); font-size: 18px; font-weight: 600; margin: 18px 0 4px; color: var(--heading-color); }
+.body h4:first-child { margin-top: 0; }
+.body figure { margin: 6px 0 16px; }
+.body figure img { width: 100%; height: auto; border: 1px solid var(--line); border-radius: 4px; display: block; }
+.body figcaption { font-family: var(--ui-font); font-size: 12.5px; color: var(--ink-2); margin-top: 6px; }
+.ex[tabindex]:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; }
+
+/* ---- plain lists (news, teaching, group, writing) ---- */
+.plain { list-style: none; padding: 0; margin: 0 0 1em; }
+.plain li { margin: 0 0 .55em; }
+.news li { display: grid; grid-template-columns: 92px 1fr; gap: 14px; font-size: 16.5px; line-height: 1.6; margin-bottom: .7em; }
+.news .d { font-family: var(--mono-font); font-size: 12.5px; color: var(--ink-2); padding-top: 3px; }
+.group h4 { font-family: var(--ui-font); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); margin: 18px 0 6px; font-weight: 600; }
+.group li, .teach li, .writing li { font-size: 16.5px; line-height: 1.6; }
+
+/* ---- publications: title / authors / venue | links ---- */
+.pubs p { margin: 0 0 1.05em; font-size: 16.5px; line-height: 1.5; }
+.pubs .t { font-weight: 600; color: var(--heading-color); }
+.pubs .t a { text-decoration: none; }
+.pubs .t a:hover { text-decoration: underline; }
+.pubs .au { color: var(--ink-2); }
+.pubs .au ins { color: var(--heading-color); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+.pubs .v { font-weight: 600; color: var(--heading-color); }
+.pubs .award { color: var(--accent-color); font-weight: 600; }
+
+@media (max-width: 860px){
+  .home { grid-template-columns: minmax(0, 1fr); gap: 28px; padding: 92px 16px 64px; }
+  .profile { position: static; display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 0 18px; align-items: start; }
+  .profile h1 { grid-column: 2; font-size: 27px; margin-bottom: 8px; }
+  .profile .portrait { grid-column: 1; grid-row: 1 / span 2; width: 112px; height: 112px; margin: 0; }
+  .profile .role { grid-column: 2; margin-bottom: 12px; }
+  .profile .secnav, .profile .links { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 16px; margin: 0 0 10px; }
+  .profile .links { padding-top: 10px; }
+  .col { font-size: 17px; }
+  .col .lead { font-size: 19px; }
+}
+@media (max-width: 520px){ .news li { grid-template-columns: 1fr; gap: 0; } }

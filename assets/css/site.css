@@ -575,3 +575,9 @@ body:not(.scrolled) .header--onhero .mobile-nav-toggle { color: #ffffff !importa
 
 /* Sitewide footer tagline */
 .footer-tagline { font-family: var(--heading-font); font-style: italic; font-size: 15px; color: var(--ink-2); margin: 0 0 16px; max-width: 640px; }
+
+/* Desktop: keep the theme toggle inline with the nav links (it was wrapping
+   onto a second row, doubling the fixed header's height). */
+@media (min-width: 992px){
+  #header .navmenu { display:flex; align-items:center; }
+}

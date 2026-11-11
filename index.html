@@ -4,16 +4,16 @@
   <meta charset="utf-8">
   <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Suchir Salhan — How AI Systems Learn</title>
-  <meta name="description" content="Suchir Salhan is a PhD candidate in Computer Science at the University of Cambridge. He studies how AI systems learn, using small, human-scale language models as scientific instruments and insights from cognitive science and linguistics.">
-  <meta name="keywords" content="Suchir Salhan, Cambridge, small language models, BabyLM, multilingual, interpretability, tokenization, Beetle, PicoLM, learning dynamics">
+  <title>Suchir Salhan</title>
+  <meta name="description" content="Suchir Salhan is an AI researcher at the University of Cambridge working on the science of language modelling: how AI systems learn, develop internal representations and acquire capabilities.">
+  <meta name="keywords" content="Suchir Salhan, Cambridge, developmental interpretability, small language models, BabyLM, BabyVLM, multilingual, Beetle, PicoLM, learning dynamics, AI safety">
   <link href="favicon.ico" rel="icon" sizes="any">
   <link rel="icon" href="assets/images/logo-ss.svg" type="image/svg+xml">
   <link href="assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://suchirsalhan.github.io/">
-  <meta property="og:title" content="Suchir Salhan — How AI Systems Learn">
-  <meta property="og:description" content="PhD candidate at the University of Cambridge studying how AI systems learn, using small, human-scale language models as scientific instruments.">
+  <meta property="og:title" content="Suchir Salhan">
+  <meta property="og:description" content="AI researcher at the University of Cambridge working on the science of language modelling and developmental interpretability.">
   <meta property="og:image" content="https://suchirsalhan.github.io/assets/images/suchir_salhan_web.jpg">
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
@@ -22,137 +22,7 @@
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/site.css" rel="stylesheet">
-  <style>
-    /* ============ Editorial academic homepage ============ */
-    .wrap { max-width: 1120px; margin: 0 auto; padding: 0 26px; }
-
-    /* ---- HERO ---- */
-    .hero-home { padding: calc(92px + 7vh) 0 7vh; border-bottom: 1px solid var(--line); }
-    .hero-grid { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,0.85fr); gap: 60px; align-items: center; }
-    .hero-eyebrow { font-family: var(--mono-font); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: var(--accent-color); margin: 0 0 20px; }
-    .hero-home h1 { font-size: clamp(44px, 6vw, 76px); line-height: .98; letter-spacing: -.025em; font-weight: 600; margin: 0 0 22px; color: var(--heading-color); }
-    .hero-statement { font-family: var(--heading-font); font-size: clamp(21px, 2.5vw, 28px); line-height: 1.4; color: var(--heading-color); margin: 0 0 20px; max-width: 30ch; }
-    .hero-statement em { font-style: italic; color: var(--accent-deep); }
-    .hero-affil { font-family: var(--ui-font); font-size: 16px; line-height: 1.6; color: var(--ink-2); margin: 0 0 28px; max-width: 48ch; }
-    .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 20px; }
-    .hero-quiet { display: flex; flex-wrap: wrap; gap: 6px 20px; }
-    .hero-quiet a { font-family: var(--ui-font); font-size: 14.5px; color: var(--ink-2); text-decoration: none; display: inline-flex; align-items: center; gap: 7px; }
-    .hero-quiet a i { color: var(--accent-color); }
-    .hero-quiet a:hover { color: var(--accent-deep); }
-    .hero-portrait { position: relative; }
-    .hero-portrait img { width: 100%; height: auto; display: block; border-radius: 18px; border: 1px solid var(--line); box-shadow: 0 24px 60px rgba(42,39,32,.18); aspect-ratio: 4/5; object-fit: cover; object-position: 50% 20%; }
-    html[data-theme="dark"] .hero-portrait img { box-shadow: 0 24px 60px rgba(0,0,0,.6); }
-    @media (max-width: 860px){
-      .hero-grid { grid-template-columns: 1fr; gap: 36px; }
-      .hero-portrait { order: -1; max-width: 340px; }
-      .hero-home { padding-top: calc(80px + 4vh); }
-    }
-
-    /* ---- EVIDENCE STRIP ---- */
-    .evidence { border-bottom: 1px solid var(--line); background: var(--tint-bg); }
-    .evidence-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
-    .ev { padding: 34px 26px; text-align: center; border-right: 1px solid var(--line); }
-    .ev:last-child { border-right: 0; }
-    .ev .n { font-family: var(--heading-font); font-size: clamp(34px, 4vw, 46px); font-weight: 600; color: var(--accent-deep); line-height: 1; }
-    .ev .l { font-family: var(--ui-font); font-size: 14px; line-height: 1.4; color: var(--ink-2); margin-top: 10px; }
-    @media (max-width: 760px){
-      .evidence-grid { grid-template-columns: 1fr 1fr; }
-      .ev { border-bottom: 1px solid var(--line); }
-      .ev:nth-child(odd){ border-right: 1px solid var(--line); }
-      .ev:nth-child(even){ border-right: 0; }
-    }
-
-    /* ---- SECTION SCAFFOLD ---- */
-    .sec { padding: 78px 0; border-bottom: 1px solid var(--line); }
-    .sec.tinted { background: var(--tint-bg); }
-    .sec-eyebrow { font-family: var(--mono-font); font-size: 12.5px; letter-spacing: .18em; text-transform: uppercase; color: var(--accent-color); margin: 0 0 10px; }
-    .sec h2 { font-size: clamp(28px, 3.2vw, 38px); line-height: 1.12; letter-spacing: -.015em; margin: 0 0 16px; color: var(--heading-color); }
-    .sec-lead { font-size: 19px; line-height: 1.65; color: var(--default-color); max-width: 62ch; margin: 0 0 8px; }
-    .sec-lead strong { color: var(--heading-color); }
-
-    /* ---- RESEARCH THEMES ---- */
-    .themes { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; margin-top: 40px; }
-    @media (max-width: 720px){ .themes { grid-template-columns: 1fr; } }
-    .theme { background: var(--surface-color); border: 1px solid var(--line); border-radius: 16px; padding: 28px; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
-    .theme:hover { transform: translateY(-3px); box-shadow: 0 16px 40px rgba(76,99,66,.12); border-color: color-mix(in srgb, var(--accent-color), transparent 55%); }
-    html[data-theme="dark"] .theme:hover { box-shadow: 0 16px 40px rgba(0,0,0,.5); }
-    .theme .ic { width: 46px; height: 46px; border-radius: 12px; background: var(--accent-soft); color: var(--accent-deep); display: flex; align-items: center; justify-content: center; font-size: 22px; margin-bottom: 16px; }
-    .theme h3 { font-size: 21px; line-height: 1.25; margin: 0 0 10px; color: var(--heading-color); }
-    .theme p { font-size: 15.5px; line-height: 1.6; color: var(--ink-2); margin: 0 0 14px; }
-    .theme a.more { font-family: var(--mono-font); font-size: 13px; color: var(--accent-deep); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
-    .theme a.more:hover { color: var(--accent-color); }
-
-    /* ---- PROJECT FEATURES ---- */
-    .project { display: grid; grid-template-columns: minmax(0,0.95fr) minmax(0,1.05fr); gap: 48px; align-items: center; margin-top: 44px; }
-    .project:first-of-type { margin-top: 36px; }
-    .project.flip .project-media { order: 2; }
-    .project-media img { width: 100%; height: auto; display: block; border-radius: 16px; border: 1px solid var(--line); box-shadow: 0 18px 44px rgba(42,39,32,.14); aspect-ratio: 16/11; object-fit: cover; }
-    html[data-theme="dark"] .project-media img { box-shadow: 0 18px 44px rgba(0,0,0,.5); }
-    .project-tag { font-family: var(--mono-font); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--accent-color); margin: 0 0 8px; }
-    .project h3 { font-size: clamp(26px, 3vw, 32px); line-height: 1.1; margin: 0 0 14px; color: var(--heading-color); }
-    .project p { font-size: 16.5px; line-height: 1.65; color: var(--default-color); margin: 0 0 14px; }
-    .project .meta-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
-    @media (max-width: 820px){
-      .project, .project.flip { grid-template-columns: 1fr; gap: 24px; }
-      .project.flip .project-media { order: -1; }
-      .project-media { order: -1; }
-    }
-
-    /* ---- NEWS + AWARDS ---- */
-    .news-awards { display: grid; grid-template-columns: 1.3fr 1fr; gap: 56px; align-items: start; }
-    @media (max-width: 820px){ .news-awards { grid-template-columns: 1fr; gap: 40px; } }
-    .newsrow { display: grid; grid-template-columns: 110px 1fr; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--line); }
-    .newsrow:first-of-type { border-top: 1px solid var(--line); }
-    .newsrow .d { font-family: var(--mono-font); font-size: 12.5px; color: var(--accent-deep); padding-top: 2px; }
-    .newsrow .t { font-size: 16px; line-height: 1.55; color: var(--default-color); }
-    .newsrow .t a { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 2px; }
-    .newsrow .t strong { color: var(--heading-color); }
-    @media (max-width: 520px){ .newsrow { grid-template-columns: 1fr; gap: 4px; } }
-    .award-card { background: var(--surface-color); border: 1px solid var(--line); border-radius: 16px; padding: 24px; margin-bottom: 16px; }
-    .award-card .yr { font-family: var(--mono-font); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-color); }
-    .award-card h4 { font-size: 18px; line-height: 1.3; margin: 6px 0 6px; color: var(--heading-color); }
-    .award-card p { font-size: 14.5px; line-height: 1.55; color: var(--ink-2); margin: 0; }
-
-    /* ---- WORK WITH ME ---- */
-    .workme { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
-    @media (max-width: 820px){ .workme { grid-template-columns: 1fr; gap: 28px; } }
-    .workme-media img { width: 100%; height: auto; display: block; border-radius: 16px; border: 1px solid var(--line); box-shadow: 0 18px 44px rgba(42,39,32,.14); aspect-ratio: 4/3; object-fit: cover; }
-    html[data-theme="dark"] .workme-media img { box-shadow: 0 18px 44px rgba(0,0,0,.5); }
-    .workme ul { margin: 18px 0 20px; padding: 0; list-style: none; }
-    .workme ul li { font-size: 16px; line-height: 1.55; color: var(--default-color); padding: 8px 0 8px 28px; position: relative; border-bottom: 1px solid var(--line); }
-    .workme ul li:last-child { border-bottom: 0; }
-    .workme ul li::before { content: "\F138"; font-family: "bootstrap-icons"; position: absolute; left: 0; top: 8px; color: var(--accent-color); font-size: 15px; }
-
-    /* ---- ABOUT ---- */
-    .about-grid { display: grid; grid-template-columns: 300px 1fr; gap: 48px; align-items: start; }
-    @media (max-width: 760px){ .about-grid { grid-template-columns: 1fr; gap: 24px; } }
-    .about-grid .about-photo { width: 100%; height: auto; border-radius: 16px; border: 1px solid var(--line); box-shadow: 0 16px 40px rgba(42,39,32,.14); display: block; aspect-ratio: 4/5; object-fit: cover; }
-    html[data-theme="dark"] .about-grid .about-photo { box-shadow: 0 16px 40px rgba(0,0,0,.5); }
-    .about-body p { font-size: 17px; line-height: 1.7; color: var(--default-color); margin: 0 0 16px; }
-    .about-body p:first-child { margin-top: 0; }
-    .about-body a { color: var(--accent-deep); text-decoration: underline; text-underline-offset: 2px; }
-
-    /* ---- CONTACT ---- */
-    .contact { padding: 70px 0; }
-    .contact h2 { font-size: clamp(26px, 3vw, 34px); margin: 0 0 14px; color: var(--heading-color); }
-    .contact .lead { font-size: 18px; line-height: 1.6; color: var(--default-color); max-width: 54ch; margin: 0 0 24px; }
-    .contact .rows { display: flex; flex-direction: column; gap: 10px; margin-bottom: 22px; }
-    .contact .crow { display: flex; align-items: center; gap: 12px; font-size: 16px; color: var(--default-color); }
-    .contact .crow i { color: var(--accent-color); width: 20px; text-align: center; }
-    .contact .crow a { color: var(--accent-deep); text-decoration: none; }
-    .contact .crow a:hover { text-decoration: underline; }
-    .contact .links { display: flex; flex-wrap: wrap; gap: 8px 22px; }
-    .contact .links a { font-family: var(--ui-font); font-size: 14.5px; color: var(--ink-2); text-decoration: none; display: inline-flex; align-items: center; gap: 7px; }
-    .contact .links a i { color: var(--accent-color); }
-    .contact .links a:hover { color: var(--accent-deep); }
-
-    /* ---- subtle, reduced-motion-safe reveal ---- */
-    .reveal-up { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
-    .reveal-up.in { opacity: 1; transform: none; }
-    @media (prefers-reduced-motion: reduce){ .reveal-up { opacity: 1; transform: none; transition: none; } }
-    html { scroll-behavior: smooth; }
-    @media (prefers-reduced-motion: reduce){ html { scroll-behavior: auto; } }
-  </style>
+  <link href="assets/css/quiet.css" rel="stylesheet">
 </head>
 <body class="index-page">
 
@@ -176,224 +46,254 @@
     </div>
   </header>
 
-  <main class="main">
+  <main class="main home">
 
-    <!-- ========== HERO ========== -->
-    <section class="hero-home">
-      <div class="wrap">
-        <div class="hero-grid">
-          <div class="hero-text">
-            <p class="hero-eyebrow">PhD Candidate · University of Cambridge</p>
-            <h1>Suchir Salhan</h1>
-            <p class="hero-statement">I study <em>how AI systems learn</em> — treating small, human-scale language models as scientific instruments.</p>
-            <p class="hero-affil">PhD candidate in Computer Science at the University of Cambridge (Gonville &amp; Caius College), working across machine learning, cognitive science and linguistics to understand how language models acquire capabilities and develop internal representations during training.</p>
-            <div class="hero-cta">
-              <a href="research.html" class="btn-pill solid"><i class="bi bi-compass"></i> Explore my research</a>
-              <a href="research.html#publications" class="btn-pill outline"><i class="bi bi-journal-text"></i> Publications</a>
-              <a href="assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" target="_blank" class="btn-pill outline"><i class="bi bi-file-earmark-pdf"></i> CV</a>
-            </div>
-            <div class="hero-quiet">
-              <a href="mailto:sas245@cam.ac.uk"><i class="bi bi-envelope"></i> sas245@cam.ac.uk</a>
-              <a href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="bi bi-mortarboard"></i> Google Scholar</a>
-              <a href="https://aclanthology.org/people/s/suchir-salhan/" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> ACL Anthology</a>
-              <a href="https://www.cst.cam.ac.uk/people/sas245" target="_blank" rel="noopener"><i class="bi bi-building"></i> Cambridge CST</a>
-              <a href="https://www.linkedin.com/in/ssalhan/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
-            </div>
+    <!-- ========== PROFILE ========== -->
+    <aside class="profile" aria-label="Profile">
+      <h1>Suchir Salhan</h1>
+      <img class="portrait" src="assets/images/suchir_salhan_web.jpg" alt="Portrait of Suchir Salhan" width="168" height="168">
+      <p class="role"><strong>PhD Candidate in Computer Science</strong><br>University of Cambridge<br>Gonville &amp; Caius College</p>
+      <ul class="secnav" aria-label="On this page">
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Contributions</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#publications">Selected research</a></li>
+        <li><a href="#teaching">Teaching</a></li>
+        <li><a href="#group">Research group</a></li>
+        <li><a href="#work-with-me">Collaboration</a></li>
+        <li><a href="#writing">Writing</a></li>
+        <li><a href="#about">About</a></li>
+      </ul>
+      <ul class="links" aria-label="Contact and profiles">
+        <li><a href="mailto:sas245@cam.ac.uk">Email</a></li>
+        <li><a href="assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" target="_blank">CV</a></li>
+        <li><a href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a></li>
+        <li><a href="https://github.com/suchirsalhan" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="https://twitter.com/suchirsalhan" target="_blank" rel="noopener">X</a></li>
+      </ul>
+    </aside>
+
+    <div class="col">
+
+      <!-- ========== RESEARCH INTRODUCTION ========== -->
+      <section id="research" aria-label="Research introduction">
+        <p class="lead">I'm Suchir, an AI researcher at the University of Cambridge. I study how AI systems learn and gain capabilities, and what that process can teach us about building better ones.</p>
+
+        <p>I am a PhD candidate in Computer Science, supervised by Professor <a href="https://www.cl.cam.ac.uk/~pjb48/">Paula Buttery</a>, working on the science of language modelling. I contribute to an emerging field known as <span class="ex" tabindex="0" role="button" aria-expanded="false" data-more="— the study of how representations and capabilities form <em>during</em> training, rather than only what a finished model can do —">developmental interpretability</span>, which has applications to cognitive science and to AI safety.</p>
+
+        <p>Three questions motivate the work. <span class="q">How do representations and capabilities emerge as a model learns?</span> <span class="q">How does the organisation of those representations shape generalisation, composition and transfer?</span> And <span class="q">how can we monitor and evaluate learning systems scientifically, beyond static benchmarks?</span></p>
+
+        <p>I approach them with small, human-scale language models trained under controlled conditions: models small enough to inspect checkpoint by checkpoint, yet rich enough to test hypotheses drawn from language acquisition and cognition. With Catherine Arnett, James Michaelov and Paula Buttery I built <a href="beetle.html"><strong>Beetle</strong></a>, a suite of 330 open models for studying how language-learning history shapes linguistic representations. As Head of Research of <a href="https://www.picolm.io/" target="_blank" rel="noopener"><strong>PicoLM</strong></a>, with Richard Diehl Martinez, I help maintain the open framework that trains and analyses them. I co-organise the <a href="https://babylm.github.io/" target="_blank" rel="noopener"><strong>BabyLM</strong></a> workshop and shared task at EMNLP and <a href="https://babyvlm.github.io/" target="_blank" rel="noopener"><strong>BabyVLM</strong></a> at NeurIPS, which ask how much a model can learn from a child-sized data budget. Work from this programme has received two Outstanding Paper Awards and two oral presentations.</p>
+
+        <p>More broadly, I am interested in building fully open-source AI systems that are socially and culturally situated, for decision-making, learning and human–AI collaboration.</p>
+
+        <details class="more">
+          <summary>Read the full research statement</summary>
+          <div class="body">
+            <h4>Developmental intelligence and the science of language modelling</h4>
+            <p>A central theme of my work is how representations and capabilities develop across the stages of a model's training. I am interested in monitoring how representations form, and in evaluating AI systems scientifically rather than only through static benchmarks, as a route to safer systems. Beetle, an open-source small language model suite and learning-dynamics framework built with Paula Buttery, Catherine Arnett and James Michaelov, is my main instrument for this: I use it to study learning dynamics, interpretability and safety under controlled conditions.</p>
+
+            <h4>Internal representations and generalisation</h4>
+            <p>I study how representations emerge during learning, how their organisation shapes generalisation, composition and transfer, and how we can build better methods for evaluating and monitoring intelligent systems. Recent work asks when independently trained models converge on compatible representations, and what model merging reveals about the geometry of what has been learned.</p>
+
+            <h4>Human-scale and sample-efficient learning</h4>
+            <p>How can we build more capable systems with substantially less data and computation? I co-organise the BabyLM Workshop and Shared Task at EMNLP 2026 (Budapest) and 2027 (Cancún), and the BabyVLM Workshop at NeurIPS 2026. My master's thesis trained small language models for the BabyLM Challenge using acquisition-inspired curricula on developmentally plausible corpora in several languages. The longer-term aim is to turn a scientific understanding of learning into more sample-efficient AI systems, particularly through better tokenization and a closer study of training data.</p>
+
+            <h4>Multilingual and comparative cognition</h4>
+            <p>Most people use more than one language, yet computational models of language processing are largely monolingual. I build computational models and small AI systems to study how humans acquire language and other cognitive capabilities, and to compare learning in biological and artificial systems. What can the development of artificial intelligence teach us about cognition, and what can cognitive science contribute to building better AI?</p>
+
+            <h4>Developmental interpretability and AI safety</h4>
+            <p>If capabilities emerge during training, we should be able to watch them emerge. I am interested in whether developmental signals in a model's internal representations can anticipate behaviour before standard evaluations detect it, and in what that would mean for monitoring, evaluation and the safety of increasingly capable systems.</p>
+
+            <h4>Collective intelligence and socially situated AI</h4>
+            <p>I want my empirical and theoretical work on small open models to connect with the fast-moving wider AI ecosystem, in an interdisciplinary and stakeholder-centred way. With cognitive scientists and applied machine-learning researchers (for example in language learning), I work on guiding and calibrating LLM behaviour in multi-agent settings, aligning model outputs with user needs and domain-specific tasks, towards AI for decision-making, learning and human–AI collaboration that is better situated socially and culturally.</p>
+
+            <p class="small muted">I am passionate about open-source AI and happy to collaborate and consult with industry partners. In March 2025 our group released PicoLM. The <a href="research.html">research page</a> sets out each strand with representative papers.</p>
           </div>
-          <div class="hero-portrait">
-            <img src="assets/images/suchir_salhan_web.jpg" alt="Portrait of Suchir Salhan" width="640" height="800">
+        </details>
+      </section>
+
+      <!-- ========== CONTRIBUTIONS ========== -->
+      <section id="projects">
+        <h2>Contributions</h2>
+        <p>The common thread is not simply that I build small language models; it is that I develop experimental methods for understanding how they learn, what they represent, and when those representations can be trusted.</p>
+
+        <h3><a href="beetle.html">Beetle</a></h3>
+        <p class="kicker">Language acquisition · Multilingual models</p>
+        <p><span class="q">How does learning history shape linguistic representations?</span> Beetle is a controlled suite of 330 open models (285 bilingual, 45 monolingual) across 13 first languages, five exposure curricula and three data scales. Because the models are matched populations that differ only in one aspect of their linguistic experience, hypotheses about bilingualism, such as the timing of second-language exposure, cross-lingual transfer and attrition, become experiments that are hard to run in larger, less transparent systems.</p>
+        <p class="outs">Research resource · Empirical findings · Open models &nbsp;·&nbsp; <a href="beetle.html">project</a> · <a href="https://openreview.net/pdf?id=NQrSQk3HZ2" target="_blank" rel="noopener">paper</a> · <a href="https://beetlelm.github.io/" target="_blank" rel="noopener">code &amp; models</a> · EMNLP 2026</p>
+        <details class="more">
+          <summary>More about this contribution</summary>
+          <div class="body">
+            <figure>
+              <img src="assets/beetle/trilingual-learning-dynamics.jpg" alt="Learning curves for Beetle models under different bilingual exposure schedules" loading="lazy">
+              <figcaption>Learning dynamics under different exposure schedules: the same architecture and budget, different linguistic histories.</figcaption>
+            </figure>
+            <p>Beetle is built on the PicoLM decoder backbone, so every model shares an architecture and training code and differs only in the data it saw and when. That makes it possible to attribute differences in representation and behaviour to learning history rather than to incidental design choices. The <a href="writing/beetle-launch.html">launch essay</a> explains why controlled pretraining is worth the effort.</p>
           </div>
-        </div>
-      </div>
-    </section>
+        </details>
 
-    <!-- ========== EVIDENCE STRIP ========== -->
-    <section class="evidence" aria-label="Research at a glance">
-      <div class="evidence-grid">
-        <div class="ev"><div class="n">25+</div><div class="l">Peer-reviewed publications, with first-author work at EMNLP &amp; EACL</div></div>
-        <div class="ev"><div class="n">2</div><div class="l">Outstanding Paper Awards, BabyLM Workshop (EMNLP 2025)</div></div>
-        <div class="ev"><div class="n">330</div><div class="l">Open small language models in the Beetle suite</div></div>
-        <div class="ev"><div class="n">2</div><div class="l">Research challenges co-organised: BabyLM &amp; BabyVLM</div></div>
-      </div>
-    </section>
+        <h3><a href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM</a></h3>
+        <p>Studying how capabilities emerge means training many small models and inspecting them checkpoint by checkpoint, infrastructure most researchers rebuild from scratch. <strong>Pico</strong> is a lightweight, modular framework for hypothesis-driven small-model research: researchers make a targeted change to architecture or training and observe its effect directly, against a suite of standardised baseline models. It now underpins much of my own work and that of a growing group of collaborators.</p>
+        <p class="outs"><a href="https://www.picolm.io/" target="_blank" rel="noopener">project</a> · <a href="https://aclanthology.org/2025.emnlp-demos.22/" target="_blank" rel="noopener">paper</a> · EMNLP 2025 System Demonstrations</p>
 
-    <!-- ========== RESEARCH AT A GLANCE ========== -->
-    <section class="sec" id="research">
-      <div class="wrap">
-        <p class="sec-eyebrow">Research at a glance</p>
-        <h2>How do intelligent systems learn?</h2>
-        <p class="sec-lead">I study learning as it unfolds through training. Rather than only measuring what a finished model can do, I use <strong>small, human-scale language models</strong> as controlled experiments — tractable enough to inspect directly, yet rich enough to test hypotheses drawn from human language acquisition and cognition. Four connected questions run through the work.</p>
+        <h3>Learning from a child-sized budget</h3>
+        <p>Through BabyLM I study which training strategies let a model acquire real linguistic competence from roughly a hundred million words. Earlier work tested whether theories of acquisition can specify finer-grained, language-specific curricula (<a href="research.html#pub-less-is-more">Less is More</a>); more recent work studies contingent, multi-turn interaction between a teacher and a small "student" model (<a href="research.html#pub-teacher-demos">Teacher Demonstrations</a>) and token-wise gating for vision–language learning (<a href="research.html#pub-looking-to-learn">Looking to Learn</a>), both Outstanding Paper Awards. <a href="research.html#pub-babybabellm">BabyBabelLM</a> extends the paradigm to 45 languages.</p>
 
-        <div class="themes">
-          <article class="theme reveal-up">
-            <div class="ic"><i class="bi bi-activity"></i></div>
-            <h3>Developmental interpretability</h3>
-            <p>How do capabilities and internal representations emerge <em>during</em> training — and can we monitor that development before standard evaluations detect it? This connects interpretability to AI safety.</p>
-            <a class="more" href="research.html"><i class="bi bi-arrow-right"></i> Learning dynamics &amp; interpretability</a>
-          </article>
-          <article class="theme reveal-up">
-            <div class="ic"><i class="bi bi-cpu"></i></div>
-            <h3>Sample-efficient, human-scale learning</h3>
-            <p>Humans learn language from far less data than today's models. Which architectures and training strategies let a model acquire real capabilities from child-sized data budgets? This drives the BabyLM and BabyVLM challenges.</p>
-            <a class="more" href="research.html"><i class="bi bi-arrow-right"></i> Human-scale modelling</a>
-          </article>
-          <article class="theme reveal-up">
-            <div class="ic"><i class="bi bi-globe2"></i></div>
-            <h3>Multilingual &amp; bilingual learning</h3>
-            <p>Most people use more than one language, yet models of language processing are largely monolingual. By controlling what languages a model sees, and when, I test how linguistic experience shapes what it learns and generalises.</p>
-            <a class="more" href="beetle.html"><i class="bi bi-arrow-right"></i> Beetle model suite</a>
-          </article>
-          <article class="theme reveal-up">
-            <div class="ic"><i class="bi bi-diagram-3"></i></div>
-            <h3>Tokenization &amp; adaptive computation</h3>
-            <p>Tokenization is usually a fixed preprocessing step. I treat it as a learned resource-allocation policy: can a model decide how much computation to spend on different parts of its input?</p>
-            <a class="more" href="research.html"><i class="bi bi-arrow-right"></i> Efficient architectures</a>
-          </article>
-        </div>
-      </div>
-    </section>
+        <h3>Tokenization as a learned allocation of computation</h3>
+        <p>Tokenization is usually treated as fixed preprocessing. I treat it as part of the learning problem: <a href="research.html#pub-bytespan">ByteSpan</a> groups predictable bytes into subwords using an external byte-level model, and <a href="research.html#pub-langmap">LangMAP</a> lets the input representation adapt to the language being modelled.</p>
+      </section>
 
-    <!-- ========== SELECTED PROJECTS ========== -->
-    <section class="sec tinted" id="projects">
-      <div class="wrap">
-        <p class="sec-eyebrow">Selected projects</p>
-        <h2>Open research infrastructure</h2>
-        <p class="sec-lead">Two open-source projects anchor my research programme — one a suite of controlled models, the other the framework that trains and studies them.</p>
+      <!-- ========== NEWS ========== -->
+      <section id="news">
+        <h2>News</h2>
+        <ul class="plain news">
+          <li><span class="d">Sep 2026</span><span>Released <a href="writing/beetle-launch.html">Beetle</a>, an open suite of 330 bilingual and monolingual models, and presented it at X-PPL-26 in Bayonne.</span></li>
+          <li><span class="d">2026</span><span>Three main-conference papers at <strong>EMNLP 2026</strong>, Budapest: <a href="research.html#pub-beetle">Beetle</a>, <a href="research.html#pub-langmap">LangMAP</a> and <a href="research.html#pub-crosslingual-align">Cross-Lingual Alignment Without Joint Training</a>.</span></li>
+          <li><span class="d">2026</span><span>Co-organising <a href="https://babylm.github.io/" target="_blank" rel="noopener">BabyLM 2026</a>, now with a multilingual track, and the first <a href="https://babyvlm.github.io/" target="_blank" rel="noopener">BabyVLM</a> workshop at NeurIPS 2026.</span></li>
+          <li><span class="d">May 2026</span><span>Invited seminars at SheffieldNLP and the University of Copenhagen on sample-efficient and human-scale language modelling.</span></li>
+          <li><span class="d">Mar 2026</span><span>The xBLiMPs project, with Catherine Arnett, Paula Buttery and Andrew Caines, funded by the <a href="https://www.languagesciences.cam.ac.uk/news/language-sciences-incubator-fund-projects-announced-march-2026" target="_blank" rel="noopener">Language Sciences Incubator Fund</a>.</span></li>
+          <li><span class="d">Jan 2026</span><span><a href="research.html#pub-babybabellm">BabyBabelLM</a> accepted to EACL 2026; two oral papers at <a href="https://www.phonetics.mmll.cam.ac.uk/ocp23" target="_blank" rel="noopener">OCP23</a>, hosted at Gonville &amp; Caius.</span></li>
+          <li><span class="d">Nov 2025</span><span>Two <strong>Outstanding Paper Awards</strong> at the BabyLM Workshop, EMNLP 2025, Suzhou.</span></li>
+          <li><span class="d">Mar 2025</span><span>Released <a href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM</a>, the Cambridge small-language-model and learning-dynamics framework.</span></li>
+        </ul>
+        <p class="small"><a href="presentations.html#talks">Talks and presentations</a></p>
+      </section>
 
-        <!-- Beetle -->
-        <div class="project reveal-up">
-          <div class="project-media">
-            <img src="assets/beetle/trilingual-learning-dynamics.jpg" alt="Learning-dynamics curves from the Beetle bilingual model suite" loading="lazy">
+      <!-- ========== SELECTED RESEARCH ========== -->
+      <section id="publications" class="pubs">
+        <h2>Selected research</h2>
+        <p class="small muted">Reverse chronological. The <a href="research.html#publications">full publication list</a> and <a href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a> have the complete record.</p>
+
+        <p><span class="t"><a href="research.html#pub-beetle">Beetle: A Bilingual Model Suite for Modelling Second-Language Processing</a></span><br>
+          <span class="au"><ins>S Salhan</ins>, C Arnett, J Michaelov, P Buttery</span><br>
+          <span class="v">EMNLP 2026</span> | <a href="https://openreview.net/pdf?id=NQrSQk3HZ2" target="_blank" rel="noopener">paper</a> | <a href="https://beetlelm.github.io/" target="_blank" rel="noopener">code</a> | <a href="beetle.html">project</a></p>
+
+        <p><span class="t"><a href="research.html#pub-langmap">LangMAP: A Language-Adaptive Approach to Tokenization</a></span><br>
+          <span class="au">C Meister, <ins>S Salhan</ins>, A Szablewski, P Lesci, P Buttery, T Pimentel</span><br>
+          <span class="v">EMNLP 2026</span> | <a href="writing/paper-langmap.html">write-up</a></p>
+
+        <p><span class="t"><a href="research.html#pub-crosslingual-align">Cross-Lingual Alignment Without Joint Training: Do Monolingual Language Models Converge on Universal Representations?</a></span><br>
+          <span class="au">EJ Zhou, <ins>S Salhan</ins>, C Arnett</span><br>
+          <span class="v">EMNLP 2026</span> | <a href="writing/paper-crosslingual-alignment.html">write-up</a></p>
+
+        <p><span class="t"><a href="research.html#pub-babylm-turns-4">BabyLM Turns 4 and Goes Multilingual: Call for Papers for the 2026 BabyLM Workshop</a></span><br>
+          <span class="au">L Choshen, R Cotterell, …, <ins>S Salhan</ins>, …, A Warstadt, EG Wilcox</span><br>
+          <span class="v">BabyLM Workshop, EMNLP 2026</span> | <a href="https://arxiv.org/abs/2602.20092" target="_blank" rel="noopener">paper</a></p>
+
+        <p><span class="t"><a href="research.html#pub-babybabellm">BabyBabelLM: A Multilingual Benchmark of Developmentally Plausible Training Data</a></span><br>
+          <span class="au">J Jumelet, A Fourtassi, A Haga, …, <ins>S Salhan</ins>, …, A Warstadt, L Choshen</span><br>
+          <span class="v">EACL 2026</span> | <a href="https://babylm.github.io/babybabellm/" target="_blank" rel="noopener">project</a> | <a href="writing/paper-babybabellm.html">write-up</a></p>
+
+        <p><span class="t"><a href="research.html#pub-pico">Pico: A Modular Framework for Hypothesis-Driven Small Language Model Research</a></span><br>
+          <span class="au">R Diehl Martinez, DD Africa, Y Weiss, <ins>S Salhan</ins>, R Daniels, P Buttery</span><br>
+          <span class="v">EMNLP 2025 System Demonstrations</span> | <a href="https://aclanthology.org/2025.emnlp-demos.22/" target="_blank" rel="noopener">paper</a> | <a href="https://www.picolm.io/" target="_blank" rel="noopener">project</a></p>
+
+        <p><span class="t"><a href="research.html#pub-teacher-demos">Teacher Demonstrations in a BabyLM's Zone of Proximal Development for Contingent Multi-Turn Interaction</a></span><br>
+          <span class="au"><ins>S Salhan</ins>, H Gu, D Rooein, D Galvan-Sosa, G Gaudeau, A Caines, Z Yuan, P Buttery</span><br>
+          <span class="v">BabyLM Workshop, EMNLP 2025</span> <span class="award">(Outstanding Paper Award)</span> | <a href="https://aclanthology.org/2025.babylm-main.25/" target="_blank" rel="noopener">paper</a></p>
+
+        <p><span class="t"><a href="research.html#pub-looking-to-learn">Looking to Learn: Token-wise Dynamic Gating for Low-Resource Vision-Language Modelling</a></span><br>
+          <span class="au">BM Ganescu, <ins>S Salhan</ins>, A Caines, P Buttery</span><br>
+          <span class="v">BabyLM Workshop, EMNLP 2025</span> <span class="award">(Outstanding Paper Award)</span> | <a href="https://aclanthology.org/2025.babylm-main.15/" target="_blank" rel="noopener">paper</a></p>
+
+        <p><span class="t"><a href="research.html#pub-seq-length">What's the Best Sequence Length for BabyLM?</a></span><br>
+          <span class="au"><ins>S Salhan</ins>, R Diehl Martinez, Z Goriely, P Buttery</span><br>
+          <span class="v">BabyLM Workshop, EMNLP 2025</span> | <a href="https://aclanthology.org/2025.babylm-main.10/" target="_blank" rel="noopener">paper</a></p>
+
+        <p><span class="t"><a href="research.html#pub-bliss">BLiSS: Evaluating Bilingual Learner Competence in Second Language Small Language Models</a></span><br>
+          <span class="au">Y Gao, <ins>S Salhan</ins>, A Caines, P Buttery, W Sun</span><br>
+          <span class="v">BabyLM Workshop, EMNLP 2025</span> | <a href="https://aclanthology.org/2025.babylm-main.13/" target="_blank" rel="noopener">paper</a></p>
+
+        <p><span class="t"><a href="research.html#pub-grammatical-diversity">Measuring Grammatical Diversity from Small Corpora: Derivational Entropy Rates, Mean Length of Utterances, and Annotation Invariance</a></span><br>
+          <span class="au">F Moscoso del Prado Martín, <ins>S Salhan</ins></span><br>
+          <span class="v">ACL 2025</span> | <a href="https://direct.mit.edu/coli/article/doi/10.1162/coli.a.15/131070" target="_blank" rel="noopener">paper</a></p>
+
+        <p><span class="t"><a href="research.html#pub-bytespan">ByteSpan: Information-Driven Subword Tokenisation</a></span><br>
+          <span class="au">Z Goriely, <ins>S Salhan</ins>, P Lesci, J Cheng, P Buttery</span><br>
+          <span class="v">Tokenization Workshop, ICML 2025</span> | <a href="https://arxiv.org/abs/2506.18639" target="_blank" rel="noopener">paper</a></p>
+
+        <p><span class="t"><a href="research.html#pub-less-is-more">Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies</a></span><br>
+          <span class="au"><ins>S Salhan</ins>, R Diehl Martinez, Z Goriely, P Buttery</span><br>
+          <span class="v">BabyLM Challenge, CoNLL 2024</span> | <a href="https://aclanthology.org/2024.conll-babylm.15/" target="_blank" rel="noopener">paper</a></p>
+      </section>
+
+      <!-- ========== TEACHING ========== -->
+      <section id="teaching">
+        <h2>Teaching</h2>
+        <ul class="plain teach">
+          <li>Li18 <a href="teaching.html">Computational Linguistics</a> (Linguistics Tripos), lectures on computational syntax. 2025–26.</li>
+          <li>L95 <a href="teaching.html">Introduction to Natural Language Syntax and Parsing</a> (MPhil ACS / Part III), guest lecturer and teaching assistant. 2024–26.</li>
+          <li>MPhil guest lecture, <a href="teaching.html">Language Model Evaluation</a>, with Paula Buttery &amp; Fermín Moscoso del Prado Martín. Michaelmas 2024.</li>
+          <li>UROP, <a href="https://www.picolm.io/" target="_blank" rel="noopener">Small Language Models</a>, with Paula Buttery. Summer 2025.</li>
+          <li>Supervisions for the Computer Science Tripos: Machine Learning &amp; Bayesian Inference (II); Artificial Intelligence and Formal Models of Language (IB); Introduction to Probability and Machine Learning &amp; Real-World Data (IA).</li>
+        </ul>
+      </section>
+
+      <!-- ========== RESEARCH GROUP ========== -->
+      <section id="group" class="group">
+        <h2>Research group</h2>
+        <p class="small">Students I supervise or co-supervise in the Cambridge NLIP group, mostly with Paula Buttery and Andrew Caines.</p>
+        <h4>MPhil students</h4>
+        <ul class="plain">
+          <li>Yeji Heo (MPhil ACS 2025–26), cultural knowledge in pretrained language models</li>
+          <li>Adam El-Kholy (MPhil MLMI 2025–26), exploration limits of post-training under GRPO</li>
+        </ul>
+        <h4>Undergraduate research students</h4>
+        <ul class="plain">
+          <li>Ellie Polyakova Reed, Shivan Arora, Mingchuan Zou, Jacy To, Abdullah Akram, Alisa Potomkiva</li>
+        </ul>
+        <h4>Former mentees</h4>
+        <ul class="plain">
+          <li><a href="https://github.com/biancaganescu" target="_blank" rel="noopener">Bianca-Mihaela Ganescu</a> (MPhil ACS 2024–25; Outstanding Paper Award, BabyLM 2025)</li>
+          <li>Andrzej Szablewski (visiting student; LangMAP, EMNLP 2026) · Ali Kheirkhah (PicoLM intern, 2025)</li>
+        </ul>
+        <p class="small"><a href="people.html">Students, collaborators and groups</a></p>
+      </section>
+
+      <!-- ========== COLLABORATION & MENTORSHIP ========== -->
+      <section id="work-with-me">
+        <h2>Collaboration &amp; mentorship</h2>
+        <p>Much of my work is collective. I co-organise the <a href="https://babylm.github.io/" target="_blank" rel="noopener">BabyLM</a> challenge and workshop and <a href="https://babyvlm.github.io/" target="_blank" rel="noopener">BabyVLM</a> at NeurIPS, organise the weekly <a href="https://talks.cam.ac.uk/user/show/95704/" target="_blank" rel="noopener">Cambridge NLIP seminar</a>, and develop open research infrastructure through PicoLM. I also teach and supervise across computer science and linguistics (<a href="service.html">service</a>).</p>
+        <p>I am interested in collaborating with researchers in machine learning, cognitive science, linguistics, interpretability and AI safety, for example on controlled experiments with small language models, developmental interpretability and model monitoring, multilingual and cross-lingual evaluation, sample-efficient learning, evaluation and calibration, or open-source research infrastructure. I am also happy to talk with industry partners about open models.</p>
+        <p>Each year I offer MPhil projects in dynamic tokenization, sample-efficient learning, developmental interpretability and bilingual modelling with Beetle, and supervise undergraduate research over the summer. Projects are designed to lead to publishable work. The <a href="teaching.html#mphil-projects">project areas</a> and <a href="assets/teaching/Salhan_2627_MPhil_Project_Proposals.pdf" target="_blank" rel="noopener">2026–27 proposals (PDF)</a> have details; otherwise, <a href="mailto:sas245@cam.ac.uk">email me</a>.</p>
+      </section>
+
+      <!-- ========== WRITING ========== -->
+      <section id="writing">
+        <h2>Writing</h2>
+        <ul class="plain writing">
+          <li><a href="writing/beetle-launch.html">Beetle: a framework for controlled bilingual and multilingual pretraining</a> <span class="muted">· Sep 2026</span></li>
+          <li><a href="writing/phd-year-one.html">Year one of a Cambridge PhD: eight papers, one framework, and a lot of coffee</a> <span class="muted">· Mar 2026</span></li>
+          <li><a href="writing/ocp23-reflections.html">Phonology at home: reflections on hosting OCP23 at Caius</a> <span class="muted">· Jan 2026</span></li>
+          <li><a href="writing/nlip-michaelmas-2024.html">NLIP seminars, Michaelmas 2024</a> <span class="muted">· Jan 2025</span></li>
+        </ul>
+        <p class="small"><a href="writing/index.html">All essays and paper write-ups</a></p>
+      </section>
+
+      <!-- ========== ABOUT ========== -->
+      <section id="about">
+        <h2>About</h2>
+        <p>I'm a PhD candidate in Computer Science at Cambridge and a member of Gonville &amp; Caius College, supervised by Paula Buttery. Before that I studied <span class="ex" tabindex="0" role="button" aria-expanded="false" data-more="I took a BA (Starred First) and an MEng (Distinction) at Caius, and my master's thesis on the BabyLM Challenge drew me into the question of how models acquire their capabilities.">Computer Science and Linguistics at Cambridge.</span></p>
+        <p>I also organise research workshops, build open-source AI systems, and edit <a href="https://www.per-capita.co.uk" target="_blank" rel="noopener">Per Capita Media</a>.</p>
+        <details class="more">
+          <summary>Read my extended biography</summary>
+          <div class="body">
+            <p>My work sits between computer science, computational linguistics and cognitive science, and the other fields I draw on supply questions and methods rather than decoration. <strong>Language acquisition and developmental psychology</strong> suggest which learning trajectories are worth testing and what counts as a plausible data budget. <strong>Comparative cognition</strong> asks which properties of learning are general and which belong to a particular kind of learner. <strong>Computational linguistics and linguistic diversity</strong> keep evaluation honest beyond English and beyond high-resource languages. <strong>Cognitive science and theories of representation</strong> shape what I look for inside models. <strong>Philosophy of science</strong> informs how I design controlled experiments, and <strong>AI safety and governance</strong> are why I care whether developmental signals can be monitored at all.</p>
+            <p>Work from this programme has received two Outstanding Paper Awards at BabyLM (EMNLP 2025) and two oral presentations. Outside research I lead Per Capita Media, an independent Cambridge publication, and have worked in journalism with The One Show, The Sunday Times and BBC Radio 5 Live.</p>
+            <p class="small"><a href="about.html">More about me</a> · <a href="assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" target="_blank">Curriculum vitae</a></p>
           </div>
-          <div class="project-body">
-            <p class="project-tag">Beetle · Bilingual model suite</p>
-            <h3>Beetle</h3>
-            <p><strong>The problem.</strong> Computational models of human language processing have focused heavily on monolingual speakers, even though most people in the world use more than one language.</p>
-            <p><strong>What I build.</strong> Beetle is a framework and a collection of 330 small language models trained under controlled bilingual and monolingual settings — matched populations that differ in a specific aspect of their learning history.</p>
-            <p><strong>Why it matters.</strong> This experimental control lets us test hypotheses about bilingualism — code-switching, language attrition, heritage learning — that are difficult to study in larger, less transparent systems.</p>
-            <div class="meta-row">
-              <a href="beetle.html" class="btn-pill solid"><i class="bi bi-arrow-right"></i> Explore Beetle</a>
-              <a href="research.html#pub-beetle" class="btn-pill outline"><i class="bi bi-journal-text"></i> Read the paper</a>
-            </div>
-          </div>
-        </div>
+        </details>
+      </section>
 
-        <!-- PicoLM -->
-        <div class="project flip reveal-up">
-          <div class="project-media">
-            <img src="assets/images/photos/photo-poster-pico.jpg" alt="PicoLM poster presentation at EMNLP 2025" loading="lazy">
-          </div>
-          <div class="project-body">
-            <p class="project-tag">PicoLM · Learning-dynamics framework</p>
-            <h3>PicoLM</h3>
-            <p><strong>The problem.</strong> Studying how capabilities emerge requires training many small models and inspecting them checkpoint by checkpoint — infrastructure most researchers rebuild from scratch.</p>
-            <p><strong>What I build.</strong> PicoLM is an open framework for pretraining, interpreting and tokenizing small language models, designed for hypothesis-driven experiments on learning dynamics.</p>
-            <p><strong>Why it matters.</strong> It makes small-model research reproducible and comparable, giving a common foundation for the BabyLM community and my own work.</p>
-            <div class="meta-row">
-              <a href="https://www.picolm.io/" target="_blank" rel="noopener" class="btn-pill solid"><i class="bi bi-box-arrow-up-right"></i> picolm.io</a>
-              <a href="research.html" class="btn-pill outline"><i class="bi bi-journal-text"></i> Related work</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <!-- ========== ELSEWHERE ========== -->
+      <section id="contact">
+        <h2>Elsewhere on this site</h2>
+        <p class="small"><a href="research.html#publications">Publications</a> · <a href="assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" target="_blank">CV</a> · <a href="research.html">Research</a> · <a href="beetle.html">Beetle</a> · <a href="teaching.html">Teaching &amp; supervision</a> · <a href="presentations.html">Talks</a> · <a href="service.html">Service</a> · <a href="writing/index.html">Writing</a> · <a href="people.html">People</a> · <a href="about.html">About</a></p>
+        <p class="small muted"><a href="mailto:sas245@cam.ac.uk">sas245@cam.ac.uk</a> · Department of Computer Science &amp; Technology, University of Cambridge</p>
+      </section>
 
-    <!-- ========== NEWS + AWARDS ========== -->
-    <section class="sec" id="news">
-      <div class="wrap">
-        <div class="news-awards">
-          <div>
-            <p class="sec-eyebrow">Recent news</p>
-            <h2>Latest</h2>
-            <div class="newsrow"><div class="d">2026</div><div class="t">Three main-conference papers accepted at <strong>EMNLP 2026</strong> (Budapest) — <a href="research.html#pub-beetle">Beetle</a>, <a href="research.html#pub-langmap">LangMAP</a> and <a href="research.html#pub-crosslingual-align">Cross-Lingual Alignment</a>.</div></div>
-            <div class="newsrow"><div class="d">Jan 2026</div><div class="t"><a href="research.html#pub-babybabellm">BabyBabelLM</a> accepted to <strong>EACL 2026</strong> (Main Conference, Rabat); two oral papers at the <a href="https://www.phonetics.mmll.cam.ac.uk/ocp23" target="_blank" rel="noopener">23rd Old-World Conference in Phonology</a>, hosted at Gonville &amp; Caius College.</div></div>
-            <div class="newsrow"><div class="d">Sep 2025</div><div class="t"><strong>Eight accepted papers</strong> at EMNLP and NeurIPS workshops, including <strong>two Outstanding Paper Awards</strong> at BabyLM 2025.</div></div>
-            <div class="newsrow"><div class="d">Mar 2025</div><div class="t">Released <a href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM</a>, the Cambridge small language model and learning-dynamics framework.</div></div>
-          </div>
-          <div>
-            <p class="sec-eyebrow">Recognition</p>
-            <h2>Awards</h2>
-            <div class="award-card">
-              <div class="yr">BabyLM Workshop · EMNLP 2025</div>
-              <h4>Two Outstanding Paper Awards</h4>
-              <p>Recognised at the BabyLM Workshop in Suzhou for work on sample-efficient, human-scale language modelling.</p>
-            </div>
-            <div class="award-card">
-              <div class="yr">EMNLP 2026</div>
-              <h4>Two Oral Paper Awards</h4>
-              <p>Recent work selected for oral presentation at EMNLP 2026.</p>
-            </div>
-            <p style="margin-top:4px"><a href="presentations.html#talks" class="btn-pill outline"><i class="bi bi-arrow-right"></i> Invited talks</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== WORK WITH ME ========== -->
-    <section class="sec tinted" id="work-with-me">
-      <div class="wrap">
-        <div class="workme">
-          <div class="workme-media reveal-up">
-            <img src="assets/images/photos/hero-babylm-solo.jpg" alt="Presenting human-scale AI research at EMNLP" loading="lazy">
-          </div>
-          <div class="workme-body">
-            <p class="sec-eyebrow">Working with me</p>
-            <h2>Supervision &amp; collaboration</h2>
-            <p class="sec-lead">I am looking for motivated MPhil students interested in developing and understanding language models. Projects are based in the Cambridge Natural Language and Information Processing (NLIP) group, with opportunities to collaborate across Computer Science, Linguistics and Cognitive Science.</p>
-            <ul>
-              <li>Real research questions using controlled language models, open-source training infrastructure and interpretability methods</li>
-              <li>Four project areas: dynamic tokenization, sample-efficient AI, developmental interpretability, and bilingual modelling with Beetle</li>
-              <li>Scope to produce publishable work, with possible co-supervision in AI safety, interpretability or computational psycholinguistics</li>
-            </ul>
-            <div class="meta-row" style="display:flex;flex-wrap:wrap;gap:12px">
-              <a href="teaching.html#mphil-projects" class="btn-pill solid"><i class="bi bi-arrow-right"></i> Project areas &amp; how to apply</a>
-              <a href="assets/teaching/Salhan_2627_MPhil_Project_Proposals.pdf" target="_blank" rel="noopener" class="btn-pill outline"><i class="bi bi-file-earmark-pdf"></i> Project proposals (PDF)</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== ABOUT ========== -->
-    <section class="sec" id="about">
-      <div class="wrap">
-        <p class="sec-eyebrow">About</p>
-        <h2>Background</h2>
-        <div class="about-grid">
-          <img class="about-photo" src="assets/images/suchir_salhan.png" alt="Suchir Salhan" loading="lazy">
-          <div class="about-body">
-            <p>I am a PhD candidate in Computer Science at the University of Cambridge (Gonville &amp; Caius College), supervised by Professor <a href="https://www.cl.cam.ac.uk/~pjb48/">Paula Buttery</a>. My research sits at the intersection of machine learning, computational linguistics, cognitive science and AI safety.</p>
-            <p>I previously completed a BA and MEng in Computer Science and Linguistics at Cambridge, earning a Starred First (Class I with Distinction) and a Distinction. My master's work drew me into the BabyLM Challenge, and from there into the broader question of how models acquire their capabilities.</p>
-            <p>I co-organise the BabyLM and BabyVLM research challenges, lecture and supervise in Cambridge, and organise the weekly <a href="service.html">Cambridge NLIP seminars</a>, open to the public.</p>
-            <p style="margin-top:6px"><a href="about.html" class="btn-pill outline"><i class="bi bi-arrow-right"></i> Read more about me</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========== CONTACT ========== -->
-    <section class="contact" id="contact">
-      <div class="wrap">
-        <p class="sec-eyebrow">Get in touch</p>
-        <h2>Say hello</h2>
-        <p class="lead">I am always happy to hear from prospective students, collaborators and anyone curious about small language models.</p>
-        <div class="rows">
-          <div class="crow"><i class="bi bi-envelope"></i><a href="mailto:sas245@cam.ac.uk">sas245@cam.ac.uk</a></div>
-          <div class="crow"><i class="bi bi-geo-alt"></i><span>Department of Computer Science &amp; Technology, University of Cambridge · Gonville &amp; Caius College</span></div>
-        </div>
-        <div class="links">
-          <a href="research.html#publications"><i class="bi bi-journal-text"></i> Publications</a>
-          <a href="assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> Curriculum Vitae</a>
-          <a href="teaching.html#mphil-projects"><i class="bi bi-person-raised-hand"></i> MPhil projects</a>
-          <a href="https://scholar.google.com/citations?user=xOo9sisAAAAJ&amp;hl=en" target="_blank" rel="noopener"><i class="bi bi-mortarboard"></i> Google Scholar</a>
-          <a href="https://aclanthology.org/people/s/suchir-salhan/" target="_blank" rel="noopener"><i class="bi bi-link-45deg"></i> ACL Anthology</a>
-          <a href="https://www.cst.cam.ac.uk/people/sas245" target="_blank" rel="noopener"><i class="bi bi-building"></i> Cambridge CST</a>
-          <a href="https://www.linkedin.com/in/ssalhan/" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i> LinkedIn</a>
-          <a href="https://twitter.com/suchirsalhan" target="_blank" rel="noopener"><i class="bi bi-twitter-x"></i> X</a>
-        </div>
-      </div>
-    </section>
-
+    </div>
   </main>
 
   <nav class="dock" aria-label="Primary">
@@ -426,21 +326,15 @@
   <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
   <script>
-    /* Subtle, reduced-motion-safe reveal on scroll */
-    (function(){
-      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-      var els = Array.prototype.slice.call(document.querySelectorAll('.reveal-up'));
-      if (reduce || !('IntersectionObserver' in window)) {
-        els.forEach(function(e){ e.classList.add('in'); });
-        return;
-      }
-      var io = new IntersectionObserver(function(entries){
-        entries.forEach(function(en){
-          if (en.isIntersecting){ en.target.classList.add('in'); io.unobserve(en.target); }
-        });
-      }, { threshold: 0.12 });
-      els.forEach(function(e){ io.observe(e); });
-    })();
+    /* Keyboard support for the inline expanders (.ex); clicks are handled in explore.js */
+    document.addEventListener('keydown', function(e){
+      var ex = e.target.closest && e.target.closest('.ex[tabindex]');
+      if (ex && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); ex.click(); }
+    });
+    document.addEventListener('click', function(e){
+      var ex = e.target.closest && e.target.closest('.ex[tabindex]');
+      if (ex) setTimeout(function(){ ex.setAttribute('aria-expanded', ex.classList.contains('is-open') ? 'true' : 'false'); }, 0);
+    });
   </script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/main.js"></script>
