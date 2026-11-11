@@ -574,10 +574,16 @@ body:not(.scrolled) .header--onhero .mobile-nav-toggle { color: #ffffff !importa
 }
 
 /* Sitewide footer tagline */
-.footer-tagline { font-family: var(--heading-font); font-style: italic; font-size: 15px; color: var(--ink-2); margin: 0 0 16px; max-width: 640px; }
+.footer-tagline { font-family: var(--ui-font); font-size: 15px; color: var(--ink-2); margin: 0 0 16px; max-width: 640px; }
 
 /* Desktop: keep the theme toggle inline with the nav links (it was wrapping
    onto a second row, doubling the fixed header's height). */
 @media (min-width: 992px){
   #header .navmenu { display:flex; align-items:center; }
 }
+
+/* Beetle wordmark (BeetlewBug): the default image for Beetle wherever it is named */
+.beetle-wordmark { display: inline-block; height: 1.5em; width: auto; vertical-align: -0.3em; }
+html[data-theme="dark"] .beetle-wordmark { filter: invert(1); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .beetle-wordmark { filter: invert(1); } }
+h3 .beetle-wordmark { height: 2.1em; vertical-align: -0.2em; }

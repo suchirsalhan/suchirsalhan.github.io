@@ -420,7 +420,8 @@
       "primary_source": "acl_anthology",
       "verified": true,
       "featured": 1,
-      "featured_finding": "330 open models (285 bilingual, 45 monolingual) across 13 first languages turn the timing and amount of second-language exposure into an experimental variable."
+      "featured_finding": "330 open models (285 bilingual, 45 monolingual) across 13 first languages turn the timing and amount of second-language exposure into an experimental variable.",
+      "wordmark": "assets/images/beetlewbug.png"
     },
     {
       "id": "pub-langmap",

@@ -250,7 +250,7 @@ def render_start_here(pubs):
     for p in feat:
         role = " · First author" if p["first_author"] else ""
         lis.append(f'''      <li>
-        <h3 class="sh-title"><a href="#{p["id"]}">{e(p["short_title"])}</a></h3>
+        <h3 class="sh-title"><a href="#{p["id"]}">{(f'<img class="beetle-wordmark" src="{e(p["wordmark"])}" alt="{e(p["short_title"])}" width="520" height="368">' if p.get("wordmark") else e(p["short_title"]))}</a></h3>
         <p class="sh-meta">{e(p["venue_short"])} · {STATUS_LABEL[p["status"]]}{role}</p>
         <p class="sh-finding">{e(p.get("featured_finding") or p.get("finding") or "")} {link(p["primary_url"], "Read the paper", f": {p['short_title']}")}</p>
       </li>''')
