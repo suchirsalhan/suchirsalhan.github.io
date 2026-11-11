@@ -27,6 +27,11 @@
   <link href="assets/css/site.css" rel="stylesheet">
   <link href="assets/css/quiet.css" rel="stylesheet">
   <link href="assets/css/beetle.css" rel="stylesheet">
+  <style>
+    .bt-points { margin: 40px 0 0; padding: 26px 0 0 1.1em; border-top: 1px solid var(--bt-rule); max-width: 40em; }
+    .bt-points li { font-family: var(--default-font); font-size: 17px; line-height: 1.65; color: var(--default-color); margin: 0 0 14px; padding-left: 4px; text-wrap: pretty; }
+    .bt-points li::marker { color: var(--bt-accent-text); }
+  </style>
 </head>
 <body class="index-page beetle-page">
 
@@ -83,6 +88,12 @@
       <ul class="bt-cta">
         <li><a href="https://beetlelm.github.io/" target="_blank" rel="noopener">Explore the Beetle framework →</a><span class="sub">software, documentation and models</span></li>
         <li><a href="https://aclanthology.org/2026.emnlp-main.2276/" target="_blank" rel="noopener">Read our EMNLP 2026 paper →</a><span class="sub">ACL Anthology</span></li>
+      </ul>
+      <ul class="bt-points">
+        <li>Designed and built Beetle, an open-source framework for controlled bilingual and multilingual pretraining, with a declarative YAML interface for independently manipulating tokenisation, target language, training budgets and exposure curricula.</li>
+        <li>Designed, trained and released a 330-model suite (285 bilingual, 45 monolingual), spanning 13 first languages, five exposure curricula and three training scales (100M–24B tokens), with densely checkpointed training trajectories for mechanistic analysis.</li>
+        <li>Developed five controlled exposure curricula (B1–B5) to isolate how balanced, simultaneous, sequential, episodic and late second-language exposure shape acquisition, enabling systematic experiments on learning dynamics, phase transitions and catastrophic forgetting.</li>
+        <li>Released an end-to-end reproducibility and interpretability infrastructure, including three pip-installable libraries, training data, tokenisers, model checkpoints and analysis tooling, preserving gradients, activations and circuits for studying how representations and linguistic abilities emerge throughout training.</li>
       </ul>
     </div>
 
