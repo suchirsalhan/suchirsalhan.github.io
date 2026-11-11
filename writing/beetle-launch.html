@@ -60,11 +60,6 @@
 
           <p>Although Beetle grew out of computational psycholinguistics — modelling how humans process a second language — it is much more than a psycholinguistics tool. It is a general interpretability and controlled-pretraining infrastructure. Because every model is checkpointed densely across training, and because exposure is a first-class, configurable variable, Beetle lets you ask mechanistic questions about <em>when</em> and <em>how</em> abilities emerge, not just whether a final model has them.</p>
 
-          <figure>
-            <img src="../assets/beetle/beetle-fig1.jpg" alt="The Beetle framework: independently manipulable tokeniser, target language, training budget, and exposure structure, all configured via YAML.">
-            <figcaption>The Beetle framework. Tokeniser, target language, training budget, and exposure curriculum are independently configurable, feeding a controlled-pretraining engine that emits densely checkpointed models for analysis and interpretability.</figcaption>
-          </figure>
-
           <h2>Why controlled pretraining</h2>
 
           <p>Most claims about what a language model has learned rest on inspecting the finished model. That misses almost everything interesting about acquisition. I built Beetle so that exposure structure becomes an experimental variable, letting us watch a second language being acquired checkpoint by checkpoint rather than only reading off the end state. The same models, the same budget — only the way the second language is introduced changes. That is what makes the results below controlled rather than anecdotal.</p>
@@ -87,19 +82,11 @@
 
           <p>Models trained with structured, staged exposure align with human L2 reading times (MECO L2) as well as, and often better than, multilingual LLMs of up to 8B parameters, at a tiny fraction of the size. Human-scale, controlled pretraining turns out to be competitive with brute-force scale for this cognitive-modelling target.</p>
 
-          <figure>
-            <img src="../assets/beetle/fig_meco_beetle_vs_baselines_bars.jpg" alt="Bar chart: small Beetle models match or beat multilingual LLMs up to 8B parameters on MECO L2 reading-time alignment.">
-            <figcaption>MECO L2 reading-time alignment. Small Beetle models (structured exposure) match or exceed multilingual LLM baselines up to 8B parameters.</figcaption>
-          </figure>
+          <p><a href="https://beetlelm.github.io/models.html">Figures and model details are on the Beetle site →</a></p>
 
           <h3>A dissociation: staged exposure for processing, balanced for grammaticality</h3>
 
           <p>The best curriculum depends on what you measure. Staged exposure yields the best fit to online reading-time behaviour, whereas balanced exposure produces stronger offline grammatical judgement (CEFR, JFLEG). This dissociation between online processing and offline competence mirrors a distinction long drawn in the psycholinguistics of second-language acquisition.</p>
-
-          <figure>
-            <img src="../assets/beetle/fig_bliss_vs_meco_final-1.jpg" alt="Comparison of BLiSS grammaticality versus MECO reading-time outcomes across exposure curricula, showing a dissociation.">
-            <figcaption>BLiSS (grammaticality) versus MECO (reading-time): balanced exposure favours grammatical judgement while staged exposure favours human-like processing — a clear dissociation.</figcaption>
-          </figure>
 
           <h3>Learning dynamics: phase transitions, curricula, and forgetting</h3>
 
