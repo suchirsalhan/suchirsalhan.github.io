@@ -1,0 +1,1674 @@
+{
+  "_comment": "Canonical publication data for research.html. Edit here, then run: python3 scripts/build_publications.py",
+  "publications": [
+    {
+      "id": "pub-pico",
+      "short_title": "Pico",
+      "title": "Pico: A Modular Framework for Hypothesis-Driven Small Language Model Research",
+      "authors": [
+        {
+          "name": "Richard Diehl-Martinez"
+        },
+        {
+          "name": "David Demitri Africa"
+        },
+        {
+          "name": "Yuval Weiss"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Ryan Daniels"
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2025,
+      "venue": "EMNLP 2025 Systems Demonstration · Suzhou, China",
+      "venue_short": "EMNLP 2025 System Demonstrations",
+      "type": "conference",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "devinterp",
+        "sample-efficient"
+      ],
+      "award": null,
+      "finding": "A modular framework that lets you change one thing in a small language model's architecture or training and directly watch what it does.",
+      "takeaway": "Small-model research should be a science, not guesswork.",
+      "summary": "Building small and medium language models is still more art than science: tight parameter budgets make every design choice matter, yet researchers lack systematic ways to test and refine ideas. We introduce Pico, a lightweight, modular framework of two libraries that give researchers a sandbox for making targeted changes to a model's architecture or training procedures and directly observing the effect on its behaviour. To support reproducible experiments, we release a suite of baseline models, pico-decoder, trained under standardised conditions and open-sourced for the community. Case studies show how Pico supports iterative small-LM design and analysis.",
+      "acl_anthology_url": "https://aclanthology.org/2025.emnlp-demos.22/",
+      "arxiv_url": "https://arxiv.org/abs/2509.16413",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:Y0pCki6q_DkC",
+      "doi": "10.18653/v1/2025.emnlp-demos.22",
+      "project_url": "https://www.picolm.io/",
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": "writing/paper-pico.html",
+      "other_links": [],
+      "thumbnail": "assets/thumbs/babylm%20+%20pico.jpg",
+      "primary_url": "https://aclanthology.org/2025.emnlp-demos.22/",
+      "primary_source": "acl_anthology",
+      "verified": true,
+      "featured": 4,
+      "featured_finding": "A modular framework for changing one part of a small model's architecture or training and measuring what that change does."
+    },
+    {
+      "id": "pub-babybabellm",
+      "short_title": "BabyBabelLM",
+      "title": "BabyBabelLM: A Multilingual Benchmark of Developmentally Plausible Training Data",
+      "authors": [
+        {
+          "name": "Jaap Jumelet"
+        },
+        {
+          "name": "Abdellah Fourtassi"
+        },
+        {
+          "name": "Akari Haga"
+        },
+        {
+          "name": "Bastian Bunzeck"
+        },
+        {
+          "name": "Bhargav Shandilya"
+        },
+        {
+          "name": "Diana Galvan-Sosa"
+        },
+        {
+          "name": "Faiz Ghifari Haznitrama"
+        },
+        {
+          "name": "Francesca Padovani"
+        },
+        {
+          "name": "François Meyer"
+        },
+        {
+          "name": "Hai Hu"
+        },
+        {
+          "name": "Julen Etxaniz"
+        },
+        {
+          "name": "Laurent Prévot"
+        },
+        {
+          "name": "Linyang He"
+        },
+        {
+          "name": "María Grandury"
+        },
+        {
+          "name": "Mila Marcheva"
+        },
+        {
+          "name": "Negar Foroutan"
+        },
+        {
+          "name": "Nikitas Theodoropoulos"
+        },
+        {
+          "name": "Pouya Sadeghi"
+        },
+        {
+          "name": "Siyuan Song"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Susana Zhou"
+        },
+        {
+          "name": "Yurii Paniv"
+        },
+        {
+          "name": "Ziyin Zhang"
+        },
+        {
+          "name": "Arianna Bisazza"
+        },
+        {
+          "name": "Alex Warstadt"
+        },
+        {
+          "name": "Leshem Choshen"
+        }
+      ],
+      "year": 2026,
+      "venue": "EACL 2026 (Main Conference) · Rabat, Morocco",
+      "venue_short": "EACL 2026",
+      "type": "conference",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "multilingual",
+        "sample-efficient",
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "A multilingual collection of datasets modelling the language a child hears from birth to fluency across 45 languages, with benchmarks and baseline models.",
+      "takeaway": "Developmental data has no business being English-only.",
+      "summary": "We built BabyBabelLM, a multilingual collection of datasets that model the language a person hears from birth until they acquire a native language. The collection curates developmentally plausible training data of roughly 100 million English word-equivalents across 45 languages. Alongside the data we create evaluation benchmarks and train baseline models. The aim is to support multilingual pretraining research and language acquisition studies.",
+      "acl_anthology_url": "https://aclanthology.org/2026.eacl-long.152/",
+      "arxiv_url": "https://arxiv.org/abs/2510.10159",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:WF5omc3nYNoC",
+      "doi": "10.18653/v1/2026.eacl-long.152",
+      "project_url": "https://babylm.github.io/babybabellm/",
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": "writing/paper-babybabellm.html",
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://aclanthology.org/2026.eacl-long.152/",
+      "primary_source": "acl_anthology",
+      "verified": true,
+      "featured": 2,
+      "featured_finding": "Developmentally plausible training data, about 100 million words per language, for 45 languages, with benchmarks and baseline models."
+    },
+    {
+      "id": "pub-babylm-turns-4",
+      "short_title": "BabyLM Turns 4",
+      "title": "BabyLM Turns 4 and Goes Multilingual: Call for Papers for the 2026 BabyLM Workshop",
+      "authors": [
+        {
+          "name": "Leshem Choshen"
+        },
+        {
+          "name": "Ryan Cotterell"
+        },
+        {
+          "name": "Mustafa Omer Gul"
+        },
+        {
+          "name": "Jaap Jumelet"
+        },
+        {
+          "name": "Tal Linzen"
+        },
+        {
+          "name": "Aaron Mueller"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Raj Sanjay Shah"
+        },
+        {
+          "name": "Alex Warstadt"
+        },
+        {
+          "name": "Ethan Gotlieb Wilcox"
+        }
+      ],
+      "year": 2026,
+      "venue": "BabyLM Workshop 2026 @ EMNLP · Budapest, Hungary",
+      "venue_short": "BabyLM Workshop 2026",
+      "type": "conference",
+      "status": "preprint",
+      "first_author": false,
+      "topics": [
+        "sample-efficient",
+        "multilingual"
+      ],
+      "award": null,
+      "finding": "The call for papers for the 2026 BabyLM Workshop, which opens the sample-efficient pretraining challenge up to multilingual training data.",
+      "takeaway": "Data-efficient pretraining grows up and stops being English-only.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": "https://arxiv.org/abs/2602.20092",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:8k81kl-MbHgC",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://arxiv.org/abs/2602.20092",
+      "primary_source": "arxiv",
+      "verified": true
+    },
+    {
+      "id": "pub-grammar-induction",
+      "short_title": "Maturational theories via grammar induction",
+      "title": "A Computational Operationalisation of Competing Maturational Theories of Syntactic Development via Statistical Grammar Induction",
+      "authors": [
+        {
+          "name": "Mila Marcheva"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Weiwei Sun"
+        }
+      ],
+      "year": 2026,
+      "venue": "CogSci 2026 (Main Conference), Proceedings of the Annual Meeting of the Cognitive Science Society · Rio de Janeiro, Brazil",
+      "venue_short": "CogSci 2026",
+      "type": "conference",
+      "status": "accepted",
+      "first_author": false,
+      "topics": [
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "Statistical grammar induction over child-directed speech is used to test competing maturational theories of how children's syntax develops.",
+      "takeaway": "Grammar induction can adjudicate theories of how syntax matures.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": "https://arxiv.org/abs/2605.08476",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:qxL8FJ1GzNcC",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://arxiv.org/abs/2605.08476",
+      "primary_source": "arxiv",
+      "verified": true
+    },
+    {
+      "id": "pub-phoneme-distribution",
+      "short_title": "Phoneme frequencies across languages",
+      "title": "The Distribution of Phoneme Frequencies across the World's Languages: Macroscopic and Microscopic Information-Theoretic Models",
+      "authors": [
+        {
+          "name": "Fermín Moscoso del Prado Martín"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        }
+      ],
+      "year": 2026,
+      "venue": "under review",
+      "venue_short": "under review",
+      "type": "conference",
+      "status": "under-review",
+      "first_author": false,
+      "topics": [
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "Macroscopic and microscopic information-theoretic models of how phoneme frequencies are distributed across the world's languages.",
+      "takeaway": "The shape of a language's sound system may be predictable from information theory.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": "https://arxiv.org/abs/2603.02860",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:kNdYIx-mwKoC",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://arxiv.org/abs/2603.02860",
+      "primary_source": "arxiv",
+      "verified": true
+    },
+    {
+      "id": "pub-diachronic-phonemes",
+      "short_title": "Diachronic phoneme frequencies",
+      "title": "Modelling the Diachronic Emergence of Phoneme Frequency Distributions",
+      "authors": [
+        {
+          "name": "Fermín Moscoso del Prado Martín"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        }
+      ],
+      "year": 2026,
+      "venue": "Proceedings of the Society for Computation in Linguistics (SCiL) · Presentation at ACL 2026, San Diego, USA",
+      "venue_short": "SCiL 2026",
+      "type": "conference",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "A model of how the frequency distribution of phonemes emerges over time as languages change.",
+      "takeaway": "Today's phoneme frequencies are the fossil record of a language's history.",
+      "summary": null,
+      "acl_anthology_url": "https://aclanthology.org/2026.scil-main.14/",
+      "arxiv_url": "https://arxiv.org/abs/2603.09503",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:ULOm3_A8WrAC",
+      "doi": "10.18653/v1/2026.scil-main.14",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [
+        {
+          "label": "SCiL proceedings",
+          "url": "https://openpublishing.library.umass.edu/scil/issues/"
+        }
+      ],
+      "thumbnail": null,
+      "primary_url": "https://aclanthology.org/2026.scil-main.14/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-beetle",
+      "short_title": "Beetle",
+      "title": "Beetle: A Bilingual Model Suite for Modelling Second-Language Processing",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Catherine Arnett"
+        },
+        {
+          "name": "James Michaelov"
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2026,
+      "venue": "EMNLP 2026 Main Conference · Budapest, Hungary",
+      "venue_short": "EMNLP 2026",
+      "type": "conference",
+      "status": "published",
+      "first_author": true,
+      "topics": [
+        "multilingual",
+        "devinterp",
+        "representations"
+      ],
+      "award": null,
+      "finding": "A suite of bilingual models trained with controlled exposure to a second language (L2), used to model how people process an L2.",
+      "takeaway": "Controlling what a model sees, and when, mirrors how humans pick up a second language.",
+      "summary": null,
+      "acl_anthology_url": "https://aclanthology.org/2026.emnlp-main.2276/",
+      "arxiv_url": "https://arxiv.org/abs/2609.22633",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:L8Ckcad2t8MC",
+      "doi": "10.18653/2026.emnlp-main.2276",
+      "project_url": "beetle.html",
+      "code_url": "https://beetlelm.github.io/",
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://aclanthology.org/2026.emnlp-main.2276/",
+      "primary_source": "acl_anthology",
+      "verified": true,
+      "featured": 1,
+      "featured_finding": "330 open models (285 bilingual, 45 monolingual) across 13 first languages turn the timing and amount of second-language exposure into an experimental variable."
+    },
+    {
+      "id": "pub-langmap",
+      "short_title": "LangMAP",
+      "title": "LangMAP: A Language-Adaptive Approach to Tokenization",
+      "authors": [
+        {
+          "name": "Clara Meister"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Andrzej Szablewski"
+        },
+        {
+          "name": "Pietro Lesci"
+        },
+        {
+          "name": "Paula Buttery"
+        },
+        {
+          "name": "Tiago Pimentel"
+        }
+      ],
+      "year": 2026,
+      "venue": "EMNLP 2026 Main Conference · Budapest, Hungary (also Second Tokenization Workshop, COLM)",
+      "venue_short": "EMNLP 2026",
+      "type": "conference",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "tokenisation",
+        "multilingual"
+      ],
+      "award": null,
+      "finding": "A tokenisation method that adapts its segmentation to each language rather than applying one fixed scheme everywhere.",
+      "takeaway": "One tokeniser for every language leaves performance on the table.",
+      "summary": null,
+      "acl_anthology_url": "https://aclanthology.org/2026.emnlp-main.2170/",
+      "arxiv_url": "https://arxiv.org/abs/2606.23566",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:Wp0gIr-vW9MC",
+      "doi": "10.18653/2026.emnlp-main.2170",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": "writing/paper-langmap.html",
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://aclanthology.org/2026.emnlp-main.2170/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-crosslingual-align",
+      "short_title": "Cross-Lingual Alignment Without Joint Training",
+      "title": "Cross-Lingual Alignment Without Joint Training: Do Monolingual Language Models Converge on Universal Representations?",
+      "authors": [
+        {
+          "name": "EJ Zhou"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Catherine Arnett"
+        }
+      ],
+      "year": 2026,
+      "venue": "EMNLP 2026 Main Conference · Budapest, Hungary",
+      "venue_short": "EMNLP 2026",
+      "type": "conference",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "representations",
+        "multilingual"
+      ],
+      "award": null,
+      "finding": "Tests whether language models trained separately on single languages arrive at the same underlying representations without ever sharing training.",
+      "takeaway": "If monolingual models converge on their own, the structure is in the languages, not the training.",
+      "summary": null,
+      "acl_anthology_url": "https://aclanthology.org/2026.emnlp-main.947/",
+      "arxiv_url": "https://arxiv.org/abs/2608.27115",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:7PzlFSSx8tAC",
+      "doi": "10.18653/2026.emnlp-main.947",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": "writing/paper-crosslingual-alignment.html",
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://aclanthology.org/2026.emnlp-main.947/",
+      "primary_source": "acl_anthology",
+      "verified": true,
+      "featured": 5,
+      "featured_finding": "Asks whether language models trained separately on single languages converge on shared representations without any joint training."
+    },
+    {
+      "id": "pub-less-is-more",
+      "short_title": "Less is More",
+      "title": "Less is More: Pre-Training Cross-Lingual Small-Scale Language Models with Cognitively-Plausible Curriculum Learning Strategies",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true,
+          "equal_contribution": true
+        },
+        {
+          "name": "Richard Diehl-Martinez"
+        },
+        {
+          "name": "Zebulon Goriely"
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2024,
+      "venue": "CoNLL 2024 BabyLM Challenge (Paper Track) · Miami, Florida, USA (Nov 2024)",
+      "venue_short": "CoNLL 2024 BabyLM Challenge",
+      "type": "workshop",
+      "status": "published",
+      "first_author": true,
+      "topics": [
+        "sample-efficient",
+        "multilingual",
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "Curricula that follow real theories of child language acquisition, applied language by language, can beat non-curriculum baselines across four language families.",
+      "takeaway": "Copy how children actually learn, not just how much.",
+      "summary": "Curriculum learning is a popular way to make Small-Scale Language Models (SSLMs) more cognitively plausible in the BabyLM Challenge, but it has rarely improved much over non-curriculum models. We ask whether theories of linguistic acquisition can specify finer-grained curricula. We build age-ordered corpora of Child-Directed Speech for four typologically distant language families and implement acquisition-inspired curricula cross-lingually. Comparing three curricula that replicate the predictions of acquisition theories (Growing, Inwards and MMM) on a standard SSLM architecture, we find fine-grained, language-specific curricula can outperform non-curriculum baselines.",
+      "acl_anthology_url": "https://aclanthology.org/2024.conll-babylm.15/",
+      "arxiv_url": "https://arxiv.org/abs/2410.22886",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:u5HHmVD_uO8C",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": "writing/paper-less-is-more.html",
+      "other_links": [],
+      "thumbnail": "assets/thumbs/2410.22886v1.jpg",
+      "primary_url": "https://aclanthology.org/2024.conll-babylm.15/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-bytespan",
+      "short_title": "ByteSpan",
+      "title": "ByteSpan: Information-Driven Subword Tokenisation",
+      "authors": [
+        {
+          "name": "Zebulon Goriely"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Pietro Lesci"
+        },
+        {
+          "name": "Julius Cheng"
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2025,
+      "venue": "ICML 2025 Tokenization Workshop (TokShop) · Vancouver, Canada (August 2025)",
+      "venue_short": "ICML 2025 Tokenization Workshop",
+      "type": "workshop",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "tokenisation",
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "ByteSpan builds a subword vocabulary by grouping bytes a language model finds predictable, giving vocabularies that align with morphology better than BPE for English.",
+      "takeaway": "Maybe tokenisers should learn morphology, not just compress.",
+      "summary": "Recent dynamic tokenisers work directly on bytes and pool their latent representations into patches, much like word-segmentation models that mark boundaries where an autoregressive model's prediction error spikes. We ask whether grouping predictable bytes, rather than pooling their representations, can yield a useful fixed subword vocabulary. ByteSpan is an information-driven subword tokeniser that uses an external byte-level LM during training to find contiguous predictable byte sequences and group them into subwords. It produces efficient vocabularies with higher morphological alignment scores than BPE for English, and shows similar compression and Rényi efficiency across 25 languages.",
+      "acl_anthology_url": null,
+      "arxiv_url": "https://arxiv.org/abs/2506.18639",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:qjMakFHDy7sC",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": "writing/paper-bytespan.html",
+      "other_links": [
+        {
+          "label": "OpenReview",
+          "url": "https://openreview.net/forum?id=5AnYuCoCsf&noteId=z9aNzxmVFt"
+        }
+      ],
+      "thumbnail": null,
+      "primary_url": "https://arxiv.org/abs/2506.18639",
+      "primary_source": "arxiv",
+      "verified": true,
+      "featured": 3,
+      "featured_finding": "Grouping bytes that a language model finds predictable yields subword vocabularies that align with morphology better than byte-pair encoding (BPE) for English."
+    },
+    {
+      "id": "pub-grammatical-diversity",
+      "short_title": "Measuring Grammatical Diversity",
+      "title": "Measuring Grammatical Diversity from Small Corpora: Derivational Entropy Rates, Mean Length of Utterances, and Annotation Invariance",
+      "authors": [
+        {
+          "name": "Fermín Moscoso del Prado Martín"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        }
+      ],
+      "year": 2025,
+      "venue": "ACL 2025 Main Conference (Poster) · Vienna, Austria (August 2025)",
+      "venue_short": "ACL 2025",
+      "type": "workshop",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "New information-theoretic measures quantify grammatical diversity from small corpora, staying stable across syntactic annotation scheme and corpus size.",
+      "takeaway": "You don't need a huge corpus to measure grammatical richness.",
+      "summary": "We introduce information-theoretic measures, derivational entropy rates alongside mean length of utterance, for quantifying grammatical diversity from small corpora. We show the estimates stay robust to the choice of syntactic annotation scheme, a property we call annotation invariance. They also hold up under limited corpus size.",
+      "acl_anthology_url": "https://aclanthology.org/2025.cl-4.4/",
+      "arxiv_url": "https://arxiv.org/abs/2412.06095",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:UeHWp8X0CEIC",
+      "doi": "10.1162/coli.a.15",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": "assets/posters/ACL_Poster.pdf",
+      "slides_url": "assets/presentations/acl2025.pdf",
+      "writeup_url": "writing/paper-grammatical-diversity.html",
+      "other_links": [
+        {
+          "label": "Computational Linguistics (MIT Press)",
+          "url": "https://direct.mit.edu/coli/article/doi/10.1162/coli.a.15/131070"
+        }
+      ],
+      "thumbnail": "assets/thumbs/ACL_Poster.jpg",
+      "primary_url": "https://aclanthology.org/2025.cl-4.4/",
+      "primary_source": "acl_anthology",
+      "verified": true,
+      "slides_label": "Slides"
+    },
+    {
+      "id": "pub-meta-pretraining",
+      "short_title": "Meta-Pretraining for Cross-Lingual NER",
+      "title": "Meta-Pretraining for Zero-Shot Cross-Lingual Named Entity Recognition in Low-Resource Philippine Languages",
+      "authors": [
+        {
+          "name": "David Demitri Africa"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Yuval Weiss"
+        },
+        {
+          "name": "Paula Buttery"
+        },
+        {
+          "name": "Richard Diehl-Martinez"
+        }
+      ],
+      "year": 2025,
+      "venue": "5th Workshop on Multilingual Representation Learning (MRL), EMNLP 2025 · Suzhou, China",
+      "venue_short": "MRL Workshop, EMNLP 2025",
+      "type": "workshop",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "multilingual",
+        "sample-efficient"
+      ],
+      "award": null,
+      "finding": "Adding meta-learning to the pretraining of small decoder models lets them transfer named-entity recognition zero-shot to Philippine languages unseen during training.",
+      "takeaway": "Teach small models to adapt and they travel to new languages.",
+      "summary": "Named-entity recognition in low-resource languages usually means finetuning very large multilingual LMs, which is often infeasible under memory or latency limits. We ask whether small decoder LMs can be pretrained so that they adapt quickly and transfer zero-shot to languages unseen during pretraining. To do this we replace part of the autoregressive objective with first-order model-agnostic meta-learning (MAML), testing on Tagalog and Cebuano, which are typologically similar yet differ in their actor/non-actor voice systems. Across four model sizes (11M–570M), MAML lifts zero-shot micro-F1 by 2–6 points under head-only tuning and 1–3 points after full tuning, and cuts convergence time by up to 8%. Gains are largest for single-token person entities that co-occur with the Tagalog case particles si and ni.",
+      "acl_anthology_url": "https://aclanthology.org/2025.mrl-main.8/",
+      "arxiv_url": "https://arxiv.org/abs/2509.02160",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:zYLM7Y9cAGgC",
+      "doi": "10.18653/v1/2025.mrl-main.8",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": "assets/posters/Pico_MAML_Multilingual_Representation_Learning_Workshop.pdf",
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": "assets/thumbs/Pico_MAML_Multilingual_Representation_Learning_Workshop.jpg",
+      "primary_url": "https://aclanthology.org/2025.mrl-main.8/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-teacher-demos",
+      "short_title": "Teacher Demonstrations",
+      "title": "Teacher Demonstrations in a BabyLM’s Zone of Proximal Development for Contingent Multi-Turn Interaction",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Hongyi Gu"
+        },
+        {
+          "name": "Donya Rooein"
+        },
+        {
+          "name": "Diana Galvan-Sosa"
+        },
+        {
+          "name": "Gabrielle Gaudeau"
+        },
+        {
+          "name": "Andrew Caines"
+        },
+        {
+          "name": "Zheng Yuan"
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2025,
+      "venue": "BabyLM Workshop, EMNLP 2025 · Suzhou, China",
+      "venue_short": "BabyLM Workshop, EMNLP 2025",
+      "type": "workshop",
+      "status": "published",
+      "first_author": true,
+      "topics": [
+        "sample-efficient",
+        "evaluation",
+        "linguistics"
+      ],
+      "award": "Outstanding Paper Award",
+      "finding": "ContingentChat, a Teacher–Student framework, teaches a 100M-word BabyLM to hold more grammatical, cohesive back-and-forth conversation.",
+      "takeaway": "Tiny models can learn to actually hold a conversation.",
+      "summary": "Child–caregiver dialogue has a property called contingency: prompt, direct, meaningful exchanges between the speakers. We introduce ContingentChat, a Teacher–Student framework that benchmarks and improves multi-turn contingency in a BabyLM trained on 100M words. Using a new alignment dataset for post-training, the BabyLM produces responses that are more grammatical and cohesive. Adaptive Teacher decoding strategies give only limited further gains. The work shows targeted post-training helps dialogue quality, and frames contingency as a hard goal for BabyLMs.",
+      "acl_anthology_url": "https://aclanthology.org/2025.babylm-main.25/",
+      "arxiv_url": "https://arxiv.org/abs/2510.20411",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:UebtZRa9Y70C",
+      "doi": "10.18653/v1/2025.babylm-main.25",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": "writing/paper-teacher-demonstrations.html",
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://aclanthology.org/2025.babylm-main.25/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-looking-to-learn",
+      "short_title": "Looking to Learn",
+      "title": "Looking to Learn: Token-wise Dynamic Gating for Low-Resource Vision-Language Modelling",
+      "authors": [
+        {
+          "name": "Bianca-Mihaela Ganescu"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Andrew Caines"
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2025,
+      "venue": "BabyLM Workshop, EMNLP 2025 · Suzhou, China",
+      "venue_short": "BabyLM Workshop, EMNLP 2025",
+      "type": "workshop",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "sample-efficient",
+        "devinterp"
+      ],
+      "award": "Outstanding Paper Award",
+      "finding": "A lightweight vision-language model with token-wise dynamic gating learns from very little data and leans on images for content words, language for function words.",
+      "takeaway": "The model learned when to look, nobody told it to.",
+      "summary": "Training vision-language models on cognitively plausible amounts of data means rethinking how models combine words and images. Within the Vision track of the BabyLM Challenge 2025, we propose a lightweight decoder architecture with token-wise dynamic gating for adaptive fusion of linguistic and visual cues, feature modulation and channel attention to stretch limited visual information, and auxiliary contrastive objectives for visual grounding. Across five benchmarks (BLiMP, BLiMP Supplement, EWoK, Winoground and VQA) it matches or beats multimodal baselines. The dynamic gate also discovers interpretable patterns without supervision, favouring visual cues for content words and linguistic cues for function words.",
+      "acl_anthology_url": "https://aclanthology.org/2025.babylm-main.15/",
+      "arxiv_url": "https://arxiv.org/abs/2510.08470",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:eQOLeE2rZwMC",
+      "doi": "10.18653/v1/2025.babylm-main.15",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": "writing/paper-looking-to-learn.html",
+      "other_links": [],
+      "thumbnail": "assets/thumbs/Bmg44_MPhil_Project%20(1).jpg",
+      "primary_url": "https://aclanthology.org/2025.babylm-main.15/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-bliss",
+      "short_title": "BLiSS",
+      "title": "BLiSS: Evaluating Bilingual Learner Competence in Second Language Small Language Models",
+      "authors": [
+        {
+          "name": "Yuan Gao"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Andrew Caines"
+        },
+        {
+          "name": "Paula Buttery"
+        },
+        {
+          "name": "Weiwei Sun"
+        }
+      ],
+      "year": 2025,
+      "venue": "BabyLM Workshop, EMNLP 2025 · Suzhou, China",
+      "venue_short": "BabyLM Workshop, EMNLP 2025",
+      "type": "workshop",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "multilingual",
+        "evaluation",
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "BLiSS is a benchmark of 1.5M minimal pairs built from real learner errors, testing how well second-language small models capture the systematic patterns of learner language.",
+      "takeaway": "Learner mistakes are data, not noise.",
+      "summary": "Cross-lingual extensions of the BabyLM Shared Task push Small Language Models to simulate a wider range of acquisition scenarios, including code-switching, simultaneous and successive bilingualism, and second language acquisition. Yet there is no benchmark for the formal competence of cognitively inspired models of L2 acquisition (L2LMs). We introduce the Benchmark of Learner Interlingual Syntactic Structure (BLiSS): 1.5M naturalistic minimal pairs derived from errorful sentence–correction pairs in parallel learner corpora. We use them to evaluate L2LMs trained under different regimes on specific properties of learner language, giving a linguistically motivated, controlled measure of interlanguage competence.",
+      "acl_anthology_url": "https://aclanthology.org/2025.babylm-main.13/",
+      "arxiv_url": "https://arxiv.org/abs/2510.19419",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:roLk4NBRz8UC",
+      "doi": "10.18653/v1/2025.babylm-main.13",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": "writing/paper-bliss.html",
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://aclanthology.org/2025.babylm-main.13/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-seq-length",
+      "short_title": "Best Sequence Length for BabyLM",
+      "title": "What's the Best Sequence Length for BabyLM?",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Richard Diehl-Martinez"
+        },
+        {
+          "name": "Zebulon Goriely"
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2025,
+      "venue": "BabyLM Workshop, EMNLP 2025 · Suzhou, China",
+      "venue_short": "BabyLM Workshop, EMNLP 2025",
+      "type": "workshop",
+      "status": "published",
+      "first_author": true,
+      "topics": [
+        "sample-efficient"
+      ],
+      "award": null,
+      "finding": "For BabyLM pretraining, longer context often helps but not always: short sequences suffice for grammar tasks, while morphological reasoning benefits from longer ones.",
+      "takeaway": "There is no single best context length; it depends on the task.",
+      "summary": "Transformer language models use a fixed context window that has grown in step with pretraining dataset size, yet many BabyLM submissions default to much shorter sequences. We ask a simple question: what sequence length should we use when training BabyLMs? Using 100M words of training data and fixed compute budgets, we compare 125M-parameter Mamba and OPT models. Longer is often better, but the best length depends on both task and architecture. Shorter sequences are enough for grammatical generalization, while longer contexts help morphological analogical reasoning.",
+      "acl_anthology_url": "https://aclanthology.org/2025.babylm-main.10/",
+      "arxiv_url": "https://arxiv.org/abs/2510.19493",
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:Se3iqnhoufwC",
+      "doi": "10.18653/v1/2025.babylm-main.10",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": "assets/posters/BabyLM%20Sequence%20Length%20Poster.pdf",
+      "slides_url": null,
+      "writeup_url": "writing/paper-sequence-length.html",
+      "other_links": [],
+      "thumbnail": "assets/thumbs/BabyLM%20Sequence%20Length%20Poster.jpg",
+      "primary_url": "https://aclanthology.org/2025.babylm-main.10/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-pedagogical-alignment",
+      "short_title": "Pedagogical Alignment of LLMs",
+      "title": "Pedagogical Alignment of LLMs Requires Diverse Cognitively-Inspired Student Proxies",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Andrew Caines"
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2025,
+      "venue": "NeurIPS First Workshop on CogInterp: Interpreting Cognition in Deep Learning Models, 2025 · San Diego, California, USA",
+      "venue_short": "CogInterp Workshop, NeurIPS 2025",
+      "type": "workshop",
+      "status": "accepted",
+      "first_author": true,
+      "topics": [
+        "evaluation",
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "Argues that aligning tutoring models to learners needs a diverse set of cognitively-inspired student simulators, not one generic proxy.",
+      "takeaway": "A tutor trained against one imaginary student teaches only that student.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/scholar?q=%22Pedagogical+Alignment+of+LLMs+Requires+Diverse+Cognitively-Inspired+Student+Proxies%22",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": "assets/posters/CogInterp%20NEURIPS%20Poster.pdf",
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": "assets/thumbs/CogInterp%20NEURIPS%20Poster.jpg",
+      "primary_url": "https://scholar.google.com/scholar?q=%22Pedagogical+Alignment+of+LLMs+Requires+Diverse+Cognitively-Inspired+Student+Proxies%22",
+      "primary_source": "google_scholar",
+      "verified": true,
+      "preview_url": "assets/thumbs/CogInterp%20NEURIPS%20Poster.jpg",
+      "preview_label": "Poster image"
+    },
+    {
+      "id": "pub-theoretical-linguistics",
+      "short_title": "Theoretical Linguistics and Causal Abstraction",
+      "title": "Theoretical Linguistics Constrains Hypothesis-Driven Causal Abstraction in Mechanistic Interpretability",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Konstantinos Voudouris"
+        }
+      ],
+      "year": 2025,
+      "venue": "NeurIPS First Workshop on CogInterp: Interpreting Cognition in Deep Learning Models, 2025 · San Diego, California, USA",
+      "venue_short": "CogInterp Workshop, NeurIPS 2025",
+      "type": "workshop",
+      "status": "accepted",
+      "first_author": true,
+      "topics": [
+        "devinterp",
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "Uses theoretical linguistics to constrain which causal abstractions are worth testing in mechanistic interpretability.",
+      "takeaway": "Linguistic theory tells interpretability where to look.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/scholar?q=%22Theoretical+Linguistics+Constrains+Hypothesis-Driven+Causal+Abstraction+in+Mechanistic+Interpretability%22",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": "assets/posters/CogInterp%20NEURIPS%20Poster_2.pdf",
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": "assets/thumbs/CogInterp%20NEURIPS%20Poster_2.jpg",
+      "primary_url": "https://scholar.google.com/scholar?q=%22Theoretical+Linguistics+Constrains+Hypothesis-Driven+Causal+Abstraction+in+Mechanistic+Interpretability%22",
+      "primary_source": "google_scholar",
+      "verified": true,
+      "preview_url": "assets/thumbs/CogInterp%20NEURIPS%20Poster_2.jpg",
+      "preview_label": "Poster image"
+    },
+    {
+      "id": "pub-goldfish",
+      "short_title": "Merged Goldfish Models",
+      "title": "Glints of Gold or Troubling Waters? Can a School of Merged Monolingual Goldfish Models Swim in Bilingual Seas?",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "EJ Zhou"
+        },
+        {
+          "name": "Laura Barbenel"
+        },
+        {
+          "name": "Lily Goulder"
+        },
+        {
+          "name": "Lucas Resck"
+        },
+        {
+          "name": "Catherine Arnett"
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2026,
+      "venue": "EACL Workshop on Multilingual Multicultural Evaluation (MME), Non-Archival Full Paper, 2026 · Rabat, Morocco",
+      "venue_short": "MME Workshop, EACL 2026",
+      "type": "workshop",
+      "status": "accepted",
+      "first_author": true,
+      "topics": [
+        "representations",
+        "multilingual"
+      ],
+      "award": null,
+      "finding": "Asks whether merging separately trained monolingual Goldfish models produces a working bilingual model.",
+      "takeaway": null,
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/scholar?q=%22Glints+of+Gold+or+Troubling+Waters%3F+Can+a+School+of+Merged+Monolingual+Goldfish+Models+Swim+in+Bilingual+Seas%3F%22",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": "assets/thumbs/EACL_2026_MME_Workshop.jpg",
+      "primary_url": "https://scholar.google.com/scholar?q=%22Glints+of+Gold+or+Troubling+Waters%3F+Can+a+School+of+Merged+Monolingual+Goldfish+Models+Swim+in+Bilingual+Seas%3F%22",
+      "primary_source": "google_scholar",
+      "verified": true,
+      "preview_url": "assets/thumbs/EACL_2026_MME_Workshop.jpg",
+      "preview_label": "First-page preview"
+    },
+    {
+      "id": "pub-universal-conceptual",
+      "short_title": "Universal Conceptual Representations",
+      "title": "Do Monolingual Language Models Learn Cross-Lingual Universal Conceptual Representations?",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "EJ Zhou"
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2026,
+      "venue": "ICLR Workshop on Unifying Concept Representation Learning (UCRL) & ICLR Workshop on Representational Alignment (Re-Align), 2026 · Rio de Janeiro, Brazil",
+      "venue_short": "ICLR 2026 workshops",
+      "type": "workshop",
+      "status": "accepted",
+      "first_author": true,
+      "topics": [
+        "representations",
+        "multilingual"
+      ],
+      "award": null,
+      "finding": "Probes whether models trained on a single language nonetheless build concept representations that line up across languages.",
+      "takeaway": "Shared concepts can show up even without shared training data.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:3fE2CSJIrl8C",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:3fE2CSJIrl8C",
+      "primary_source": "google_scholar",
+      "verified": true
+    },
+    {
+      "id": "pub-l1-influence",
+      "short_title": "L1 Influence in L2 Language Models",
+      "title": "L1 Influence in L2 Language Models: A Human-Centric Approach",
+      "authors": [
+        {
+          "name": "Laura Barbenel"
+        },
+        {
+          "name": "Lily Goulder"
+        },
+        {
+          "name": "Aoife O'Driscoll"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Catherine Arnett"
+        },
+        {
+          "name": "Andrew Caines"
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2026,
+      "venue": "Computational Developmental Linguistics (CDL) Workshop @ ACL 2026",
+      "venue_short": "CDL Workshop, ACL 2026",
+      "type": "workshop",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "multilingual",
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "A human-centred study of how a model's first language shapes its behaviour when it goes on to learn a second.",
+      "takeaway": "Models carry an accent from their first language, much like people do.",
+      "summary": null,
+      "acl_anthology_url": "https://aclanthology.org/2026.cdl-1.15/",
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:mVmsd5A6BfQC",
+      "doi": "10.18653/v1/2026.cdl-1.15",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://aclanthology.org/2026.cdl-1.15/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-repertoires",
+      "short_title": "Repertoires, Not Scores",
+      "title": "Repertoires, Not Scores: Instability as Signal in Cultural Evaluation of LLMs",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Filip Trhlik"
+        },
+        {
+          "name": "Diana Galvan-Sosa"
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2026,
+      "venue": "Culture x AI Workshop, ICML 2026 · Seoul, Korea",
+      "venue_short": "Culture x AI Workshop, ICML 2026",
+      "type": "workshop",
+      "status": "accepted",
+      "first_author": true,
+      "topics": [
+        "evaluation"
+      ],
+      "award": null,
+      "finding": "Argues that the instability in an LLM's cultural responses is itself the signal, so evaluation should report repertoires rather than single scores.",
+      "takeaway": "A model's cultural variation is data, not measurement error.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/scholar?q=%22Repertoires%2C+Not+Scores%3A+Instability+as+Signal+in+Cultural+Evaluation+of+LLMs%22",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://scholar.google.com/scholar?q=%22Repertoires%2C+Not+Scores%3A+Instability+as+Signal+in+Cultural+Evaluation+of+LLMs%22",
+      "primary_source": "google_scholar",
+      "verified": true
+    },
+    {
+      "id": "pub-protocol-competence",
+      "short_title": "Protocol Competence of Small LMs",
+      "title": "Protocol Competence of Small Language Models in Interactive Language Game Environments",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2026,
+      "venue": "The LM Playschool (Improving Language Models through Learning from Dialogue Interaction) @ EMNLP 2026 · Budapest, Hungary",
+      "venue_short": "LM Playschool, EMNLP 2026",
+      "type": "workshop",
+      "status": "published",
+      "first_author": true,
+      "topics": [
+        "evaluation",
+        "sample-efficient"
+      ],
+      "award": null,
+      "finding": "Tests whether small language models can follow the protocols of interactive language games learned through dialogue.",
+      "takeaway": "Playing language games is a demanding test of a small model's competence.",
+      "summary": null,
+      "acl_anthology_url": "https://aclanthology.org/2026.lmplayschool-1.6/",
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:hC7cP41nSMkC",
+      "doi": "10.18653/2026.lmplayschool-1.6",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://aclanthology.org/2026.lmplayschool-1.6/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-claude-reinvestigates",
+      "short_title": "Claude reinvestigates herself",
+      "title": "Claude reinvestigates herself: A replication of different types of syntactic agreement recruit the same units in LLMs",
+      "authors": [
+        {
+          "name": "Elena Polyakova-Reed"
+        },
+        {
+          "name": "Shivan Arora"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2026,
+      "venue": "9th BlackboxNLP Workshop Special Track (Reproducibility & Reliability), EMNLP 2026 · Budapest, Hungary",
+      "venue_short": "BlackboxNLP 2026",
+      "type": "workshop",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "devinterp",
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "A replication asking whether different kinds of syntactic agreement are handled by the same units inside an LLM.",
+      "takeaway": "Does one grammar circuit do many jobs? Replication puts it to the test.",
+      "summary": null,
+      "acl_anthology_url": "https://aclanthology.org/2026.blackboxnlp-1.69/",
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:IWHjjKOFINEC",
+      "doi": "10.18653/2026.blackboxnlp-1.69",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://aclanthology.org/2026.blackboxnlp-1.69/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-linear-truth",
+      "short_title": "Linear Truth Encodings",
+      "title": "Development of Linear Truth Encodings in Language Models: A Replication Study",
+      "authors": [
+        {
+          "name": "Mingchuan Zou"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Paula Buttery"
+        }
+      ],
+      "year": 2026,
+      "venue": "9th BlackboxNLP Workshop Special Track (Reproducibility & Reliability), EMNLP 2026 · Budapest, Hungary",
+      "venue_short": "BlackboxNLP 2026",
+      "type": "workshop",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "devinterp",
+        "evaluation"
+      ],
+      "award": null,
+      "finding": "Replicates how linear representations of truth emerge in language models over the course of training.",
+      "takeaway": "When does a model start encoding true-vs-false as a direction you can read off?",
+      "summary": null,
+      "acl_anthology_url": "https://aclanthology.org/2026.blackboxnlp-1.72/",
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=xOo9sisAAAAJ&citation_for_view=xOo9sisAAAAJ:-f6ydRqryjwC",
+      "doi": "10.18653/2026.blackboxnlp-1.72",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": "writing/paper-linear-truth-encodings.html",
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://aclanthology.org/2026.blackboxnlp-1.72/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-minimal-means",
+      "short_title": "Maximising Minimal Means",
+      "title": "On the Potential for Maximising Minimal Means in Transformer Language Models: A Dynamical Systems Perspective",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true,
+          "equal_contribution": true
+        }
+      ],
+      "year": 2023,
+      "venue": "Cambridge Occasional Papers in Linguistics, Volume 15, Article 3: pp. 55–110. ISSN: 2050-5949",
+      "venue_short": "Cambridge Occasional Papers in Linguistics, vol. 15",
+      "type": "working",
+      "status": "published",
+      "first_author": true,
+      "topics": [
+        "devinterp",
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "A dynamical-systems reading of Transformer language models through the linguistic principle of maximising minimal means.",
+      "takeaway": "Efficiency principles from linguistics can describe what Transformers do.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/scholar?q=%22On+the+Potential+for+Maximising+Minimal+Means+in+Transformer+Language+Models%3A+A+Dynamical+Systems+Perspective%22",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": "assets/thumbs/v15_salhan_2.jpg",
+      "primary_url": "https://scholar.google.com/scholar?q=%22On+the+Potential+for+Maximising+Minimal+Means+in+Transformer+Language+Models%3A+A+Dynamical+Systems+Perspective%22",
+      "primary_source": "google_scholar",
+      "verified": true
+    },
+    {
+      "id": "pub-multimodal",
+      "short_title": "Multimodal Grounding across Languages",
+      "title": "Multimodal Language Modelling across Languages and Cultures: Grounding Strategies for Nouns and Verbs",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Fangyu Liu"
+        },
+        {
+          "name": "Nigel Collier"
+        }
+      ],
+      "year": 2022,
+      "venue": "Research Project, Language Technology Lab, Department of Theoretical and Applied Linguistics, University of Cambridge",
+      "venue_short": "Language Technology Lab",
+      "type": "working",
+      "status": "preprint",
+      "first_author": true,
+      "topics": [
+        "multilingual",
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "Compares grounding strategies for nouns and verbs when modelling language across languages and cultures with images.",
+      "takeaway": "Nouns and verbs don't ground in images the same way.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/scholar?q=%22Multimodal+Language+Modelling+across+Languages+and+Cultures%3A+Grounding+Strategies+for+Nouns+and+Verbs%22",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": "assets/thumbs/CollierLiu.jpg",
+      "primary_url": "https://scholar.google.com/scholar?q=%22Multimodal+Language+Modelling+across+Languages+and+Cultures%3A+Grounding+Strategies+for+Nouns+and+Verbs%22",
+      "primary_source": "google_scholar",
+      "verified": true,
+      "preview_url": "assets/thumbs/CollierLiu.jpg",
+      "preview_label": "First-page preview"
+    },
+    {
+      "id": "pub-phonemes-chance",
+      "short_title": "Phonemes: Chance, Costs and Tiers",
+      "title": "The Distribution of Phonemes across Languages: Chance, Costs, and Integration across Linguistic Tiers",
+      "authors": [
+        {
+          "name": "Fermín Moscoso del Prado Martín"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        }
+      ],
+      "year": 2026,
+      "venue": "23rd Old-World Conference in Phonology (OCP23), Gonville & Caius College (Accepted Oral)",
+      "venue_short": "OCP23",
+      "type": "working",
+      "status": "accepted",
+      "first_author": false,
+      "topics": [
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "Examines how phoneme distributions across languages reflect chance, articulatory cost, and integration across linguistic tiers.",
+      "takeaway": "A sound system balances what's easy to say against what's easy to tell apart.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/scholar?q=%22The+Distribution+of+Phonemes+across+Languages%3A+Chance%2C+Costs%2C+and+Integration+across+Linguistic+Tiers%22",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": "assets/presentations/ML2025.pdf",
+      "writeup_url": null,
+      "other_links": [
+        {
+          "label": "PDF",
+          "url": "assets/papers/ocp_fermin.pdf"
+        }
+      ],
+      "thumbnail": "assets/thumbs/ocp_fermin.jpg",
+      "primary_url": "https://scholar.google.com/scholar?q=%22The+Distribution+of+Phonemes+across+Languages%3A+Chance%2C+Costs%2C+and+Integration+across+Linguistic+Tiers%22",
+      "primary_source": "google_scholar",
+      "verified": true,
+      "slides_label": "Keynote Slides",
+      "preview_url": "assets/thumbs/ocp_fermin.jpg",
+      "preview_label": "First-page preview"
+    },
+    {
+      "id": "pub-convergent-equilibria",
+      "short_title": "Convergent Phoneme Surprisal",
+      "title": "Convergent Equilibria in Cross-Lingual Phoneme Surprisal Distributions: Statistical and Simulation-Based Analysis",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Fermín Moscoso del Prado Martín"
+        }
+      ],
+      "year": 2026,
+      "venue": "23rd Old-World Conference in Phonology (OCP23), Gonville & Caius College (Accepted Oral)",
+      "venue_short": "OCP23",
+      "type": "working",
+      "status": "accepted",
+      "first_author": true,
+      "topics": [
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "Statistical and simulation-based analysis of whether phoneme surprisal distributions settle into the same equilibrium across languages.",
+      "takeaway": "Different languages may drift toward the same statistical resting point.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/scholar?q=%22Convergent+Equilibria+in+Cross-Lingual+Phoneme+Surprisal+Distributions%3A+Statistical+and+Simulation-Based+Analysis%22",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://scholar.google.com/scholar?q=%22Convergent+Equilibria+in+Cross-Lingual+Phoneme+Surprisal+Distributions%3A+Statistical+and+Simulation-Based+Analysis%22",
+      "primary_source": "google_scholar",
+      "verified": true
+    },
+    {
+      "id": "pub-linguistic-universals",
+      "short_title": "Linguistic Universals via Sparse Autoencoders",
+      "title": "Extended Abstract for “Linguistic Universals\": Emergent Shared Features in Independent Monolingual Language Models via Sparse Autoencoders",
+      "authors": [
+        {
+          "name": "EJ Zhou"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        }
+      ],
+      "year": 2025,
+      "venue": "5th Workshop on Multilingual Representation Learning (MRL), EMNLP 2025 · Suzhou, China",
+      "venue_short": "MRL Workshop, EMNLP 2025",
+      "type": "working",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "representations",
+        "multilingual",
+        "devinterp"
+      ],
+      "award": null,
+      "finding": "Aligns sparse-autoencoder features across separately trained monolingual models to look for universal features that emerge independently.",
+      "takeaway": "Languages may share structure that models rediscover on their own.",
+      "summary": "Do independently trained monolingual language models converge on shared linguistic principles? We analyse a suite of models trained separately on single languages with identical architectures and budgets. We train sparse autoencoders on their activations to get interpretable latent features, then align those features across languages using activation correlations. Pairwise analyses test whether the feature spaces converge in non-trivial ways, and we look for universal features that recur across models.",
+      "acl_anthology_url": "https://aclanthology.org/2025.mrl-main.9/",
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/scholar?q=%22Extended+Abstract+for+%E2%80%9CLinguistic+Universals%22%3A+Emergent+Shared+Features+in+Independent+Monolingual+Language+Models+via+Sparse+Autoencoders%22",
+      "doi": "10.18653/v1/2025.mrl-main.9",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://aclanthology.org/2025.mrl-main.9/",
+      "primary_source": "acl_anthology",
+      "verified": true
+    },
+    {
+      "id": "pub-linguistics-age",
+      "short_title": "Linguistics in the Age of Language Models",
+      "title": "Linguistics in the Age of Language Models: What can Cognitively-Inspired Language Models offer to Linguistic Theory?",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        }
+      ],
+      "year": 2025,
+      "venue": "Position Paper in Cambridge Occasional Papers in Linguistics (CoPiL), Accepted, Volume 17",
+      "venue_short": "Cambridge Occasional Papers in Linguistics, vol. 17",
+      "type": "working",
+      "status": "accepted",
+      "first_author": true,
+      "topics": [
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "A position paper on what cognitively-inspired language models can offer linguistic theory.",
+      "takeaway": "Language models can be evidence for linguistics, not just tools built from it.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/scholar?q=%22Linguistics+in+the+Age+of+Language+Models%3A+What+can+Cognitively-Inspired+Language+Models+offer+to+Linguistic+Theory%3F%22",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": "assets/thumbs/v17_salhan.jpg",
+      "primary_url": "https://scholar.google.com/scholar?q=%22Linguistics+in+the+Age+of+Language+Models%3A+What+can+Cognitively-Inspired+Language+Models+offer+to+Linguistic+Theory%3F%22",
+      "primary_source": "google_scholar",
+      "verified": true,
+      "preview_url": "assets/thumbs/v17_salhan.jpg",
+      "preview_label": "First-page preview"
+    },
+    {
+      "id": "pub-tokenizer-fertility",
+      "short_title": "Tokenizer Cognitive Plausibility",
+      "title": "Is Tokenizer Cognitive Plausibility just Fertility?",
+      "authors": [
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        }
+      ],
+      "year": 2026,
+      "venue": "Extended Abstract, Second Tokenization Workshop, Conference of Language Modelling (COLM) · San Francisco, USA",
+      "venue_short": "Second Tokenization Workshop, COLM",
+      "type": "working",
+      "status": "accepted",
+      "first_author": true,
+      "topics": [
+        "tokenisation",
+        "linguistics"
+      ],
+      "award": null,
+      "finding": "Asks whether what looks like cognitive plausibility in a tokenizer reduces to fertility (how many tokens it uses).",
+      "takeaway": "Maybe the tokenizer's \"plausibility\" is just counting tokens.",
+      "summary": null,
+      "acl_anthology_url": null,
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/scholar?q=%22Is+Tokenizer+Cognitive+Plausibility+just+Fertility%3F%22",
+      "doi": null,
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "primary_url": "https://scholar.google.com/scholar?q=%22Is+Tokenizer+Cognitive+Plausibility+just+Fertility%3F%22",
+      "primary_source": "google_scholar",
+      "verified": true
+    }
+  ]
+}

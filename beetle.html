@@ -4,15 +4,17 @@
   <meta charset="utf-8">
   <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Beetle — Controlled Bilingual Pretraining &amp; Interpretability</title>
-  <meta name="description" content="Beetle — an open-source framework built by Suchir Salhan for controlled bilingual and multilingual language-model pretraining and interpretability. The foundation of his PhD.">
+  <title>Beetle · Experimentally studying how language models learn · Suchir Salhan</title>
+  <meta name="description" content="Beetle is an open-source experimental framework built by Suchir Salhan for controlling the conditions under which language models develop: language exposure, curriculum, tokenisation, training budget and corpus. It releases 330 densely checkpointed models across 13 first languages, five curricula and three scales (EMNLP 2026).">
   <link href="favicon.ico" rel="icon" sizes="any">
-  <link rel="icon" href="assets/images/logo-ss.svg" type="image/svg+xml">
   <link href="assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link rel="icon" href="assets/images/logo-ss.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/beetle/brand/beetle-favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#13241c">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://suchirsalhan.github.io/beetle.html">
-  <meta property="og:title" content="Beetle — Controlled Bilingual Pretraining & Interpretability">
-  <meta property="og:description" content="An open-source framework I built for controlled bilingual & multilingual language-model pretraining and interpretability — the foundation of my PhD.">
+  <meta property="og:title" content="Beetle: A new way to experimentally study how language models learn">
+  <meta property="og:description" content="An open-source framework for controlling the language experience of language models, with 330 open, densely checkpointed models across 13 first languages, five exposure curricula and three training scales.">
   <meta property="og:image" content="https://suchirsalhan.github.io/assets/beetle/beetle-fig1.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -23,8 +25,33 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/site.css" rel="stylesheet">
+  <link href="assets/css/quiet.css" rel="stylesheet">
+  <link href="assets/css/beetle.css" rel="stylesheet">
 </head>
-<body class="index-page">
+<body class="index-page beetle-page">
+
+  <!-- Beetle mark, defined once. Eight elytral segments read top to bottom as stages of training;
+       a coloured segment marks a condition that differs. Spec: assets/beetle/brand/README.md -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <path id="bt-L1" d="M31.25 25H17.5Q15 25 15 27.5V31.5H31.25Z"/>
+      <path id="bt-R1" d="M32.75 25H46.5Q49 25 49 27.5V31.5H32.75Z"/>
+      <path id="bt-L2" d="M31.25 33H15V39.5H31.25Z"/>
+      <path id="bt-R2" d="M32.75 33H49V39.5H32.75Z"/>
+      <path id="bt-L3" d="M31.25 41H15.02A17 19 0 0 0 16.58 48H31.25Z"/>
+      <path id="bt-R3" d="M32.75 41H48.98A17 19 0 0 1 47.42 48H32.75Z"/>
+      <path id="bt-L4" d="M31.25 49.5H17.28A17 19 0 0 0 31.25 58.98Z"/>
+      <path id="bt-R4" d="M32.75 49.5H46.72A17 19 0 0 1 32.75 58.98Z"/>
+      <g id="bt-body">
+        <path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M28.5 9.5 24 3.5M35.5 9.5 40 3.5M19 20 13 16.5M15 35 9 33M16.5 46 11 50.5M45 20 51 16.5M49 35 55 33M47.5 46 53 50.5"/>
+        <rect x="27.5" y="8" width="9" height="6" rx="3"/>
+        <path d="M22 16H42Q45 16 45 19V21.5Q45 23.5 43 23.5H21Q19 23.5 19 21.5V19Q19 16 22 16Z"/>
+        <use href="#bt-L1"/><use href="#bt-R1"/><use href="#bt-L2"/><use href="#bt-R2"/>
+        <use href="#bt-L3"/><use href="#bt-R3"/><use href="#bt-L4"/><use href="#bt-R4"/>
+      </g>
+    </defs>
+  </svg>
+
   <header id="header" class="header header--solid d-flex align-items-center fixed-top">
     <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
       <a href="index.html" class="brand"><img class="logo-ss" src="assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
@@ -45,51 +72,219 @@
     </div>
   </header>
 
-  <main class="main">
-    <!-- Page hero -->
-    <section class="page-hero">
-      <div class="container">
-        <div class="breadcrumb-mini"><a href="index.html">Home</a> / <a href="research.html">Research</a> / Beetle</div>
-        <p class="eyebrow">Flagship framework</p>
-        <h1>Beetle</h1>
-        <p style="font-size:19px;font-weight:600;color:#fdfbf4;margin:0 0 10px">Small models. Big questions.</p>
-        <p>An open-source framework I built for controlled bilingual &amp; multilingual language-model pretraining and interpretability — now released.</p>
-      </div>
-    </section>
+  <!-- ========== HERO ========== -->
+  <section class="bt-hero" aria-labelledby="bt-title">
+    <div>
+      <p class="bt-crumb"><a href="index.html">Home</a> / <a href="research.html">Research</a> / Beetle</p>
+      <h1 id="bt-title"><span class="nm">Beetle:</span> A new way to experimentally study how language models learn.</h1>
+      <p class="bt-q">What if we could study not just what language models know, but how their language experience shapes what they learn?</p>
+      <p class="bt-body">I created Beetle, an open-source experimental framework that lets researchers systematically manipulate the conditions under which language models develop: which languages they encounter, how much data they see, which tokenizer they use, and in what order they learn different languages. The result is a collection of 330 open models, spanning 13 first languages, five exposure curricula and three training scales, with dense checkpoints that make representational change measurable throughout training. This provides researchers with a new testbed for investigating how linguistic representations emerge, converge and diverge under different learning experiences — turning questions about language acquisition and multilingual model development into controlled, reproducible experiments.</p>
+      <ul class="bt-cta">
+        <li><a href="https://beetlelm.github.io/" target="_blank" rel="noopener">Explore the Beetle framework →</a><span class="sub">software, documentation and models</span></li>
+        <li><a href="https://aclanthology.org/2026.emnlp-main.2276/" target="_blank" rel="noopener">Read our EMNLP 2026 paper →</a><span class="sub">ACL Anthology</span></li>
+      </ul>
+    </div>
 
-    <!-- Signpost: software + write-up -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head left">
-          <p class="kicker">Now open source</p>
-          <h2>Beetle is released</h2>
-          <p>The software is live. Everything below points you to it.</p>
-        </div>
-        <div class="prose wide">
-          <p><strong>Beetle</strong> is a framework I designed and built for controlled bilingual and multilingual pretraining. It gives you a single, declarative interface in which the tokeniser, the target language, the training budget, and the exposure structure of the data can each be manipulated independently, all configured through YAML. It grew out of computational psycholinguistics, but it is a general interpretability and controlled-pretraining infrastructure: because every model is checkpointed densely and exposure is a first-class variable, you can ask when and how abilities emerge, not just whether a final model has them. I designed the system, trained the models, and authored the libraries; it builds on the PicoDecoder backbone from PicoLM.</p>
+    <figure class="bt-plate">
+      <p class="lbl" aria-hidden="true"><span>Plate 1</span><span>Beetle</span></p>
+      <svg class="bt-mark hero-mark" viewBox="0 0 64 64" role="img" aria-label="The Beetle mark: a symmetrical beetle with eight body segments, one of them in vermilion.">
+        <use href="#bt-body"/><use href="#bt-R3" class="seg-accent"/>
+      </svg>
+      <ul class="bt-specimens" aria-label="The five exposure curricula drawn on the Beetle body plan">
+        <li><svg class="bt-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#bt-body"/><use href="#bt-R1" class="c1"/><use href="#bt-R2" class="c1"/><use href="#bt-R3" class="c1"/><use href="#bt-R4" class="c1"/></svg><b>B1</b></li>
+        <li><svg class="bt-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#bt-body"/><use href="#bt-R3" class="c2 faint"/><use href="#bt-R4" class="c2"/></svg><b>B2</b></li>
+        <li><svg class="bt-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#bt-body"/><use href="#bt-L3" class="c3 faint"/><use href="#bt-L4" class="c3 faint"/><use href="#bt-R3" class="c3"/><use href="#bt-R4" class="c3"/></svg><b>B3</b></li>
+        <li><svg class="bt-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#bt-body"/><use href="#bt-R1" class="c4"/><use href="#bt-R3" class="c4"/></svg><b>B4</b></li>
+        <li><svg class="bt-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#bt-body"/><use href="#bt-R4" class="c5"/></svg><b>B5</b></li>
+      </ul>
+      <figcaption>One body plan, five language histories. Segments run from early training (top) to late (bottom); colour marks when the second language is present. A schematic of the <a href="#controls">curricula below</a>.</figcaption>
+    </figure>
+  </section>
 
-          <div class="chip-row" style="margin:22px 0">
-            <span class="chip">330 models</span><span class="chip">285 bilingual</span><span class="chip">45 monolingual</span>
-            <span class="chip">13 L1s</span>
-            <span class="chip">5 curricula (B1–B5)</span>
-            <span class="chip">3 data scales</span>
+  <main class="main home bt-main">
+
+    <!-- ========== SIDE NAV ========== -->
+    <aside class="profile" aria-label="On this page">
+      <p class="bt-side"><svg class="bt-mark" viewBox="0 0 64 64" aria-hidden="true"><use href="#bt-body"/><use href="#bt-R3" class="seg-accent"/></svg>Beetle</p>
+      <ul class="secnav" aria-label="Sections">
+        <li><a href="#question">The question</a></li>
+        <li><a href="#controls">Experimental controls</a></li>
+        <li><a href="#release">The release</a></li>
+        <li><a href="#applications">What it can study</a></li>
+        <li><a href="#findings">First results</a></li>
+        <li><a href="#outputs">Paper and software</a></li>
+      </ul>
+      <ul class="links" aria-label="Beetle links">
+        <li><a href="https://beetlelm.github.io/" target="_blank" rel="noopener">Framework and models</a></li>
+        <li><a href="https://aclanthology.org/2026.emnlp-main.2276/" target="_blank" rel="noopener">EMNLP 2026 paper</a></li>
+        <li><a href="writing/beetle-launch.html">Launch essay</a></li>
+      </ul>
+    </aside>
+
+    <div class="col">
+
+      <!-- ========== THE QUESTION ========== -->
+      <section id="question">
+        <h2>The question</h2>
+        <p class="lead">Beetle makes language-model development experimentally observable and controllable.</p>
+        <p>Most of what we know about language models comes from testing finished ones. We evaluate a trained model, compare its scores with another model's, and attribute the gap to whatever separates them, which is usually size, data and architecture all at once. That tells us what a model can do. It says little about how the ability formed, or which part of the model's experience produced it.</p>
+        <p>Beetle makes the learning experience the experimental variable. Models in a comparison share an architecture, training code and budget, and differ in one controlled respect, such as the point at which a second language enters the data. Every model is checkpointed densely, so a difference at the end of training can be traced back through the run to where it first appeared.</p>
+
+        <figure class="bt-diagram">
+          <ul class="bt-strips">
+            <li>
+              <span class="k">Evaluating a finished model</span>
+              <svg viewBox="0 0 300 38" preserveAspectRatio="none" aria-hidden="true">
+                <line class="axis" x1="0" y1="19" x2="300" y2="19"/>
+                <rect class="dot" x="293" y="12" width="7" height="14"/>
+              </svg>
+            </li>
+            <li>
+              <span class="k">Studying how it developed</span>
+              <svg viewBox="0 0 300 38" preserveAspectRatio="none" aria-hidden="true">
+                <line class="axis" x1="0" y1="19" x2="300" y2="19"/>
+                <line class="tick" x1="1.2" y1="11" x2="1.2" y2="27"/><line class="tick" x1="2.4" y1="11" x2="2.4" y2="27"/>
+                <line class="tick" x1="4.7" y1="11" x2="4.7" y2="27"/><line class="tick" x1="9.4" y1="11" x2="9.4" y2="27"/>
+                <line class="tick" x1="18.8" y1="11" x2="18.8" y2="27"/><line class="tick" x1="37.5" y1="11" x2="37.5" y2="27"/>
+                <line class="tick" x1="75" y1="11" x2="75" y2="27"/><line class="tick" x1="150" y1="11" x2="150" y2="27"/>
+                <rect class="dot" x="293" y="12" width="7" height="14"/>
+              </svg>
+            </li>
+          </ul>
+          <p class="bt-axis-note" aria-hidden="true"><span class="sp"></span><span class="ax"><span>start of training</span><span>end</span></span></p>
+          <figcaption>Where measurements are taken. Ticks are checkpoints on a log<sub>2</sub> schedule, dense early in training when most change happens (schematic).</figcaption>
+        </figure>
+      </section>
+
+      <!-- ========== EXPERIMENTAL CONTROLS ========== -->
+      <section id="controls">
+        <h2>Experimental controls</h2>
+        <p>A Beetle experiment is specified by six settings, each of which can be changed while the others stay fixed. They are set in a declarative YAML configuration rather than in bespoke training scripts, which is what makes large, systematic ablations practical.</p>
+
+        <ol class="bt-config">
+          <li><span class="n">01</span><div><h3>Language exposure</h3><p>Which languages a model encounters, and which it learns first.</p></div><span class="val">13 first languages; bilingual and monolingual runs</span></li>
+          <li class="varied"><span class="n">02</span><div><h3>Exposure curriculum</h3><p>When the second language arrives, and in what proportion.</p></div><span class="val">five curricula, B1–B5, drawn below</span></li>
+          <li><span class="n">03</span><div><h3>Tokenisation</h3><p>How text is divided into the units the model learns from.</p></div><span class="val">set independently; tokenisers released</span></li>
+          <li><span class="n">04</span><div><h3>Training budget</h3><p>How much data the model sees.</p></div><span class="val">100M, 2B or 24B tokens</span></li>
+          <li><span class="n">05</span><div><h3>Corpus composition</h3><p>What the training text consists of.</p></div><span class="val">decontaminated, pretokenised data at each scale</span></li>
+          <li><span class="n">06</span><div><h3>Developmental trajectory</h3><p>Where along training the model can be measured.</p></div><span class="val">log<sub>2</sub> checkpoints with gradients and activations</span></li>
+        </ol>
+
+        <h3 class="bt-h3">Five exposure curricula</h3>
+        <p>The curriculum is the variable most specific to Beetle. Holding the languages, model and budget fixed, it changes only when the second language appears and how much of the data it makes up.</p>
+        <figure class="bt-diagram">
+          <ul class="bt-strips">
+            <li><span class="k"><b>B1</b>balanced, 50:50 throughout</span>
+              <svg viewBox="0 0 300 38" preserveAspectRatio="none" aria-hidden="true"><line class="grid" x1="0" y1="18" x2="300" y2="18"/><path class="area a1" d="M0 36V18H300V36Z"/><line class="axis" x1="0" y1="36" x2="300" y2="36"/></svg></li>
+            <li><span class="k"><b>B2</b>gradual transition after 50% of training, to 50:50</span>
+              <svg viewBox="0 0 300 38" preserveAspectRatio="none" aria-hidden="true"><line class="grid" x1="0" y1="18" x2="300" y2="18"/><path class="area a2" d="M0 36H150C205 36 215 18 272 18H300V36Z"/><line class="axis" x1="0" y1="36" x2="300" y2="36"/></svg></li>
+            <li><span class="k"><b>B3</b>step transition at 50%, to 33:67</span>
+              <svg viewBox="0 0 300 38" preserveAspectRatio="none" aria-hidden="true"><line class="grid" x1="0" y1="18" x2="300" y2="18"/><path class="area a3" d="M0 36H150V12H300V36Z"/><line class="axis" x1="0" y1="36" x2="300" y2="36"/></svg></li>
+            <li><span class="k"><b>B4</b>classroom: episodic bursts, 80:20 overall</span>
+              <svg viewBox="0 0 300 38" preserveAspectRatio="none" aria-hidden="true"><line class="mean" x1="0" y1="28.8" x2="300" y2="28.8"/><path class="area a4" d="M0 36V34.2H16C24 34.2 25 12.6 30 12.6C35 12.6 36 34.2 44 34.2H76C84 34.2 85 12.6 90 12.6C95 12.6 96 34.2 104 34.2H136C144 34.2 145 12.6 150 12.6C155 12.6 156 34.2 164 34.2H196C204 34.2 205 12.6 210 12.6C215 12.6 216 34.2 224 34.2H256C264 34.2 265 12.6 270 12.6C275 12.6 276 34.2 284 34.2H300V36Z"/><line class="axis" x1="0" y1="36" x2="300" y2="36"/></svg></li>
+            <li><span class="k"><b>B5</b>late onset at 80% of training</span>
+              <svg viewBox="0 0 300 38" preserveAspectRatio="none" aria-hidden="true"><line class="grid" x1="0" y1="18" x2="300" y2="18"/><path class="area a5" d="M0 36H240V18H300V36Z"/><line class="axis" x1="0" y1="36" x2="300" y2="36"/></svg></li>
+          </ul>
+          <p class="bt-axis-note" aria-hidden="true"><span class="sp"></span><span class="ax"><span>start of training</span><span>end</span></span></p>
+          <figcaption>Second-language exposure ratio over training for each curriculum; the dashed line marks a 50:50 mix (for B4, the 20% average). Redrawn from the framework figure below.</figcaption>
+        </figure>
+
+        <figure class="bt-fig narrow">
+          <img src="assets/beetle/beetle-fig1.jpg" alt="The Beetle framework figure: exposure-ratio curves for bilingual curricula B1 to B5 and trilingual curricula, the same curriculum at three data scales, and learning-mechanism manipulations." loading="lazy" width="1400" height="1400">
+          <figcaption><b>The framework.</b> Curricula, learning-mechanism manipulations and data scale are configured independently, and every run is densely checkpointed for analysis.</figcaption>
+        </figure>
+      </section>
+
+      <!-- ========== THE RELEASE ========== -->
+      <section id="release">
+        <h2>The release</h2>
+        <p class="bt-spec"><span>330 models</span><span>285 bilingual</span><span>45 monolingual</span><span>13 first languages</span><span>curricula B1–B5</span><span>100M / 2B / 24B tokens</span><span>PicoDecoder backbone</span></p>
+        <p>The first release contains 330 models: 285 bilingual and 45 monolingual. Their 13 first languages were chosen to vary in typological distance from English and include German, Dutch, Chinese, Italian, Hindi, Russian, Turkish and Basque. The models span five exposure curricula and three training scales of 100M, 2B and 24B tokens.</p>
+        <p>The default backbone is a 125M-parameter, LLaMA-style PicoDecoder from <a href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM</a>; encoder–decoder, mixture-of-experts and state-space variants are also supported. Checkpoints follow a log<sub>2</sub> schedule and keep gradients and activations, so the suite can be used for interpretability work without retraining anything. For several of these languages, these are the first densely checkpointed models to be released.</p>
+        <p>Everything needed to reproduce the work is public: the checkpoints, the tokenisers, the decontaminated and pretokenised training data at all three scales, and the analysis pipelines. The software itself is three pip-installable libraries, covering controlled pretraining, exposure curricula, and analysis and interpretability.</p>
+      </section>
+
+      <!-- ========== APPLICATIONS ========== -->
+      <section id="applications">
+        <h2>What it can study</h2>
+        <p>Because the models form matched populations, a question about learning history becomes a comparison between runs. Some of the questions the suite is built for:</p>
+        <ul class="bt-questions">
+          <li>When does a second language start to be represented, and does it arrive gradually or in jumps?<span class="v">dense checkpoints · curriculum</span></li>
+          <li>Does the order in which languages are learned change how much of the first language a model keeps?<span class="v">curriculum · language exposure</span></li>
+          <li>Does a curriculum work the same way for a first language close to English as for a distant one?<span class="v">language exposure · curriculum</span></li>
+          <li>How do representations of different languages converge or diverge as training goes on?<span class="v">language exposure · developmental trajectory</span></li>
+          <li>How much does segmentation shape cross-lingual representations, separately from the data?<span class="v">tokenisation</span></li>
+          <li>Can small models trained on modest data account for how people read in a second language?<span class="v">training budget · curriculum</span></li>
+        </ul>
+        <p>The models are evaluated on MECO L2 reading times, BLiSS, CEFR, JFLEG and Mono/Multi-BLiMP, so behavioural and representational measures can be compared on the same runs.</p>
+      </section>
+
+      <!-- ========== FIRST RESULTS ========== -->
+      <section id="findings">
+        <h2>First results</h2>
+        <p>The <a href="https://aclanthology.org/2026.emnlp-main.2276/" target="_blank" rel="noopener">EMNLP 2026 paper</a> uses Beetle to ask how exposure structure affects second-language learning in small models. Three results stand out.</p>
+
+        <h3 class="bt-h3">Small models match much larger ones on human reading times</h3>
+        <p>Models trained with staged exposure fit human second-language reading times (MECO L2) as well as multilingual LLMs of up to 8B parameters, and often better, at a small fraction of their size.</p>
+        <figure class="bt-fig">
+          <img src="assets/beetle/fig_meco_beetle_vs_baselines_bars.jpg" alt="Bar chart of MECO L2 reading-time alignment: small Beetle models compared with multilingual LLM baselines up to 8B parameters." loading="lazy" width="1400" height="729">
+          <figcaption>MECO L2 reading-time alignment. Small Beetle models with structured exposure match or exceed multilingual LLM baselines up to 8B parameters.</figcaption>
+        </figure>
+
+        <h3 class="bt-h3">Processing and grammaticality favour different curricula</h3>
+        <p>Which curriculum is best depends on what you measure. Staged exposure gives the closest fit to online reading behaviour, while balanced exposure gives stronger offline grammatical judgements. Psycholinguists draw the same distinction between processing and competence in human second-language learners.</p>
+        <figure class="bt-fig">
+          <img src="assets/beetle/fig_bliss_vs_meco_final-1.jpg" alt="Scatter plot of BLiSS grammaticality against MECO reading-time fit, showing balanced and staged curricula in different regions." loading="lazy" width="1400" height="718">
+          <figcaption>BLiSS (grammaticality) against MECO (reading time). Balanced exposure favours grammatical judgement; staged exposure favours human-like processing.</figcaption>
+        </figure>
+
+        <h3 class="bt-h3">Learning happens in stages</h3>
+        <p>With dense checkpoints the run itself can be inspected. Acquisition proceeds through phase transitions rather than smoothly, curricula interact with how close a language is to English, and the amount of the first language a model loses depends on both the curriculum and the second language. None of this is visible from the final checkpoint alone.</p>
+        <figure class="bt-fig">
+          <img src="assets/beetle/fig3_phase_transition_heatmap-1.jpg" alt="Heatmap comparing Dutch–English models across curricula on BLiMP, FLORES negative log-likelihood change and MECO surprisal." loading="lazy" width="1400" height="694">
+          <figcaption>Dutch–English models across curricula, scored on grammaticality (BLiMP), change in FLORES NLL and MECO surprisal. Colour is a z-score within each row; blue is better than the row mean.</figcaption>
+        </figure>
+
+        <details class="more">
+          <summary>More learning-dynamics figures</summary>
+          <div class="body">
+            <figure>
+              <img src="assets/beetle/zho_catastrophic_forgetting.jpg" alt="Horizontal bar chart of the rise in perplexity for Chinese as a first language, relative to a monolingual model, by second language and curriculum." loading="lazy" width="1400" height="1242">
+              <figcaption>Forgetting of Chinese as a first language: rise in perplexity relative to the monolingual model, by second language and curriculum.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/beetle/PPL_learning_curves.jpg" alt="FLORES perplexity curves over training steps for Bulgarian, German, English, Dutch and Chinese; first language solid, second language dashed." loading="lazy" width="1400" height="1400">
+              <figcaption>FLORES perplexity over training for five languages. Solid lines are the first language, dashed lines the second.</figcaption>
+            </figure>
+            <figure>
+              <img src="assets/beetle/trilingual-learning-dynamics.jpg" alt="Accuracy over training steps for Dutch, Chinese and English under balanced and heritage curricula." loading="lazy" width="899" height="1400">
+              <figcaption>Accuracy over training for Dutch, Chinese and English under balanced and heritage curricula.</figcaption>
+            </figure>
           </div>
+        </details>
+      </section>
 
-          <div class="theme-links">
-            <a class="btn-pill solid" href="https://beetlelm.github.io/" target="_blank" rel="noopener">Open the Beetle software <i class="bi bi-box-arrow-up-right"></i></a>
-            <a class="btn-pill outline" href="writing/beetle-launch.html">Read the launch write-up <i class="bi bi-arrow-right"></i></a>
-            <a class="btn-pill outline" href="https://openreview.net/pdf?id=NQrSQk3HZ2" target="_blank" rel="noopener">Read the paper <i class="bi bi-file-earmark-text"></i></a>
-          </div>
+      <!-- ========== PAPER AND SOFTWARE ========== -->
+      <section id="outputs" class="pubs">
+        <h2>Paper and software</h2>
+        <p><span class="t"><a href="https://aclanthology.org/2026.emnlp-main.2276/" target="_blank" rel="noopener">Beetle: A Bilingual Model Suite for Modelling Second-Language Processing</a></span><br>
+          <span class="au"><ins>S Salhan</ins>, C Arnett, J Michaelov, P Buttery</span><br>
+          <span class="v">EMNLP 2026</span> | <a href="https://aclanthology.org/2026.emnlp-main.2276/" target="_blank" rel="noopener">paper</a> | <a href="https://openreview.net/pdf?id=NQrSQk3HZ2" target="_blank" rel="noopener">OpenReview version</a> | <a href="https://beetlelm.github.io/" target="_blank" rel="noopener">code and models</a> | <a href="research.html#publications">all publications</a></p>
+        <p><span class="t"><a href="https://beetlelm.github.io/" target="_blank" rel="noopener">The Beetle framework</a></span><br>
+          <span class="au">Software, documentation, the 330 checkpoints, tokenisers, training data and analysis pipelines.</span><br>
+          <a href="https://beetlelm.github.io/" target="_blank" rel="noopener">beetlelm.github.io</a></p>
+        <p><span class="t"><a href="writing/beetle-launch.html">Beetle: a framework for controlled bilingual and multilingual pretraining</a></span><br>
+          <span class="au">The launch essay: why controlled pretraining, how the curricula work, and what the first experiments found.</span><br>
+          <span class="v">September 2026</span> | <a href="writing/beetle-launch.html">read the essay</a></p>
+        <p class="small muted">I designed and built Beetle, trained the 330 models, and wrote the curriculum engine, analysis toolkit and libraries. It builds on the PicoDecoder backbone from <a href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM</a>, which I did not create.</p>
 
-          <figure class="beetle-figure">
-            <img src="assets/beetle/beetle-fig1.jpg" alt="The Beetle framework: independently manipulable tokeniser, target language, training budget, and exposure structure, all configured via YAML." loading="lazy">
-            <figcaption>The Beetle framework. Tokeniser, target language, training budget, and exposure curriculum are independently configurable, feeding a controlled-pretraining engine that emits densely checkpointed models for analysis and interpretability.</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
+        <p class="bt-close">Language models are not simply trained. They develop under particular experiences. Beetle lets us control those experiences and study what they produce.</p>
+      </section>
+
+    </div>
   </main>
-<nav class="dock" aria-label="Primary">
+
+  <nav class="dock" aria-label="Primary">
     <a href="research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
     <a href="beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
     <a href="research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
@@ -100,21 +295,6 @@
     <a href="about.html"><i class="bi bi-person"></i><span>About</span></a>
     <a href="assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
   </nav>
-
-
-  <!-- Beetle page styles -->
-  <style>
-    .beetle-figure { margin:30px 0; }
-    .beetle-figure img {
-      width:100%; max-width:100%; height:auto; display:block;
-      border-radius:16px; border:1px solid var(--line);
-      box-shadow: 0 16px 44px rgba(42,39,32,0.14); background: var(--surface-color);
-    }
-    .beetle-figure figcaption {
-      margin-top:12px; font-family: var(--ui-font); font-size:14px; line-height:1.55;
-      color: var(--ink-2); max-width:760px;
-    }
-  </style>
 
   <footer class="footer">
     <div class="container">
@@ -131,112 +311,17 @@
     </div>
   </footer>
   <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <script>
+    /* Keyboard support for disclosure-style inline expanders (.ex), as on the homepage */
+    document.addEventListener('keydown', function(e){
+      var ex = e.target.closest && e.target.closest('.ex[tabindex]');
+      if (ex && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); ex.click(); }
+    });
+  </script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/js/main.js"></script>
   <script src="assets/js/explore.js"></script>
-
-  <!-- Beetle easter egg: little beetles crawling across the page. Self-contained, pointer-events:none, respects prefers-reduced-motion. -->
-  <style>
-    #beetle-parade {
-      position: fixed;
-      inset: 0;
-      z-index: 1;
-      pointer-events: none;
-      overflow: hidden;
-    }
-    #beetle-parade .beetle {
-      position: absolute;
-      will-change: transform;
-      pointer-events: auto;
-      cursor: pointer;
-      user-select: none;
-      line-height: 1;
-      transform: translate3d(0, 0, 0);
-    }
-  </style>
-  <script>
-  (function () {
-    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-
-    var container = document.createElement('div');
-    container.id = 'beetle-parade';
-    container.setAttribute('aria-hidden', 'true');
-    document.body.appendChild(container);
-
-    var rand = function (min, max) { return Math.random() * (max - min) + min; };
-    var count = Math.floor(rand(6, 10)); // 6-9 beetles
-    var beetles = [];
-
-    function makeBeetle() {
-      var el = document.createElement('span');
-      el.className = 'beetle';
-      el.textContent = '🪲'; // 🪲
-      var vw = window.innerWidth;
-      var vh = window.innerHeight;
-
-      var b = {
-        el: el,
-        size: rand(22, 30),
-        // keep beetles mostly in the lower half / margins so they stay playful
-        y: rand(vh * 0.45, vh - 40),
-        dir: Math.random() < 0.5 ? 1 : -1,
-        speed: rand(20, 70) / 1000, // px per ms
-        wigAmp: rand(3, 8),
-        wigFreq: rand(0.003, 0.008),
-        wigPhase: rand(0, Math.PI * 2),
-        spinUntil: 0,
-        scurry: 1
-      };
-      b.x = b.dir > 0 ? rand(-vw, 0) : rand(vw, vw * 2);
-      el.style.fontSize = b.size + 'px';
-
-      el.addEventListener('click', function () {
-        // little spin + scurry away faster
-        b.spinUntil = performance.now() + 600;
-        b.scurry = 3.2;
-        setTimeout(function () { b.scurry = 1; }, 1200);
-      });
-
-      container.appendChild(el);
-      return b;
-    }
-
-    for (var i = 0; i < count; i++) beetles.push(makeBeetle());
-
-    var last = performance.now();
-    function frame(now) {
-      var dt = Math.min(now - last, 50);
-      last = now;
-      var vw = window.innerWidth;
-      var vh = window.innerHeight;
-
-      for (var i = 0; i < beetles.length; i++) {
-        var b = beetles[i];
-        b.x += b.dir * b.speed * b.scurry * dt;
-
-        // loop around when off-screen
-        var pad = b.size + 20;
-        if (b.dir > 0 && b.x > vw + pad) {
-          b.x = -pad;
-          b.y = rand(vh * 0.45, vh - 40);
-        } else if (b.dir < 0 && b.x < -pad) {
-          b.x = vw + pad;
-          b.y = rand(vh * 0.45, vh - 40);
-        }
-
-        var wiggle = Math.sin(now * b.wigFreq + b.wigPhase) * b.wigAmp;
-        // face direction of travel: emoji points up by default, so rotate +90/-90
-        var facing = b.dir > 0 ? 90 : -90;
-        var spin = b.spinUntil > now ? ((b.spinUntil - now) / 600) * 360 : 0;
-        var rot = facing + (b.dir > 0 ? spin : -spin);
-
-        b.el.style.transform = 'translate3d(' + b.x.toFixed(1) + 'px,' + (b.y + wiggle).toFixed(1) + 'px,0) rotate(' + rot.toFixed(1) + 'deg)';
-      }
-      requestAnimationFrame(frame);
-    }
-    requestAnimationFrame(frame);
-  })();
-  </script>
 </body>
 </html>

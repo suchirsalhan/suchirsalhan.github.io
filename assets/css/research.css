@@ -1,0 +1,134 @@
+/* research.html only. Loaded after quiet.css; follows its quiet, text-first rules
+   (no cards, hairline rules, small-caps h2). Uses site tokens from site.css. */
+
+/* ---------- utilities ---------- */
+.sr-only { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); clip-path: inset(50%); white-space: nowrap; border: 0; }
+.skip-link { position: absolute; left: 12px; top: -100px; z-index: 10000; background: var(--background-color);
+  color: var(--heading-color); padding: 8px 14px; border: 2px solid var(--accent-color); border-radius: 4px;
+  font-family: var(--ui-font); font-size: 15px; }
+.skip-link:focus { top: 12px; }
+html.no-js .pub-controls { display: none !important; }
+
+/* Visible focus on every interactive element on this page */
+.research-page a:focus-visible,
+.research-page button:focus-visible,
+.research-page summary:focus-visible,
+.research-page input:focus-visible,
+.research-page select:focus-visible,
+.skip-link:focus-visible {
+  outline: 2px solid var(--accent-color); outline-offset: 3px; border-radius: 2px;
+}
+
+/* Metadata contrast: --ink-2 is #5b5f66 on #fff (6.3:1) and #a6a9b0 on #0a0a0a (8.4:1),
+   both above 4.5:1. Avoid opacity or lighter mixes on small text. */
+.research-page .muted, .research-page .pub-meta, .research-page .pub-topics { color: var(--ink-2); }
+
+/* Fixed header: land headings below it */
+.research-page [id] { scroll-margin-top: 96px; }
+
+/* ---------- profile column as an on-page table of contents ---------- */
+.research-page .profile h1 { font-size: 30px; }
+.research-page .profile .role { font-size: 14px; }
+.toc-label { font-family: var(--ui-font); font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--ink-2); margin: 0 0 8px; font-weight: 600; }
+.research-page .profile .secnav { margin-bottom: 20px; }
+.research-page .toc-sub { list-style: none; padding: 2px 0 0 12px; margin: 0; border-left: 1px solid var(--line); }
+.research-page .toc-sub li { margin: 0 0 2px; }
+.research-page .toc-sub a { font-size: 13px; color: var(--ink-2); }
+.research-page .secnav a[aria-current="true"] { color: var(--accent-color); }
+
+/* ---------- prose ---------- */
+.research-page .col h3 { scroll-margin-top: 96px; }
+.research-page .col h3.h4, .research-page .body h3.h4 { font-family: var(--heading-font); font-size: 18px;
+  font-weight: 600; margin: 18px 0 4px; color: var(--heading-color); }
+.research-page .body h3.h4:first-child { margin-top: 0; }
+.questions { padding-left: 1.3em; margin: 0 0 1em; }
+.questions li { margin: 0 0 .6em; line-height: 1.55; }
+.questions li a { font-weight: 600; color: var(--heading-color); }
+.questions .muted { font-size: 16px; }
+.theme { font-size: 17px; line-height: 1.65; }
+.theme .refs { display: block; font-family: var(--ui-font); font-size: 14px; color: var(--ink-2); margin-top: 2px; }
+.theme .refs a { color: var(--ink-2); }
+.theme .refs a:hover { color: var(--accent-color); }
+
+/* ---------- start here ---------- */
+.start-list { list-style: none; padding: 0; margin: 0; counter-reset: sh; }
+.start-list > li { counter-increment: sh; padding: 12px 0 12px 2.1em; position: relative; border-top: 1px solid var(--line); }
+.start-list > li:last-child { border-bottom: 1px solid var(--line); }
+.start-list > li::before { content: counter(sh); position: absolute; left: 0; top: 14px;
+  font-family: var(--mono-font); font-size: 13px; color: var(--ink-2); }
+.research-page .col .sh-title { font-size: 19px; margin: 0 0 2px; }
+.research-page .col .sh-title a { text-decoration: none; }
+.research-page .col .sh-title a:hover { text-decoration: underline; }
+.sh-meta { font-family: var(--ui-font); font-size: 13.5px; color: var(--ink-2); margin: 0 0 4px !important; }
+.sh-finding { font-size: 16.5px; line-height: 1.6; margin: 0 !important; }
+.sh-finding a { font-family: var(--ui-font); font-size: 14px; white-space: nowrap; }
+
+/* ---------- catalogue controls ---------- */
+.pub-controls { font-family: var(--ui-font); font-size: 14px; margin: 18px 0 8px; padding: 14px 0 6px;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.pf-row { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: flex-end; margin-bottom: 10px; }
+.pf-search { flex: 1 1 260px; min-width: 0; }
+.pf-sort { flex: 0 1 auto; }
+.pub-controls label { display: block; font-weight: 600; font-size: 13px; color: var(--heading-color); margin: 0 0 4px; }
+.pub-controls input[type="search"], .pub-controls select {
+  width: 100%; max-width: 100%; font: inherit; font-size: 15px; color: var(--default-color);
+  background: var(--background-color); border: 1px solid var(--ink-2); border-radius: 4px; padding: 7px 10px; }
+.pf-hint { font-size: 12.5px; color: var(--ink-2); margin: 4px 0 0 !important; }
+.pf-group { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 4px 12px; align-items: baseline; margin: 0 0 8px; }
+.pf-label { font-weight: 600; font-size: 13px; color: var(--heading-color); margin: 0 !important; }
+.pf-btns { display: flex; flex-wrap: wrap; gap: 6px; }
+.pf-btn, .pf-reset { font: inherit; font-size: 13.5px; line-height: 1.3; color: var(--default-color); background: transparent;
+  border: 1px solid var(--ink-2); border-radius: 3px; padding: 4px 9px; cursor: pointer; text-align: left; }
+.pf-btn:hover, .pf-reset:hover { border-color: var(--accent-color); color: var(--accent-color); }
+.pf-btn[aria-pressed="true"] { background: var(--heading-color); color: var(--background-color); border-color: var(--heading-color); }
+.pf-btn[aria-pressed="true"]::before { content: "\2713\00a0"; }
+.pf-actions { margin: 6px 0 4px !important; }
+.pub-count { font-family: var(--ui-font); font-size: 14px; color: var(--ink-2); margin: 10px 0 4px !important; }
+.pub-empty { font-size: 16px; }
+
+/* ---------- catalogue entries ---------- */
+.pub-group { margin: 0 0 8px; }
+.research-page .col .pub-group > h3 { display: block; font-size: 20px; margin: 30px 0 6px; padding: 0; border: 0; }
+.research-page .pub-group > h3 .count { font-family: var(--ui-font); font-size: 14px; font-weight: 400; color: var(--ink-2);
+  background: none; padding: 0; border-radius: 0; }
+.pub-list { list-style: none; padding: 0; margin: 0; }
+.pub-list > li { border-top: 1px solid var(--line); }
+.publication { padding: 14px 0 12px; font-size: 16px; line-height: 1.55; }
+.publication p { margin: 0 0 4px !important; }
+.research-page .col .pub-title { font-family: var(--heading-font); font-size: 18px; line-height: 1.35; font-weight: 600;
+  margin: 0 0 4px; color: var(--heading-color); overflow-wrap: anywhere; hyphens: auto; }
+.research-page .col .pub-title a { text-decoration: none; }
+.research-page .col .pub-title a:hover { text-decoration: underline; }
+.pub-authors { font-family: var(--ui-font); font-size: 14px; color: var(--default-color); }
+.pub-authors .eq { color: var(--heading-color); }
+.pub-meta { font-family: var(--ui-font); font-size: 13.5px; }
+.pub-meta .sep { margin: 0 .2em; }
+.pub-status, .pub-role { color: var(--heading-color); }
+.pub-award { color: var(--accent-deep); font-weight: 600; }
+.pub-finding { font-size: 16px; }
+.pub-take { font-style: italic; color: var(--ink-2); }
+.pub-topics { font-family: var(--ui-font); font-size: 12.5px; }
+.pub-links ul { list-style: none; padding: 0; margin: 4px 0 0; display: flex; flex-wrap: wrap; gap: 2px 16px;
+  font-family: var(--ui-font); font-size: 13.5px; }
+.pub-links a { color: var(--accent-deep); }
+.pub-links a:hover { color: var(--accent-color); }
+.publication details.more { margin: 6px 0 2px; }
+.publication details.more > summary { font-size: 13.5px; }
+.publication details.more > .body { margin-top: 10px; }
+.publication details.more > .body p { font-size: 15.5px; line-height: 1.6; }
+.publication:target { outline: 2px solid color-mix(in srgb, var(--accent-color) 45%, transparent); outline-offset: 6px; border-radius: 2px; }
+
+/* ---------- small screens ---------- */
+@media (max-width: 860px) {
+  .research-page .profile { display: block; }
+  .research-page .profile h1 { font-size: 27px; }
+  .research-page .toc-sub { display: none; }
+  .research-page .profile .secnav li { margin: 0; }
+  .pf-group { grid-template-columns: minmax(0, 1fr); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .research-page *, .research-page *::before, .research-page *::after { animation: none !important; transition: none !important; }
+}

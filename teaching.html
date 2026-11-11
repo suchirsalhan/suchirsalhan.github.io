@@ -4,8 +4,12 @@
   <meta charset="utf-8">
   <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Teaching · Suchir Salhan</title>
-  <meta name="description" content="Guest lecturer, teaching assistant, and supervisor across the Cambridge Computer Science and Linguistics Tripos.">
+  <title>Teaching, Supervision &amp; Mentorship · Suchir Salhan</title>
+  <meta name="description" content="Suchir Salhan teaches and supervises students in Computer Science, Linguistics, Machine Learning and Cognitive Science at the University of Cambridge: courses, undergraduate supervision, research mentorship, MPhil and Part III projects, and research collaboration.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://suchirsalhan.github.io/teaching.html">
+  <meta property="og:title" content="Teaching, Supervision &amp; Mentorship · Suchir Salhan">
+  <meta property="og:description" content="Courses, undergraduate supervision, research mentorship, MPhil and Part III projects, and research collaboration with Suchir Salhan at the University of Cambridge.">
   <link href="favicon.ico" rel="icon" sizes="any">
   <link rel="icon" href="assets/images/logo-ss.svg" type="image/svg+xml">
   <link href="assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -17,6 +21,39 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/site.css" rel="stylesheet">
+  <link href="assets/css/quiet.css" rel="stylesheet">
+  <style>
+    /* Teaching page only: intent router, "for / next step" lines, materials lists. */
+    .profile .navlabel { font-family: var(--mono-font); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 8px; }
+    .profile a:focus-visible, .col a:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; border-radius: 2px; }
+
+    .router { margin: 0 0 1.4em; }
+    .router li { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 16px; font-size: 16.5px; line-height: 1.55; margin: 0; padding: 9px 0; border-bottom: 1px solid var(--line); }
+    .router li:first-child { border-top: 1px solid var(--line); }
+    .router a { font-family: var(--ui-font); font-size: 15.5px; font-weight: 600; color: var(--heading-color); }
+    .router .d { color: var(--ink-2); }
+
+    .for, .next { font-family: var(--ui-font); font-size: 15px; line-height: 1.6; }
+    .for { color: var(--ink-2); margin-bottom: 1.1em !important; }
+    .for b, .next b { font-family: var(--mono-font); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; font-weight: 500; color: var(--ink-2); margin-right: 8px; }
+    .next { padding: 10px 0 10px 16px; border-left: 2px solid var(--accent-color); }
+    .materials li { font-size: 16.5px; line-height: 1.6; }
+    .materials .c { font-family: var(--ui-font); font-weight: 600; font-size: 15px; color: var(--heading-color); margin-right: 6px; }
+    .col h3.sub { font-family: var(--ui-font); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); margin: 22px 0 8px; font-weight: 600; }
+    .body ul { padding-left: 1.2em; margin: 0 0 1em; }
+    .body li { font-size: 16px; line-height: 1.6; margin-bottom: .4em; }
+    .portal { margin: 0 0 8px; }
+    .portal h3 { margin-top: 6px; }
+
+    @media (max-width: 860px){
+      /* No portrait on this page, so the profile stacks as a single column. */
+      .profile.page { display: block; }
+      .profile.page .secnav { display: flex; flex-wrap: wrap; gap: 4px 16px; }
+    }
+    @media (max-width: 600px){
+      .router li { grid-template-columns: 1fr; gap: 2px; }
+    }
+  </style>
 </head>
 <body class="index-page">
   <header id="header" class="header header--solid d-flex align-items-center fixed-top">
@@ -39,359 +76,300 @@
     </div>
   </header>
 
-  <main class="main">
-    <section class="page-hero">
-      <div class="container">
-        <div class="breadcrumb-mini"><a href="index.html">Home</a> / Teaching</div>
-        <p class="eyebrow">Teaching</p>
-        <h1>Teaching &amp; Supervision</h1>
-        <p>Teaching across artificial intelligence, cognitive science, and linguistics, as a guest lecturer, teaching assistant, and supervisor on the Cambridge Computer Science and Linguistics Tripos — including <a href="#mphil-projects">MPhil and Part III research project proposals</a> for prospective students.</p>
-      </div>
-    </section>
+  <main class="main home">
 
-    <!-- MPHIL / PART III PROJECT PROPOSALS -->
-    <section class="section" id="mphil-projects">
-      <div class="container">
-        <div class="section-head left">
-          <p class="kicker">Prospective Students</p>
-          <h2>MPhil &amp; Part III Research Projects</h2>
-          <p>I am looking for motivated MPhil students interested in developing and understanding language models. Projects will be based in the Cambridge Natural Language and Information Processing (NLIP) research group, with opportunities to collaborate with researchers across Computer Science, Linguistics, and Cognitive Science. Depending on the project, there may also be opportunities for co-supervision from researchers with expertise in language model fundamentals, AI safety, interpretability, or computational psycholinguistics.</p>
+    <!-- ========== PAGE PROFILE ========== -->
+    <aside class="profile page" aria-label="Teaching, supervision and mentorship">
+      <h1>Teaching, Supervision &amp; Mentorship</h1>
+      <p class="role"><strong>University of Cambridge</strong></p>
+      <p class="navlabel" id="secnav-label">How can I help?</p>
+      <ul class="secnav" aria-labelledby="secnav-label">
+        <li><a href="#course-teaching">Taking a course I teach</a></li>
+        <li><a href="#supervision">Undergraduate supervision</a></li>
+        <li><a href="#mentorship">Research mentorship</a></li>
+        <li><a href="#mphil-projects">MPhil &amp; Part III projects</a></li>
+        <li><a href="#collaboration">Collaborating</a></li>
+      </ul>
+      <ul class="links" aria-label="Contact">
+        <li><a href="mailto:sas245@cam.ac.uk">Email</a></li>
+        <li><a href="people.html">Students &amp; collaborators</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" target="_blank">CV</a></li>
+      </ul>
+    </aside>
+
+    <div class="col">
+
+      <!-- ========== START HERE ========== -->
+      <section id="start" aria-labelledby="start-h">
+        <p class="lead">I teach and supervise students across Computer Science, Linguistics, Machine Learning and Cognitive Science at the University of Cambridge. Whether you're taking a course I teach, looking for undergraduate supervision, interested in research mentorship or exploring an MPhil or Part III research project, find the right starting point below.</p>
+
+        <h2 id="start-h">How can I help?</h2>
+        <ul class="plain router">
+          <li><a href="#portal">Taking a course I teach?</a><span class="d">Find course information, lecture materials, supervision arrangements and learning resources through the Cambridge Student Portal (Raven login required).</span></li>
+          <li><a href="#supervision">Looking for undergraduate supervision?</a><span class="d">Find out about my supervision approach, expectations and arrangements for Cambridge Computer Science and Linguistics Tripos students.</span></li>
+          <li><a href="#mentorship">Interested in research mentorship?</a><span class="d">Explore undergraduate research opportunities, UROPs, research training and opportunities to develop independent research skills.</span></li>
+          <li><a href="#mphil-projects">Looking for an MPhil or Part III research project?</a><span class="d">Explore potential research projects in language modelling, sample-efficient AI, multilingual learning, tokenization and developmental interpretability.</span></li>
+          <li><a href="#collaboration">Interested in collaborating?</a><span class="d">Get in touch to discuss research ideas and potential collaborations across machine learning, computational linguistics, cognitive science and AI safety.</span></li>
+        </ul>
+      </section>
+
+      <!-- ========== COURSE TEACHING ========== -->
+      <section id="course-teaching">
+        <h2>Taking a course I teach</h2>
+        <p class="for"><b>For</b>Students on Li18, L95 or the MPhil courses below, and anyone looking for my lecture materials.</p>
+
+        <div id="portal" class="portal">
+          <h3>Cambridge Student Portal</h3>
+          <p class="kicker">Cambridge students only · Raven login required</p>
+          <p>The portal is for the practical details: course information, supervision instructions and booking arrangements, how to submit work, and learning resources such as lecture materials, handouts, reading lists and research-training material. The public materials further down this section will stay here.</p>
+          <!-- TODO(portal-url): replace the mailto below with the Raven-protected portal URL
+               (e.g. a Cambridge-hosted page behind Raven/Shibboleth). GitHub Pages cannot do
+               Raven authentication, so the portal must be hosted elsewhere. Then update the
+               status sentence and remove "coming soon". -->
+          <p class="next"><b>Access via Raven</b>The portal link is coming soon. Until then, <a href="mailto:sas245@cam.ac.uk?subject=Cambridge%20student%20portal">email me</a> from your Cambridge address and I will send you what you need.</p>
         </div>
 
-        <div class="hero-cta" style="display:flex;flex-wrap:wrap;gap:12px;margin:0 0 30px">
-          <a href="assets/teaching/Salhan_2627_MPhil_Project_Proposals.pdf" target="_blank" class="btn-pill solid"><i class="bi bi-file-earmark-pdf"></i> 2026–27 Project Proposals (PDF)</a>
-          <a href="mailto:sas245@cam.ac.uk" class="btn-pill outline"><i class="bi bi-envelope"></i> Email me</a>
-        </div>
+        <h3 class="sub">Courses</h3>
 
-        <div class="prose wide">
-          <h3>About my research</h3>
-          <p>I am a PhD researcher in Computer Science at the University of Cambridge, supervised by Professor <a href="https://www.cl.cam.ac.uk/~pjb48/">Paula Buttery</a>. My research sits at the intersection of machine learning, computational linguistics, cognitive science, and AI safety. I study how language models acquire capabilities, how their internal representations develop during training, and how insights from human language learning can help us build more efficient, interpretable, and reliable AI systems.</p>
-          <p>I have co-authored more than 25 accepted peer-reviewed publications, including first-author work at EMNLP, EACL, and specialist venues across machine learning, computational linguistics, and cognitive science. My recent work has received two Oral Paper Awards at EMNLP 2026 and two Outstanding Paper Awards at the 2025 BabyLM Workshop. I also co-organise the BabyLM and BabyVLM research challenges, which bring together researchers developing language and multimodal models under constrained training budgets.</p>
-          <p>A central theme of my work is <strong>developmental AI</strong>: studying not only what a trained model can do, but how it acquires its capabilities, what determines the representations it develops, and whether we can monitor and influence that process. I use small language models as controlled scientific instruments, allowing us to test hypotheses about learning that would be difficult to investigate in larger, less transparent systems.</p>
-          <p>I am particularly interested in projects that combine technically rigorous machine learning with a clear scientific question. The following are four broad project areas, with example directions rather than fixed specifications. We can refine individual projects around your interests, technical background, and the time available for an MPhil.</p>
-        </div>
+        <p>I am a guest lecturer for courses in the Linguistics and Computer Science Triposes. My first guest lecture, on language model evaluation, was in November 2024 for an MPhil course with Prof Paula Buttery and Dr Fermín Moscoso del Prado Martín. Since then I have given lectures and written handouts on language modelling, parsing and evaluation for graduate and undergraduate courses.</p>
 
-        <!-- Project area 1 -->
-        <div class="teach-card" style="margin-top:22px">
-          <h4><i class="bi bi-diagram-3"></i> 1 · Dynamic Tokenization — Learning What a Model Should Process Together</h4>
-          <p style="font-style:italic;color:var(--ink-2);margin:0 0 12px"><b>Research area:</b> Language model architectures, tokenization, adaptive computation, multilingual NLP.</p>
-          <p>Tokenization is often treated as a preprocessing step. An alternative view is that tokenization is a resource allocation policy: it determines how much computation and memory a model spends processing different parts of its input.</p>
-          <p>Conventional subword tokenizers assign fixed segmentation rules before a model begins learning. But not all input sequences are equally difficult. A familiar word, an unfamiliar name, a piece of code, and a morphologically complex word may benefit from very different granularities of processing. Could a model learn to allocate its computational resources dynamically, rather than being constrained by a fixed vocabulary? Recent approaches to byte-level and patch-based language modelling, alongside work on transferring pretrained tokenizers into byte-level models, create promising opportunities to investigate this question.</p>
-          <p><b>Possible research directions.</b></p>
-          <ul>
-            <li><b>Transferring pretrained tokenization:</b> can we transfer useful segmentation structure from a pretrained BPE language model into a byte-level or tokenizer-free architecture without inheriting its fixed vocabulary?</li>
-            <li><b>Adaptive tokenization:</b> can a model learn when to process text as individual bytes, characters, subwords, or longer patches, using signals such as uncertainty or information content?</li>
-            <li><b>Multilingual resource allocation:</b> does dynamic tokenization allocate computation more effectively across languages with different writing systems, morphological structures, and levels of representation in the training data?</li>
-            <li><b>Interpreting segmentation decisions:</b> can we understand which features of an input cause a model to change its processing granularity, and whether those decisions improve downstream performance?</li>
-          </ul>
-          <p>A particularly interesting direction is to investigate whether tokenization can be transferred as a learned computational strategy, rather than as a fixed collection of boundaries.</p>
-          <p><b>What you could do:</b> implement or adapt a tokenization architecture, design controlled comparisons against standard BPE and byte-level baselines, and evaluate the resulting models on language modelling, multilingual tasks, or computational efficiency. Depending on the project, there may also be scope for analysing learned representations and segmentation behaviour.</p>
-          <p><b>A good fit if you enjoy:</b> deep learning systems, model architectures, efficient training, multilingual NLP, or the interface between language and computation.</p>
-          <p style="margin-bottom:4px"><b>Selected references</b></p>
-          <ul>
-            <li>Cognetta et al. (2026), <i>Tokenization: A Survey for Modern NLP</i>.</li>
-            <li>Pagnoni et al. (2025), <i>Byte Latent Transformer: Patches Scale Better Than Tokens</i>.</li>
-            <li>Meister et al. (2026), <i>LangMAP: A Language-Adaptive Approach to Tokenization</i>.</li>
-          </ul>
-        </div>
+        <ul class="plain teach">
+          <li>Li18 <a href="#materials-li18">Computational Linguistics</a> (Linguistics Tripos), lectures on language models and parsing, and on deep neural networks. 2025–26.</li>
+          <li>L95 <a href="#materials-l95">Introduction to Natural Language Syntax and Parsing</a> (Part III / MPhil Advanced Computer Science), guest lecturer and teaching assistant. Michaelmas 2024 onwards.</li>
+          <li>MPhil guest lecture, Language Model Evaluation, with Paula Buttery &amp; Fermín Moscoso del Prado Martín. Michaelmas 2024.</li>
+        </ul>
 
-        <!-- Project area 2 -->
-        <div class="teach-card" style="margin-top:22px">
-          <h4><i class="bi bi-cpu"></i> 2 · Sample-Efficient AI — Building Models That Learn More from Less</h4>
-          <p style="font-style:italic;color:var(--ink-2);margin:0 0 12px"><b>Research area:</b> Language model training, efficient architectures, cognitive science, multimodal learning.</p>
-          <p>Modern AI systems are trained on enormous quantities of data, yet humans acquire language and other complex skills from comparatively limited experience. Can we develop learning systems that make better use of the data they receive?</p>
-          <p>The BabyLM initiative investigates this question by challenging researchers to train language models under constrained data budgets. I co-organise the BabyLM and BabyVLM challenges, which provide benchmarks and shared tasks for investigating sample-efficient language and multimodal learning. The goal is not simply to produce a smaller model; it is to understand which architectural and learning choices allow a model to acquire useful capabilities from limited experience. Cognitive science offers hypotheses about structured learning, curriculum, memory, and inductive biases; machine learning provides the tools to test and extend them.</p>
-          <p><b>Possible research directions.</b></p>
-          <ul>
-            <li><b>Architectures for limited-data learning:</b> test whether recurrence, parameter sharing, adaptive computation, or alternative architectural choices improve learning when training data are scarce.</li>
-            <li><b>Cognitively inspired learning strategies:</b> investigate whether structured curricula, linguistic inductive biases, or models of human language acquisition improve sample efficiency.</li>
-            <li><b>From text to multimodal learning:</b> test whether techniques that help language models learn from limited text also benefit models trained on restricted amounts of visual or speech data.</li>
-            <li><b>Evaluating what small models know:</b> develop or apply evaluations that distinguish genuine acquisition of a capability from memorisation, superficial task performance, or reliance on dataset artefacts.</li>
-          </ul>
-          <p>A strong project might start with a specific hypothesis about learning, implement a controlled comparison, and establish not only whether an approach works but under what conditions and why.</p>
-          <p><b>What you could do:</b> train small models under controlled data budgets, develop new architectures or training strategies, and evaluate learning curves across model sizes, datasets, or training regimes. Existing open-source frameworks and shared-task infrastructure can provide a starting point.</p>
-          <p><b>A good fit if you enjoy:</b> machine learning, neural network architectures, learning theory, cognitive science, or building AI systems under practical resource constraints.</p>
-          <div class="res-links">
-            <a href="https://babylm.github.io/" target="_blank"><i class="bi bi-box-arrow-up-right"></i> BabyLM</a>
-            <a href="https://babylm.github.io/" target="_blank"><i class="bi bi-box-arrow-up-right"></i> BabyVLM</a>
+        <details class="more">
+          <summary>More about these courses</summary>
+          <div class="body">
+            <h4>Li18 Computational Linguistics</h4>
+            <p>Li18 introduces statistical and neural approaches to language, from n-gram models and PCFG parsing through to modern transformer language models. My 2025–26 lectures cover language models and parsing (Lecture 7, computational syntax) and deep neural networks.</p>
+            <figure><img src="assets/images/photos/photo-lecturing.jpg" alt="Suchir Salhan lecturing Li18 Computational Linguistics at Cambridge" loading="lazy"><figcaption>Lecturing Li18 Computational Linguistics (Lecture 7: Computational Syntax), University of Cambridge.</figcaption></figure>
+            <h4>L95 Introduction to Natural Language Syntax and Parsing</h4>
+            <p>L95 covers parsing algorithms (CKY, shift-reduce), categorial grammars, span-based constituency parsing, evaluation, lexicalised PCFGs and unification grammars, and recent topics such as discontinuous parsing. My handout covers language model evaluation with BLiMP and other minimal-pair benchmarks; I have also written notes and slides on tokenization.</p>
           </div>
-        </div>
+        </details>
 
-        <!-- Project area 3 -->
-        <div class="teach-card" style="margin-top:22px">
-          <h4><i class="bi bi-activity"></i> 3 · Developmental Interpretability — Monitoring Capabilities as They Emerge</h4>
-          <p style="font-style:italic;color:var(--ink-2);margin:0 0 12px"><b>Research area:</b> Mechanistic interpretability, AI safety, training dynamics, capability evaluation.</p>
-          <p>Most language model evaluations examine a model after training, and most interpretability studies investigate the internal mechanisms of an already-trained system. Both approaches can miss an important question: what happens internally as a model acquires a new capability, and can we detect that development reliably?</p>
-          <p>A model's capabilities do not necessarily emerge all at once. Training may create internal representations that later support particular behaviours, or produce bottlenecks that limit what subsequent post-training can achieve. Understanding these dynamics could help us identify which capabilities are developing, when existing evaluations become informative, and whether apparent signs of progress or risk correspond to meaningful changes in the model. Rather than treating an internal component as inherently meaningful, we can test whether it predicts behaviour, whether interventions establish a causal relationship, and whether findings replicate across checkpoints, random seeds, or model families.</p>
-          <p><b>Possible research directions.</b></p>
-          <ul>
-            <li><b>Monitoring capability emergence:</b> can internal representations or activation patterns reveal that a model is acquiring a capability before standard behavioural evaluations reliably detect it?</li>
-            <li><b>Replicating interpretability findings:</b> do proposed circuits, neurons, or linear representations persist across random seeds, training checkpoints, and model architectures?</li>
-            <li><b>Pretraining and post-training:</b> which capabilities are constrained by representations learned during pretraining, and which can be developed through subsequent optimisation?</li>
-            <li><b>Reliable evaluation and AI safety:</b> when do interpretability metrics provide useful evidence about a model's behaviour, and when can they give false reassurance?</li>
-            <li><b>Cultural and social capabilities:</b> how do models acquire culturally specific knowledge, and can we identify the training conditions or internal representations associated with reliable performance across different cultural contexts?</li>
-          </ul>
-          <p>These questions are particularly relevant to AI safety because an evaluation that works only at the end of training may provide little warning about how a system is developing. Equally, an internal signal that looks promising but does not generalise or predict behaviour can be misleading.</p>
-          <p><b>What you could do:</b> analyse model checkpoints, design behavioural and internal evaluations, perform activation interventions, or replicate existing findings under controlled conditions. Projects can range from focused empirical studies to more ambitious investigations of how capabilities develop during training.</p>
-          <p><b>A good fit if you enjoy:</b> mechanistic interpretability, AI safety, experimental machine learning, causal inference, or the scientific study of neural networks.</p>
-          <p style="margin-bottom:4px"><b>Related research</b></p>
-          <ul>
-            <li>Chen et al. (2026), <i>The Coverage Principle: How Pre-Training Enables Post-Training</i>.</li>
-            <li>Zou, Salhan &amp; Buttery (2026), <i>Development of Linear Truth Encodings in Language Models: A Replication Study</i>.</li>
-            <li>Polyakova-Reed et al. (2026), <i>Claude Reinvestigates Herself: A Replication of Different Types of Syntactic Agreement Recruit the Same Units in LLMs</i>.</li>
-          </ul>
-          <p style="font-size:15px;color:var(--ink-2)">The latter two projects form part of our work on reproducibility and reliability in interpretability research.</p>
-        </div>
+        <h3 class="sub">Public lecture materials</h3>
+        <ul class="plain materials">
+          <li id="materials-li18"><span class="c">Li18</span> <a href="assets/teaching/Li18%20Lecture%207%20slides.pdf" target="_blank">Lecture 7 slides</a> · <a href="assets/teaching/Li18%20Lecture%208%20slides.pdf" target="_blank">Lecture 8 slides</a> · <a href="assets/teaching/Perplexity%20and%20Evaluation%20Metrics%20Essay.pdf" target="_blank">Perplexity and evaluation metrics (essay)</a></li>
+          <li id="materials-l95"><span class="c">L95</span> <a href="assets/teaching/L95_BLiMP_25_26.pdf" target="_blank">BLiMP handout</a> · <a href="assets/teaching/L95_Slides___Suchir.pdf" target="_blank">slides</a> · <a href="assets/teaching/L95_2025_26.pdf" target="_blank">notes 2025–26</a> · <a href="assets/teaching/L95_2025_26_Reading_List.pdf" target="_blank">reading list</a> · <a href="assets/teaching/L95_Tokenizers_Slides.pdf" target="_blank">tokenizers slides</a> · <a href="assets/teaching/L95_Tokenization_2025_26.pdf" target="_blank">tokenization notes 2025–26</a></li>
+          <li><span class="c">NLP</span> <a href="assets/tripos/NLP_Advice_Tripos.pdf" target="_blank">NLP advice for the Tripos</a>, short notes on approaching NLP coursework, projects and supervisions</li>
+        </ul>
 
-        <!-- Project area 4 -->
-        <div class="teach-card" style="margin-top:22px">
-          <h4><i class="bi bi-globe2"></i> 4 · Beetle — Computational Models of Bilingual and Multilingual Language Processing</h4>
-          <p style="font-style:italic;color:var(--ink-2);margin:0 0 12px"><b>Research area:</b> Computational psycholinguistics, multilingual language models, language acquisition, cognitive modelling.</p>
-          <p>Most people in the world use more than one language, but computational models of human language processing have historically focused heavily on monolingual speakers. This creates a scientific gap: how can we understand the effects of language experience when our computational models do not adequately represent the diversity of that experience?</p>
-          <p>I developed <a href="beetle.html">Beetle</a>, a framework and suite of controlled bilingual language models designed to investigate second-language processing. By controlling which languages a model encounters, when it encounters them, and how much exposure it receives, we can test hypotheses about human bilingualism in a systematic way. This makes it possible to investigate not only whether a model can process multiple languages, but also how the history of its language experience shapes its behaviour.</p>
-          <p><b>Possible research directions.</b></p>
-          <ul>
-            <li><b>Code-switching:</b> how does the balance and ordering of language exposure affect a model's ability to switch between languages within and across sentences?</li>
-            <li><b>Language attrition:</b> when a model receives substantially more exposure to a second language, under what conditions does its performance in its first language deteriorate?</li>
-            <li><b>Heritage bilingualism:</b> can controlled training regimes capture aspects of learning a minority language at home while becoming increasingly dominant in a majority language?</li>
-            <li><b>Human-model alignment:</b> do model predictions and internal representations align with human reading times, behavioural experiments, or neural measurements across linguistic tasks?</li>
-            <li><b>Developmental trajectories:</b> do two models with similar final performance develop different internal representations because they encountered their languages in different orders or proportions?</li>
-            <li><b>Language production:</b> how does prior language experience affect syntactic choices, lexical selection, and cross-linguistic influence in model-generated language?</li>
-          </ul>
-          <p>A key advantage of this framework is experimental control. Rather than comparing unrelated models trained on different datasets, we can construct matched populations that differ in a specific aspect of their learning history and test the consequences.</p>
-          <p><b>What you could do:</b> train or analyse controlled bilingual models, design computational psycholinguistic experiments, compare model predictions with human behavioural data, or investigate how multilingual training influences representations and language production.</p>
-          <p><b>A good fit if you enjoy:</b> language, linguistics, cognitive science, multilingual NLP, experimental psychology, or using computational models to test theories of human learning.</p>
-          <div class="res-links">
-            <a href="beetle.html"><i class="bi bi-bug"></i> Beetle model suite</a>
+        <p class="next"><b>Next step</b>The materials above are public. For a question about a lecture or handout, <a href="mailto:sas245@cam.ac.uk">email me</a>.</p>
+      </section>
+
+      <!-- ========== UNDERGRADUATE SUPERVISION ========== -->
+      <section id="supervision">
+        <h2>Undergraduate supervision</h2>
+        <p class="for"><b>For</b>Cambridge Tripos students, and Directors of Studies looking for a supervisor.</p>
+
+        <p>I supervise these Computer Science Tripos courses:</p>
+        <ul class="plain teach">
+          <li>Part IA: Introduction to Probability; Machine Learning &amp; Real-World Data. Supervisor, and teaching assistant / lead demonstrator.</li>
+          <li>Part IB: Artificial Intelligence; Formal Models of Language. Supervisor.</li>
+          <li>Part II: Machine Learning &amp; Bayesian Inference (MLBI). Supervisor.</li>
+        </ul>
+
+        <details class="more">
+          <summary>What my MLBI supervision resources cover</summary>
+          <div class="body">
+            <p>MAP learning for regression and classification; the optimum weight vector for ridge regression and iteratively reweighted least squares (IRLS); SVMs and the KKT conditions; and the Bayesian interpretation of neural networks, including the matrix inversion lemma. I am also collecting lecture notes, handouts and supervision materials for the courses I supervise or have taken.</p>
           </div>
-          <p style="margin:12px 0 4px"><b>Selected publications</b></p>
-          <ul>
-            <li>Salhan, Arnett, Michaelov &amp; Buttery (2026), <i>Beetle: A Bilingual Model Suite for Modelling Second-Language Processing</i>.</li>
-            <li>Kubiak, Salhan, Buttery &amp; Moscoso del Prado Martín (2026), <i>Distinct Patterns of Brain Alignment of Language Models across Linguistic Domains</i>.</li>
-            <li>Barbenel et al. (2026), <i>L1 Influence in L2 Language Models: A Human-Centric Approach</i>.</li>
-          </ul>
-        </div>
+        </details>
 
-        <!-- What I look for -->
-        <div class="prose wide" style="margin-top:30px">
-          <h3>What I look for in MPhil students</h3>
-          <p>You do not need to have worked on all these topics before applying. I am interested in students who can formulate a clear research question, work independently on technical problems, and critically evaluate experimental results. Depending on the project, useful preparation may include:</p>
-          <ul>
-            <li><b>Machine learning:</b> experience with Python and PyTorch, neural networks, model training, or empirical machine learning.</li>
-            <li><b>Computer systems:</b> an interest in efficient training, computational constraints, model architectures, or experimental infrastructure.</li>
-            <li><b>Linguistics and cognitive science:</b> experience with formal linguistics, language acquisition, psycholinguistics, or experimental methods.</li>
-            <li><b>Interpretability and evaluation:</b> an interest in causal reasoning, statistical analysis, reproducibility, or understanding the limitations of model evaluations.</li>
-          </ul>
-          <p>These are complementary backgrounds rather than a checklist. For example, a student with a strong machine learning background might develop a new tokenization architecture, while a student with a linguistics background might design controlled experiments to test how bilingual experience changes model behaviour. I particularly value projects that go beyond reporting a benchmark improvement to explain why an approach works, where it fails, and what the results tell us about learning or intelligence.</p>
-        </div>
+        <p class="next"><b>Next step</b>To ask whether I can supervise a course this year, <a href="mailto:sas245@cam.ac.uk">email me</a> with the course, your college and your year. If I already supervise you, the arrangements for booking and handing in work will be in the <a href="#portal">student portal</a>; until it is live, I will send them by email.</p>
+      </section>
 
-        <!-- How to get in touch -->
-        <div class="prose wide" style="margin-top:12px">
-          <h3>How to get in touch</h3>
-          <p>If you are interested in one of these directions, please get in touch with a brief introduction outlining:</p>
-          <ul>
-            <li>Your academic background and relevant technical or research experience.</li>
-            <li>Which project area interests you and what question you would like to investigate.</li>
-            <li>Any relevant projects, papers, code, or other work you would like to share.</li>
-          </ul>
-          <p>You are also welcome to suggest a related research question of your own. The four areas above are starting points, and I am happy to discuss how an idea could be developed into a focused MPhil project.</p>
-          <p><b>Proposed supervisors:</b> Suchir Salhan and Professor Paula Buttery, University of Cambridge.</p>
-        </div>
+      <!-- ========== RESEARCH MENTORSHIP ========== -->
+      <section id="mentorship">
+        <h2>Research mentorship</h2>
+        <p class="for"><b>For</b>Undergraduates who want research experience: a UROP, a summer project, or structured research training.</p>
 
-        <div class="hero-cta" style="display:flex;flex-wrap:wrap;gap:12px;margin-top:22px">
-          <a href="assets/teaching/Salhan_2627_MPhil_Project_Proposals.pdf" target="_blank" class="btn-pill solid"><i class="bi bi-file-earmark-pdf"></i> 2026–27 Project Proposals (PDF)</a>
-          <a href="mailto:sas245@cam.ac.uk" class="btn-pill outline"><i class="bi bi-envelope"></i> Email me</a>
-        </div>
-      </div>
-    </section>
+        <p>In summer 2025, with Prof Paula Buttery, I co-supervised two Small Language Model UROP students. The eight-week programme was built on <a href="https://www.picolm.io/" target="_blank" rel="noopener">Pico</a>, our framework for training small language models and studying their learning dynamics. Alongside their independent projects, the students followed a structured practical course: a weekly reading list plus hands-on pretraining and interpretability work.</p>
+        <p>I am also a Google DeepMind Research Ready mentor with <a href="https://www.richarddiehlmartinez.com/" target="_blank" rel="noopener">Richard Diehl Martinez</a> and Prof Paula Buttery. The programme is supported by Google DeepMind, the Hg Foundation and the Royal Academy of Engineering.</p>
+        <p>Past UROP reports and the students I have mentored are listed on the <a href="people.html">people page</a>.</p>
 
-    <!-- GUEST LECTURING -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head left">
-          <p class="kicker">Guest Lecturing</p>
-          <h2>Cambridge Lecture Notes</h2>
-          <p>I am a guest lecturer for several courses in the Linguistics and Computer Science Triposes. Here you can find my lecture materials, handouts and associated repositories.</p>
-        </div>
-
-        <div class="prose wide">
-          <p>I delivered my first guest lecture in November 2024 for an MPhil course at the University of Cambridge, with Prof Paula Buttery and Dr Fermín Moscoso del Prado Martín, on Language Model Evaluation. Since then I have contributed lectures and handouts on language modelling, parsing, and evaluation across the graduate and undergraduate curriculum.</p>
-          <figure class="inline-photo"><img src="assets/images/photos/photo-lecturing.jpg" alt="Lecturing Li18 Computational Linguistics at Cambridge" loading="lazy"><figcaption>Lecturing Li18 Computational Linguistics (Lecture 7: Computational Syntax), University of Cambridge.</figcaption></figure>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-lg-6">
-            <div class="teach-card">
-              <h4><i class="bi bi-mortarboard"></i> L95 — Introduction to Natural Language Syntax &amp; Parsing</h4>
-              <ul>
-                <li><b>Part III / MPhil Advanced Computer Science</b></li>
-                <li>Guest lecturer and teaching assistant. My handout covers Language Model Evaluation (BLiMP and minimal-pair benchmarks), delivered in Michaelmas 2024.</li>
-                <li>Course topics include parsing algorithms (CKY, shift-reduce), categorial grammars, span-based constituency parsing, evaluation, lexicalised PCFGs and unification grammars, and recent topics such as discontinuous parsing.</li>
-              </ul>
-              <div class="res-links">
-                <a href="assets/teaching/L95_BLiMP_25_26.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> Handout · BLiMP</a>
-                <a href="assets/teaching/L95_Slides___Suchir.pdf" target="_blank"><i class="bi bi-easel"></i> Slides</a>
-                <a href="assets/teaching/L95_2025_26.pdf" target="_blank"><i class="bi bi-journal-text"></i> Notes 2025–26</a>
-                <a href="assets/teaching/L95_2025_26_Reading_List.pdf" target="_blank"><i class="bi bi-list-ul"></i> Reading List</a>
-                <a href="assets/teaching/L95_Tokenizers_Slides.pdf" target="_blank"><i class="bi bi-easel"></i> Tokenizers Slides</a>
-                <a href="assets/teaching/L95_Tokenization_2025_26.pdf" target="_blank"><i class="bi bi-journal-text"></i> Tokenization Notes 2025–26</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-6">
-            <div class="teach-card">
-              <h4><i class="bi bi-mortarboard"></i> Li18 — Computational Linguistics</h4>
-              <ul>
-                <li><b>Linguistics Tripos</b></li>
-                <li>2025–26 lecture notes on Computational Linguistics — Language Models and Parsing, and Deep Neural Networks.</li>
-                <li>Introduces students to statistical and neural approaches to language, from n-gram and PCFG parsing through to modern transformer language models.</li>
-              </ul>
-              <div class="res-links">
-                <a href="assets/teaching/Li18%20Lecture%207%20slides.pdf" target="_blank"><i class="bi bi-easel"></i> Lecture 7 Slides</a>
-                <a href="assets/teaching/Li18%20Lecture%208%20slides.pdf" target="_blank"><i class="bi bi-easel"></i> Lecture 8 Slides</a>
-                <a href="assets/teaching/Perplexity%20and%20Evaluation%20Metrics%20Essay.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i> Perplexity &amp; Evaluation Metrics Essay</a>
-                <a href="assets/tripos/NLP_Advice_Tripos.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> NLP Tripos Advice</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SUPERVISIONS -->
-    <section class="section tint">
-      <div class="container">
-        <div class="section-head left">
-          <p class="kicker">Supervisions</p>
-          <h2>Cambridge Supervision Resources</h2>
-          <p>I supervise several courses for Cambridge Computer Science undergraduates, and am collating lecture notes, handouts and supervision materials for courses I supervise or have previously taken.</p>
-        </div>
-
-        <div class="row g-4">
-          <div class="col-lg-4">
-            <div class="teach-card">
-              <h4><i class="bi bi-1-circle"></i> CST IA — First Year</h4>
-              <ul>
-                <li>Introduction to Probability</li>
-                <li>Machine Learning &amp; Real World Data</li>
-                <li><b>Role:</b> Supervisor &amp; Teaching Assistant / Lead Demonstrator</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="teach-card">
-              <h4><i class="bi bi-2-circle"></i> CST IB — Second Year</h4>
-              <ul>
-                <li>Artificial Intelligence</li>
-                <li>Formal Models of Language</li>
-                <li><b>Role:</b> Supervisor</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="teach-card">
-              <h4><i class="bi bi-3-circle"></i> CST II — Third Year</h4>
-              <ul>
-                <li>Machine Learning &amp; Bayesian Inference (MLBI)</li>
-                <li><b>Role:</b> Supervisor</li>
-                <li>Supervision resources cover: MAP Learning (regression &amp; classification); optimum weight vector for Ridge Regression and Iterated Reweighted Least Squares (IRLS); SVMs and KKT conditions; and the Bayesian interpretation of neural networks (Matrix Inversion Lemma).</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- UROP SUPERVISION -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head left">
-          <p class="kicker">UROP Supervision</p>
-          <h2>Small Language Models UROPs 2025</h2>
-          <p>An eight-week Undergraduate Research Opportunity Programme built on <a href="https://www.picolm.io/" target="_blank">Pico</a>, our small language model learning-dynamics framework, co-supervised with Prof Paula Buttery.</p>
-        </div>
-
-        <div class="prose wide">
-          <p>In 2025 I co-supervised two Small Language Model UROP students, running a structured practical course alongside their independent research projects. The programme pairs a weekly reading list with hands-on pretraining and interpretability work using Pico. I am also a <b>Google DeepMind Research Ready</b> mentor together with <a href="https://www.richarddiehlmartinez.com/" target="_blank">Richard Diehl Martinez</a> and Prof Paula Buttery, supported by Google DeepMind, the Hg Foundation and the Royal Academy of Engineering.</p>
-
-          <h3>Eight-Week Syllabus</h3>
-
-          <h4>Week 1 (14 Jul) — BabyLMs and Multilingual Evaluation</h4>
-          <ul>
-            <li><b>Required:</b> <a href="https://aclanthology.org/2023.conll-babylm.1.pdf" target="_blank">Findings of the 1st BabyLM Challenge</a>; <a href="https://aclanthology.org/2023.conll-babylm.2.pdf" target="_blank">Findings of the 2nd BabyLM Challenge</a>; <a href="assets/papers/L95_BLiMP.pdf" target="_blank">Handout on LM Evaluation</a>.</li>
-            <li><b>Recommended:</b> <a href="https://aclanthology.org/2023.conll-babylm.10/" target="_blank">CLIMB</a>; <a href="https://aclanthology.org/2023.conll-babylm.11/" target="_blank">Less is More (cross-lingual curriculum)</a>.</li>
-          </ul>
-
-          <h4>Week 2 (21 Jul) — Tokenisation &amp; Interpretability / Bilingual BabyLM</h4>
-          <ul>
-            <li><a href="https://arxiv.org/pdf/2311.03658" target="_blank">Linear Representation Hypothesis</a>; <a href="https://drive.google.com/file/d/1yaBGi6RQdcGlGfjjGLGf5fo0TaINpsLm/view" target="_blank">Arthur Conmy (DeepMind) slides</a>; <a href="https://universaldependencies.org/" target="_blank">Universal Dependencies</a>.</li>
-            <li><a href="https://arxiv.org/pdf/2503.03962" target="_blank">Shared Grammatical Representations in Bilingual LMs</a>; <a href="https://arxiv.org/abs/2504.02768" target="_blank">MultiBLiMP 1.0</a>; <a href="https://transformerlensorg.github.io/TransformerLens/" target="_blank">TransformerLens</a>.</li>
-          </ul>
-
-          <h4>Week 3 (28 Jul) — Pretraining LMs: The Pico Framework</h4>
-          <ul>
-            <li><a href="https://www.picolm.io/guides/train" target="_blank">Pico Train tutorial</a>; <a href="https://www.picolm.io/guides/analyze" target="_blank">Pico Analyze tutorial</a>.</li>
-          </ul>
-
-          <h4>Week 4 (04 Aug) — BabyLM Architectures &amp; Feedback (ALTA, CST)</h4>
-          <ul>
-            <li><a href="https://arxiv.org/abs/2308.02019" target="_blank">BabyLlama</a>.</li>
-          </ul>
-
-          <h4>Week 5 (11 Aug) — Mechanistic and Developmental Interpretability</h4>
-          <ul>
-            <li>Interim project presentations.</li>
-          </ul>
-
-          <h4>Week 6 (18 Aug) — Train Your Own BabyLM From Scratch</h4>
-          <ul>
-            <li>Interaction Track / Multimodal Track.</li>
-          </ul>
-
-          <h4>Week 7 (25 Aug) — Small Language Models: Frontier Problems</h4>
-          <ul>
-            <li><a href="https://arxiv.org/pdf/2311.03658" target="_blank">Linear Representation Hypothesis</a>; Conmy slides.</li>
-          </ul>
-
-          <h4>Week 8 (01 Sep) — Small Language Models: Frontier Problems (Architectures)</h4>
-          <ul>
-            <li>Final project presentations. UROP reports due Friday 5 September 2025, 5pm.</li>
-          </ul>
-
-          <h3>Language Model Primers</h3>
-          <ul>
-            <li><a href="https://stanford-cs336.github.io/spring2025-lectures/?trace=var/traces/lecture_01.json" target="_blank">CS336 — Language Models from Scratch</a>; <a href="https://web.stanford.edu/class/cs224u/slides/cs224u-contextualreps-2023-handout.pdf" target="_blank">CS224U — Contextual Word Representations</a>; <a href="https://web.stanford.edu/class/cs224u/slides/cs224u-incontextlearning-2023-handout.pdf" target="_blank">CS224U — In-Context Learning</a>.</li>
-          </ul>
-
-          <h3>Small Language Models &amp; Further Reading</h3>
-          <ul>
-            <li><a href="https://web.stanford.edu/class/cs224u/slides/lisa-224u-diffusion.pdf" target="_blank">CS224U — Diffusion Models for Text</a>; <a href="https://arxiv.org/pdf/2411.03350" target="_blank">A Comprehensive Survey of Small Language Models</a>; <a href="https://arxiv.org/pdf/2506.02153" target="_blank">Small Language Models are the Future of Agentic AI</a>.</li>
-            <li>Non-autoregressive LMs: <a href="https://spacehunterinf.github.io/blog/2025/diffusion-language-models/" target="_blank">What are Diffusion Language Models? — Xiaochen Zhu</a>.</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- TRIPOS ADVICE CALLOUT -->
-    <section class="section tint">
-      <div class="container">
-        <div class="prose wide">
-          <div class="teach-card">
-            <h4><i class="bi bi-lightbulb"></i> Tripos Advice</h4>
+        <details class="more">
+          <summary>The 2025 UROP syllabus and reading list</summary>
+          <div class="body">
+            <h4>Week 1 (14 Jul): BabyLMs and multilingual evaluation</h4>
             <ul>
-              <li>A short set of notes for Computer Science and Linguistics Tripos students on approaching Natural Language Processing coursework, projects and supervisions.</li>
+              <li>Required: <a href="https://aclanthology.org/2023.conll-babylm.1.pdf" target="_blank" rel="noopener">Findings of the 1st BabyLM Challenge</a>; <a href="https://aclanthology.org/2023.conll-babylm.2.pdf" target="_blank" rel="noopener">Findings of the 2nd BabyLM Challenge</a>; <a href="assets/papers/L95_BLiMP.pdf" target="_blank">handout on LM evaluation</a>.</li>
+              <li>Recommended: <a href="https://aclanthology.org/2023.conll-babylm.10/" target="_blank" rel="noopener">CLIMB</a>; <a href="https://aclanthology.org/2023.conll-babylm.11/" target="_blank" rel="noopener">Less is More (cross-lingual curriculum)</a>.</li>
             </ul>
-            <div class="res-links">
-              <a href="assets/tripos/NLP_Advice_Tripos.pdf" target="_blank"><i class="bi bi-file-earmark-pdf"></i> NLP Advice for the Tripos</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+            <h4>Week 2 (21 Jul): tokenisation and interpretability; bilingual BabyLM</h4>
+            <ul>
+              <li><a href="https://arxiv.org/pdf/2311.03658" target="_blank" rel="noopener">Linear Representation Hypothesis</a>; <a href="https://drive.google.com/file/d/1yaBGi6RQdcGlGfjjGLGf5fo0TaINpsLm/view" target="_blank" rel="noopener">Arthur Conmy (DeepMind) slides</a>; <a href="https://universaldependencies.org/" target="_blank" rel="noopener">Universal Dependencies</a>.</li>
+              <li><a href="https://arxiv.org/pdf/2503.03962" target="_blank" rel="noopener">Shared Grammatical Representations in Bilingual LMs</a>; <a href="https://arxiv.org/abs/2504.02768" target="_blank" rel="noopener">MultiBLiMP 1.0</a>; <a href="https://transformerlensorg.github.io/TransformerLens/" target="_blank" rel="noopener">TransformerLens</a>.</li>
+            </ul>
+            <h4>Week 3 (28 Jul): pretraining LMs with the Pico framework</h4>
+            <ul>
+              <li><a href="https://www.picolm.io/guides/train" target="_blank" rel="noopener">Pico Train tutorial</a>; <a href="https://www.picolm.io/guides/analyze" target="_blank" rel="noopener">Pico Analyze tutorial</a>.</li>
+            </ul>
+            <h4>Week 4 (04 Aug): BabyLM architectures and feedback (ALTA, CST)</h4>
+            <ul>
+              <li><a href="https://arxiv.org/abs/2308.02019" target="_blank" rel="noopener">BabyLlama</a>.</li>
+            </ul>
+            <h4>Week 5 (11 Aug): mechanistic and developmental interpretability</h4>
+            <ul><li>Interim project presentations.</li></ul>
+            <h4>Week 6 (18 Aug): train your own BabyLM from scratch</h4>
+            <ul><li>Interaction track / multimodal track.</li></ul>
+            <h4>Week 7 (25 Aug): small language models, frontier problems</h4>
+            <ul><li><a href="https://arxiv.org/pdf/2311.03658" target="_blank" rel="noopener">Linear Representation Hypothesis</a>; Conmy slides.</li></ul>
+            <h4>Week 8 (01 Sep): small language models, frontier problems (architectures)</h4>
+            <ul><li>Final project presentations. UROP reports were due on Friday 5 September 2025.</li></ul>
 
+            <h4>Language model primers</h4>
+            <ul>
+              <li><a href="https://stanford-cs336.github.io/spring2025-lectures/?trace=var/traces/lecture_01.json" target="_blank" rel="noopener">CS336: Language Models from Scratch</a>; <a href="https://web.stanford.edu/class/cs224u/slides/cs224u-contextualreps-2023-handout.pdf" target="_blank" rel="noopener">CS224U: Contextual Word Representations</a>; <a href="https://web.stanford.edu/class/cs224u/slides/cs224u-incontextlearning-2023-handout.pdf" target="_blank" rel="noopener">CS224U: In-Context Learning</a>.</li>
+            </ul>
+            <h4>Small language models and further reading</h4>
+            <ul>
+              <li><a href="https://web.stanford.edu/class/cs224u/slides/lisa-224u-diffusion.pdf" target="_blank" rel="noopener">CS224U: Diffusion Models for Text</a>; <a href="https://arxiv.org/pdf/2411.03350" target="_blank" rel="noopener">A Comprehensive Survey of Small Language Models</a>; <a href="https://arxiv.org/pdf/2506.02153" target="_blank" rel="noopener">Small Language Models are the Future of Agentic AI</a>.</li>
+              <li>Non-autoregressive LMs: <a href="https://spacehunterinf.github.io/blog/2025/diffusion-language-models/" target="_blank" rel="noopener">What are Diffusion Language Models? (Xiaochen Zhu)</a>.</li>
+            </ul>
+          </div>
+        </details>
+
+        <p class="next"><b>Next step</b>If you are a Cambridge undergraduate interested in a UROP or another research project, <a href="mailto:sas245@cam.ac.uk">email me</a> with your year, your course, and the kind of question you would like to work on.</p>
+      </section>
+
+      <!-- ========== RESEARCH SUPERVISION (MPhil / Part III) ========== -->
+      <section id="mphil-projects">
+        <h2>Research supervision</h2>
+        <p class="for"><b>For</b>Cambridge MPhil and Part III students choosing a research project, and anyone asking about co-supervision.</p>
+
+        <p>I am looking for MPhil students who want to develop and understand language models. Projects sit in the Cambridge Natural Language and Information Processing (NLIP) group, with chances to work with researchers across computer science, linguistics and cognitive science. Depending on the project, a co-supervisor with expertise in language model fundamentals, AI safety, interpretability or computational psycholinguistics may also be possible. The proposed supervisors are me and Prof Paula Buttery.</p>
+        <p>I like projects that pair careful machine learning with a clear scientific question. The four areas below are starting points with example directions, not fixed specifications; we can shape a project around your interests, your background and the time an MPhil allows. The <a href="assets/teaching/Salhan_2627_MPhil_Project_Proposals.pdf" target="_blank"><strong>2026–27 project proposals (PDF)</strong></a> have the full write-ups. My research is described on the <a href="research.html">research page</a>.</p>
+
+        <h3>1. Dynamic tokenization: learning what a model should process together</h3>
+        <p class="kicker">Architectures · Tokenization · Adaptive computation · Multilingual NLP</p>
+        <p>Tokenization is usually treated as preprocessing. Another view is that it is a resource allocation policy: it decides how much computation and memory a model spends on each part of its input. A familiar word, an unfamiliar name, a piece of code and a morphologically complex word may each benefit from a different granularity. Could a model learn to allocate computation dynamically instead of relying on a fixed vocabulary?</p>
+        <details class="more">
+          <summary>More about this project area</summary>
+          <div class="body">
+            <p>Recent work on byte-level and patch-based language modelling, and on transferring pretrained tokenizers into byte-level models, makes this question newly tractable.</p>
+            <h4>Possible directions</h4>
+            <ul>
+              <li><strong>Transferring pretrained tokenization.</strong> Can useful segmentation structure from a pretrained BPE model be transferred into a byte-level or tokenizer-free architecture without inheriting its fixed vocabulary?</li>
+              <li><strong>Adaptive tokenization.</strong> Can a model learn when to process text as bytes, characters, subwords or longer patches, using signals such as uncertainty or information content?</li>
+              <li><strong>Multilingual resource allocation.</strong> Does dynamic tokenization allocate computation better across languages with different writing systems, morphology and amounts of training data?</li>
+              <li><strong>Interpreting segmentation decisions.</strong> Which features of an input make a model change its processing granularity, and do those decisions help downstream?</li>
+            </ul>
+            <p>One direction I find especially interesting is whether tokenization can be transferred as a learned computational strategy rather than a fixed set of boundaries.</p>
+            <h4>What you could do</h4>
+            <p>Implement or adapt a tokenization architecture, design controlled comparisons against BPE and byte-level baselines, and evaluate on language modelling, multilingual tasks or efficiency. There may be room to analyse learned representations and segmentation behaviour too. A good fit if you enjoy deep learning systems, model architectures, efficient training, multilingual NLP, or the interface between language and computation.</p>
+            <h4>Selected references</h4>
+            <ul>
+              <li>Cognetta et al. (2026), <i>Tokenization: A Survey for Modern NLP</i>.</li>
+              <li>Pagnoni et al. (2025), <i>Byte Latent Transformer: Patches Scale Better Than Tokens</i>.</li>
+              <li>Meister et al. (2026), <i>LangMAP: A Language-Adaptive Approach to Tokenization</i>.</li>
+            </ul>
+          </div>
+        </details>
+
+        <h3>2. Sample-efficient AI: models that learn more from less</h3>
+        <p class="kicker">Language model training · Efficient architectures · Cognitive science · Multimodal learning</p>
+        <p>Modern AI systems are trained on enormous amounts of data, yet people acquire language and other skills from comparatively little experience. I co-organise the <a href="https://babylm.github.io/" target="_blank" rel="noopener">BabyLM</a> and <a href="https://babyvlm.github.io/" target="_blank" rel="noopener">BabyVLM</a> challenges, which ask researchers to train models under constrained data budgets. The aim is to understand which architectural and learning choices let a model acquire useful capabilities from limited experience, not just to make a smaller model.</p>
+        <details class="more">
+          <summary>More about this project area</summary>
+          <div class="body">
+            <p>Cognitive science offers hypotheses about structured learning, curricula, memory and inductive biases; machine learning provides the tools to test and extend them.</p>
+            <h4>Possible directions</h4>
+            <ul>
+              <li><strong>Architectures for limited data.</strong> Do recurrence, parameter sharing, adaptive computation or other architectural choices help when training data are scarce?</li>
+              <li><strong>Cognitively inspired learning.</strong> Do structured curricula, linguistic inductive biases or models of human language acquisition improve sample efficiency?</li>
+              <li><strong>From text to multimodal learning.</strong> Do techniques that help language models learn from limited text also help models trained on restricted visual or speech data?</li>
+              <li><strong>Evaluating what small models know.</strong> Develop or apply evaluations that separate genuine acquisition of a capability from memorisation, superficial task performance or dataset artefacts.</li>
+            </ul>
+            <p>A strong project might start from a specific hypothesis about learning, run a controlled comparison, and establish when and why an approach works, not only whether it does.</p>
+            <h4>What you could do</h4>
+            <p>Train small models under controlled data budgets, develop new architectures or training strategies, and compare learning curves across model sizes, datasets or training regimes. Existing open-source frameworks and shared-task infrastructure give you a starting point. A good fit if you enjoy machine learning, neural network architectures, learning theory, cognitive science, or building AI systems under practical resource constraints.</p>
+          </div>
+        </details>
+
+        <h3>3. Developmental interpretability: monitoring capabilities as they emerge</h3>
+        <p class="kicker">Mechanistic interpretability · AI safety · Training dynamics · Capability evaluation</p>
+        <p>Most evaluations look at a model after training, and most interpretability studies examine a model that is already trained. Both can miss what happens inside a model as it acquires a new capability, and whether we can detect that reliably. These questions matter for AI safety: an evaluation that only works at the end of training may give little warning about how a system is developing.</p>
+        <details class="more">
+          <summary>More about this project area</summary>
+          <div class="body">
+            <p>Capabilities need not emerge all at once. Training may build representations that later support particular behaviours, or create bottlenecks that limit what post-training can achieve. Rather than assuming an internal component is meaningful, we can test whether it predicts behaviour, whether interventions show a causal link, and whether findings replicate across checkpoints, seeds or model families. An internal signal that looks promising but does not generalise can be as misleading as a late evaluation.</p>
+            <h4>Possible directions</h4>
+            <ul>
+              <li><strong>Monitoring capability emergence.</strong> Can internal representations or activation patterns show a capability forming before behavioural evaluations reliably detect it?</li>
+              <li><strong>Replicating interpretability findings.</strong> Do proposed circuits, neurons or linear representations persist across seeds, checkpoints and architectures?</li>
+              <li><strong>Pretraining and post-training.</strong> Which capabilities are constrained by representations learned in pretraining, and which can later optimisation develop?</li>
+              <li><strong>Reliable evaluation and AI safety.</strong> When do interpretability metrics give useful evidence about behaviour, and when do they give false reassurance?</li>
+              <li><strong>Cultural and social capabilities.</strong> How do models acquire culturally specific knowledge, and which training conditions or representations go with reliable performance across cultural contexts?</li>
+            </ul>
+            <h4>What you could do</h4>
+            <p>Analyse model checkpoints, design behavioural and internal evaluations, run activation interventions, or replicate published findings under controlled conditions. Projects range from focused empirical studies to broader investigations of how capabilities develop. A good fit if you enjoy mechanistic interpretability, AI safety, experimental machine learning, causal inference, or the scientific study of neural networks.</p>
+            <h4>Related research</h4>
+            <ul>
+              <li>Chen et al. (2026), <i>The Coverage Principle: How Pre-Training Enables Post-Training</i>.</li>
+              <li>Zou, Salhan &amp; Buttery (2026), <i>Development of Linear Truth Encodings in Language Models: A Replication Study</i>.</li>
+              <li>Polyakova-Reed et al. (2026), <i>Claude Reinvestigates Herself: A Replication of Different Types of Syntactic Agreement Recruit the Same Units in LLMs</i>.</li>
+            </ul>
+            <p class="small muted">The last two are part of our work on reproducibility and reliability in interpretability research.</p>
+          </div>
+        </details>
+
+        <h3>4. Beetle: computational models of bilingual and multilingual language processing</h3>
+        <p class="kicker">Computational psycholinguistics · Multilingual models · Language acquisition · Cognitive modelling</p>
+        <p>Most people use more than one language, but computational models of language processing have mostly modelled monolingual speakers. I developed <a href="beetle.html">Beetle</a>, a framework and suite of controlled bilingual language models for studying second-language processing. Because we control which languages a model sees, when, and how much, we can test hypotheses about how language history shapes behaviour.</p>
+        <details class="more">
+          <summary>More about this project area</summary>
+          <div class="body">
+            <p>The key advantage is experimental control. Instead of comparing unrelated models trained on different data, we can build matched populations that differ in one aspect of their learning history and test the consequences.</p>
+            <h4>Possible directions</h4>
+            <ul>
+              <li><strong>Code-switching.</strong> How do the balance and order of language exposure affect switching between languages within and across sentences?</li>
+              <li><strong>Language attrition.</strong> When a model gets far more exposure to a second language, when does its first language deteriorate?</li>
+              <li><strong>Heritage bilingualism.</strong> Can controlled training capture learning a minority language at home while a majority language becomes dominant?</li>
+              <li><strong>Human–model alignment.</strong> Do model predictions and representations line up with human reading times, behavioural experiments or neural measurements?</li>
+              <li><strong>Developmental trajectories.</strong> Do two models with similar final performance develop different representations because they met their languages in a different order or proportion?</li>
+              <li><strong>Language production.</strong> How does prior language experience affect syntactic choices, lexical selection and cross-linguistic influence in generated text?</li>
+            </ul>
+            <h4>What you could do</h4>
+            <p>Train or analyse controlled bilingual models, design computational psycholinguistic experiments, compare model predictions with human data, or study how multilingual training shapes representations and production. A good fit if you enjoy language, linguistics, cognitive science, multilingual NLP, experimental psychology, or testing theories of human learning with computational models.</p>
+            <h4>Selected publications</h4>
+            <ul>
+              <li>Salhan, Arnett, Michaelov &amp; Buttery (2026), <i>Beetle: A Bilingual Model Suite for Modelling Second-Language Processing</i>.</li>
+              <li>Kubiak, Salhan, Buttery &amp; Moscoso del Prado Martín (2026), <i>Distinct Patterns of Brain Alignment of Language Models across Linguistic Domains</i>.</li>
+              <li>Barbenel et al. (2026), <i>L1 Influence in L2 Language Models: A Human-Centric Approach</i>.</li>
+            </ul>
+          </div>
+        </details>
+
+        <h3 class="sub">What I look for</h3>
+        <p>You do not need to have worked on all of these topics. I am interested in students who can frame a clear research question, work independently on technical problems, and look critically at their own results. Useful preparation depends on the project:</p>
+        <ul>
+          <li><strong>Machine learning:</strong> Python and PyTorch, neural networks, model training or empirical ML.</li>
+          <li><strong>Computer systems:</strong> efficient training, computational constraints, architectures or experimental infrastructure.</li>
+          <li><strong>Linguistics and cognitive science:</strong> formal linguistics, language acquisition, psycholinguistics or experimental methods.</li>
+          <li><strong>Interpretability and evaluation:</strong> causal reasoning, statistics, reproducibility, or the limits of model evaluations.</li>
+        </ul>
+        <p>These are complementary backgrounds, not a checklist. A student with a strong ML background might build a new tokenization architecture; a linguist might design controlled experiments on how bilingual experience changes model behaviour. I especially value projects that explain why an approach works, where it fails and what that tells us about learning, rather than reporting a benchmark gain.</p>
+
+        <p class="next"><b>Next step</b><a href="mailto:sas245@cam.ac.uk">Email me</a> a short introduction covering your academic background and relevant technical or research experience, which area interests you and what question you would like to investigate, and any projects, papers or code you would like to share. You are welcome to propose a related question of your own. For co-supervision, email me with a short description of the project and who else is involved.</p>
+        <p class="small muted">Proposals: <a href="assets/teaching/Salhan_2627_MPhil_Project_Proposals.pdf" target="_blank">2026–27 (PDF)</a> · <a href="assets/teaching/Salhan_2526_MPhil_Project_Proposals.pdf" target="_blank">2025–26 (PDF, previous year)</a>. Current and former MPhil students are listed on the <a href="people.html">people page</a>.</p>
+      </section>
+
+      <!-- ========== RESEARCH COLLABORATION ========== -->
+      <section id="collaboration">
+        <h2>Research collaboration</h2>
+        <p class="for"><b>For</b>Researchers and research students, at Cambridge or elsewhere, who have an idea for a joint project.</p>
+        <p>Much of my work is collaborative, and I am interested in hearing from researchers in machine learning, cognitive science, linguistics, interpretability and AI safety. Good starting points include controlled experiments with small language models (including the <a href="beetle.html">Beetle</a> suite and the <a href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM</a> framework), developmental interpretability and model monitoring, multilingual and cross-lingual evaluation, and sample-efficient learning through <a href="https://babylm.github.io/" target="_blank" rel="noopener">BabyLM</a>.</p>
+        <p>My <a href="research.html">research page</a> sets out the questions I am working on, and the <a href="people.html">people page</a> lists current collaborators.</p>
+        <p class="next"><b>Next step</b><a href="mailto:sas245@cam.ac.uk">Email me</a> with a few lines on the question, what you bring to it, and any relevant papers or code.</p>
+      </section>
+
+
+    </div>
   </main>
 
   <nav class="dock" aria-label="Primary">
