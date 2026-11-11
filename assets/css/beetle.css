@@ -72,6 +72,7 @@ html[data-theme="dark"] body.beetle-page {
 .bt-crumb { font-family: var(--mono-font); font-size: 12px; letter-spacing: .04em; color: var(--bt-ink-2); margin: 0 0 22px; }
 .bt-crumb a { color: var(--bt-ink-2); text-decoration: underline; text-decoration-color: var(--bt-rule); text-underline-offset: 3px; }
 .bt-crumb a:hover { color: var(--bt-accent-text); }
+.bt-hero--solo { grid-template-columns: minmax(0, 760px); justify-content: center; }
 .bt-hero h1 { font-family: var(--heading-font); font-weight: 600; color: var(--bt-ink);
   font-size: clamp(34px, 4.4vw, 52px); line-height: 1.06; letter-spacing: -0.018em; margin: 0 0 22px; text-wrap: balance; }
 .bt-hero h1 .nm { color: var(--bt-accent-text); }
