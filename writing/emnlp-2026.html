@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>EMNLP 2026 in Budapest: six papers, two orals · Suchir Salhan</title>
+  <meta name="description" content="Suchir Salhan on his EMNLP 2026 papers in Budapest: Beetle, LangMAP and cross-lingual alignment in the main conference, plus workshop papers at LM Playschool, BlackboxNLP and MRL, and co-organising BabyLM.">
+  <meta name="author" content="Suchir Salhan">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://suchirsalhan.github.io/writing/emnlp-2026.html">
+  <meta property="og:title" content="EMNLP 2026 in Budapest: six papers, two orals">
+  <meta property="og:description" content="Suchir Salhan on his EMNLP 2026 papers in Budapest: Beetle, LangMAP and cross-lingual alignment in the main conference, plus workshop papers at LM Playschool, BlackboxNLP and MRL, and co-organising BabyLM.">
+  <meta property="og:site_name" content="Suchir Salhan">
+  <meta property="article:published_time" content="2026-11-15">
+  <meta property="article:author" content="Suchir Salhan">
+  <meta name="twitter:card" content="summary">
+  <link href="../favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <link href="../assets/css/writing.css" rel="stylesheet">
+  <style>
+    .tufte-article .links { font-size: 17px; color: var(--ink-2); }
+    .tufte-article mark { background: #fff3a8; color: #222; padding: 0 .15em; }
+  </style>
+</head>
+<body class="index-page writing-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../beetle.html">Beetle</a></li>
+          <li><a href="index.html" class="active">Writing</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../presentations.html">Talks</a></li>
+          <li><a href="../people.html">People</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Paper write-up</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="tufte-article">
+          <div class="meta"><time datetime="2026-11-15">15 November 2026</time> · Paper write-up · Suchir Salhan</div>
+          <h1>EMNLP 2026 in Budapest: six papers, two orals</h1>
+
+          <p class="standfirst">EMNLP 2026 was in Budapest in October. Three of our papers were in the main conference: Beetle, LangMAP and a study of cross-lingual alignment between separately trained models. Three more appeared in workshop proceedings: one at the LM Playschool and two in BlackboxNLP's reproducibility track. Beetle and LangMAP were both selected for oral presentations, among roughly the top 3% of a pool of about 17,000 ARR submissions. We also presented a non-archival poster at the MRL workshop, and I co-organised the BabyLM workshop.</p>
+
+          <p>Below is one short note per paper: the question, what we did, one result, and where to find the paper, slides and poster.</p>
+
+          <h2 id="beetle">Beetle</h2>
+
+          <p>Most work that uses language models to study human language processing is monolingual, and mostly English, even though most people speak more than one language. Beetle asks whether controlling a model's second-language experience (when English arrives, and in what proportion) changes how well it models second-language readers. It was presented as an oral.</p>
+
+          <p>With Catherine Arnett, James Michaelov and Paula Buttery, I trained a suite of 330 open models (285 bilingual, 45 monolingual) across five exposure curricula and three training scales, from 100M to 24B tokens. English is always the second language. The curricula run from a balanced 50/50 mix (B1) to a late onset where English only arrives 80% of the way through training (B5).</p>
+
+          <p>To compare models with readers, we took first-pass gaze durations from second-language English speakers in the MECO eye-tracking corpus. We used each model's word surprisal to predict them in a mixed-effects regression that controls for word length, frequency and position, and measured the gain in log-likelihood over a baseline without surprisal. Staged exposure (B2 to B5) generally fit second-language reading times better than balanced bilingual training (B1). The poster adds that the Beetle models generally fit better than five massively multilingual baselines (Apertus, Gemma, Llama, Qwen and XGLM), and that no single curriculum is best for every case.</p>
+
+          <p class="links">Paper: <a href="https://aclanthology.org/2026.emnlp-main.2276/" target="_blank" rel="noopener">ACL Anthology</a> · <a href="../research.html#pub-beetle">publication entry</a> · <a href="../beetle.html">Beetle page</a> · <a href="../assets/presentations/beetle-emnlp-2026.pdf" target="_blank" rel="noopener">slides</a> · <a href="../assets/posters/beetle-emnlp-2026.pdf" target="_blank" rel="noopener">poster</a> · framework: <a href="https://beetlelm.github.io/" target="_blank" rel="noopener">beetlelm.github.io</a></p>
+
+          <h2 id="langmap">LangMAP</h2>
+
+          <p>A multilingual tokenizer's vocabulary often already contains good pieces for a language, but it applies one global segmentation policy to every language, so it can pick the wrong ones. Clara Meister led this paper, which asks whether a pretrained tokenizer can be made language-adaptive by changing how it scores existing tokens, without touching the vocabulary. It was presented as an oral.</p>
+
+          <p>LangMAP keeps the vocabulary and learns one unigram distribution per language with EM, estimated from 25M tokens of each language. At inference it segments a string under each language's distribution and returns the most likely segmentation overall, so it needs no language label. We applied it to the Qwen, Llama, Gemma and Mistral tokenizers and compared it with the original tokenizer and a language-agnostic UnigramLM, across seven natural languages (German, Finnish, Hungarian, Turkish, Hindi, Arabic and Tamil) and several programming languages.</p>
+
+          <p>LangMAP improved alignment with morphological boundaries (MorphScore) across the natural languages and consistently improved alignment with code structure (abstract syntax tree boundaries). Fine-tuning models on LangMAP segmentations did not show consistent improvements, so the gain is in segmentation quality and not, so far, in downstream performance.</p>
+
+          <p class="links">Paper: <a href="https://aclanthology.org/2026.emnlp-main.2170/" target="_blank" rel="noopener">ACL Anthology</a> · <a href="../research.html#pub-langmap">publication entry</a> · <a href="../assets/presentations/langmap-emnlp-2026.pdf" target="_blank" rel="noopener">slides</a>, prepared with Clara · <a href="../assets/posters/langmap-emnlp-2026.pdf" target="_blank" rel="noopener">poster</a> · <a href="paper-langmap.html">short write-up</a></p>
+
+          <h2 id="cross-lingual-alignment-without-joint-training">Cross-lingual alignment without joint training</h2>
+
+          <p>Multilingual models usually get their cross-lingual ability from joint training, which makes it hard to say where the alignment comes from. With EJ Zhou, Catherine Arnett and Anna Korhonen, we asked whether language models trained separately on single languages still converge on shared representations, with no joint training at all.</p>
+
+          <p>We tested strictly monolingual models, including the Goldfish families and independently developed models from different labs. We measured how alignable their representational geometry is across layers, fit a single Procrustes rotation on parallel sentences to map hidden states between models, and then patched rotated activations from one model into another.</p>
+
+          <p>The models develop alignable geometry, and alignment strengthens with data scale, model scale and linguistic proximity. The rotation also carries functional content: in most cases, patching a rotated English residual into a German model on a factual cloze flips its prediction to the donor's capital. In the paper's framing, this suggests cross-lingual alignment can emerge from the structure of language itself rather than from joint training.</p>
+
+          <p class="links">Paper: <a href="https://aclanthology.org/2026.emnlp-main.947/" target="_blank" rel="noopener">ACL Anthology</a> · <a href="../research.html#pub-crosslingual-align">publication entry</a> · <a href="paper-crosslingual-alignment.html">short write-up</a></p>
+
+          <h2 id="protocol-competence-in-interactive-language-games">Protocol competence in interactive language games</h2>
+
+          <p>Before a small language model can learn from interaction, it has to take part in the interaction correctly. At the LM Playschool workshop, Paula Buttery and I asked whether demonstrations from a larger model can teach a small model to take part in interactive language games, and whether it can then improve from its own successful games.</p>
+
+          <p>We evaluated Qwen, Llama and Gemma models from 0.8B to 7B parameters on five CLEMBench Playpen games, scored with ClemScore. Small models often failed at interacting correctly rather than at the task itself. We then compared protocol repair, teacher demonstrations and self-ReST (generate, filter and fine-tune on the model's own winning games) on Qwen3.5-0.8B under matched compute budgets.</p>
+
+          <p>For that model, ClemScore went from 6.67 with protocol repair to 14.97 with demonstrations and 20.27 with self-ReST. Self-generated data only helped once the model could interact reliably. A credit-weighted variant of ReST had a mean of 19.17 with lower variance, but the differences were not statistically significant.</p>
+
+          <p class="links">Paper: <a href="https://aclanthology.org/2026.lmplayschool-1.6/" target="_blank" rel="noopener">ACL Anthology</a> · <a href="../research.html#pub-protocol-competence">publication entry</a> · <a href="../assets/posters/playpen-emnlp-2026.pdf" target="_blank" rel="noopener">poster</a></p>
+
+          <h2 id="claude-reinvestigates-herself">Claude reinvestigates herself</h2>
+
+          <p>Kryvosheieva et al. (ACL 2026) reported that different kinds of syntactic agreement recruit the same units inside large language models. In BlackboxNLP's reproducibility track, Elena Polyakova and Shivan Arora led a replication with Paula Buttery and me.</p>
+
+          <p>We reproduced the main findings with ablation, cross-overlap and cross-validation analyses on BLiMP across seven LLMs. We then added three methods: attention-head analysis, Differential Binary Masking and Distributed Alignment Search. We also extended the analysis to other languages.</p>
+
+          <p>In Russian, the units shared across benchmarks overlapped more than chance (3.94% against 1%), but much less than units within one benchmark (15.86 to 26.94%). The attention-head analysis also found sharing across phenomena, but it was broader and less specific to agreement than in the original residual-unit analysis, and its extent varied across architectures and languages.</p>
+
+          <p class="links">Paper: <a href="https://aclanthology.org/2026.blackboxnlp-1.69/" target="_blank" rel="noopener">ACL Anthology</a> · <a href="../research.html#pub-claude-reinvestigates">publication entry</a> · <a href="../assets/posters/claude-reinvestigates-herself-blackboxnlp-2026.pdf" target="_blank" rel="noopener">poster</a></p>
+
+          <h2 id="linear-truth-encodings">Linear truth encodings</h2>
+
+          <p>Truth probes are used for hallucination detection and truthfulness interventions. Ravfogel et al. (2025) proposed that linear truth directions emerge because true statements tend to co-occur, which helps a model predict the next token. Mingchuan Zou led our replication, also in BlackboxNLP's reproducibility track, with Paula Buttery and me.</p>
+
+          <p>We tested the mechanism in one-layer attention-only toy transformers, with an ablation where the truth of one fact says nothing about the truth of the other. We also probed Llama-3.1-8B and 70B on six CounterFact relations with logistic-regression probes.</p>
+
+          <p>In our one-layer fully trainable transformers, truth was not linearly decodable without co-occurrence. We reproduced the 8B false-context gap (1.43 nats with Llama-3.1, against 1.52 reported with Llama-3), but not the original's final probability of the right answer after a false sequence (about 0.48 for us, about 0.25 originally). The limits matter here: we only show necessity in synthetic models, we tested two models on six relations, and probes show that truth is decodable, not that the model uses it.</p>
+
+          <p class="links">Paper: <a href="https://aclanthology.org/2026.blackboxnlp-1.72/" target="_blank" rel="noopener">ACL Anthology</a> · <a href="../research.html#pub-linear-truth">publication entry</a> · <a href="../assets/posters/blackboxnlp-2026-linear-truth-encodings.pdf" target="_blank" rel="noopener">poster</a> · <a href="paper-linear-truth-encodings.html">short write-up</a></p>
+
+          <h2 id="shared-units-divergent-trajectories">Shared units, divergent trajectories</h2>
+
+          <p>Earlier work on whether syntactic phenomena share components inside a model looks mostly at finished models. At the MRL workshop, Elena Polyakova and I presented a poster asking when those shared or language-specific units emerge during training, and how the order of language exposure shapes them. The poster was non-archival.</p>
+
+          <p>This is a pilot on Dutch as the first language and English as the second. We trained GPT-2-style bilingual models with two Beetle curricula: simultaneous (continued mixed exposure) and sequential (a full switch from Dutch to English halfway through). We then tracked syntax-responsive units across four checkpoints from the point English is introduced to the end of training.</p>
+
+          <p>Sequential training ended with substantially lower Dutch BLiMP-NL accuracy and weaker overlap among Dutch units, which fits forgetting once Dutch exposure stops. The curriculum effects were specific to each phenomenon rather than a uniform shift across syntax.</p>
+
+          <p class="links"><a href="../assets/posters/mrl-2026.pdf" target="_blank" rel="noopener">Poster</a></p>
+
+          <h2 id="what-connects-them-and-babylm">What connects them, and BabyLM</h2>
+
+          <p>Most of these papers vary what a model sees and when, then look at what it ends up representing: the exposure curricula in Beetle and the MRL pilot, per-language token preferences in LangMAP, and separate monolingual training in the alignment paper. The two BlackboxNLP papers check whether published claims about model internals hold up when someone else reruns them.</p>
+
+          <p>I also co-organised the BabyLM workshop, which this year opens its sample-efficient pretraining challenge to multilingual training data (<a href="../research.html#pub-babylm-turns-4">call for papers</a>, <a href="event-babylm.html">more on BabyLM 2026</a>).</p>
+
+          <p>Thank you to all my co-authors, and to my fellow BabyLM organisers.</p>
+
+
+          <p class="related">Related: <a href="../research.html#publications">Publications</a> · <a href="../presentations.html#posters">Posters</a> · <a href="../beetle.html">Beetle</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+<nav class="dock" aria-label="Primary">
+    <a href="../research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="../beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="../research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="../teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="../presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="../people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="../about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="../assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline"><a href="mailto:sas245@cam.ac.uk">sas245@cam.ac.uk</a></p>
+        <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="../research.html">Research</a><a href="../research.html#publications">Publications</a>
+          <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
+          <a href="../assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/explore.js"></script>
+  <script defer src="../assets/js/toc.js"></script>
+</body>
+</html>

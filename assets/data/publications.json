@@ -181,6 +181,75 @@
       "featured_finding": "Developmentally plausible training data, about 100 million words per language, for 45 languages, with benchmarks and baseline models."
     },
     {
+      "id": "pub-babylm-findings-2026",
+      "short_title": "BabyLM 2026 Findings",
+      "title": "Findings of the Fourth BabyLM Challenge & Workshop: Going Beyond English",
+      "authors": [
+        {
+          "name": "Leshem Choshen"
+        },
+        {
+          "name": "Ryan Cotterell"
+        },
+        {
+          "name": "Mustafa Omer Gul"
+        },
+        {
+          "name": "Jaap Jumelet"
+        },
+        {
+          "name": "Tal Linzen"
+        },
+        {
+          "name": "Aaron Mueller"
+        },
+        {
+          "name": "Suchir Salhan",
+          "me": true
+        },
+        {
+          "name": "Raj Sanjay Shah"
+        },
+        {
+          "name": "Alex Warstadt"
+        },
+        {
+          "name": "Ethan Gotlieb Wilcox"
+        }
+      ],
+      "year": 2026,
+      "venue": "Proceedings of the Second BabyLM Workshop, EMNLP 2026 · Budapest, Hungary",
+      "venue_short": "BabyLM Workshop, EMNLP 2026",
+      "type": "workshop",
+      "status": "published",
+      "first_author": false,
+      "topics": [
+        "sample-efficient",
+        "multilingual"
+      ],
+      "themes": [
+        "learn"
+      ],
+      "award": null,
+      "finding": "The fourth BabyLM Challenge added a multilingual track (English, Dutch, Mandarin), where LLM-generated parallel data proved effective at improving multilingual capabilities in low-data settings.",
+      "takeaway": null,
+      "summary": null,
+      "acl_anthology_url": "https://aclanthology.org/2026.babylm-main.37/",
+      "arxiv_url": null,
+      "google_scholar_url": "https://scholar.google.com/scholar?q=Findings+of+the+Fourth+BabyLM+Challenge+%26+Workshop%3A+Going+Beyond+English",
+      "doi": "10.18653/2026.babylm-main.37",
+      "project_url": null,
+      "code_url": null,
+      "poster_url": null,
+      "slides_url": null,
+      "writeup_url": null,
+      "other_links": [],
+      "thumbnail": null,
+      "verified": true,
+      "primary_url": "https://aclanthology.org/2026.babylm-main.37/",
+      "primary_source": "acl_anthology"
+    },
+    {
       "id": "pub-babylm-turns-4",
       "short_title": "BabyLM Turns 4",
       "title": "BabyLM Turns 4 and Goes Multilingual: Call for Papers for the 2026 BabyLM Workshop",
@@ -424,7 +493,7 @@
         "language",
         "representations"
       ],
-      "award": null,
+      "award": "Oral presentation, EMNLP 2026",
       "finding": "A suite of bilingual models trained with controlled exposure to a second language (L2), used to model how people process an L2.",
       "takeaway": "Controlling what a model sees, and when, mirrors how humans pick up a second language.",
       "summary": null,
@@ -484,7 +553,7 @@
       "themes": [
         "language"
       ],
-      "award": null,
+      "award": "Oral presentation, EMNLP 2026",
       "finding": "A tokenisation method that adapts its segmentation to each language rather than applying one fixed scheme everywhere.",
       "takeaway": "One tokeniser for every language leaves performance on the table.",
       "summary": null,
@@ -517,6 +586,9 @@
         },
         {
           "name": "Catherine Arnett"
+        },
+        {
+          "name": "Anna Korhonen"
         }
       ],
       "year": 2026,
@@ -947,7 +1019,7 @@
     {
       "id": "pub-seq-length",
       "short_title": "Best Sequence Length for BabyLM",
-      "title": "What's the Best Sequence Length for BabyLM?",
+      "title": "What is the Best Sequence Length for BabyLM?",
       "authors": [
         {
           "name": "Suchir Salhan",
@@ -1206,7 +1278,7 @@
     {
       "id": "pub-l1-influence",
       "short_title": "L1 Influence in L2 Language Models",
-      "title": "L1 Influence in L2 Language Models: A Human-Centric Approach",
+      "title": "L1 Influence in L2 Language Models: A Human-centric Approach",
       "authors": [
         {
           "name": "Laura Barbenel"
@@ -1366,7 +1438,7 @@
       "title": "Claude reinvestigates herself: A replication of different types of syntactic agreement recruit the same units in LLMs",
       "authors": [
         {
-          "name": "Elena Polyakova-Reed"
+          "name": "Elena Polyakova"
         },
         {
           "name": "Shivan Arora"
