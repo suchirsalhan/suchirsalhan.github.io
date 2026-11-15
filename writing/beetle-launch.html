@@ -4,8 +4,14 @@
   <meta charset="utf-8">
   <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Beetle: a framework for controlled bilingual &amp; multilingual pretraining · Suchir Salhan</title>
-  <meta name="description" content="Announcing the open-source release of Beetle — a framework for controlled bilingual and multilingual language-model pretraining and interpretability.">
+  <title>A Beetle's-Eye View of Open AI: Building Slowly in a Field That Never Stops Moving and How Good Science Takes a Village · Suchir Salhan</title>
+  <meta name="description" content="An essay by Suchir Salhan on building Beetle: how a question about bilingual language learning grew into 330 open models, and what it taught him about slow science and interdisciplinary research.">
+  <meta name="author" content="Suchir Salhan">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://suchirsalhan.github.io/writing/beetle-launch.html">
+  <meta property="og:title" content="A Beetle&#x27;s-Eye View of Open AI: Building Slowly in a Field That Never Stops Moving and How Good Science Takes a Village">
+  <meta property="og:description" content="An essay by Suchir Salhan on building Beetle: how a question about bilingual language learning grew into 330 open models, and what it taught him about slow science and interdisciplinary research.">
+  <meta property="article:published_time" content="2026-11-15">
   <link href="../favicon.ico" rel="icon" sizes="any">
   <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
   <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -44,59 +50,95 @@
   <main class="main">
     <section class="page-hero">
       <div class="container">
-        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Launch</div>
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Essay</div>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
         <article class="tufte-article">
-          <div class="meta">8 September 2026 · Software Release</div>
-          <h1>Beetle: a framework for controlled bilingual &amp; multilingual pretraining</h1>
+          <div class="meta"><time datetime="2026-11-15">15 November 2026</time> · Essay · Suchir Salhan</div>
+          <h1>A Beetle's-Eye View of Open AI: Building Slowly in a Field That Never Stops Moving and How Good Science Takes a Village</h1>
 
-          <p class="standfirst">Small models. Big questions. Today I am open-sourcing Beetle, the framework I built to study how language models acquire a second language under tightly controlled, fully reproducible conditions.<span class="sn"><span class="sn-ref">1</span><span class="sidenote" data-n="1"><a href="https://beetlelm.github.io/">Beetle software release — beetlelm.github.io</a></span></span></p>
+          <p class="standfirst">How a question about bilingual language learning grew into 330 open models, an interdisciplinary research community, and one of the most rewarding projects I've worked on.</p>
 
-          <p>Beetle is a framework I designed and built for <strong>controlled bilingual and multilingual pretraining</strong>. It gives you a single, declarative interface in which the tokeniser, the target language, the training budget, and the exposure structure of the data can each be manipulated independently. Everything is configured through declarative YAML, which turns what used to be a tangle of bespoke scripts into a systematic, large-scale ablation of how learning dynamics and data structure shape acquisition. As of today it is open source, and the release — the engine, the curricula, the model suite, and the analysis tooling — is available at <a href="https://beetlelm.github.io/">beetlelm.github.io</a>.</p>
+          <h2>The accidental making of 330 little language models</h2>
 
-          <p>Although Beetle grew out of computational psycholinguistics — modelling how humans process a second language — it is much more than a psycholinguistics tool. It is a general interpretability and controlled-pretraining infrastructure. Because every model is checkpointed densely across training, and because exposure is a first-class, configurable variable, Beetle lets you ask mechanistic questions about <em>when</em> and <em>how</em> abilities emerge, not just whether a final model has them.</p>
+          <p>I didn't set out to train 330 language models; in fact, I think that would be a rather odd thing for someone to even want to do in the first place! But somehow I spent six months of my life dedicated to this quest and I learnt a thing or two along the way.</p>
 
-          <h2>Why controlled pretraining</h2>
+          <p>When I first started thinking about Beetle, I had a fairly modest question: does it matter how a language model learns a second language? However, this followed with almost 6 months, of course interspersed with working on lots of other cool projects, of experiments, infrastructure building, conversations with researchers across different disciplines.</p>
 
-          <p>Most claims about what a language model has learned rest on inspecting the finished model. That misses almost everything interesting about acquisition. I built Beetle so that exposure structure becomes an experimental variable, letting us watch a second language being acquired checkpoint by checkpoint rather than only reading off the end state. The same models, the same budget — only the way the second language is introduced changes. That is what makes the results below controlled rather than anecdotal.</p>
+          <p>But this has been the hardest project I have ever worked on. On more than a few occasions I wondered whether I'd bitten off considerably more than I could chew.</p>
 
-          <h2>What I trained</h2>
+          <p>There were plenty of hard day's nights, usually involving Cloudflare GPUs, out-of-memory errors and the increasingly philosophical question of whether a training run would ever finish.</p>
 
-          <p>Beetle is not a single script but a large, reproducible model suite, and I trained the whole thing. The release includes <strong>285 bilingual and 45 monolingual models</strong> (330 in total), with rich checkpoints across a range of typologically-diverse L1s, exposure curricula (B1–B5) and three data scales (100M / 2B / 24B tokens) — released to study multilingual pretraining and the computational modelling of bilingualism and second-language learning.</p>
+          <p>With the benefit of time, it is also what makes the project so rewarding.</p>
 
-          <p>The 13 L1s span German, Dutch, Chinese, Italian, Hindi, Russian, Turkish, Basque and more, deliberately chosen to vary typological distance from English. Checkpoints follow a log<sub>2</sub> schedule and preserve gradients, activations and circuits, so the suite supports interpretability out of the box; for several of these languages these are the first densely checkpointed models released. The default backbone is a 125M LLaMA-style PicoDecoder,<span class="sn"><span class="sn-ref">2</span><span class="sidenote" data-n="2"><a href="https://www.picolm.io/">PicoDecoder / PicoLM — picolm.io. Pico is inherited, collaborative infrastructure; Beetle builds on it.</a></span></span> with encoder-decoder, MoE and SSM variants also supported. Models are evaluated on MECO L2 reading-time, BLiSS, CEFR, JFLEG and Mono/Multi-BLiMP.</p>
+          <p>Beetle has taken me through several research communities that I might not otherwise have encountered in quite the same way. It began with my interest in small language models and the BabyLM community, grew through collaborations with people working in open-source AI and computational psycholinguistics, and eventually found connections with researchers and practitioners interested in bilingualism and language assessment. Along the way, it became a much bigger project than I had originally imagined!</p>
 
-          <h2>The five exposure curricula</h2>
+          <p>I wanted to write a little about that journey: not just what we built (which I've already documented extensively; see the <a href="https://beetlelm.github.io/">Beetle website</a> and my <a href="https://huggingface.co/blog/suchirsalhan/beetle">post on Hugging Face</a>). I wanted to take a moment to focus on more human aspects of research.</p>
 
-          <p>The heart of the design is five ways of introducing the second language during pretraining. Each is a declarative configuration in Beetle. <strong>B1 (Balanced)</strong> interleaves L1 and L2 evenly throughout training. <strong>B2 (Simultaneous)</strong> mixes both languages into a single stream from the first step. <strong>B3 (Sequential)</strong> establishes the L1 first, then introduces the L2 in a distinct later stage. <strong>B4 (Classroom / episodic)</strong> delivers the L2 in spaced bursts interspersed with L1, an analogue of classroom instruction rather than immersion. <strong>B5 (Late)</strong> introduces the L2 only near the end of training, after extensive L1 exposure.</p>
+          <h2>It started with BabyLM</h2>
 
-          <h2>What we find</h2>
+          <p>A lot of my thinking about Beetle grew out of the BabyLM Challenge and the community around it. BabyLM is how I came into the AI field. I've always found the central question behind BabyLM compelling: how much can we learn about language acquisition if we stop assuming that models need enormous quantities of data to be interesting?</p>
 
-          <p>Exposure structure is not a cosmetic training detail. It changes what the model learns, and how well small models mirror human second-language processing. This work is the subject of my first first-author main-conference paper, currently under review.<span class="sn"><span class="sn-ref">3</span><span class="sidenote" data-n="3"><a href="../beetle.html">Structured Exposure Pretraining in Bilingual Language Models for Modelling L2 Language Processing — Salhan, Arnett, Michaelov, Buttery. Paper available on request.</a></span></span></p>
+          <p>The challenge brings together people interested in language learning, cognitive science, linguistics and machine learning. It was an unusually stimulating environment in which to think about models not simply as systems to scale, but as systems whose learning experiences we could study.</p>
 
-          <h3>Small Beetle models rival 8B LLMs on human L2 reading-time</h3>
+          <p>I started wondering whether we could take this a little further; most people are multilingual, but for years the BabyLM community was focussed on English. That was until a wonderful effort led by Jaap Jumelet, where we released BabyBabelLM. Rather than just controlling how much language a model encountered, this now allowed me to ask what happened to language models if we controlled how it encountered different languages?</p>
 
-          <p>Models trained with structured, staged exposure align with human L2 reading times (MECO L2) as well as, and often better than, multilingual LLMs of up to 8B parameters, at a tiny fraction of the size. Human-scale, controlled pretraining turns out to be competitive with brute-force scale for this cognitive-modelling target.</p>
+          <p>In my PhD work with my supervisor Paula Buttery, we were thinking about building computational models of second language acquisition. Many of our early conversations were rooted in computational linguistics and modelling of acquisition. My first year, however, introduced me to new techniques in learning dynamics, interpretability and tokenization. I was also forced to think about more practical questions guided by the "north star" of priorities of the team of AI researchers and managers at Cambridge University Press &amp; Assessment. Their interest in practical language assessment introduced another dimension to the project. It was a reminder that questions about language proficiency aren't confined to academic benchmarks. They matter to educators, learners and the people responsible for assessing language ability in the real world.</p>
 
-          <p><a href="https://beetlelm.github.io/models.html">Figures and model details are on the Beetle site →</a></p>
+          <h2>The people who made Beetle what it became</h2>
 
-          <h3>A dissociation: staged exposure for processing, balanced for grammaticality</h3>
+          <p>One of my favourite things about working on Beetle was how many different research communities it brought together! I think this has really shaped the flavour of research that I value, where we can speak to multiple communities through shared infrastructure.</p>
 
-          <p>The best curriculum depends on what you measure. Staged exposure yields the best fit to online reading-time behaviour, whereas balanced exposure produces stronger offline grammatical judgement (CEFR, JFLEG). This dissociation between online processing and offline competence mirrors a distinction long drawn in the psycholinguistics of second-language acquisition.</p>
+          <p>The BabyLM community gave me an initial home for thinking about sample-efficient language learning. But my involvement with the open-source AI community, particularly EleutherAI, also had a significant influence on how I approached the project. I'd invited Catherine Arnett and Tyler Chang to give a seminar in Cambridge online. Not so secretly, I'd been a fan of their work, and inviting cool researchers who you admire is one of the perks of organising a seminar series so you can subject your labmates to hear more about your own research interests!</p>
 
-          <h3>Learning dynamics: phase transitions, curricula, and forgetting</h3>
+          <p>Catherine had worked on one of the precursor papers in this tiny subliterature of "L2LMs" called BGPT and we found we had shared interests in expanding this to more languages. I'd also met Tatsuya Aoyama at NeurIPS and I really enjoyed chatting more about his work. I became increasingly convinced that research infrastructure should be something other people could actually use. There is a particular satisfaction in releasing something that another researcher can take, modify and build upon without having to ask your permission or reproduce years of work first. The open-source community has a wonderful culture of people making their work available, sharing infrastructure and helping each other solve problems. I wanted Beetle to squarely fall into this tradition.</p>
 
-          <p>Because Beetle checkpoints densely, we can watch these abilities emerge. Acquisition proceeds in phase transitions rather than smoothly; curricula interact with typological proximity to English; and sequential and late curricula expose catastrophic forgetting of the L1 that balanced exposure avoids. These dynamics are invisible if you only inspect the final model.</p>
+          <p>The project also became a much more explicitly psycholinguistic endeavour through working with James Michaelov. I really enjoyed the opportunity to connect questions about language-model training with questions about how humans actually process language. And this was one of the many rude awakenings I had to deal with in this project since I hadn't necessarily seriously engaged with the amount of psycholinguistic literature. When I applied to Cambridge, I completed a Trinity College Essay competition on bilingualism and actually multilingual acquisition and processing was one of the things that drew me to think about the wonders of human language, which is certainly a uniquely human capability compared to animal communication for instance. Sadly, due to some more negative supervision experiences in my first year of Cambridge, I drifted away from studying psycholinguistics in my later years of my undergraduate studies. But Cambridge is wonderful in many ways, and I have to thank my college daughter, Laura Barbenel, in particular, for encouraging me to stretch myself and rediscover my initial interests in psycholinguistics!</p>
 
-          <h2>Reproducible by design</h2>
+          <h2>Building something that didn't quite exist yet</h2>
 
-          <p>Beetle is not one script but three pip-installable libraries and several supporting infrastructures: a controlled-pretraining engine, an exposure-curriculum system, and an analysis and interpretability toolkit. Everything needed to reproduce the work is released — the 330 model checkpoints, the tokenisers, the decontaminated, pretokenised training data at all three scales, and the full analysis pipelines. The goal is that any result here can be re-derived from the released artefacts alone. Beetle is my own framework: I designed and built the system, I trained the 330 models, and I authored the curriculum engine, the analysis toolkit and the libraries. It builds on the PicoDecoder backbone from PicoLM, which I did not create; everything else is my individual contribution.</p>
+          <p>At some point, the project became as much about building infrastructure as answering the original research question. I wanted to be able to construct models with different bilingual exposure histories, compare them against matched monolingual counterparts, and make the resulting checkpoints available for further research. This gradually turned into Beetle, a framework for controlled bilingual and multilingual pretraining, alongside its monolingual counterpart, Goldfish.</p>
 
-          <p>The software is live now. If you want to run controlled bilingual or multilingual pretraining, or reuse the checkpoints for interpretability, start at <a href="https://beetlelm.github.io/">beetlelm.github.io</a>.</p>
+          <p>Beetle and Goldfish: perhaps not the most conventional pairing, but a rather good one for matched bilingual and monolingual models. Beetle is a nod to The Beatles and their distinctive drop-capital branding; Goldfish seemed like an appropriate companion for the monolingual models.</p>
+
+          <p>One of the key desiderata of our framework was dense intermediate checkpoints rather than just releasing the final models. It may be one of the most valuable aspects of the entire release. I spent a considerable amount of time developing the training framework, data pipelines, curricula, checkpointing and analysis infrastructure. What started as an experiment became something that could support a much larger family of experiments. I won't pretend that getting all of this working was always particularly exciting.</p>
+
+          <p>It wasn't always a ticket to ride. There were plenty of moments when the project felt more like a hard day's night. I spent far too much time checking configurations, inspecting training runs and trying to work out why something that should have worked didn't. I found issues with training runs; retraining models was not fun at all... But these experiences also changed how I think about experimental science. When you're building something at this scale, the engineering isn't separate from the research. The decisions you make about infrastructure determine what you can reliably investigate.</p>
+
+          <p>Ultimately, I'd much rather see Beetle become something that other people use, extend and occasionally disagree with than have it remain a self-contained project associated with one paper. A paper describes what you did and what you found. A framework gives someone else the opportunity to do something you haven't thought of yet. For Beetle, I'm especially excited about the possibilities for researchers interested in interpretability, developmental modelling and language acquisition. Having access to intermediate checkpoints means that people can investigate how representations change throughout training, how knowledge transfers between languages and whether different learning histories produce different internal structures.</p>
+
+          <h2>A case for slow science and interdisciplinarity</h2>
+
+          <p>I think one of the more difficult aspects of working on Beetle was learning to be patient with a project that simply refused to move at the pace I sometimes wanted it to.</p>
+
+          <p>Academic research, particularly in NLP and AI, is extraordinarily fast-moving; it's naturally stressful and high-pressure, and can be, in my opinion, increasingly negative when AI-generated reviews and peer pressure get thrown into the mix. With the rolling ARR cycles, there is always another submission deadline, another batch of papers appearing on arXiv, and another opportunity to get work out into the world. It's very easy to look around and feel as though everyone else is publishing considerably more than you are. When you're watching other researchers submit papers every few months, spending months building infrastructure, debugging experiments and trying to make a complicated research question experimentally tractable did make me feel that I was in some way "falling behind". I certainly felt that pressure. There were periods when I wondered whether I was making a mistake by investing so much time in something that wouldn't produce a publication for quite some time. There is a particular anxiety in watching the publication cycle move on while you're still trying to get your own experiments into a state where you trust them. You can spend months working on something and still have relatively little to show for it in the currency that academia most visibly rewards: accepted papers.</p>
+
+          <p>So having the paper selected for an Oral presentation at EMNLP 2026 was already incredibly rewarding. The paper was selected from a highly competitive ARR pool of approximately 17,000 submissions, placing it among the top 3%. I'm particularly pleased that a project built around a relatively niche question about bilingual language learning found an audience in the wider NLP community.</p>
+
+          <p>The recognition meant a lot to me, not simply because of the result, but because of what it represented after such a long journey. So much of the work was invisible: building the infrastructure, coordinating experiments, learning unfamiliar areas of psycholinguistics, working through engineering failures, revisiting analyses and having conversations that gradually changed how I thought about the original question.</p>
+
+          <p>The real test of Beetle will be what other people do with the models and how people choose to build on the framework. But it was a lovely reminder that there is value in taking the time to do something properly, even when the surrounding incentives sometimes make that difficult.</p>
+
+          <p>The experience has made me reflect on how I choose to engage in the publish-or-perish culture that is so dominant in AI at the moment. Perhaps the biggest thing that I've taken away from this experience is that research doesn't always have to move at the speed of the publication cycle. Some projects need time to become the projects they are supposed to become. And sometimes, it's worth resisting the urge to turn every intermediate result into another paper. I'm very glad I was able to breathe life into this project for so many months.</p>
+
+          <p>"After all, you get by with a little help from your friends." One of my favourite parts of working on Beetle has been the opportunity to work with people who think about AI in very different ways, including cognitive scientists, interpretability researchers, bilingualism researchers and applied AI researchers in education. Working with my supervisor, Paula Buttery, has been particularly enjoyable. What started with fairly niche questions about corpus linguistics, bilingual exposure and language acquisition gradually opened up much bigger conversations, including questions about Sovereign AI and the role of language technologies in different linguistic communities.</p>
+
+          <p>I think this captures something I particularly value about interdisciplinary research. There have been several moments during this project when I've felt as though I've been intellectually picked up and planted into an entirely new field. You start with a question you think you understand, have a conversation with someone who approaches it from a completely different perspective, and suddenly find yourself thinking about a much broader set of problems.</p>
+
+          <p>Interdisciplinary research is also really challenging to pitch. It took me many iterations of trial-and-error through discussions in Cambridge Language Sciences and with collaborators and visitors in local colloquiums and presentations in my group to figure out how to "sell" my work the best way.</p>
+
+          <p>That's really the essence of Beetle for me: the project itself took on its own life as it encountered new ideas, people and communities. I think I've come away understanding not just more about bilingual language learning, but also considerably more about the wider ecosystem in which language models are developed, evaluated and deployed.</p>
+
+          <p>Wrapping up a paper (or a PhD thesis) was described to me by a lecturer as a "divorce"; life moves on and the paper and the hard work moves on.</p>
+
+          <p>I don't think this is the end. And if you'll forgive one last Beatles reference: if this sounds like the end of a rather long and winding road, it really isn't. There are plenty of open questions and hopefully many more people who will take Beetle somewhere we haven't thought of yet.</p>
+
+          <h2>Explore Beetle</h2>
+
+          <p><a href="https://beetlelm.github.io/">Beetle framework and model releases</a> · <a href="https://aclanthology.org/2026.emnlp-main.2276/">Research paper</a> · <a href="https://huggingface.co/blog/suchirsalhan/beetle">Software release announcement</a></p>
         </article>
       </div>
     </section>
