@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Teaching, Supervision &amp; Mentorship · Suchir Salhan</title>
-  <meta name="description" content="Suchir Salhan teaches and supervises students in Computer Science, Linguistics, Machine Learning and Cognitive Science at the University of Cambridge: courses, undergraduate supervision, research mentorship, MPhil and Part III projects, and research collaboration.">
+  <title>Teaching &amp; Supervision · Suchir Salhan</title>
+  <meta name="description" content="Suchir Salhan teaches and supervises students in Computer Science, Linguistics, Machine Learning and Cognitive Science at the University of Cambridge: lecture materials for Li18 and L95, undergraduate supervision, UROP mentorship, MPhil and Part III projects, and research collaboration.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://suchirsalhan.github.io/teaching.html">
-  <meta property="og:title" content="Teaching, Supervision &amp; Mentorship · Suchir Salhan">
-  <meta property="og:description" content="Courses, undergraduate supervision, research mentorship, MPhil and Part III projects, and research collaboration with Suchir Salhan at the University of Cambridge.">
+  <meta property="og:title" content="Teaching &amp; Supervision · Suchir Salhan">
+  <meta property="og:description" content="Lecture materials, undergraduate supervision, UROP mentorship, MPhil and Part III projects, and research collaboration with Suchir Salhan at the University of Cambridge.">
   <link href="favicon.ico" rel="icon" sizes="any">
   <link rel="icon" href="assets/images/logo-ss.svg" type="image/svg+xml">
   <link href="assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -22,38 +22,7 @@
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/site.css" rel="stylesheet">
   <link href="assets/css/quiet.css" rel="stylesheet">
-  <style>
-    /* Teaching page only: intent router, "for / next step" lines, materials lists. */
-    .profile .navlabel { font-family: var(--mono-font); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); margin: 0 0 8px; }
-    .profile a:focus-visible, .col a:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 2px; border-radius: 2px; }
-
-    .router { margin: 0 0 1.4em; }
-    .router li { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 16px; font-size: 16.5px; line-height: 1.55; margin: 0; padding: 9px 0; border-bottom: 1px solid var(--line); }
-    .router li:first-child { border-top: 1px solid var(--line); }
-    .router a { font-family: var(--ui-font); font-size: 15.5px; font-weight: 600; color: var(--heading-color); }
-    .router .d { color: var(--ink-2); }
-
-    .for, .next { font-family: var(--ui-font); font-size: 15px; line-height: 1.6; }
-    .for { color: var(--ink-2); margin-bottom: 1.1em !important; }
-    .for b, .next b { font-family: var(--mono-font); font-size: 11.5px; letter-spacing: .1em; text-transform: uppercase; font-weight: 500; color: var(--ink-2); margin-right: 8px; }
-    .next { padding: 10px 0 10px 16px; border-left: 2px solid var(--accent-color); }
-    .materials li { font-size: 16.5px; line-height: 1.6; }
-    .materials .c { font-family: var(--ui-font); font-weight: 600; font-size: 15px; color: var(--heading-color); margin-right: 6px; }
-    .col h3.sub { font-family: var(--ui-font); font-size: 13px; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-2); margin: 22px 0 8px; font-weight: 600; }
-    .body ul { padding-left: 1.2em; margin: 0 0 1em; }
-    .body li { font-size: 16px; line-height: 1.6; margin-bottom: .4em; }
-    .portal { margin: 0 0 8px; }
-    .portal h3 { margin-top: 6px; }
-
-    @media (max-width: 860px){
-      /* No portrait on this page, so the profile stacks as a single column. */
-      .profile.page { display: block; }
-      .profile.page .secnav { display: flex; flex-wrap: wrap; gap: 4px 16px; }
-    }
-    @media (max-width: 600px){
-      .router li { grid-template-columns: 1fr; gap: 2px; }
-    }
-  </style>
+  <link href="assets/css/teaching.css" rel="stylesheet">
 </head>
 <body class="index-page">
   <header id="header" class="header header--solid d-flex align-items-center fixed-top">
@@ -76,20 +45,12 @@
     </div>
   </header>
 
-  <main class="main home">
+  <main class="main home tv">
 
     <!-- ========== PAGE PROFILE ========== -->
-    <aside class="profile page" aria-label="Teaching, supervision and mentorship">
-      <h1>Teaching, Supervision &amp; Mentorship</h1>
+    <aside class="profile page" aria-label="Teaching and supervision">
+      <h1>Teaching &amp; Supervision</h1>
       <p class="role"><strong>University of Cambridge</strong></p>
-      <p class="navlabel" id="secnav-label">How can I help?</p>
-      <ul class="secnav" aria-labelledby="secnav-label">
-        <li><a href="#course-teaching">Taking a course I teach</a></li>
-        <li><a href="#supervision">Undergraduate supervision</a></li>
-        <li><a href="#mentorship">Research mentorship</a></li>
-        <li><a href="#mphil-projects">MPhil &amp; Part III projects</a></li>
-        <li><a href="#collaboration">Collaborating</a></li>
-      </ul>
       <ul class="links" aria-label="Contact">
         <li><a href="mailto:sas245@cam.ac.uk">Email</a></li>
         <li><a href="people.html">Students &amp; collaborators</a></li>
@@ -100,78 +61,169 @@
 
     <div class="col">
 
-      <!-- ========== START HERE ========== -->
-      <section id="start" aria-labelledby="start-h">
-        <p class="lead">I teach and supervise students across Computer Science, Linguistics, Machine Learning and Cognitive Science at the University of Cambridge. Whether you're taking a course I teach, looking for undergraduate supervision, interested in research mentorship or exploring an MPhil or Part III research project, find the right starting point below.</p>
+      <!-- Context bar: shown by teaching.js once a view is chosen. -->
+      <div class="tv-context" id="tv-context" hidden>
+        <span class="tv-now"><span class="tv-now-label">Showing</span> <span id="tv-now">All information</span></span>
+        <a class="tv-change" href="teaching.html" data-go="start">Change audience</a>
+      </div>
 
-        <h2 id="start-h">How can I help?</h2>
-        <ul class="plain router">
-          <li><a href="#portal">Taking a course I teach?</a><span class="d">Find course information, lecture materials, supervision arrangements and learning resources through the Cambridge Student Portal (Raven login required).</span></li>
-          <li><a href="#supervision">Looking for undergraduate supervision?</a><span class="d">Find out about my supervision approach, expectations and arrangements for Cambridge Computer Science and Linguistics Tripos students.</span></li>
-          <li><a href="#mentorship">Interested in research mentorship?</a><span class="d">Explore undergraduate research opportunities, UROPs, research training and opportunities to develop independent research skills.</span></li>
-          <li><a href="#mphil-projects">Looking for an MPhil or Part III research project?</a><span class="d">Explore potential research projects in language modelling, sample-efficient AI, multilingual learning, tokenization and developmental interpretability.</span></li>
-          <li><a href="#collaboration">Interested in collaborating?</a><span class="d">Get in touch to discuss research ideas and potential collaborations across machine learning, computational linguistics, cognitive science and AI safety.</span></li>
-        </ul>
+      <!-- ========== CHOOSER ========== -->
+      <section class="view" id="start" data-label="Choose what brings you here" aria-labelledby="start-h">
+        <h2 class="v-title" id="start-h" tabindex="-1">What can I help you with?</h2>
+        <p class="lead">I teach and supervise at the University of Cambridge. Choose what brings you here and I'll point you to the relevant information and resources.</p>
+        <p class="tv-ask" id="ima">I'm a...</p>
+        <div class="choices" role="group" aria-labelledby="ima">
+          <button type="button" class="choice" data-go="courses"><span class="c-t">Student taking one of your courses</span><span class="c-d">Lecture slides, handouts and reading for Li18, L95 and my MPhil lecture.</span></button>
+          <button type="button" class="choice" data-go="supervision"><span class="c-t">Undergraduate looking for a supervisor</span><span class="c-d">The Tripos courses I supervise and how to ask about supervision.</span></button>
+          <button type="button" class="choice" data-go="urop"><span class="c-t">Undergraduate interested in research (UROP)</span><span class="c-d">What a summer research project with me involves, and how to apply.</span></button>
+          <button type="button" class="choice" data-go="mphil-projects"><span class="c-t">MPhil / Part III student looking for a project</span><span class="c-d">Research themes, this year's project proposals and how to approach me.</span></button>
+          <button type="button" class="choice" data-go="collaborate"><span class="c-t">Researcher interested in collaborating</span><span class="c-d">The questions I work on and where a joint project could start.</span></button>
+        </div>
+        <noscript>
+          <p class="small muted">Everything on this page is shown below: <a href="#courses">courses</a> · <a href="#supervision">supervision</a> · <a href="#urop">UROP</a> · <a href="#mphil-projects">MPhil and Part III projects</a> · <a href="#collaborate">collaboration</a>.</p>
+        </noscript>
       </section>
 
-      <!-- ========== COURSE TEACHING ========== -->
-      <section id="course-teaching">
-        <h2>Taking a course I teach</h2>
-        <p class="for"><b>For</b>Students on Li18, L95 or the MPhil courses below, and anyone looking for my lecture materials.</p>
+      <!-- ========== STEP 2: WHICH COURSE ========== -->
+      <section class="view" id="courses" data-label="Courses I teach" aria-labelledby="courses-h">
+        <p class="kicker">Taking one of my courses</p>
+        <h2 class="v-title" id="courses-h" tabindex="-1">Tell me a little more</h2>
+        <p>Which course are you taking?</p>
+        <div class="choices" role="group" aria-labelledby="courses-h">
+          <button type="button" class="choice" data-go="li18"><span class="c-t">Li18 · Computational Linguistics</span><span class="c-d">Linguistics Tripos. My lectures on computational syntax and deep neural networks.</span></button>
+          <button type="button" class="choice" data-go="l95"><span class="c-t">L95 · Natural Language Syntax and Parsing</span><span class="c-d">Part III and MPhil Advanced Computer Science. Parsing, BLiMP and tokenisation.</span></button>
+          <button type="button" class="choice" data-go="lm-eval"><span class="c-t">MPhil · Language Model Evaluation</span><span class="c-d">My guest lecture with Paula Buttery and Fermín Moscoso del Prado Martín.</span></button>
+        </div>
+        <p class="small muted">I am a guest lecturer for courses in the Linguistics and Computer Science Triposes. My first guest lecture, on language model evaluation, was in November 2024 for an MPhil course with Prof Paula Buttery and Dr Fermín Moscoso del Prado Martín. Since then I have given lectures and written handouts on language modelling, parsing and evaluation for graduate and undergraduate courses.</p>
+      </section>
 
-        <div id="portal" class="portal">
-          <h3>Cambridge Student Portal</h3>
+      <!-- ========== LI18 ========== -->
+      <section class="view" id="li18" data-label="Li18 · Computational Linguistics" aria-labelledby="li18-h">
+        <p class="kicker">Li18 · Computational Linguistics · Linguistics Tripos · 2025–26</p>
+        <h2 class="v-title" id="li18-h" tabindex="-1">Welcome to Li18</h2>
+        <p class="lead">Here are the materials for my lectures. Start with the slides, or explore the additional reading.</p>
+
+        <h3 class="sub" id="materials-li18">Lecture materials</h3>
+        <ul class="plain mats">
+          <li><a class="mat" href="assets/teaching/Li18%20Lecture%207%20slides.pdf" target="_blank"><span class="m-t">Lecture 7 · Computational Syntax</span><span class="m-f">Slides · PDF</span></a></li>
+          <li><a class="mat" href="assets/teaching/Li18%20Lecture%208%20slides.pdf" target="_blank"><span class="m-t">Lecture 8 · Deep Neural Networks</span><span class="m-f">Slides · PDF</span></a></li>
+        </ul>
+
+        <details class="more">
+          <summary>Additional reading and resources</summary>
+          <div class="body">
+            <ul>
+              <li><a href="assets/teaching/Perplexity%20and%20Evaluation%20Metrics%20Essay.pdf" target="_blank">Perplexity and evaluation metrics (essay, PDF)</a></li>
+              <li><a href="assets/tripos/NLP_Advice_Tripos.pdf" target="_blank">NLP advice for the Tripos (PDF)</a>, short notes on approaching NLP coursework, projects and supervisions.</li>
+            </ul>
+            <h4>About the course</h4>
+            <p>Li18 introduces statistical and neural approaches to language, from n-gram models and PCFG parsing through to modern transformer language models. My 2025–26 lectures cover language models and parsing (Lecture 7, computational syntax) and deep neural networks.</p>
+            <figure><img src="assets/images/photos/photo-lecturing.jpg" alt="Suchir Salhan lecturing Li18 Computational Linguistics at Cambridge" loading="lazy"><figcaption>Lecturing Li18 Computational Linguistics (Lecture 7: Computational Syntax), University of Cambridge.</figcaption></figure>
+          </div>
+        </details>
+
+        <div class="portal">
+          <h3 class="sub">Cambridge Student Portal</h3>
           <p class="kicker">Cambridge students only · Raven login required</p>
-          <p>The portal is for the practical details: course information, supervision instructions and booking arrangements, how to submit work, and learning resources such as lecture materials, handouts, reading lists and research-training material. The public materials further down this section will stay here.</p>
+          <p class="small">The portal is for the practical details: course information, supervision instructions and booking arrangements, how to submit work, and learning resources such as lecture materials, handouts, reading lists and research-training material. The public materials on this page will stay here.</p>
           <!-- TODO(portal-url): replace the mailto below with the Raven-protected portal URL
                (e.g. a Cambridge-hosted page behind Raven/Shibboleth). GitHub Pages cannot do
                Raven authentication, so the portal must be hosted elsewhere. Then update the
                status sentence and remove "coming soon". -->
-          <p class="next"><b>Access via Raven</b>The portal link is coming soon. Until then, <a href="mailto:sas245@cam.ac.uk?subject=Cambridge%20student%20portal">email me</a> from your Cambridge address and I will send you what you need.</p>
+          <p class="small">The portal link is coming soon. Until then, <a href="mailto:sas245@cam.ac.uk?subject=Cambridge%20student%20portal">email me</a> from your Cambridge address and I will send you what you need.</p>
         </div>
 
-        <h3 class="sub">Courses</h3>
+        <p class="tv-help">Need help with something? <a href="mailto:sas245@cam.ac.uk?subject=Li18">Get in touch by email ↗</a></p>
+      </section>
 
-        <p>I am a guest lecturer for courses in the Linguistics and Computer Science Triposes. My first guest lecture, on language model evaluation, was in November 2024 for an MPhil course with Prof Paula Buttery and Dr Fermín Moscoso del Prado Martín. Since then I have given lectures and written handouts on language modelling, parsing and evaluation for graduate and undergraduate courses.</p>
+      <!-- ========== L95 ========== -->
+      <section class="view" id="l95" data-label="L95 · Natural Language Syntax and Parsing" aria-labelledby="l95-h">
+        <p class="kicker">L95 · Introduction to Natural Language Syntax and Parsing · Part III / MPhil ACS</p>
+        <h2 class="v-title" id="l95-h" tabindex="-1">Welcome to L95</h2>
+        <p class="lead">I am a guest lecturer and teaching assistant on L95, from Michaelmas 2024 onwards. Start with the slides and notes, then the BLiMP handout.</p>
 
-        <ul class="plain teach">
-          <li>Li18 <a href="#materials-li18">Computational Linguistics</a> (Linguistics Tripos), lectures on language models and parsing, and on deep neural networks. 2025–26.</li>
-          <li>L95 <a href="#materials-l95">Introduction to Natural Language Syntax and Parsing</a> (Part III / MPhil Advanced Computer Science), guest lecturer and teaching assistant. Michaelmas 2024 onwards.</li>
-          <li>MPhil guest lecture, Language Model Evaluation, with Paula Buttery &amp; Fermín Moscoso del Prado Martín. Michaelmas 2024.</li>
+        <h3 class="sub" id="materials-l95">Parsing</h3>
+        <ul class="plain mats">
+          <li><a class="mat" href="assets/teaching/L95_Slides___Suchir.pdf" target="_blank"><span class="m-t">L95 lecture slides</span><span class="m-f">Slides · PDF</span></a></li>
+          <li><a class="mat" href="assets/teaching/L95_2025_26.pdf" target="_blank"><span class="m-t">L95 notes, 2025–26</span><span class="m-f">Notes · PDF</span></a></li>
+        </ul>
+
+        <h3 class="sub">Evaluation</h3>
+        <ul class="plain mats">
+          <li><a class="mat" href="assets/teaching/L95_BLiMP_25_26.pdf" target="_blank"><span class="m-t">BLiMP handout: language model evaluation with minimal pairs</span><span class="m-f">Handout · PDF</span></a></li>
+        </ul>
+
+        <h3 class="sub">Tokenisation</h3>
+        <ul class="plain mats">
+          <li><a class="mat" href="assets/teaching/L95_Tokenizers_Slides.pdf" target="_blank"><span class="m-t">Tokenizers</span><span class="m-f">Slides · PDF</span></a></li>
+          <li><a class="mat" href="assets/teaching/L95_Tokenization_2025_26.pdf" target="_blank"><span class="m-t">Tokenization notes, 2025–26</span><span class="m-f">Notes · PDF</span></a></li>
         </ul>
 
         <details class="more">
-          <summary>More about these courses</summary>
+          <summary>Reading list and course overview</summary>
           <div class="body">
-            <h4>Li18 Computational Linguistics</h4>
-            <p>Li18 introduces statistical and neural approaches to language, from n-gram models and PCFG parsing through to modern transformer language models. My 2025–26 lectures cover language models and parsing (Lecture 7, computational syntax) and deep neural networks.</p>
-            <figure><img src="assets/images/photos/photo-lecturing.jpg" alt="Suchir Salhan lecturing Li18 Computational Linguistics at Cambridge" loading="lazy"><figcaption>Lecturing Li18 Computational Linguistics (Lecture 7: Computational Syntax), University of Cambridge.</figcaption></figure>
-            <h4>L95 Introduction to Natural Language Syntax and Parsing</h4>
+            <ul>
+              <li><a href="assets/teaching/L95_2025_26_Reading_List.pdf" target="_blank">L95 reading list, 2025–26 (PDF)</a></li>
+            </ul>
+            <h4>About the course</h4>
             <p>L95 covers parsing algorithms (CKY, shift-reduce), categorial grammars, span-based constituency parsing, evaluation, lexicalised PCFGs and unification grammars, and recent topics such as discontinuous parsing. My handout covers language model evaluation with BLiMP and other minimal-pair benchmarks; I have also written notes and slides on tokenization.</p>
           </div>
         </details>
 
-        <h3 class="sub">Public lecture materials</h3>
-        <ul class="plain materials">
-          <li id="materials-li18"><span class="c">Li18</span> <a href="assets/teaching/Li18%20Lecture%207%20slides.pdf" target="_blank">Lecture 7 slides</a> · <a href="assets/teaching/Li18%20Lecture%208%20slides.pdf" target="_blank">Lecture 8 slides</a> · <a href="assets/teaching/Perplexity%20and%20Evaluation%20Metrics%20Essay.pdf" target="_blank">Perplexity and evaluation metrics (essay)</a></li>
-          <li id="materials-l95"><span class="c">L95</span> <a href="assets/teaching/L95_BLiMP_25_26.pdf" target="_blank">BLiMP handout</a> · <a href="assets/teaching/L95_Slides___Suchir.pdf" target="_blank">slides</a> · <a href="assets/teaching/L95_2025_26.pdf" target="_blank">notes 2025–26</a> · <a href="assets/teaching/L95_2025_26_Reading_List.pdf" target="_blank">reading list</a> · <a href="assets/teaching/L95_Tokenizers_Slides.pdf" target="_blank">tokenizers slides</a> · <a href="assets/teaching/L95_Tokenization_2025_26.pdf" target="_blank">tokenization notes 2025–26</a></li>
-          <li><span class="c">NLP</span> <a href="assets/tripos/NLP_Advice_Tripos.pdf" target="_blank">NLP advice for the Tripos</a>, short notes on approaching NLP coursework, projects and supervisions</li>
+        <div class="portal">
+          <h3 class="sub">Cambridge Student Portal</h3>
+          <p class="kicker">Cambridge students only · Raven login required</p>
+          <p class="small">The portal is for the practical details: course information, supervision instructions and booking arrangements, how to submit work, and learning resources such as lecture materials, handouts, reading lists and research-training material. The public materials on this page will stay here.</p>
+          <!-- TODO(portal-url): replace the mailto below with the Raven-protected portal URL
+               (e.g. a Cambridge-hosted page behind Raven/Shibboleth). GitHub Pages cannot do
+               Raven authentication, so the portal must be hosted elsewhere. Then update the
+               status sentence and remove "coming soon". -->
+          <p class="small">The portal link is coming soon. Until then, <a href="mailto:sas245@cam.ac.uk?subject=Cambridge%20student%20portal">email me</a> from your Cambridge address and I will send you what you need.</p>
+        </div>
+
+        <p class="tv-help">Need help with something? <a href="mailto:sas245@cam.ac.uk?subject=L95">Get in touch by email ↗</a></p>
+      </section>
+
+      <!-- ========== MPHIL: LANGUAGE MODEL EVALUATION ========== -->
+      <section class="view" id="lm-eval" data-label="MPhil · Language Model Evaluation" aria-labelledby="lm-eval-h">
+        <p class="kicker">MPhil guest lecture · Michaelmas 2024</p>
+        <h2 class="v-title" id="lm-eval-h" tabindex="-1">Language Model Evaluation</h2>
+        <p class="lead">I gave this guest lecture in November 2024 for an MPhil course with Prof Paula Buttery and Dr Fermín Moscoso del Prado Martín. It was my first guest lecture.</p>
+        <p>The slides from this lecture are not on this page. These materials cover the same ground:</p>
+        <ul class="plain mats">
+          <li><a class="mat" href="assets/teaching/L95_BLiMP_25_26.pdf" target="_blank"><span class="m-t">Language model evaluation with BLiMP and minimal pairs</span><span class="m-f">Handout · PDF</span></a></li>
+          <li><a class="mat" href="assets/teaching/Perplexity%20and%20Evaluation%20Metrics%20Essay.pdf" target="_blank"><span class="m-t">Perplexity and evaluation metrics</span><span class="m-f">Essay · PDF</span></a></li>
         </ul>
 
-        <p class="next"><b>Next step</b>The materials above are public. For a question about a lecture or handout, <a href="mailto:sas245@cam.ac.uk">email me</a>.</p>
+        <div class="portal">
+          <h3 class="sub">Cambridge Student Portal</h3>
+          <p class="kicker">Cambridge students only · Raven login required</p>
+          <p class="small">The portal is for the practical details: course information, supervision instructions and booking arrangements, how to submit work, and learning resources such as lecture materials, handouts, reading lists and research-training material. The public materials on this page will stay here.</p>
+          <!-- TODO(portal-url): replace the mailto below with the Raven-protected portal URL
+               (e.g. a Cambridge-hosted page behind Raven/Shibboleth). GitHub Pages cannot do
+               Raven authentication, so the portal must be hosted elsewhere. Then update the
+               status sentence and remove "coming soon". -->
+          <p class="small">The portal link is coming soon. Until then, <a href="mailto:sas245@cam.ac.uk?subject=Cambridge%20student%20portal">email me</a> from your Cambridge address and I will send you what you need.</p>
+        </div>
+
+        <p class="tv-help">Need help with something? <a href="mailto:sas245@cam.ac.uk?subject=Language%20model%20evaluation">Get in touch by email ↗</a></p>
       </section>
 
       <!-- ========== UNDERGRADUATE SUPERVISION ========== -->
-      <section id="supervision">
-        <h2>Undergraduate supervision</h2>
-        <p class="for"><b>For</b>Cambridge Tripos students, and Directors of Studies looking for a supervisor.</p>
+      <section class="view" id="supervision" data-label="Undergraduate supervision" aria-labelledby="supervision-h">
+        <p class="kicker">For Tripos students and Directors of Studies</p>
+        <h2 class="v-title" id="supervision-h" tabindex="-1">Supervision for Tripos students</h2>
+        <p class="lead">I supervise courses in the Computer Science Tripos. If you would like me to supervise you, email me with the course, your college and your year.</p>
 
-        <p>I supervise these Computer Science Tripos courses:</p>
+        <h3 class="sub">Courses I supervise</h3>
         <ul class="plain teach">
-          <li>Part IA: Introduction to Probability; Machine Learning &amp; Real-World Data. Supervisor, and teaching assistant / lead demonstrator.</li>
-          <li>Part IB: Artificial Intelligence; Formal Models of Language. Supervisor.</li>
-          <li>Part II: Machine Learning &amp; Bayesian Inference (MLBI). Supervisor.</li>
+          <li><strong>Part IA</strong>: Introduction to Probability; Machine Learning &amp; Real-World Data. Supervisor, and teaching assistant / lead demonstrator.</li>
+          <li><strong>Part IB</strong>: Artificial Intelligence; Formal Models of Language. Supervisor.</li>
+          <li><strong>Part II</strong>: Machine Learning &amp; Bayesian Inference (MLBI). Supervisor.</li>
         </ul>
+
+        <h3 class="sub">Arrangements</h3>
+        <p>The first step is an email. If I already supervise you, the arrangements for booking and handing in work will be in the Cambridge Student Portal; until it is live, I will send them by email.</p>
 
         <details class="more">
           <summary>What my MLBI supervision resources cover</summary>
@@ -179,21 +231,35 @@
             <p>MAP learning for regression and classification; the optimum weight vector for ridge regression and iteratively reweighted least squares (IRLS); SVMs and the KKT conditions; and the Bayesian interpretation of neural networks, including the matrix inversion lemma. I am also collecting lecture notes, handouts and supervision materials for the courses I supervise or have taken.</p>
           </div>
         </details>
+        <details class="more">
+          <summary>Notes for NLP coursework and supervisions</summary>
+          <div class="body">
+            <p><a href="assets/tripos/NLP_Advice_Tripos.pdf" target="_blank">NLP advice for the Tripos (PDF)</a>, short notes on approaching NLP coursework, projects and supervisions.</p>
+          </div>
+        </details>
 
-        <p class="next"><b>Next step</b>To ask whether I can supervise a course this year, <a href="mailto:sas245@cam.ac.uk">email me</a> with the course, your college and your year. If I already supervise you, the arrangements for booking and handing in work will be in the <a href="#portal">student portal</a>; until it is live, I will send them by email.</p>
+        <p class="tv-help">Asking about supervision this year? <a href="mailto:sas245@cam.ac.uk?subject=Supervision">Email me ↗</a> with the course, your college and your year.</p>
       </section>
 
-      <!-- ========== RESEARCH MENTORSHIP ========== -->
-      <section id="mentorship">
-        <h2>Research mentorship</h2>
-        <p class="for"><b>For</b>Undergraduates who want research experience: a UROP, a summer project, or structured research training.</p>
+      <!-- ========== UROP / RESEARCH MENTORSHIP ========== -->
+      <section class="view" id="urop" data-label="Undergraduate research (UROP)" aria-labelledby="urop-h">
+        <p class="kicker">For undergraduates who want research experience</p>
+        <h2 class="v-title" id="urop-h" tabindex="-1">Undergraduate research and UROPs</h2>
+        <p class="lead">A UROP gives you a research project of your own, with structured support around it. Below is how the 2025 programme worked, what past students did, and how to apply.</p>
 
+        <h3 class="sub">What mentorship involves</h3>
         <p>In summer 2025, with Prof Paula Buttery, I co-supervised two Small Language Model UROP students. The eight-week programme was built on <a href="https://www.picolm.io/" target="_blank" rel="noopener">Pico</a>, our framework for training small language models and studying their learning dynamics. Alongside their independent projects, the students followed a structured practical course: a weekly reading list plus hands-on pretraining and interpretability work.</p>
         <p>I am also a Google DeepMind Research Ready mentor with <a href="https://www.richarddiehlmartinez.com/" target="_blank" rel="noopener">Richard Diehl Martinez</a> and Prof Paula Buttery. The programme is supported by Google DeepMind, the Hg Foundation and the Royal Academy of Engineering.</p>
-        <p>Past UROP reports and the students I have mentored are listed on the <a href="people.html">people page</a>.</p>
+
+        <h3 class="sub">Previous UROPs</h3>
+        <ul class="plain teach">
+          <li>Ellie Polyakova Reed, <i>Evaluating Typological Effects of L2 English in Language Model Benchmarks</i> (2025). <a href="assets/teaching/ep757_urop.pdf" target="_blank">UROP report (PDF)</a></li>
+          <li>Shivan Arora, <i>Controlled Text Generation: a teacher–student paradigm for CEFR-levelled complexity control</i> (2025).</li>
+        </ul>
+        <p class="small muted">Other students I have mentored, and the papers that came out of their projects, are listed on the <a href="people.html">people page</a>.</p>
 
         <details class="more">
-          <summary>The 2025 UROP syllabus and reading list</summary>
+          <summary>The eight-week syllabus (2025)</summary>
           <div class="body">
             <h4>Week 1 (14 Jul): BabyLMs and multilingual evaluation</h4>
             <ul>
@@ -222,6 +288,11 @@
             <h4>Week 8 (01 Sep): small language models, frontier problems (architectures)</h4>
             <ul><li>Final project presentations. UROP reports were due on Friday 5 September 2025.</li></ul>
 
+          </div>
+        </details>
+        <details class="more">
+          <summary>Reading lists</summary>
+          <div class="body">
             <h4>Language model primers</h4>
             <ul>
               <li><a href="https://stanford-cs336.github.io/spring2025-lectures/?trace=var/traces/lecture_01.json" target="_blank" rel="noopener">CS336: Language Models from Scratch</a>; <a href="https://web.stanford.edu/class/cs224u/slides/cs224u-contextualreps-2023-handout.pdf" target="_blank" rel="noopener">CS224U: Contextual Word Representations</a>; <a href="https://web.stanford.edu/class/cs224u/slides/cs224u-incontextlearning-2023-handout.pdf" target="_blank" rel="noopener">CS224U: In-Context Learning</a>.</li>
@@ -234,18 +305,29 @@
           </div>
         </details>
 
-        <p class="next"><b>Next step</b>If you are a Cambridge undergraduate interested in a UROP or another research project, <a href="mailto:sas245@cam.ac.uk">email me</a> with your year, your course, and the kind of question you would like to work on.</p>
+        <h3 class="sub">How to apply</h3>
+        <p>If you are a Cambridge undergraduate interested in a UROP or another research project, email me with your year, your course, and the kind of question you would like to work on.</p>
+        <p class="tv-help"><a href="mailto:sas245@cam.ac.uk?subject=UROP">Email me about a UROP ↗</a></p>
       </section>
 
-      <!-- ========== RESEARCH SUPERVISION (MPhil / Part III) ========== -->
-      <section id="mphil-projects">
-        <h2>Research supervision</h2>
-        <p class="for"><b>For</b>Cambridge MPhil and Part III students choosing a research project, and anyone asking about co-supervision.</p>
-
-        <p>I am looking for MPhil students who want to develop and understand language models. Projects sit in the Cambridge Natural Language and Information Processing (NLIP) group, with chances to work with researchers across computer science, linguistics and cognitive science. Depending on the project, a co-supervisor with expertise in language model fundamentals, AI safety, interpretability or computational psycholinguistics may also be possible. The proposed supervisors are me and Prof Paula Buttery.</p>
+      <!-- ========== MPHIL / PART III PROJECTS ========== -->
+      <section class="view" id="mphil-projects" data-label="MPhil and Part III projects" aria-labelledby="mphil-h">
+        <p class="kicker">For MPhil and Part III students, and co-supervision</p>
+        <h2 class="v-title" id="mphil-h" tabindex="-1">Research projects for MPhil and Part III</h2>
+        <p class="lead">I am looking for MPhil students who want to develop and understand language models. The proposed supervisors are me and Prof Paula Buttery.</p>
+        <p>Projects sit in the Cambridge Natural Language and Information Processing (NLIP) group, with chances to work with researchers across computer science, linguistics and cognitive science. Depending on the project, a co-supervisor with expertise in language model fundamentals, AI safety, interpretability or computational psycholinguistics may also be possible.</p>
         <p>I like projects that pair careful machine learning with a clear scientific question. The four areas below are starting points with example directions, not fixed specifications; we can shape a project around your interests, your background and the time an MPhil allows. The <a href="assets/teaching/Salhan_2627_MPhil_Project_Proposals.pdf" target="_blank"><strong>2026–27 project proposals (PDF)</strong></a> have the full write-ups. My research is described on the <a href="research.html">research page</a>.</p>
 
-        <h3>1. Dynamic tokenization: learning what a model should process together</h3>
+        <h3 class="sub">Research themes</h3>
+        <ol class="themes">
+          <li><a href="#proj-tokenization">Dynamic tokenization</a></li>
+          <li><a href="#proj-sample-efficient">Sample-efficient AI</a></li>
+          <li><a href="#proj-devinterp">Developmental interpretability</a></li>
+          <li><a href="#proj-beetle">Beetle: bilingual and multilingual processing</a></li>
+        </ol>
+
+        <h3 class="sub">Project proposals</h3>
+        <h3 id="proj-tokenization">1. Dynamic tokenization: learning what a model should process together</h3>
         <p class="kicker">Architectures · Tokenization · Adaptive computation · Multilingual NLP</p>
         <p>Tokenization is usually treated as preprocessing. Another view is that it is a resource allocation policy: it decides how much computation and memory a model spends on each part of its input. A familiar word, an unfamiliar name, a piece of code and a morphologically complex word may each benefit from a different granularity. Could a model learn to allocate computation dynamically instead of relying on a fixed vocabulary?</p>
         <details class="more">
@@ -271,7 +353,7 @@
           </div>
         </details>
 
-        <h3>2. Sample-efficient AI: models that learn more from less</h3>
+        <h3 id="proj-sample-efficient">2. Sample-efficient AI: models that learn more from less</h3>
         <p class="kicker">Language model training · Efficient architectures · Cognitive science · Multimodal learning</p>
         <p>Modern AI systems are trained on enormous amounts of data, yet people acquire language and other skills from comparatively little experience. I co-organise the <a href="https://babylm.github.io/" target="_blank" rel="noopener">BabyLM</a> and <a href="https://babyvlm.github.io/" target="_blank" rel="noopener">BabyVLM</a> challenges, which ask researchers to train models under constrained data budgets. The aim is to understand which architectural and learning choices let a model acquire useful capabilities from limited experience, not just to make a smaller model.</p>
         <details class="more">
@@ -291,7 +373,7 @@
           </div>
         </details>
 
-        <h3>3. Developmental interpretability: monitoring capabilities as they emerge</h3>
+        <h3 id="proj-devinterp">3. Developmental interpretability: monitoring capabilities as they emerge</h3>
         <p class="kicker">Mechanistic interpretability · AI safety · Training dynamics · Capability evaluation</p>
         <p>Most evaluations look at a model after training, and most interpretability studies examine a model that is already trained. Both can miss what happens inside a model as it acquires a new capability, and whether we can detect that reliably. These questions matter for AI safety: an evaluation that only works at the end of training may give little warning about how a system is developing.</p>
         <details class="more">
@@ -318,7 +400,7 @@
           </div>
         </details>
 
-        <h3>4. Beetle: computational models of bilingual and multilingual language processing</h3>
+        <h3 id="proj-beetle">4. Beetle: computational models of bilingual and multilingual language processing</h3>
         <p class="kicker">Computational psycholinguistics · Multilingual models · Language acquisition · Cognitive modelling</p>
         <p>Most people use more than one language, but computational models of language processing have mostly modelled monolingual speakers. I developed <a href="beetle.html">Beetle</a>, a framework and suite of controlled bilingual language models for studying second-language processing. Because we control which languages a model sees, when, and how much, we can test hypotheses about how language history shapes behaviour.</p>
         <details class="more">
@@ -345,7 +427,8 @@
           </div>
         </details>
 
-        <h3 class="sub">What I look for</h3>
+
+        <h3 class="sub">Preparation</h3>
         <p>You do not need to have worked on all of these topics. I am interested in students who can frame a clear research question, work independently on technical problems, and look critically at their own results. Useful preparation depends on the project:</p>
         <ul>
           <li><strong>Machine learning:</strong> Python and PyTorch, neural networks, model training or empirical ML.</li>
@@ -353,24 +436,40 @@
           <li><strong>Linguistics and cognitive science:</strong> formal linguistics, language acquisition, psycholinguistics or experimental methods.</li>
           <li><strong>Interpretability and evaluation:</strong> causal reasoning, statistics, reproducibility, or the limits of model evaluations.</li>
         </ul>
-        <p>These are complementary backgrounds, not a checklist. A student with a strong ML background might build a new tokenization architecture; a linguist might design controlled experiments on how bilingual experience changes model behaviour. I especially value projects that explain why an approach works, where it fails and what that tells us about learning, rather than reporting a benchmark gain.</p>
+        <details class="more">
+          <summary>More about what I look for</summary>
+          <div class="body">
+            <p>These are complementary backgrounds, not a checklist. A student with a strong ML background might build a new tokenization architecture; a linguist might design controlled experiments on how bilingual experience changes model behaviour. I especially value projects that explain why an approach works, where it fails and what that tells us about learning, rather than reporting a benchmark gain.</p>
+          </div>
+        </details>
 
-        <p class="next"><b>Next step</b><a href="mailto:sas245@cam.ac.uk">Email me</a> a short introduction covering your academic background and relevant technical or research experience, which area interests you and what question you would like to investigate, and any projects, papers or code you would like to share. You are welcome to propose a related question of your own. For co-supervision, email me with a short description of the project and who else is involved.</p>
+        <h3 class="sub">How to approach me</h3>
+        <p>Email me a short introduction covering your academic background and relevant technical or research experience, which area interests you and what question you would like to investigate, and any projects, papers or code you would like to share. You are welcome to propose a related question of your own. For co-supervision, email me with a short description of the project and who else is involved.</p>
+        <p class="tv-help"><a href="mailto:sas245@cam.ac.uk?subject=MPhil%20project">Email me about a project ↗</a></p>
         <p class="small muted">Proposals: <a href="assets/teaching/Salhan_2627_MPhil_Project_Proposals.pdf" target="_blank">2026–27 (PDF)</a> · <a href="assets/teaching/Salhan_2526_MPhil_Project_Proposals.pdf" target="_blank">2025–26 (PDF, previous year)</a>. Current and former MPhil students are listed on the <a href="people.html">people page</a>.</p>
       </section>
 
-      <!-- ========== RESEARCH COLLABORATION ========== -->
-      <section id="collaboration">
-        <h2>Research collaboration</h2>
-        <p class="for"><b>For</b>Researchers and research students, at Cambridge or elsewhere, who have an idea for a joint project.</p>
-        <p>Much of my work is collaborative, and I am interested in hearing from researchers in machine learning, cognitive science, linguistics, interpretability and AI safety. Good starting points include controlled experiments with small language models (including the <a href="beetle.html">Beetle</a> suite and the <a href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM</a> framework), developmental interpretability and model monitoring, multilingual and cross-lingual evaluation, and sample-efficient learning through <a href="https://babylm.github.io/" target="_blank" rel="noopener">BabyLM</a>.</p>
-        <p>My <a href="research.html">research page</a> sets out the questions I am working on, and the <a href="people.html">people page</a> lists current collaborators.</p>
-        <p class="next"><b>Next step</b><a href="mailto:sas245@cam.ac.uk">Email me</a> with a few lines on the question, what you bring to it, and any relevant papers or code.</p>
-      </section>
+      <!-- ========== COLLABORATION ========== -->
+      <section class="view" id="collaborate" data-label="Research collaboration" aria-labelledby="collaborate-h">
+        <p class="kicker">For researchers at Cambridge or elsewhere</p>
+        <h2 class="v-title" id="collaborate-h" tabindex="-1">Working together</h2>
+        <p class="lead">Much of my work is collaborative. I study how language models learn and acquire capabilities; my <a href="research.html">research page</a> sets out the questions I am working on.</p>
 
+        <h3 class="sub">Possible joint directions</h3>
+        <p>I am interested in hearing from researchers in machine learning, cognitive science, linguistics, interpretability and AI safety. Good starting points include:</p>
+        <ul>
+          <li>controlled experiments with small language models, including the <a href="beetle.html">Beetle</a> suite and the <a href="https://www.picolm.io/" target="_blank" rel="noopener">PicoLM</a> framework;</li>
+          <li>developmental interpretability and model monitoring;</li>
+          <li>multilingual and cross-lingual evaluation;</li>
+          <li>sample-efficient learning through <a href="https://babylm.github.io/" target="_blank" rel="noopener">BabyLM</a>.</li>
+        </ul>
+        <p>The <a href="people.html">people page</a> lists current collaborators.</p>
+        <p class="tv-help">Have an idea? <a href="mailto:sas245@cam.ac.uk?subject=Collaboration">Email me ↗</a> with a few lines on the question, what you bring to it, and any relevant papers or code.</p>
+      </section>
 
     </div>
   </main>
+  <script src="assets/js/teaching.js"></script>
 
   <nav class="dock" aria-label="Primary">
     <a href="research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>

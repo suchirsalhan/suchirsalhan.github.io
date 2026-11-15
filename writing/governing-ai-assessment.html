@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Who Gets to Govern the AI Systems That Assess Us? · Suchir Salhan</title>
+  <meta name="description" content="An essay by Suchir Salhan on technological sovereignty in education: why the institutions that assess knowledge need AI systems they can inspect, adapt and independently evaluate.">
+  <meta name="author" content="Suchir Salhan">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://suchirsalhan.github.io/writing/governing-ai-assessment.html">
+  <meta property="og:title" content="Who Gets to Govern the AI Systems That Assess Us?">
+  <meta property="og:description" content="An essay by Suchir Salhan on technological sovereignty in education: why the institutions that assess knowledge need AI systems they can inspect, adapt and independently evaluate.">
+  <meta property="og:site_name" content="Suchir Salhan">
+  <meta property="article:published_time" content="2026-11-15">
+  <meta property="article:author" content="Suchir Salhan">
+  <meta name="twitter:card" content="summary">
+  <link href="../favicon.ico" rel="icon" sizes="any">
+  <link rel="icon" href="../assets/images/logo-ss.svg" type="image/svg+xml">
+  <link href="../assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../assets/css/main.css" rel="stylesheet">
+  <link href="../assets/css/site.css" rel="stylesheet">
+  <link href="../assets/css/writing.css" rel="stylesheet">
+  <style>
+    .tufte-article .essay-list { font-family: var(--heading-font); font-size: 20px; line-height: 1.7; max-width: 700px; padding-left: 1.2em; margin: 0 0 1.2em; }
+    .tufte-article .essay-list li { margin-bottom: .4em; }
+    .tufte-article .related { font-size: 17px; color: var(--ink-2); margin-top: 40px; padding-top: 18px; border-top: 1px solid var(--line); }
+  </style>
+</head>
+<body class="index-page writing-page">
+  <header id="header" class="header header--solid d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+      <a href="../index.html" class="brand"><img class="logo-ss" src="../assets/images/logo-ss.svg" alt="SS" width="34" height="34"> Suchir <span>Salhan</span></a>
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="../research.html">Research</a></li>
+          <li><a href="../beetle.html">Beetle</a></li>
+          <li><a href="index.html" class="active">Writing</a></li>
+          <li><a href="../teaching.html">Teaching</a></li>
+          <li><a href="../presentations.html">Talks</a></li>
+          <li><a href="../people.html">People</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" class="nav-cv" target="_blank">CV</a></li>
+        </ul>
+        <button class="theme-switch" type="button" aria-label="Toggle dark mode"><i class="bi bi-moon-stars-fill"></i><i class="bi bi-sun-fill"></i></button>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="page-hero">
+      <div class="container">
+        <div class="breadcrumb-mini"><a href="../index.html">Home</a> / <a href="index.html">Writing</a> / Essay</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <article class="tufte-article">
+          <div class="meta"><time datetime="2026-11-15">15 November 2026</time> · Essay · Suchir Salhan</div>
+          <h1>Who Gets to Govern the AI Systems That Assess Us?</h1>
+
+          <p class="standfirst">We are increasingly expected to trust AI systems that students, teachers and parents cannot inspect. Education needs a different approach.</p>
+
+          <p>Artificial intelligence is becoming part of how we learn, teach and assess knowledge. Yet the systems increasingly responsible for these decisions are often developed by organisations whose training data, internal representations and development processes remain inaccessible.</p>
+
+          <p>We are being asked to trust systems that we cannot independently inspect, reproduce or meaningfully adapt.</p>
+
+          <p>For education, this presents a particularly important problem. Assessment depends on fairness, validity and public confidence. These properties cannot simply be assumed because an AI model performs well on a general-purpose benchmark.</p>
+
+          <p>If AI is going to shape how we assess knowledge, who gets to decide whether it is fair? And who gets to check?</p>
+
+          <p>I think we need to take a different approach to building AI for education: one based on technological sovereignty, open scientific infrastructure and the ability to independently evaluate how models learn.</p>
+
+          <h2>From buying AI to governing AI</h2>
+
+          <p>Educational institutions are increasingly dependent on a relatively small number of companies developing frontier AI systems. They can purchase access to models, integrate APIs and evaluate their outputs. But they often have limited control over how those systems were trained, what data shaped their representations or how their behaviour changes between versions.</p>
+
+          <p>This is more than a question of transparency. It is a question of institutional agency.</p>
+
+          <p>Technological sovereignty means having the technical capacity to understand, control, adapt and independently evaluate the AI systems an organisation relies upon.</p>
+
+          <p>That doesn't mean every university or assessment provider needs to train a foundation model from scratch. It means having meaningful alternatives to depending entirely on external providers.</p>
+
+          <p>Open-weight models, training configurations, evaluation datasets and intermediate checkpoints provide part of this foundation. They allow researchers and institutions to investigate systems rather than simply consume their outputs.</p>
+
+          <h2>Fairness needs to become experimentally measurable</h2>
+
+          <p>This is particularly important when we consider linguistic diversity.</p>
+
+          <p>A model might achieve similar aggregate performance across two populations while exhibiting very different weaknesses in how it processes their languages. Conventional benchmarking can miss these differences.</p>
+
+          <p>My research explores how controlled bilingual language models can help us investigate this problem.</p>
+
+          <p>In our work on open bilingual model suites, we study how different language-learning experiences shape the capabilities and representations that models develop. By controlling language exposure, training conditions and developmental trajectories, we can investigate how linguistic backgrounds influence subsequent language processing.</p>
+
+          <p>This creates an opportunity to move beyond asking whether a model can generate convincing learner-like text. We can instead investigate whether it develops capabilities that meaningfully reflect different language-learning experiences.</p>
+
+          <p>For educational assessment, this matters. We need to establish whether AI systems work across different linguistic backgrounds, not simply assume that they do.</p>
+
+          <p>Open models make these questions experimentally tractable. Controlled training makes them reproducible.</p>
+
+          <h2>We need to understand how AI systems develop</h2>
+
+          <p>There is another important distinction between accessing a finished model and studying how it came to behave as it does.</p>
+
+          <p>Most organisations interact with AI as a finished product. They observe its inputs and outputs, perhaps consult external evaluations, and decide whether its performance is sufficient.</p>
+
+          <p>But a model's capabilities emerge through a developmental process. Its training data, architecture and optimisation shape the representations it acquires and the limitations it exhibits.</p>
+
+          <p>Access to intermediate checkpoints makes it possible to investigate these processes directly.</p>
+
+          <p>We can examine when particular capabilities emerge, how different training experiences influence representations, and whether fine-tuning or adaptation introduces new weaknesses.</p>
+
+          <p>I think this offers an important opportunity to connect developmental AI research with practical model evaluation. Rather than asking only whether a system works, we can begin asking why it works, how robust its capabilities are and how they change.</p>
+
+          <p>This is especially relevant when models are used to evaluate human knowledge and ability.</p>
+
+          <h2>Education should help shape the future of AI</h2>
+
+          <p>I see three research ambitions coming together here:</p>
+
+          <ul class="essay-list">
+            <li><strong>Sovereign AI:</strong> giving educational institutions meaningful control over the systems they depend upon.</li>
+            <li><strong>Developmental AI:</strong> understanding how training experiences shape the capabilities and representations of models.</li>
+            <li><strong>Equitable AI:</strong> investigating whether systems work reliably across different languages, populations and educational backgrounds.</li>
+          </ul>
+
+          <p>None of these ambitions is achieved simply by releasing model weights. Openness does not automatically guarantee fairness, reproducibility or safety.</p>
+
+          <p>We also need controlled experiments, independent evaluation and meaningful participation from the institutions and communities affected by these systems.</p>
+
+          <p>This is why I believe educational assessment is such an important setting for fundamental AI research. It forces us to confront questions that extend beyond model performance: whose knowledge is represented, what capabilities are being evaluated, and who has the authority and technical expertise to challenge the results?</p>
+
+          <p>The organisations responsible for assessing knowledge should not have to surrender control over the intelligence used to evaluate it.</p>
+
+          <p>We should be building AI systems that educational institutions can understand, adapt and independently scrutinise, not simply systems they are expected to trust.</p>
+
+          <p class="related">Related: <a href="../beetle.html">Beetle, the open bilingual model suite</a> · <a href="../research.html">Research</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+<nav class="dock" aria-label="Primary">
+    <a href="../research.html"><i class="bi bi-lightbulb"></i><span>Research</span></a>
+    <a href="../beetle.html"><i class="bi bi-bug"></i><span>Beetle</span></a>
+    <a href="../research.html#publications"><i class="bi bi-journal-text"></i><span>Publications</span></a>
+    <a href="index.html"><i class="bi bi-pen"></i><span>Writing</span></a>
+    <a href="../teaching.html"><i class="bi bi-mortarboard"></i><span>Teaching</span></a>
+    <a href="../presentations.html"><i class="bi bi-easel"></i><span>Talks</span></a>
+    <a href="../people.html"><i class="bi bi-people"></i><span>People</span></a>
+    <a href="../about.html"><i class="bi bi-person"></i><span>About</span></a>
+    <a href="../assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf" target="_blank"><i class="bi bi-file-earmark-text"></i><span>CV</span></a>
+  </nav>
+
+
+  <footer class="footer">
+    <div class="container">
+      <p class="footer-tagline"><a href="mailto:sas245@cam.ac.uk">sas245@cam.ac.uk</a></p>
+        <div class="cols">
+        <div>© 2026 Suchir Salhan · University of Cambridge</div>
+        <div class="fnav">
+          <a href="../research.html">Research</a><a href="../research.html#publications">Publications</a>
+          <a href="../teaching.html">Teaching</a><a href="../about.html">About</a>
+          <a href="../assets/Suchir_Salhan_Academic_Curriculum_Vitae_2026.pdf">CV</a><a href="https://www.suchirsalhan.com">suchirsalhan.com</a>
+          <a href="../privacy.html">Privacy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <a href="#header" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/explore.js"></script>
+  <script defer src="../assets/js/toc.js"></script>
+</body>
+</html>

@@ -5,7 +5,7 @@
   <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Talks &amp; Presentations · Suchir Salhan</title>
-  <meta name="description" content="Slides, invited keynotes, conference posters, and invited talks &amp; seminars by Suchir Salhan.">
+  <meta name="description" content="Slides, posters and talks by Suchir Salhan.">
   <link href="favicon.ico" rel="icon" sizes="any">
   <link rel="icon" href="assets/images/logo-ss.svg" type="image/svg+xml">
   <link href="assets/img/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
@@ -17,6 +17,25 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
   <link href="assets/css/main.css" rel="stylesheet">
   <link href="assets/css/site.css" rel="stylesheet">
+  <style>
+    /* inline PDF previews for recent slides and posters */
+    .embeds { list-style: none; padding: 0; margin: 0 0 32px; }
+    .embeds > li { margin: 0 0 1.1em; font-size: 16.5px; line-height: 1.55; }
+    .embeds .t { font-weight: 600; color: var(--heading-color); }
+    .embeds .v { color: var(--ink-2, #555); }
+    .embeds a { text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+    .embeds details.more { margin: 4px 0 0; }
+    .embeds details.more > summary { display: inline; list-style: none; cursor: pointer; font-size: 14.5px;
+      color: var(--accent-color); border-bottom: 1px solid color-mix(in srgb, var(--accent-color) 40%, transparent); }
+    .embeds details.more > summary::-webkit-details-marker { display: none; }
+    .embeds details.more > summary::after { content: " \2192"; }
+    .embeds details.more[open] > summary::after { content: " \2191"; }
+    .embeds details.more > summary:focus-visible { outline: 2px solid var(--accent-color); outline-offset: 3px; }
+    .embeds details.more > .body { margin-top: 12px; }
+    .pdf-embed { display: block; width: 100%; aspect-ratio: 4 / 3; border: 1px solid var(--line, #ddd); border-radius: 4px; background: transparent; }
+    .pdf-embed.poster { aspect-ratio: 3 / 4; max-height: 90vh; }
+    .pdf-embed p { padding: 16px; font-size: 15px; }
+  </style>
 </head>
 <body class="index-page">
   <header id="header" class="header header--solid d-flex align-items-center fixed-top">
@@ -45,7 +64,6 @@
         <div class="breadcrumb-mini"><a href="index.html">Home</a> / Talks &amp; Presentations</div>
         <p class="eyebrow">Talks &amp; Presentations</p>
         <h1>Presentations, Posters &amp; Invited Talks</h1>
-        <p>Talks and posters on how intelligence emerges in minds and machines: slides and keynotes, conference and workshop posters, and a full list of invited talks &amp; seminars.</p>
         <div class="theme-links" style="margin-top:18px;display:flex;flex-wrap:wrap;gap:12px">
           <a class="btn-pill outline" href="#slides">Slides &amp; keynotes</a>
           <a class="btn-pill outline" href="#posters">Posters</a>
@@ -65,6 +83,30 @@
 
         <div class="row justify-content-center">
           <div class="col-lg-10">
+
+            <ul class="embeds">
+              <li>
+                <span class="t">Beetle: A Bilingual Model Suite for Modelling Second-Language Processing</span><br>
+                <span class="v">EMNLP 2026 Main Conference · Budapest, Hungary</span><br>
+                <a href="assets/presentations/beetle-emnlp-2026.pdf" target="_blank" rel="noopener">Slides (PDF)</a> · <a href="research.html#pub-beetle">Paper</a>
+                <details class="more"><summary>Preview</summary><div class="body">
+                  <object class="pdf-embed" data="assets/presentations/beetle-emnlp-2026.pdf" type="application/pdf" aria-label="Beetle: A Bilingual Model Suite for Modelling Second-Language Processing, slides"><p>Your browser cannot show this PDF inline. <a href="assets/presentations/beetle-emnlp-2026.pdf">Download the slides</a>.</p></object>
+                </div></details>
+              </li>
+              <li>
+                <span class="t">LangMAP: A Language-Adaptive Approach to Tokenization</span><br>
+                <span class="v">EMNLP 2026 Main Conference · Budapest, Hungary · slides prepared with Clara Meister</span><br>
+                <a href="assets/presentations/langmap-emnlp-2026.pdf" target="_blank" rel="noopener">Slides (PDF)</a> · <a href="research.html#pub-langmap">Paper</a>
+                <details class="more"><summary>Preview</summary><div class="body">
+                  <object class="pdf-embed" data="assets/presentations/langmap-emnlp-2026.pdf" type="application/pdf" aria-label="LangMAP: A Language-Adaptive Approach to Tokenization, slides"><p>Your browser cannot show this PDF inline. <a href="assets/presentations/langmap-emnlp-2026.pdf">Download the slides</a>.</p></object>
+                </div></details>
+              </li>
+              <li>
+                <span class="t">Open Bilingual Model Suite for Modelling Second-Language Processing: Building Open “Sovereign” AI Solutions for Equitable Assessment and Simulation</span><br>
+                <span class="v">CUP&amp;A</span><br>
+                <a href="assets/presentations/beetle-cupa.pptx" download>Slides (PowerPoint)</a>
+              </li>
+            </ul>
 
             <div class="pub">
               <div class="idx"><i class="bi bi-easel"></i></div>
@@ -109,6 +151,56 @@
           <h2>Conference &amp; Workshop Posters</h2>
           <p>Posters presented at conferences, workshops and departmental showcases.</p>
         </div>
+        <ul class="embeds">
+              <li>
+                <span class="t">Beetle: A Bilingual Model Suite for Modelling Second-Language Processing</span><br>
+                <span class="v">EMNLP 2026 Main Conference · Budapest, Hungary</span><br>
+                <a href="assets/posters/beetle-emnlp-2026.pdf" target="_blank" rel="noopener">Poster (PDF)</a> · <a href="research.html#pub-beetle">Paper</a>
+                <details class="more"><summary>Preview</summary><div class="body">
+                  <object class="pdf-embed poster" data="assets/posters/beetle-emnlp-2026.pdf" type="application/pdf" aria-label="Beetle: A Bilingual Model Suite for Modelling Second-Language Processing, poster"><p>Your browser cannot show this PDF inline. <a href="assets/posters/beetle-emnlp-2026.pdf">Download the poster</a>.</p></object>
+                </div></details>
+              </li>
+              <li>
+                <span class="t">LangMAP: A Language-Adaptive Approach to Tokenization</span><br>
+                <span class="v">EMNLP 2026 Main Conference · Budapest, Hungary</span><br>
+                <a href="assets/posters/langmap-emnlp-2026.pdf" target="_blank" rel="noopener">Poster (PDF)</a> · <a href="research.html#pub-langmap">Paper</a>
+                <details class="more"><summary>Preview</summary><div class="body">
+                  <object class="pdf-embed poster" data="assets/posters/langmap-emnlp-2026.pdf" type="application/pdf" aria-label="LangMAP: A Language-Adaptive Approach to Tokenization, poster"><p>Your browser cannot show this PDF inline. <a href="assets/posters/langmap-emnlp-2026.pdf">Download the poster</a>.</p></object>
+                </div></details>
+              </li>
+              <li>
+                <span class="t">Protocol Competence of Small Language Models in Interactive Language Game Environments</span><br>
+                <span class="v">The LM Playschool Workshop @ EMNLP 2026 · Budapest, Hungary</span><br>
+                <a href="assets/posters/playpen-emnlp-2026.pdf" target="_blank" rel="noopener">Poster (PDF)</a> · <a href="research.html#pub-protocol-competence">Paper</a>
+                <details class="more"><summary>Preview</summary><div class="body">
+                  <object class="pdf-embed poster" data="assets/posters/playpen-emnlp-2026.pdf" type="application/pdf" aria-label="Protocol Competence of Small Language Models in Interactive Language Game Environments, poster"><p>Your browser cannot show this PDF inline. <a href="assets/posters/playpen-emnlp-2026.pdf">Download the poster</a>.</p></object>
+                </div></details>
+              </li>
+              <li>
+                <span class="t">Claude reinvestigates herself: A replication of different types of syntactic agreement recruit the same units in LLMs</span><br>
+                <span class="v">BlackboxNLP Workshop, Reproducibility Special Track @ EMNLP 2026 · Budapest, Hungary</span><br>
+                <a href="assets/posters/claude-reinvestigates-herself-blackboxnlp-2026.pdf" target="_blank" rel="noopener">Poster (PDF)</a> · <a href="research.html#pub-claude-reinvestigates">Paper</a>
+                <details class="more"><summary>Preview</summary><div class="body">
+                  <object class="pdf-embed poster" data="assets/posters/claude-reinvestigates-herself-blackboxnlp-2026.pdf" type="application/pdf" aria-label="Claude reinvestigates herself: A replication of different types of syntactic agreement recruit the same units in LLMs, poster"><p>Your browser cannot show this PDF inline. <a href="assets/posters/claude-reinvestigates-herself-blackboxnlp-2026.pdf">Download the poster</a>.</p></object>
+                </div></details>
+              </li>
+              <li>
+                <span class="t">Development of Linear Truth Encodings in Language Models: A Replication Study</span><br>
+                <span class="v">BlackboxNLP Workshop, Reproducibility Special Track @ EMNLP 2026 · Budapest, Hungary</span><br>
+                <a href="assets/posters/blackboxnlp-2026-linear-truth-encodings.pdf" target="_blank" rel="noopener">Poster (PDF)</a> · <a href="research.html#pub-linear-truth">Paper</a>
+                <details class="more"><summary>Preview</summary><div class="body">
+                  <object class="pdf-embed poster" data="assets/posters/blackboxnlp-2026-linear-truth-encodings.pdf" type="application/pdf" aria-label="Development of Linear Truth Encodings in Language Models: A Replication Study, poster"><p>Your browser cannot show this PDF inline. <a href="assets/posters/blackboxnlp-2026-linear-truth-encodings.pdf">Download the poster</a>.</p></object>
+                </div></details>
+              </li>
+              <li>
+                <span class="t">Shared Units, Divergent Trajectories: The Acquisition of Shared and Specialised Syntactic Representations in Bilingual and Multilingual Language Models</span><br>
+                <span class="v">Multilingual Representation Learning (MRL) Workshop @ EMNLP 2026</span><br>
+                <a href="assets/posters/mrl-2026.pdf" target="_blank" rel="noopener">Poster (PDF)</a>
+                <details class="more"><summary>Preview</summary><div class="body">
+                  <object class="pdf-embed poster" data="assets/posters/mrl-2026.pdf" type="application/pdf" aria-label="Shared Units, Divergent Trajectories: The Acquisition of Shared and Specialised Syntactic Representations in Bilingual and Multilingual Language Models, poster"><p>Your browser cannot show this PDF inline. <a href="assets/posters/mrl-2026.pdf">Download the poster</a>.</p></object>
+                </div></details>
+              </li>
+        </ul>
         <figure class="inline-photo"><img src="assets/images/photos/photo-poster-sequence-length.jpg" alt="Presenting a BabyLM poster at EMNLP 2025" loading="lazy"><figcaption>Presenting at the BabyLM Workshop, EMNLP 2025 (Suzhou).</figcaption></figure>
         <figure class="inline-photo"><img src="assets/images/photos/photo-poster-theoretical-linguistics.jpg" alt="Theoretical Linguistics poster at CogInterp, NeurIPS 2025" loading="lazy"><figcaption>Theoretical Linguistics Constrains Causal Abstraction — CogInterp @ NeurIPS 2025.</figcaption></figure>
 

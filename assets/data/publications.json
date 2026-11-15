@@ -1,5 +1,5 @@
 {
-  "_comment": "Canonical publication data for research.html. Edit here, then run: python3 scripts/build_publications.py",
+  "_comment": "Canonical publication data for research.html. Edit here, then run: python3 scripts/build_publications.py. \"themes\" maps each paper to the four research questions on the page (learn, language, representations, trust); \"topics\" are finer tags used in search.",
   "publications": [
     {
       "id": "pub-pico",
@@ -35,6 +35,9 @@
       "topics": [
         "devinterp",
         "sample-efficient"
+      ],
+      "themes": [
+        "learn"
       ],
       "award": null,
       "finding": "A modular framework that lets you change one thing in a small language model's architecture or training and directly watch what it does.",
@@ -153,6 +156,9 @@
         "sample-efficient",
         "linguistics"
       ],
+      "themes": [
+        "language"
+      ],
       "award": null,
       "finding": "A multilingual collection of datasets modelling the language a child hears from birth to fluency across 45 languages, with benchmarks and baseline models.",
       "takeaway": "Developmental data has no business being English-only.",
@@ -221,6 +227,10 @@
         "sample-efficient",
         "multilingual"
       ],
+      "themes": [
+        "learn",
+        "language"
+      ],
       "award": null,
       "finding": "The call for papers for the 2026 BabyLM Workshop, which opens the sample-efficient pretraining challenge up to multilingual training data.",
       "takeaway": "Data-efficient pretraining grows up and stops being English-only.",
@@ -265,6 +275,9 @@
       "topics": [
         "linguistics"
       ],
+      "themes": [
+        "language"
+      ],
       "award": null,
       "finding": "Statistical grammar induction over child-directed speech is used to test competing maturational theories of how children's syntax develops.",
       "takeaway": "Grammar induction can adjudicate theories of how syntax matures.",
@@ -306,6 +319,9 @@
       "topics": [
         "linguistics"
       ],
+      "themes": [
+        "language"
+      ],
       "award": null,
       "finding": "Macroscopic and microscopic information-theoretic models of how phoneme frequencies are distributed across the world's languages.",
       "takeaway": "The shape of a language's sound system may be predictable from information theory.",
@@ -346,6 +362,9 @@
       "first_author": false,
       "topics": [
         "linguistics"
+      ],
+      "themes": [
+        "language"
       ],
       "award": null,
       "finding": "A model of how the frequency distribution of phonemes emerges over time as languages change.",
@@ -399,6 +418,10 @@
       "topics": [
         "multilingual",
         "devinterp",
+        "representations"
+      ],
+      "themes": [
+        "language",
         "representations"
       ],
       "award": null,
@@ -458,6 +481,9 @@
         "tokenisation",
         "multilingual"
       ],
+      "themes": [
+        "language"
+      ],
       "award": null,
       "finding": "A tokenisation method that adapts its segmentation to each language rather than applying one fixed scheme everywhere.",
       "takeaway": "One tokeniser for every language leaves performance on the table.",
@@ -502,6 +528,10 @@
       "topics": [
         "representations",
         "multilingual"
+      ],
+      "themes": [
+        "representations",
+        "language"
       ],
       "award": null,
       "finding": "Tests whether language models trained separately on single languages arrive at the same underlying representations without ever sharing training.",
@@ -555,6 +585,10 @@
         "multilingual",
         "linguistics"
       ],
+      "themes": [
+        "learn",
+        "language"
+      ],
       "award": null,
       "finding": "Curricula that follow real theories of child language acquisition, applied language by language, can beat non-curriculum baselines across four language families.",
       "takeaway": "Copy how children actually learn, not just how much.",
@@ -606,6 +640,9 @@
         "tokenisation",
         "linguistics"
       ],
+      "themes": [
+        "language"
+      ],
       "award": null,
       "finding": "ByteSpan builds a subword vocabulary by grouping bytes a language model finds predictable, giving vocabularies that align with morphology better than BPE for English.",
       "takeaway": "Maybe tokenisers should learn morphology, not just compress.",
@@ -653,6 +690,10 @@
       "first_author": false,
       "topics": [
         "linguistics"
+      ],
+      "themes": [
+        "language",
+        "representations"
       ],
       "award": null,
       "finding": "New information-theoretic measures quantify grammatical diversity from small corpora, staying stable across syntactic annotation scheme and corpus size.",
@@ -710,6 +751,9 @@
       "topics": [
         "multilingual",
         "sample-efficient"
+      ],
+      "themes": [
+        "language"
       ],
       "award": null,
       "finding": "Adding meta-learning to the pretraining of small decoder models lets them transfer named-entity recognition zero-shot to Philippine languages unseen during training.",
@@ -772,6 +816,9 @@
         "evaluation",
         "linguistics"
       ],
+      "themes": [
+        "learn"
+      ],
       "award": "Outstanding Paper Award",
       "finding": "ContingentChat, a Teacher–Student framework, teaches a 100M-word BabyLM to hold more grammatical, cohesive back-and-forth conversation.",
       "takeaway": "Tiny models can learn to actually hold a conversation.",
@@ -819,6 +866,9 @@
       "topics": [
         "sample-efficient",
         "devinterp"
+      ],
+      "themes": [
+        "learn"
       ],
       "award": "Outstanding Paper Award",
       "finding": "A lightweight vision-language model with token-wise dynamic gating learns from very little data and leans on images for content words, language for function words.",
@@ -872,6 +922,9 @@
         "evaluation",
         "linguistics"
       ],
+      "themes": [
+        "language"
+      ],
       "award": null,
       "finding": "BLiSS is a benchmark of 1.5M minimal pairs built from real learner errors, testing how well second-language small models capture the systematic patterns of learner language.",
       "takeaway": "Learner mistakes are data, not noise.",
@@ -919,6 +972,9 @@
       "topics": [
         "sample-efficient"
       ],
+      "themes": [
+        "learn"
+      ],
       "award": null,
       "finding": "For BabyLM pretraining, longer context often helps but not always: short sequences suffice for grammar tasks, while morphological reasoning benefits from longer ones.",
       "takeaway": "There is no single best context length; it depends on the task.",
@@ -964,6 +1020,10 @@
         "evaluation",
         "linguistics"
       ],
+      "themes": [
+        "learn",
+        "trust"
+      ],
       "award": null,
       "finding": "Argues that aligning tutoring models to learners needs a diverse set of cognitively-inspired student simulators, not one generic proxy.",
       "takeaway": "A tutor trained against one imaginary student teaches only that student.",
@@ -1007,6 +1067,10 @@
       "topics": [
         "devinterp",
         "linguistics"
+      ],
+      "themes": [
+        "learn",
+        "representations"
       ],
       "award": null,
       "finding": "Uses theoretical linguistics to constrain which causal abstractions are worth testing in mechanistic interpretability.",
@@ -1067,6 +1131,9 @@
         "representations",
         "multilingual"
       ],
+      "themes": [
+        "representations"
+      ],
       "award": null,
       "finding": "Asks whether merging separately trained monolingual Goldfish models produces a working bilingual model.",
       "takeaway": null,
@@ -1113,6 +1180,9 @@
       "topics": [
         "representations",
         "multilingual"
+      ],
+      "themes": [
+        "representations"
       ],
       "award": null,
       "finding": "Probes whether models trained on a single language nonetheless build concept representations that line up across languages.",
@@ -1171,6 +1241,9 @@
         "multilingual",
         "linguistics"
       ],
+      "themes": [
+        "language"
+      ],
       "award": null,
       "finding": "A human-centred study of how a model's first language shapes its behaviour when it goes on to learn a second.",
       "takeaway": "Models carry an accent from their first language, much like people do.",
@@ -1218,6 +1291,10 @@
       "topics": [
         "evaluation"
       ],
+      "themes": [
+        "language",
+        "trust"
+      ],
       "award": null,
       "finding": "Argues that the instability in an LLM's cultural responses is itself the signal, so evaluation should report repertoires rather than single scores.",
       "takeaway": "A model's cultural variation is data, not measurement error.",
@@ -1259,6 +1336,10 @@
       "topics": [
         "evaluation",
         "sample-efficient"
+      ],
+      "themes": [
+        "learn",
+        "trust"
       ],
       "award": null,
       "finding": "Tests whether small language models can follow the protocols of interactive language games learned through dialogue.",
@@ -1308,6 +1389,10 @@
         "devinterp",
         "linguistics"
       ],
+      "themes": [
+        "learn",
+        "representations"
+      ],
       "award": null,
       "finding": "A replication asking whether different kinds of syntactic agreement are handled by the same units inside an LLM.",
       "takeaway": "Does one grammar circuit do many jobs? Replication puts it to the test.",
@@ -1353,6 +1438,11 @@
         "devinterp",
         "evaluation"
       ],
+      "themes": [
+        "learn",
+        "representations",
+        "trust"
+      ],
       "award": null,
       "finding": "Replicates how linear representations of truth emerge in language models over the course of training.",
       "takeaway": "When does a model start encoding true-vs-false as a direction you can read off?",
@@ -1392,6 +1482,9 @@
       "topics": [
         "devinterp",
         "linguistics"
+      ],
+      "themes": [
+        "learn"
       ],
       "award": null,
       "finding": "A dynamical-systems reading of Transformer language models through the linguistic principle of maximising minimal means.",
@@ -1438,6 +1531,9 @@
         "multilingual",
         "linguistics"
       ],
+      "themes": [
+        "language"
+      ],
       "award": null,
       "finding": "Compares grounding strategies for nouns and verbs when modelling language across languages and cultures with images.",
       "takeaway": "Nouns and verbs don't ground in images the same way.",
@@ -1480,6 +1576,9 @@
       "first_author": false,
       "topics": [
         "linguistics"
+      ],
+      "themes": [
+        "language"
       ],
       "award": null,
       "finding": "Examines how phoneme distributions across languages reflect chance, articulatory cost, and integration across linguistic tiers.",
@@ -1530,6 +1629,9 @@
       "topics": [
         "linguistics"
       ],
+      "themes": [
+        "language"
+      ],
       "award": null,
       "finding": "Statistical and simulation-based analysis of whether phoneme surprisal distributions settle into the same equilibrium across languages.",
       "takeaway": "Different languages may drift toward the same statistical resting point.",
@@ -1573,6 +1675,9 @@
         "multilingual",
         "devinterp"
       ],
+      "themes": [
+        "representations"
+      ],
       "award": null,
       "finding": "Aligns sparse-autoencoder features across separately trained monolingual models to look for universal features that emerge independently.",
       "takeaway": "Languages may share structure that models rediscover on their own.",
@@ -1610,6 +1715,9 @@
       "first_author": true,
       "topics": [
         "linguistics"
+      ],
+      "themes": [
+        "representations"
       ],
       "award": null,
       "finding": "A position paper on what cognitively-inspired language models can offer linguistic theory.",
@@ -1651,6 +1759,9 @@
       "topics": [
         "tokenisation",
         "linguistics"
+      ],
+      "themes": [
+        "language"
       ],
       "award": null,
       "finding": "Asks whether what looks like cognitive plausibility in a tokenizer reduces to fertility (how many tokens it uses).",
